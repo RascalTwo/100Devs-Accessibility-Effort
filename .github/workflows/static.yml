@@ -3,8 +3,8 @@ name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
-#  push:
-#    branches: ["main"]
+  #  push:
+  #    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,7 +18,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -31,6 +31,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Add current deployment info to index.html
+        run: |
+          # Replace placeholders with commit information
+          COMMIT_SHA=$(git rev-parse HEAD)
+          COMMIT_DATE=$(git log -1 --format=%cd)
+          COMMIT_URL="https://github.com/${{ github.repository }}/commit/${COMMIT_SHA}"
+          PUBLISH_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          sed -i "s|{{COMMIT_SHA}}|${COMMIT_SHA}|g" website/index.html
+          sed -i "s|{{COMMIT_DATE}}|${COMMIT_DATE}|g" website/index.html
+          sed -i "s|{{COMMIT_URL}}|${COMMIT_URL}|g" website/index.html
+          sed -i "s|{{PUBLISH_DATE}}|${PUBLISH_DATE}|g" website/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
