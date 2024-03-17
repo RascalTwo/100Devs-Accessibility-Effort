@@ -1,0 +1,157 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\readonlydoc1\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\info
+{\author Kevin Fjelsted}}\margl1440\margr1440\vieww12600\viewh7800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 https://devconnected.com/how-to-switch-branch-on-git/\
+\
+Software Engineering\
+How To Switch Branch on Git\
+written by Schkn\
+ How To Switch Branch on Git\
+\
+When working on a project, you are probably managing many different branches in your repository.\
+\
+As the number of branches grow, you may need to work on different tasks in parallel, going from one branch to another all the time.\
+\
+As a consequence, you may need to switch branches very frequently.\
+\
+In this tutorial, you are going to learn how you can switch branches easily on Git.\
+\
+By the end of this tutorial, you will know how you can safely commit your work in one branch, switch to another and start working on another feature.\
+\
+\
+Table of Contents	\
+Switch Branch using git checkout\
+Switch branch using git switch\
+Checkout Remote Branch on Git\
+Checkout New Branch from Specific Commit\
+Conclusion\
+Switch Branch using git checkout\
+\
+The easiest way to switch branch on Git is to use the \'93git checkout\'94 command and specify the name of the branch you want to switch to.\
+\
+If the destination branch does not exist, you have to append the \'93-b\'94 option, otherwise you won\'92t be able to switch to that branch.\
+\
+$ git checkout <existing_branch>\
+\
+$ git checkout -b <new_branch>\
+As an example, let\'92s say that you want to switch to the master branch to another branch named \'93feature\'94 in your repository.\
+\
+First, make sure that the target branch exists by running the \'93git branch\'94 command.\
+\
+$ git branch\
+listing git branch\
+Now that you made sure that your branch exists, you can switch from the master branch to the \'93feature\'94 branch by executing the \'93git checkout\'94 command.\
+\
+\
+$ git checkout feature\
+switch branch using git checkout\
+That\'92s it!\
+\
+You have successfully switched to your \'93feature\'94 branch with the checkout command.\
+\
+On the other hand, if you try to switch to a non-existing branch, you will the following error message\
+\
+$ git checkout non-existing-branch\
+\
+error: pathspec 'non-existing-branch' did not match any file(s) known to git\
+To solve this error, you will have to append the \'93-b\'94 (for \'93new branch\'94) option to the checkout command.\
+\
+$ git checkout -b non-existing-branch\
+\
+Switched to a new branch 'non-existing'\
+\
+Now that you know more about the \'93checkout\'94 command, let\'92s see another useful command to change branch using Git.\
+\
+Switch branch using git switch\
+\
+A quick way of switching branch on Git is to use the \'93git switch\'94 command and specify the name of the branch you want to switch to.\
+\
+If the destination branch does not exist, you have to specify the \'93-c\'94 option (for \'93create branch\'93), otherwise you will get an error message when switching to that branch.\
+\
+$ git switch <existing_branch>\
+\
+$ git switch -c <non_existing_branch>\
+Again, as an example, let\'92s say that you want to switch to the \'93feature\'94 branch from the \'93master\'94 branch.\
+\
+In order to switch from the \'93master\'94 branch to the \'93feature\'94 branch, use the \'93git switch\'94 command and specify the destination branch (which is \'93feature\'94 in this case)\
+\
+$ git switch feature\
+switch branch using git switch\
+On the other hand, if you try to switch to a non existing branch, you will get the following error message\
+\
+$ git switch non-existing-branch\
+\
+fatal: invalid reference: non-existing-branch\
+To solve this error, make sure to append the \'93-c\'94 option to the \'93git switch\'94 command to specify that you want to switch to a new branch.\
+\
+$ git switch -c non-existing-branch\
+\
+Switched to a new branch 'non-existing-branch'\
+Congratulations, you have now successfully switched to another branch and you can start working on it.\
+\
+Checkout Remote Branch on Git\
+\
+\
+In some cases, you may be interested in checking out remote branches from your distant repository.\
+\
+In order to switch to a remote branch, make sure to fetch your remote branch with \'93git fetch\'94 first. You can then switch to it by executing \'93git checkout\'94 with the \'93-t\'94 option and the name of the branch.\
+\
+$ git fetch\
+\
+$ git checkout -t <remote_name>/<branch_name>\
+The \'93-t\'94 option in checkout stands for \'93track\'94 and it is used to create your branch and setting up the upstream branch automatically to the remote branch.\
+\
+As an example, let\'92s say that you have a branch named \'93remote-branch\'94 on the \'93origin\'94 remote.\
+\
+\
+In order to checkout the remote branch, you will need to execute the checkout command and specify the information specified above.\
+\
+$ git checkout -t origin/remote-branch\
+\
+Branch 'remote-branch' set up to track remote branch 'remote-branch' from 'origin'.\
+Switched to a new branch 'remote-branch'\
+As you can see, the remote tracking information was set automatically : as a consequence, if you commit any modifications, you will automatically push them to the upstream branch.\
+\
+Checkout New Branch from Specific Commit\
+\
+In some cases, you may need to switch to a new branch, but you want it to start from a specific commit on the branch.\
+\
+\
+\
+In order to checkout a new branch from a specific start point, you have to execute the \'93git checkout\'94 command and specify the \'93-B\'94 option, as well as the branch and its start point.\
+\
+$ git checkout -B <branch> <start_point>\
+In order to checkout to a specific start point, you will have to list the commits done in you repository using the \'93git log\'94 command.\
+\
+$ git log --oneline --graph\
+\
+* 98a14be Version 2 commit (master, HEAD)\
+* 53a7dcf Version 1.0 commit\
+* 0a9e448 added files\
+* bd6903f first commit\
+As you can see, the HEAD of the master branch is at 98a14be but we want to checkout to the commit just before HEAD (which is 53a7dcf).\
+\
+In order to switch to the master branch, on this specific commit, we are going to execute the \'93git checkout\'94 command and specify the \'93master\'94 branch as well as the commit SHA.\
+\
+$ git checkout -B master 53a7dcf \
+\
+Switched to and reset branch 'master'\
+In order to check that you are correctly on a specific commit, you can use the \'93git log\'94 command again.\
+\
+$ git log --oneline --graph\
+list commits using git log command\
+Awesome, you have successfully switched to another branch on a specific commit.\
+\
+Conclusion\
+\
+In this tutorial, you learnt how you can easily switch to a branch on Git using the checkout command or the switch command.\
+\
+You also learnt that you can switch to a branch that does not exist yet by specifying the \'93-b\'94 option or the \'93-c\'94 option.\
+\
+Finally, you have discovered advanced tips related to switching branches : checking out a remote branch and checking out a branch from a specific starting point.\
+}
