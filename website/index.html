@@ -127,6 +127,21 @@
                 </li>
               </ul>
             </li>
+            <li>
+              <h4>Troubleshooting</h4>
+              <details>
+                <summary>Keyboard shortcuts are not functional</summary>
+
+                <p>It is known that sometimes VSCode on Windows fails to recognize certain keyboard shortcuts - <kbd>Alt + F1</kbd> for example. One solution that has been replicated is the changing of the "keyboard.dispatch" VSCode setting from it's default value of "code" to "keyCode". This setting is now always available via the Settings GUI, so following is a keyboard-only guide to adding it - it requires you only know how to open the Command Pallette</p>
+                <p>First open the Command Pallette, then type "user settings json" and choose the "Preferences: Open User Settings (JSON)" option. Next traverse to the beginning of the file - using the <kbd>Home</kbd> & <kbd>Page Up</kbd> keys for example. From this point, go right one character - as the file starts with a "{" and we need to be after it. Next hit <kbd>Enter</kbd> to add a new line, then type this text:</p>
+                <pre>
+                  <code>"keyboard.dispatch": "keyCode",</code>
+                </pre>
+                <p>
+                  After this, saving the file should apply the setting - attempt the previously ignored keyboard shortcut. This has has resolved the issue both times it was attempted.
+                </p>
+              </details>
+            </li>
           </ul>
         </li>
         <li>
