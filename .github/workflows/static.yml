@@ -37,6 +37,9 @@ jobs:
           sed -i "s|{{COMMIT_DATE}}|${COMMIT_DATE}|g" website/index.html
           sed -i "s|{{COMMIT_URL}}|${COMMIT_URL}|g" website/index.html
           sed -i "s|{{PUBLISH_DATE}}|${PUBLISH_DATE}|g" website/index.html
+      - name: Delete unusable symlinks from website folder recursively
+        run: |
+          find website -type l -exec rm {} +
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
