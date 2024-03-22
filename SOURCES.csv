@@ -1,6 +1,5 @@
 Resource,Source
 ./changelog.html,
-./rascal_two-transcripts/,
 ./resources/100Devs Homework Image Descriptions.docx,https://discord.com/channels/735923219315425401/940054495646343208/1218288050426220584
 ./resources/bbc_description.docx,https://discord.com/channels/735923219315425401/940054495646343208/1209900176995520514
 ./resources/bbc_layout.xlsx,https://discord.com/channels/735923219315425401/940054495646343208/1218053463825711214
@@ -13,6 +12,7 @@ Resource,Source
 ./tai-chad-allan.html,
 ./tai-chad-allen.html,
 ./Visual_Studio_Guide.html,
+./whisper-transcripts/,
 {{COMMIT_URL}},https://github.com/RascalTwo/100Devs-Accessibility-Effort/blob/main/.github/workflows/static.yml
 about:blank#discord_accessible_usage,
 https://1drv.ms/w/s!Ajrklx4VfLRHsBgiiGIqBoEvaAUc?e=zeE1Q2,https://discord.com/channels/735923219315425401/940054495646343208/1218288050426220584
