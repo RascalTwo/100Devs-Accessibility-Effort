@@ -9,7 +9,8 @@
     "build": "tsc",
     "test": "TZ=UTC jest",
     "typecheck": "tsc --noEmit",
-    "generate-changelog": "node bin/generate-changelog"
+    "generate-changelog": "node bin/generate-changelog",
+    "sync-sources": "node bin/sync-sources"
   },
   "license": "ISC",
   "devDependencies": {
@@ -20,5 +21,9 @@
     "ts-jest": "^29.1.2",
     "tsx": "^4.7.1",
     "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.5",
+    "inquirer": "^8.2.6"
   }
 }
