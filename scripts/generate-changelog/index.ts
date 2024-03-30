@@ -1,4 +1,3 @@
-
 import fs from 'node:fs';
 import { generateChangelogContentLIs, getGitLog, groupCommitInfoByIsoDay, parseGitLog } from './functions';
 import { generateFullChangelogHTML } from './html-generators';

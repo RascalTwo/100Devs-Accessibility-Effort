@@ -2,7 +2,6 @@ import { execSync } from 'node:child_process';
 import type { CommitInfo } from './types';
 import { generateHTMLForDateAndCommits } from './html-generators';
 
-
 /**
  * Converts an object into an array of key-value pairs, with type information.
  *
@@ -13,7 +12,6 @@ import { generateHTMLForDateAndCommits } from './html-generators';
  * @template T - The type of the values in the object.
  */
 const typedEntries = <T>(obj: Record<string, T>) => Object.entries(obj) as [string, T][];
-
 
 /**
  * Retrieves the git log using the `git log` command and returns it as a string.
@@ -32,10 +30,14 @@ export function getGitLog() {
  * @returns An array of {@link CommitInfo} objects.
  */
 export function parseGitLog(gitLog: string): CommitInfo[] {
-	return gitLog.trim().split('\n').slice(1).map(line => {
-		const [shortHash, author, date, shortDescription] = line.split("\t");
-		return { shortHash, author, date: new Date(date), shortDescription };
-	});
+	return gitLog
+		.trim()
+		.split('\n')
+		.slice(1)
+		.map((line) => {
+			const [shortHash, author, date, shortDescription] = line.split('\t');
+			return { shortHash, author, date: new Date(date), shortDescription };
+		});
 }
 
 /**
@@ -45,12 +47,15 @@ export function parseGitLog(gitLog: string): CommitInfo[] {
  * @returns An object where the keys are ISO days and the values are arrays of {@link CommitInfo} objects.
  */
 export function groupCommitInfoByIsoDay(commits: CommitInfo[]) {
-	return commits.reduce((acc, commit) => {
-		const day = commit.date.toISOString().split('T')[0];
-		if (!acc[day]) acc[day] = [];
-		acc[day].push(commit);
-		return acc;
-	}, {} as Record<string, CommitInfo[]>)
+	return commits.reduce(
+		(acc, commit) => {
+			const day = commit.date.toISOString().split('T')[0];
+			if (!acc[day]) acc[day] = [];
+			acc[day].push(commit);
+			return acc;
+		},
+		{} as Record<string, CommitInfo[]>,
+	);
 }
 
 /**
@@ -62,5 +67,5 @@ export function groupCommitInfoByIsoDay(commits: CommitInfo[]) {
 export function generateChangelogContentLIs(commitsByIsoDay: ReturnType<typeof groupCommitInfoByIsoDay>) {
 	return typedEntries(commitsByIsoDay)
 		.sort((a, b) => b[0].localeCompare(a[0]))
-		.map(([day, commits]) => generateHTMLForDateAndCommits(day, commits))
+		.map(([day, commits]) => generateHTMLForDateAndCommits(day, commits));
 }

@@ -1,5 +1,5 @@
-import { REPOSITORY_URL } from "../constants";
-import type { CommitInfo } from "./types";
+import { REPOSITORY_URL } from '../constants';
+import type { CommitInfo } from './types';
 
 /**
  * Generates HTML markup for a specific date and its associated commits.
@@ -9,11 +9,16 @@ import type { CommitInfo } from "./types";
  * @returns The generated HTML markup.
  */
 export function generateHTMLForDateAndCommits(day: string, commits: CommitInfo[]): string {
-  const formattedDate = new Date(day).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-  const formattedCommits = (commits as CommitInfo[])
-    .sort((a, b) => b.date.getTime() - a.date.getTime())
-    .map((commit) => `<li><a href="${REPOSITORY_URL}/commit/${commit.shortHash}">${commit.shortDescription}</a></li>`)
-  return `
+	const formattedDate = new Date(day).toLocaleDateString('en-US', {
+		weekday: 'long',
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	});
+	const formattedCommits = (commits as CommitInfo[])
+		.sort((a, b) => b.date.getTime() - a.date.getTime())
+		.map((commit) => `<li><a href="${REPOSITORY_URL}/commit/${commit.shortHash}">${commit.shortDescription}</a></li>`);
+	return `
         <li>
           <h2><time datetime="${day}">${formattedDate}</time></h2>
 
@@ -24,7 +29,6 @@ export function generateHTMLForDateAndCommits(day: string, commits: CommitInfo[]
 `.replace(/^\n+|\n+$/g, '');
 }
 
-
 /**
  * Generates a full changelog HTML document.
  *
@@ -32,7 +36,7 @@ export function generateHTMLForDateAndCommits(day: string, commits: CommitInfo[]
  * @returns The generated HTML document as a string.
  */
 export function generateFullChangelogHTML(lis: string) {
-  return `<!doctype html>
+	return `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

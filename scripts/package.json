@@ -7,6 +7,8 @@
   },
   "scripts": {
     "build": "tsc",
+    "lint": "prettier . --check",
+    "lint:fix": "prettier . --write",
     "test": "TZ=UTC jest",
     "typecheck": "tsc --noEmit",
     "generate-changelog": "node bin/generate-changelog",

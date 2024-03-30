@@ -1,5 +1,5 @@
 import { JSDOM } from 'jsdom';
-import fs from 'node:fs'
+import fs from 'node:fs';
 import inquirer from 'inquirer';
 import type { AnchorInfo } from './types';
 
@@ -9,13 +9,12 @@ import type { AnchorInfo } from './types';
  */
 export function parseEntries(): AnchorInfo[] {
 	const dom = new JSDOM(fs.readFileSync('../website/index.html', 'utf-8'));
-	return Array.from(dom.window.document.querySelectorAll("a")).map((a) => ({
+	return Array.from(dom.window.document.querySelectorAll('a')).map((a) => ({
 		href: a.href,
-		textContent: a.textContent ?? "",
-		alt: a.getAttribute("alt") ?? undefined,
+		textContent: a.textContent ?? '',
+		alt: a.getAttribute('alt') ?? undefined,
 	}));
 }
-
 
 /**
  * Removes sources that are no longer present in the website.
@@ -41,10 +40,10 @@ export async function promptMissingSources(records: Record<string, string>, entr
 	for (const { href, textContent, alt } of missing) {
 		await inquirer
 			.prompt({
-				type: "input",
-				name: "alt",
+				type: 'input',
+				name: 'alt',
 				default: alt,
-				message: `Alt of ${href}:${textContent ? ` "${textContent}"` : ""}`,
+				message: `Alt of ${href}:${textContent ? ` "${textContent}"` : ''}`,
 			})
 			.then((answers) => {
 				records[href] = answers.alt;

@@ -1,5 +1,5 @@
-import { loadCSV, saveCSV } from "./csv";
-import { parseEntries, removeExtraSources, promptMissingSources } from "./functions";
+import { loadCSV, saveCSV } from './csv';
+import { parseEntries, removeExtraSources, promptMissingSources } from './functions';
 
 /**
  * Main function that synchronizes the sources.
@@ -8,7 +8,7 @@ import { parseEntries, removeExtraSources, promptMissingSources } from "./functi
  * prompts for missing sources, and saves the updated CSV file.
  */
 async function main() {
-	const filepath = "../SOURCES.csv";
+	const filepath = '../SOURCES.csv';
 
 	const records = await loadCSV(filepath);
 	const entries = parseEntries();

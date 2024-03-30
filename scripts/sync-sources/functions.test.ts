@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+import fs from 'node:fs';
 import inquirer from 'inquirer';
 import { promptMissingSources, removeExtraSources, parseEntries } from './functions';
 
@@ -52,13 +52,21 @@ describe('removeExtraSources', () => {
 
 describe('parseEntries', () => {
 	it('should parse entries from the HTML file', () => {
-		jest.spyOn(fs, 'readFileSync').mockReturnValueOnce('<html><body><a href="https://example.com/">Link 1</a><a href="./resources/resource.txt" alt="Alt Text">Link 2</a></body></html>');
+		jest
+			.spyOn(fs, 'readFileSync')
+			.mockReturnValueOnce(
+				'<html><body><a href="https://example.com/">Link 1</a><a href="./resources/resource.txt" alt="Alt Text">Link 2</a></body></html>',
+			);
 
 		const entries = parseEntries();
 
 		expect(entries).toEqual([
 			{ href: 'https://example.com/', textContent: 'Link 1', alt: undefined },
-			{ href: "./resources/resource.txt", textContent: 'Link 2', alt: "Alt Text" },
+			{
+				href: './resources/resource.txt',
+				textContent: 'Link 2',
+				alt: 'Alt Text',
+			},
 		]);
 	});
 });

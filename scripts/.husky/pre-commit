@@ -1,6 +1,9 @@
 cd scripts
+npm run lint
 npm run typecheck
 npm run test
 npm run build
 npm run sync-sources
+git add ../SOURCES.csv
 npm run generate-changelog
+git add ../website/changelog.html
