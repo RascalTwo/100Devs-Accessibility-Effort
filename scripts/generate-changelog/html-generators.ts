@@ -17,7 +17,11 @@ export function generateHTMLForDateAndCommits(day: string, commits: CommitInfo[]
 	});
 	const formattedCommits = (commits as CommitInfo[])
 		.sort((a, b) => b.date.getTime() - a.date.getTime())
-		.map((commit) => `<li><a href="${REPOSITORY_URL}/commit/${commit.shortHash}">${commit.shortDescription}</a></li>`);
+		.map(
+			(commit) => `<li>
+              <a href="${REPOSITORY_URL}/commit/${commit.shortHash}">${commit.shortDescription}</a>
+            </li>`,
+		);
 	return `
         <li>
           <h2><time datetime="${day}">${formattedDate}</time></h2>
@@ -53,5 +57,6 @@ ${lis}
       </ul>
     </main>
   </body>
-</html>`;
+</html>
+`;
 }

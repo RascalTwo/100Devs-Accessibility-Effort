@@ -13,8 +13,12 @@ describe('generateHTMLForDateAndCommits', () => {
           <h2><time datetime="2024-03-17">${new Date(day).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</time></h2>
 
           <ul>
-            <li><a href="${REPOSITORY_URL}/commit/third-hash">Third Commit</a></li>
-            <li><a href="${REPOSITORY_URL}/commit/second-hash">Second Commit</a></li>
+            <li>
+              <a href="${REPOSITORY_URL}/commit/third-hash">Third Commit</a>
+            </li>
+            <li>
+              <a href="${REPOSITORY_URL}/commit/second-hash">Second Commit</a>
+            </li>
           </ul>
         </li>`);
 	});
