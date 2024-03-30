@@ -10,13 +10,15 @@
     "test": "TZ=UTC jest",
     "typecheck": "tsc --noEmit",
     "generate-changelog": "node bin/generate-changelog",
-    "sync-sources": "node bin/sync-sources"
+    "sync-sources": "node bin/sync-sources",
+    "prepare": "cd .. && husky scripts/.husky"
   },
   "license": "ISC",
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.30",
+    "husky": "^9.0.11",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
     "tsx": "^4.7.1",

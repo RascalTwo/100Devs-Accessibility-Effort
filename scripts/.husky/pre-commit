@@ -1,0 +1,6 @@
+cd scripts
+npm run typecheck
+npm run test
+npm run build
+npm run sync-sources
+npm run generate-changelog
