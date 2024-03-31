@@ -1,0 +1,5512 @@
+﻿1
+00:00:36,940 --> 00:00:07,758
+Quincy Larson: do do do.
+
+2
+00:00:36,044 --> 00:00:38,626
+Quincy Larson: Welcome back to the FreeCodeCamp podcast.
+
+3
+00:00:38,766 --> 00:00:41,869
+Quincy Larson: I'm Quincy Larson, teacher and founder of FreeCodeCamp.org.
+
+4
+00:00:42,289 --> 00:00:47,854
+Quincy Larson: Each week, we're bringing you insight from developers, founders, and ambitious people that are getting into tech.
+
+5
+00:00:48,094 --> 00:00:57,602
+Quincy Larson: Today, we're talking with Leon Noel, who, I don't know if you've heard of 100Devs, but it's amazing and it's a huge source of inspiration for me personally.
+
+6
+00:00:58,003 --> 00:01:02,747
+Quincy Larson: He is the founder of 100Devs and he is head of engineering at Resilient Coders.
+
+7
+00:01:03,956 --> 00:01:08,279
+Quincy Larson: Leon, joining us from sunny Los Angeles.
+
+8
+00:01:08,719 --> 00:01:09,679
+Quincy Larson: How's everything going with you?
+
+9
+00:01:09,759 --> 00:01:10,720
+Quincy Larson: It's a little early.
+
+10
+00:01:10,740 --> 00:01:11,821
+Leon Noel: We'll see if the sun comes out.
+
+11
+00:01:11,901 --> 00:01:12,941
+Leon Noel: Things are going well.
+
+12
+00:01:14,022 --> 00:01:16,403
+Leon Noel: This is a surreal experience.
+
+13
+00:01:16,443 --> 00:01:17,564
+Leon Noel: Thank you so much for having me.
+
+14
+00:01:18,064 --> 00:01:20,486
+Leon Noel: And we'll get weird with it real quick.
+
+15
+00:01:22,087 --> 00:01:25,869
+Leon Noel: I always joke that my wife knows how serious I am.
+
+16
+00:01:26,409 --> 00:01:33,115
+Leon Noel: if your face is like the background of my like screens or I've had a picture of you on my desk for a little while.
+
+17
+00:01:33,696 --> 00:01:37,639
+Leon Noel: So she knows if it's go time or not based off of like she's seeing you.
+
+18
+00:01:37,759 --> 00:01:39,481
+Leon Noel: So it's an honor.
+
+19
+00:01:39,501 --> 00:01:40,422
+Leon Noel: It's a huge privilege.
+
+20
+00:01:40,482 --> 00:01:42,563
+Leon Noel: Like this is a dream come true for me.
+
+21
+00:01:42,864 --> 00:01:48,749
+Leon Noel: You're a huge hero of mine and I've done so much to help so many folks and you're who I want to be when I grow up.
+
+22
+00:01:48,789 --> 00:01:49,890
+Leon Noel: So I really appreciate it.
+
+23
+00:01:49,930 --> 00:01:50,951
+Leon Noel: Thanks for having me on.
+
+24
+00:01:51,789 --> 00:01:54,392
+Quincy Larson: Yeah, well, I just want to say that it's like very kind.
+
+25
+00:01:54,932 --> 00:02:04,061
+Quincy Larson: And I want to say that that goes both ways, like often when I'm feeling like a little bit low energy and I was, you know, I don't know if I can get a lot done today.
+
+26
+00:02:04,081 --> 00:02:10,228
+Quincy Larson: Maybe I'll just, you know, go and answer a bunch of emails and not do like curriculum design or.
+
+27
+00:02:10,808 --> 00:02:12,790
+Quincy Larson: You know, I'll go into like the.
+
+28
+00:02:13,812 --> 00:02:15,393
+Quincy Larson: I'm like, what would Leon do?
+
+29
+00:02:15,553 --> 00:02:16,815
+Quincy Larson: He would dive in headfirst.
+
+30
+00:02:16,855 --> 00:02:22,121
+Quincy Larson: He would have so much energy overflowing and he would just go in there and get things done.
+
+31
+00:02:22,621 --> 00:02:25,385
+Quincy Larson: And so, yeah, like I do think about you a lot.
+
+32
+00:02:25,765 --> 00:02:36,693
+Quincy Larson: when I'm just feeling low energy, because I've watched your streams, and I've seen the amount of energy, both literal energy, like bursting forth, and the positive energy that you bring to the community.
+
+33
+00:02:36,833 --> 00:02:39,014
+Quincy Larson: So thank you for that.
+
+34
+00:02:39,094 --> 00:02:46,860
+Quincy Larson: And I'll make a little meme of Wolverine holding the picture frame, and then Leon holding the picture of me.
+
+35
+00:02:46,900 --> 00:02:52,744
+Quincy Larson: I won't really do that, but when you said that, that just felt hot to me in my mind, because I love X-Men.
+
+36
+00:02:53,124 --> 00:02:55,266
+Leon Noel: So, um, Leon.
+
+37
+00:02:55,566 --> 00:02:57,227
+Leon Noel: Did you see the new announcement?
+
+38
+00:02:57,227 --> 00:02:58,348
+Leon Noel: 97?
+
+39
+00:02:58,348 --> 00:02:58,448
+Leon Noel: No.
+
+40
+00:02:59,489 --> 00:02:59,969
+Leon Noel: What's happening?
+
+41
+00:03:00,149 --> 00:03:02,491
+Leon Noel: They're redoing the old school cartoon.
+
+42
+00:03:03,272 --> 00:03:03,912
+Leon Noel: Oh my goodness.
+
+43
+00:03:03,992 --> 00:03:07,515
+Leon Noel: Like post-Professor X. Like the original 90s Saturday morning.
+
+44
+00:03:09,156 --> 00:03:09,456
+Leon Noel: All right.
+
+45
+00:03:09,596 --> 00:03:09,916
+Leon Noel: No more.
+
+46
+00:03:09,936 --> 00:03:11,857
+Leon Noel: Everybody stop the podcast.
+
+47
+00:03:11,877 --> 00:03:12,818
+Leon Noel: We're going to watch the trailer.
+
+48
+00:03:13,658 --> 00:03:14,299
+Leon Noel: It's really good.
+
+49
+00:03:14,339 --> 00:03:15,039
+Leon Noel: It looks really good.
+
+50
+00:03:15,079 --> 00:03:17,180
+Quincy Larson: I will put a link to the trailer in the show notes.
+
+51
+00:03:17,220 --> 00:03:23,363
+Leon Noel: I have a little bit of tears in my eyes when there's a specific catchphrase that is said, but yeah.
+
+52
+00:03:23,423 --> 00:03:25,224
+Quincy Larson: OK, I'm going to link to that.
+
+53
+00:03:25,564 --> 00:03:40,932
+Quincy Larson: Be sure to watch that immediately after you finish watching or listening to this podcast interview, because we've got a ton of advice that's practical and not just, you know, something that you can do to escape from your day to day experience, but to build up your day to day experience and accomplish your goals.
+
+54
+00:03:41,332 --> 00:03:59,784
+Quincy Larson: So Leon, before we dive into 100 devs and resilient coders and all the work you've done, I like to always start these interviews with more autobiographical stuff just so people can have context into like who you are, your lived experience, where you're coming from and where you're heading and things like that.
+
+55
+00:04:00,264 --> 00:04:07,329
+Quincy Larson: So maybe you could take us back to where you grew up and like what your earliest ambitions were as a kid.
+
+56
+00:04:08,191 --> 00:04:13,334
+Leon Noel: Yeah, so I grew up in Philly, definitely 100% a product of Philly.
+
+57
+00:04:13,354 --> 00:04:18,476
+Leon Noel: I was always kind of a very kind of tinkering, wanting to build type of kid.
+
+58
+00:04:19,297 --> 00:04:27,401
+Leon Noel: I grew up with a huge household, a big family, all in one row home in South Philly, which was amazing.
+
+59
+00:04:27,901 --> 00:04:40,971
+Leon Noel: And I was blessed to have amazing libraries where I had access to computers and could Tinker and build and I was really blessed even have a lot of even just computer science education.
+
+60
+00:04:41,092 --> 00:04:49,300
+Leon Noel: early throughout my life I had a Q basic class in middle school where I would get a sailboat to go from one side of the screen to the other.
+
+61
+00:04:49,340 --> 00:04:55,123
+Leon Noel: I thought I had magical powers and yeah, I I was very lucky to have the skill so so early.
+
+62
+00:04:55,143 --> 00:05:05,106
+Leon Noel: We also in Philly have magnet schools or which are kind of like exam schools that you test into and so I went to engineering and science where I had two years of c++.
+
+63
+00:05:06,807 --> 00:05:08,948
+Leon Noel: in high school and this is like 20 years ago.
+
+64
+00:05:09,488 --> 00:05:25,835
+Leon Noel: and so yeah I just I'm very lucky to have grown up in an environment that supported my passions and interests even when I didn't have access to those technologies or knowledge that there was a way for me to get access to it.
+
+65
+00:05:25,895 --> 00:05:27,616
+Leon Noel: so very very thankful for that.
+
+66
+00:05:28,357 --> 00:05:28,897
+Quincy Larson: That's awesome.
+
+67
+00:05:28,957 --> 00:05:37,502
+Quincy Larson: yeah that's it sounds like a really kind of like idyllic upbringing in the sense that like you've got Access to.
+
+68
+00:05:37,762 --> 00:05:38,442
+Quincy Larson: what about teachers?
+
+69
+00:05:38,623 --> 00:05:41,865
+Quincy Larson: Did you have any teachers as a kid who like really propelled you forward?
+
+70
+00:05:41,925 --> 00:05:50,512
+Quincy Larson: I always talked very passionately about my my 7th grade teacher or 8th grade teacher, science teacher, Mr.
+
+71
+00:05:50,552 --> 00:05:53,434
+Quincy Larson: Krieger, whom I've failed to track down.
+
+72
+00:05:53,474 --> 00:05:54,735
+Quincy Larson: If you know of Mr.
+
+73
+00:05:54,775 --> 00:06:04,683
+Quincy Larson: Krieger, who taught at, you know, Hoover Middle School, which was is like now destroyed, bulldozed school in Oklahoma City.
+
+74
+00:06:05,583 --> 00:06:07,284
+Quincy Larson: If anybody's heard of that person, let me know.
+
+75
+00:06:07,364 --> 00:06:10,926
+Quincy Larson: but did you have anybody like a mr Krieger in your life who?
+
+76
+00:06:11,547 --> 00:06:15,749
+Quincy Larson: Was eccentric and interesting but kept giving you like interesting books about space and stuff like that?
+
+77
+00:06:15,829 --> 00:06:18,310
+Leon Noel: Yeah, so I've been lucky to have a few.
+
+78
+00:06:19,191 --> 00:06:35,183
+Leon Noel: so miss Francine was my fifth grade teacher that when I was done my coursework would Not let me just sit there twiddling my thumbs but always had like puzzles and things to build and tinker with in the background and I Likewise, I've tried to find them.
+
+79
+00:06:35,203 --> 00:06:51,278
+Leon Noel: I haven't been able to find them, but they really kind of showed me that I could be in control of my learning, that it wasn't a one-way depositing of knowledge, that I could have some sort of control or command over the things I was doing with my free time.
+
+80
+00:06:51,358 --> 00:06:55,639
+Leon Noel: that would enable me to think creatively and to do things I wanted to do.
+
+81
+00:06:55,659 --> 00:07:09,042
+Leon Noel: I had a lot of wonderful folks throughout high school that really helped guide me, that pushed me, that maybe saw something inside of me that I didn't see inside of myself and would try and pull that out.
+
+82
+00:07:09,722 --> 00:07:12,584
+Leon Noel: my, we're talking about like code education, shout out Mr.
+
+83
+00:07:12,624 --> 00:07:16,826
+Leon Noel: Shipper, would push me to learn my C++.
+
+84
+00:07:17,147 --> 00:07:28,233
+Leon Noel: and we had the old school like matrix printers where you'd print out your code on them and I would look through it and take it to them and try to point out bugs or errors.
+
+85
+00:07:28,714 --> 00:07:34,259
+Leon Noel: and You talk about folks in your life that do the small things right, and Mr.
+
+86
+00:07:34,279 --> 00:07:39,463
+Leon Noel: Shipper, every birthday, for years and years, would just send me a happy birthday message.
+
+87
+00:07:39,503 --> 00:07:44,388
+Leon Noel: So talking about folks that just support you long-term, that was there.
+
+88
+00:07:44,608 --> 00:07:47,191
+Leon Noel: And then in university, it was Dr.
+
+89
+00:07:47,211 --> 00:08:12,846
+Leon Noel: Bupieskus, the person that showed me that I could be what I wanted to be and supported my ability to learn, supported what I wanted to do, made sure that I had funding over the summer to live, made sure that I got to do the research I wanted to do, and ultimately gave me the skills that I thought I needed to be the person I wanted to be in life.
+
+90
+00:08:12,926 --> 00:08:18,408
+Leon Noel: And so, yeah, definitely the product of amazing teachers throughout my entire life.
+
+91
+00:08:18,888 --> 00:08:25,752
+Leon Noel: Definitely something that I try to think of with Rizzle Encoders and 100Devs, like.
+
+92
+00:08:26,392 --> 00:08:34,196
+Leon Noel: what was it about those folks that inspired me to do more, to learn, to feel comfortable, and try and bring that into the classroom as well.
+
+93
+00:08:34,756 --> 00:08:34,976
+Quincy Larson: Yeah.
+
+94
+00:08:35,256 --> 00:08:35,437
+Quincy Larson: Yeah.
+
+95
+00:08:35,876 --> 00:08:44,006
+Quincy Larson: It's so cool to talk with another teacher because obviously you're a software engineer, but you're also a teacher to many, many people, not necessarily in the conventional way.
+
+96
+00:08:45,207 --> 00:08:46,889
+Quincy Larson: Maybe in the conventional way, too.
+
+97
+00:08:46,969 --> 00:08:56,238
+Quincy Larson: Maybe you actually give lectures occasionally in person, but like through 100 devs, you're essentially like the classroom teacher that people need, you know, like.
+
+98
+00:08:56,478 --> 00:08:56,759
+Quincy Larson: Yeah.
+
+99
+00:08:57,119 --> 00:09:09,604
+Quincy Larson: You know, the VAT signals up in the air, the 100 dev signal, and you're answering that call and you're helping people with the not just practical challenges of learning to code, but the motivational challenges as well.
+
+100
+00:09:10,084 --> 00:09:12,665
+Quincy Larson: And that's a huge thing I take away from your stream.
+
+101
+00:09:13,365 --> 00:09:22,109
+Quincy Larson: It sounds like you went on to do really well academically, I presume, because you went to one of the best universities in the world.
+
+102
+00:09:23,269 --> 00:09:26,831
+Quincy Larson: Maybe you could talk a little bit about what that process was like.
+
+103
+00:09:26,891 --> 00:09:33,374
+Quincy Larson: What was it like getting into a relatively elite school?
+
+104
+00:09:34,274 --> 00:09:35,715
+Quincy Larson: How long did you have that plan?
+
+105
+00:09:35,775 --> 00:09:37,876
+Quincy Larson: At what age did you snap to awareness?
+
+106
+00:09:38,416 --> 00:09:41,919
+Quincy Larson: I always like to tell people, I kind of snapped to awareness much later in life.
+
+107
+00:09:42,700 --> 00:09:45,142
+Quincy Larson: I was maybe like 20, 21.
+
+108
+00:09:45,142 --> 00:09:53,689
+Quincy Larson: And that's when I got really into journalism and studying foreign languages and stuff, themes that would kind of run throughout the rest of my life, living abroad.
+
+109
+00:09:53,769 --> 00:10:01,636
+Quincy Larson: And ultimately, much later, I had kind of a second thing where I learned like technology is really, really gosh darn useful.
+
+110
+00:10:02,316 --> 00:10:05,499
+Quincy Larson: And that's when I learned to code and automated stuff for my school and stuff.
+
+111
+00:10:05,519 --> 00:10:09,422
+Quincy Larson: But did you have an early kind of awakening at some point?
+
+112
+00:10:09,442 --> 00:10:19,329
+Quincy Larson: Do you remember a distinct period of your life where you're like, hey, I can do a lot more than other people around me are doing, my peers?
+
+113
+00:10:19,409 --> 00:10:20,950
+Quincy Larson: Was there such an awakening for you?
+
+114
+00:10:24,453 --> 00:10:27,417
+Leon Noel: I wanted to be comfortable.
+
+115
+00:10:27,437 --> 00:10:30,841
+Leon Noel: I wanted to have a good life.
+
+116
+00:10:31,301 --> 00:10:40,452
+Leon Noel: And I think early on, especially as like a kid of color, you're kind of taught this very, it's just like doctor, lawyer, dentist, it comes up over and over and over again.
+
+117
+00:10:40,472 --> 00:10:54,156
+Leon Noel: And it comes from maybe our families and the folks in our community not knowing kind of all of the opportunities that are available, but those are the safe pathways that Dr.
+
+118
+00:10:54,216 --> 00:10:54,857
+Leon Noel: Lurie Dent is.
+
+119
+00:10:54,917 --> 00:10:56,959
+Leon Noel: And so yeah, for 100 years.
+
+120
+00:10:57,480 --> 00:10:58,541
+Leon Noel: Yeah, really?
+
+121
+00:10:58,582 --> 00:10:58,802
+Leon Noel: Yeah.
+
+122
+00:10:58,842 --> 00:10:59,683
+Leon Noel: So it's proven.
+
+123
+00:10:59,703 --> 00:11:05,107
+Leon Noel: So that's kind of the path that I got put on as someone who was successful pretty early academically.
+
+124
+00:11:05,127 --> 00:11:06,967
+Leon Noel: I did well in elementary school.
+
+125
+00:11:07,047 --> 00:11:12,389
+Leon Noel: I used to have to go from my school to another school every week to do other programs.
+
+126
+00:11:13,210 --> 00:11:20,233
+Leon Noel: And I saw how hard my grandparents had to work.
+
+127
+00:11:20,933 --> 00:11:26,015
+Leon Noel: I saw how hard my grandfather worked, specifically, in a boiler room every day.
+
+128
+00:11:26,055 --> 00:11:26,695
+Leon Noel: It was hot.
+
+129
+00:11:26,775 --> 00:11:27,836
+Leon Noel: They were pulling valves.
+
+130
+00:11:29,560 --> 00:11:44,393
+Leon Noel: I saw what hardware could do, and I wanted to do something that would enable me to have a good life, but maybe not be so sweaty, right?
+
+131
+00:11:44,893 --> 00:11:48,936
+Leon Noel: And so that idea led me to look into Dr.
+
+132
+00:11:48,976 --> 00:11:49,817
+Leon Noel: Larry Dentist, Dr.
+
+133
+00:11:49,877 --> 00:11:50,558
+Leon Noel: Larry Dentist.
+
+134
+00:11:52,931 --> 00:11:59,273
+Leon Noel: As I went through middle school, I was very focused on getting into one of our magnet schools.
+
+135
+00:11:59,673 --> 00:12:04,775
+Leon Noel: So Philly has some amazing schools that you kind of test in, and it's more of like a lottery now, too, as well.
+
+136
+00:12:05,335 --> 00:12:06,775
+Leon Noel: And I went to engineering and science.
+
+137
+00:12:07,095 --> 00:12:18,558
+Leon Noel: And engineering and science was geared around getting folks into engineering and science, and had tracks that you could follow, and a really good placement rate into universities.
+
+138
+00:12:20,519 --> 00:12:27,023
+Leon Noel: For a while, my sophomore, junior, senior year, pretty much every lunch period was spent with Ms.
+
+139
+00:12:27,063 --> 00:12:37,890
+Leon Noel: Brown, who's my guidance counselor, and would make sure that I was getting access to everything I needed to do well academically and to get into really good schools.
+
+140
+00:12:38,491 --> 00:12:42,934
+Leon Noel: And coming from a low-income family, it's really expensive, so Ms.
+
+141
+00:12:42,974 --> 00:12:59,845
+Leon Noel: Brown would make sure that I had vouchers for everything that I could take the SAT for free, that I could apply to schools for free, that would get me into all the best summer programs that could help me academically.
+
+142
+00:13:00,305 --> 00:13:08,510
+Leon Noel: I did Upward Bound for a while, made sure I had access to things that I didn't, like calculators and things like that.
+
+143
+00:13:08,590 --> 00:13:17,014
+Leon Noel: And so my school, I owe a lot to in terms of getting me prepared for eventually what I would go to is Yale.
+
+144
+00:13:17,474 --> 00:13:36,723
+Leon Noel: And so for me, I think I've just been really blessed to be the product of a school system that if I wanted it, if I wanted to work hard, if I wanted to put in the hours and I played three sports, I did every club imaginable, but I had really amazing people that guided me through that process.
+
+145
+00:13:37,184 --> 00:13:49,754
+Leon Noel: And then I was able to, make it from from ENS into Yale and then went into hard sciences and was on this track to be a doctor, right?
+
+146
+00:13:50,354 --> 00:13:50,615
+Leon Noel: Dr.
+
+147
+00:13:50,635 --> 00:13:52,016
+Leon Noel: Laura Dentis, I chose doctor.
+
+148
+00:13:52,036 --> 00:14:02,502
+Leon Noel: My mom was an LPN and I got to grow up in doctor's offices and see and talk to folks.
+
+149
+00:14:02,602 --> 00:14:04,623
+Leon Noel: And that was kind of the path I was on.
+
+150
+00:14:04,683 --> 00:14:19,389
+Leon Noel: And it's kind of funny because I was doing computer science, I was in an engineering high school, and I just didn't allow myself to see that as my path or my career, even though that's where eventually I should have been and eventually did make it to.
+
+151
+00:14:19,789 --> 00:14:22,990
+Leon Noel: And so that's kind of the long winding path into, yeah.
+
+152
+00:14:23,570 --> 00:14:27,475
+Quincy Larson: Awesome, and LPN is Licensed Practitioner, Licensed Practicing Nurse?
+
+153
+00:14:27,956 --> 00:14:30,339
+Leon Noel: Yeah, it's like a vocational nurse basically.
+
+154
+00:14:30,379 --> 00:14:38,649
+Leon Noel: So instead of doing, now I guess the track is like your bachelors and you get like your RN, this was a vocational pathway to being a nurse.
+
+155
+00:14:39,591 --> 00:14:39,771
+Quincy Larson: Yeah.
+
+156
+00:14:39,951 --> 00:14:40,111
+Quincy Larson: Yeah.
+
+157
+00:14:40,131 --> 00:14:41,232
+Quincy Larson: I just want to make sure I got that right.
+
+158
+00:14:41,272 --> 00:14:51,015
+Quincy Larson: And I have like this policy that like, no matter how common the acronym is, I always try to spell it out for especially for our listeners abroad, non native English speaker listeners as well.
+
+159
+00:14:51,215 --> 00:14:53,736
+Quincy Larson: Um, uh, so, okay.
+
+160
+00:14:53,756 --> 00:14:56,396
+Quincy Larson: So just recapitulate some of that.
+
+161
+00:14:56,416 --> 00:14:57,617
+Quincy Larson: I've been taking detailed notices.
+
+162
+00:14:57,657 --> 00:15:02,398
+Quincy Larson: You talk just because this is so interesting and I'll, um, I'll email these to myself.
+
+163
+00:15:02,778 --> 00:15:05,599
+Quincy Larson: These are not for public consumption, but it's basically the contents of this conversation.
+
+164
+00:15:05,659 --> 00:15:06,260
+Quincy Larson: It's public now.
+
+165
+00:15:06,620 --> 00:15:11,541
+Quincy Larson: So, um, It sounds like you didn't.
+
+166
+00:15:11,641 --> 00:15:12,441
+Quincy Larson: it just didn't even click.
+
+167
+00:15:12,461 --> 00:15:33,555
+Quincy Larson: It didn't even really occur to you that software engineering was a field you could go into because like so many people coming from underprivileged backgrounds, so many, you know, second generation immigrants or even first generation immigrants, so many people growing up who are kind of still in the shadow of inequality, like racial inequality that's systemic.
+
+168
+00:15:33,675 --> 00:15:44,524
+Quincy Larson: That is the reason one of the reasons why, you know, wealth among black families is like Something like 1 10th of like white families that have been in the US the same duration of time.
+
+169
+00:15:44,564 --> 00:15:50,969
+Quincy Larson: I mean, it's like ridiculous, but because of these circumstances You were pushed to do.
+
+170
+00:15:51,049 --> 00:15:51,310
+Quincy Larson: Dr.
+
+171
+00:15:51,350 --> 00:15:56,834
+Quincy Larson: Lawyer dentist and again like most of my doctors Dentists
+
+172
+00:15:57,395 --> 00:15:57,555
+Leon Noel: that
+
+173
+00:15:57,655 --> 00:16:23,026
+Quincy Larson: I haven't had any lawyers thankfully like over the years have been people that who came from a different country, like their parents came from a different country, or that in many cases as doctors, they literally came from like India, past the USMLE, which is this incredibly stringent test, essentially like recertified as doctors, a very lengthy, costly process, just so they could practice in the US because the US is like, you know, a great place to live.
+
+174
+00:16:23,466 --> 00:16:24,888
+Quincy Larson: And it's a great place to work as a physician.
+
+175
+00:16:25,569 --> 00:16:27,372
+Quincy Larson: Generally, I guess I shouldn't speak for all that.
+
+176
+00:16:27,432 --> 00:16:33,803
+Quincy Larson: there may be some positions in the audience who take issue with that because of regulatory issues and all this other stuff.
+
+177
+00:16:35,703 --> 00:16:42,407
+Quincy Larson: My point is, you were so focused on that because that is what success sounded like.
+
+178
+00:16:42,927 --> 00:16:50,472
+Quincy Larson: That was like the family's perception of success and software engineering is like a relatively new thing that is not well understood.
+
+179
+00:16:50,552 --> 00:16:54,775
+Quincy Larson: And it's not a surprise because software engineering has only existed a few decades, right?
+
+180
+00:16:55,555 --> 00:17:12,515
+Quincy Larson: Maybe you could talk about like, what that awakening to software engineering was like and how you went about, okay, I'm going to go much deeper on coding and learning about computer science and math, like all these things that you need to be a successful software engineer.
+
+181
+00:17:13,315 --> 00:17:18,178
+Quincy Larson: Oh, no, no, I you may take issue with me saying like you need a whole lot of math, for example, or something like that.
+
+182
+00:17:18,438 --> 00:17:23,961
+Quincy Larson: I don't think that's necessarily true for a lot of jobs, but I always tell people like there is no knowledge.
+
+183
+00:17:24,001 --> 00:17:25,041
+Quincy Larson: that is not like.
+
+184
+00:17:25,582 --> 00:17:27,823
+Quincy Larson: you should definitely learn math if you have the time.
+
+185
+00:17:27,903 --> 00:17:30,725
+Quincy Larson: It's probably not the highest priority if you just want to go get a job as a developer.
+
+186
+00:17:31,092 --> 00:17:33,614
+Quincy Larson: Sorry, but my question for you, Leon.
+
+187
+00:17:34,354 --> 00:17:34,795
+Quincy Larson: Mathematics.
+
+188
+00:17:34,875 --> 00:17:35,195
+Quincy Larson: All right.
+
+189
+00:17:35,235 --> 00:17:36,055
+Quincy Larson: Complete introduction.
+
+190
+00:17:36,616 --> 00:17:36,956
+Quincy Larson: Right on.
+
+191
+00:17:37,076 --> 00:17:37,336
+Quincy Larson: OK.
+
+192
+00:17:37,376 --> 00:17:39,137
+Quincy Larson: So I'm glad to hear that.
+
+193
+00:17:39,178 --> 00:17:45,802
+Quincy Larson: Like, yeah, because a lot of times I hear like, I think one of the pieces of misinformation that's going around is like, oh, you don't need math to be a developer.
+
+194
+00:17:46,242 --> 00:17:47,323
+Quincy Larson: Like, I don't know any math.
+
+195
+00:17:47,343 --> 00:17:49,164
+Quincy Larson: Like, I just took high school math and I'm a developer.
+
+196
+00:17:49,565 --> 00:17:55,348
+Quincy Larson: And like, That is true to an extent, but there is kind of like a ceiling that you're going to hit in your engineering career.
+
+197
+00:17:55,588 --> 00:18:02,311
+Quincy Larson: If you don't like at least take some time to learn some mathematics and you can learn mathematics right here on Free Code Camp's YouTube channel.
+
+198
+00:18:02,732 --> 00:18:10,256
+Quincy Larson: We have courses on pretty much every engineering math topic that you would learn at like an undergraduate engineering program.
+
+199
+00:18:10,916 --> 00:18:14,358
+Quincy Larson: So, you know, it's just investment of time.
+
+200
+00:18:14,418 --> 00:18:19,921
+Quincy Larson: And that's a big thing we'll talk about in a little bit is like, is it really free in the sense that you have to invest your time and energy?
+
+201
+00:18:20,401 --> 00:18:23,463
+Quincy Larson: And not everybody has equal time and energy.
+
+202
+00:18:23,483 --> 00:18:28,245
+Quincy Larson: Some people have all kinds of different circumstances that inform their availability to learn to code.
+
+203
+00:18:28,725 --> 00:18:29,986
+Quincy Larson: So we'll talk about that in a minute.
+
+204
+00:18:30,006 --> 00:18:32,007
+Quincy Larson: But like, how did you approach this?
+
+205
+00:18:32,147 --> 00:18:33,908
+Quincy Larson: And like, maybe how old were you?
+
+206
+00:18:34,028 --> 00:18:36,690
+Quincy Larson: Were you still in school when you realized that you wanted to do CS?
+
+207
+00:18:37,850 --> 00:18:42,761
+Leon Noel: Yeah, so I was always building.
+
+208
+00:18:43,521 --> 00:18:50,705
+Leon Noel: So when I started in sixth grade, I learned QBasic and I would go to the libraries and tinker and build.
+
+209
+00:18:50,745 --> 00:18:57,308
+Leon Noel: When I was in high school, Upward Bound got me a TI-83 Plus calculator, which I still have.
+
+210
+00:18:57,348 --> 00:18:58,989
+Leon Noel: It's like in my drawer over here somewhere.
+
+211
+00:18:59,009 --> 00:19:03,192
+Leon Noel: And you could write code for that calculator.
+
+212
+00:19:03,572 --> 00:19:05,113
+Leon Noel: And I remember swapping.
+
+213
+00:19:05,153 --> 00:19:08,135
+Leon Noel: I felt like it was like old school, you know, like how people used to swap floppies.
+
+214
+00:19:08,255 --> 00:19:14,379
+Leon Noel: I would swap the games and programs from the calculator and go to the library.
+
+215
+00:19:14,419 --> 00:19:24,966
+Leon Noel: And like, I remember the thing I wanted for one Christmas was like the cable that connected the calculator to the computer so that I could like put my code on it.
+
+216
+00:19:25,086 --> 00:19:35,475
+Leon Noel: And so I remember very early working on calculator games and other fun stuff that I just wanted to bring into the world or modify and hack on.
+
+217
+00:19:35,515 --> 00:19:36,837
+Leon Noel: And so that was always really fun.
+
+218
+00:19:36,857 --> 00:19:41,822
+Leon Noel: And then I had that kind of formal C++ in high school.
+
+219
+00:19:41,842 --> 00:19:44,524
+Leon Noel: And then when I got to university, it all went out the window.
+
+220
+00:19:44,544 --> 00:19:45,946
+Leon Noel: I was doing hard biology.
+
+221
+00:19:45,966 --> 00:19:49,429
+Leon Noel: I was doing eventually biological anthropology.
+
+222
+00:19:49,469 --> 00:19:52,032
+Leon Noel: I was looking at hormones, testosterone and stuff like that.
+
+223
+00:19:52,552 --> 00:19:57,858
+Leon Noel: But this entire time I'd always been building, tinkering, I really liked entrepreneurship.
+
+224
+00:19:58,178 --> 00:20:02,462
+Leon Noel: I was always trying to start ideas, small companies, things like that.
+
+225
+00:20:02,562 --> 00:20:13,053
+Leon Noel: And I had started one kind of simple project that went pretty viral in New Haven, New York area.
+
+226
+00:20:13,833 --> 00:20:17,675
+Leon Noel: And that kind of really showed me some of the power of these skills that I've been kind of accumulating.
+
+227
+00:20:18,215 --> 00:20:28,821
+Leon Noel: But the real kind of awakening for me for computer science was every summer I was doing lab work and I had figured out how to like survive.
+
+228
+00:20:29,441 --> 00:20:35,864
+Leon Noel: When you're low income going into like an Ivy League school, basically they give you a full ride right off the rip.
+
+229
+00:20:36,024 --> 00:20:45,729
+Leon Noel: And so I had figured out that if I didn't live on campus, they would give me whatever the amount of money was to stay on campus, they would give me.
+
+230
+00:20:46,210 --> 00:20:48,611
+Leon Noel: And I was able to use that to do stuff.
+
+231
+00:20:48,671 --> 00:20:53,254
+Leon Noel: I would pay rent and food, but I was happy eating pasta and pasta sauce.
+
+232
+00:20:53,274 --> 00:21:00,558
+Leon Noel: And so I actually had money to live and do all the things that all my fellow students were doing because I had figured out this way of doing it.
+
+233
+00:21:01,639 --> 00:21:06,221
+Leon Noel: But I ran out of money one summer, and it was getting pretty dicey pretty quickly.
+
+234
+00:21:06,322 --> 00:21:10,003
+Leon Noel: I really didn't have any money for food left, literally hungry.
+
+235
+00:21:10,804 --> 00:21:14,645
+Leon Noel: And I realized that I could do things like.
+
+236
+00:21:14,805 --> 00:21:16,345
+Leon Noel: I was looking up like quick jobs.
+
+237
+00:21:16,365 --> 00:21:19,306
+Leon Noel: And then I was like, wait a minute, let me, let me see if I can build somebody a website.
+
+238
+00:21:19,366 --> 00:21:19,966
+Leon Noel: I know how to do it.
+
+239
+00:21:19,986 --> 00:21:23,607
+Leon Noel: I've been building all these like landing pages and small things with code before.
+
+240
+00:21:24,107 --> 00:21:26,368
+Leon Noel: So I put on Craigslist, Hey, I'll build you a site.
+
+241
+00:21:26,388 --> 00:21:27,528
+Leon Noel: I can get it done today.
+
+242
+00:21:27,548 --> 00:21:31,950
+Leon Noel: And somebody responded and they paid a deposit.
+
+243
+00:21:31,970 --> 00:21:36,373
+Leon Noel: and My life changed from that moment.
+
+244
+00:21:36,713 --> 00:21:38,595
+Leon Noel: I skipped all the way to the grocery store.
+
+245
+00:21:38,955 --> 00:21:39,716
+Leon Noel: I bought my pasta.
+
+246
+00:21:39,756 --> 00:21:41,517
+Leon Noel: I bought my pasta sauce for the month.
+
+247
+00:21:42,138 --> 00:21:43,159
+Leon Noel: I built in the site.
+
+248
+00:21:43,399 --> 00:21:55,770
+Leon Noel: And in that moment, something very clear happened in my brain that I had a real skill, a skill that could provide, that could put food on the table, a skill that would make it.
+
+249
+00:21:55,810 --> 00:21:57,731
+Leon Noel: so I was never fucking hungry again.
+
+250
+00:21:57,751 --> 00:21:58,531
+Leon Noel: Sorry, oops, sorry, Chris.
+
+251
+00:21:58,992 --> 00:21:59,552
+Quincy Larson: It's cool.
+
+252
+00:21:59,572 --> 00:22:00,492
+Leon Noel: Again, again.
+
+253
+00:22:00,912 --> 00:22:05,914
+Quincy Larson: Yeah, if anybody like, we don't edit this podcast at all, so I'm not gonna edit out the swear words.
+
+254
+00:22:05,954 --> 00:22:10,216
+Quincy Larson: That's like a, unless there's like something really bad that happens, like I had a coughing fit once.
+
+255
+00:22:13,137 --> 00:22:15,018
+Leon Noel: And so that changed everything.
+
+256
+00:22:15,919 --> 00:22:34,926
+Leon Noel: Until this day, I still freelance and I, that's the reason why a lot of the things I do today, the resilient coders, the 100 devs is like, I want anybody that's ever felt that way to know that there is this option, this ability to develop skills that no one can take away from you, that can put legitimate food on the table.
+
+257
+00:22:35,367 --> 00:22:38,728
+Leon Noel: And so that's when I kind of went all in on more of the engineering piece.
+
+258
+00:22:40,396 --> 00:22:40,676
+Quincy Larson: Awesome.
+
+259
+00:22:41,137 --> 00:22:47,142
+Quincy Larson: Yeah, well, um, that sounds like an amazing discovery of like powers that you just had latent within you.
+
+260
+00:22:47,723 --> 00:22:52,247
+Quincy Larson: that necessity brought forth, you know, necessity is the mother of invention, right?
+
+261
+00:22:53,689 --> 00:23:01,256
+Quincy Larson: You were forced to basically by your circumstance to like, think outside the proverbial box, come up with a way to get money to buy your pasta.
+
+262
+00:23:01,936 --> 00:23:06,880
+Quincy Larson: Um, I, you know, I definitely, uh, remember the lean college.
+
+263
+00:23:06,940 --> 00:23:08,521
+Quincy Larson: Here's some sissing off pasta.
+
+264
+00:23:08,881 --> 00:23:10,102
+Quincy Larson: We got the smack ramen.
+
+265
+00:23:10,262 --> 00:23:14,945
+Quincy Larson: If anybody, like, not the good, like, ramyun, like Korean ramen, but like, it was just called smack.
+
+266
+00:23:16,486 --> 00:23:17,467
+Quincy Larson: We'd always joke about it.
+
+267
+00:23:17,547 --> 00:23:24,832
+Quincy Larson: Like when you're hungry enough, it's almost like, you know, like a drug because it's just like, you feel so sated afterward.
+
+268
+00:23:24,852 --> 00:23:26,753
+Quincy Larson: It's terrible for you.
+
+269
+00:23:27,193 --> 00:23:28,434
+Quincy Larson: But what kind of pasta?
+
+270
+00:23:28,594 --> 00:23:32,416
+Quincy Larson: Did you have a particular build of pasta that you liked?
+
+271
+00:23:32,436 --> 00:23:35,418
+Leon Noel: This is way back.
+
+272
+00:23:35,498 --> 00:23:38,280
+Leon Noel: Whatever the cheapest was, I was going to survive.
+
+273
+00:23:38,340 --> 00:23:38,820
+Leon Noel: I didn't care.
+
+274
+00:23:38,880 --> 00:23:40,221
+Leon Noel: Nowadays, I probably have some preferences.
+
+275
+00:23:40,281 --> 00:23:47,245
+Leon Noel: But back then, whatever was on sale, whatever was the cheapest, the supermarket nearest had this clearance aisle.
+
+276
+00:23:47,725 --> 00:23:50,287
+Leon Noel: And in that clearance aisle, they would put the stuff they couldn't sell.
+
+277
+00:23:50,447 --> 00:23:53,749
+Leon Noel: And so whatever was on that rack is what I would grab.
+
+278
+00:23:54,301 --> 00:23:54,621
+Leon Noel: Yeah.
+
+279
+00:23:55,161 --> 00:23:55,381
+Quincy Larson: Yeah.
+
+280
+00:23:55,902 --> 00:24:07,905
+Quincy Larson: And to this day, by the way, like a lot of grocery stores like Walmart, like they'll take their baked goods and put them on a rack like right by the exit, like the staff only place where they have like the garbage compactor where they compact the boxes.
+
+281
+00:24:07,985 --> 00:24:09,626
+Quincy Larson: Like I worked in grocery stores for a few years.
+
+282
+00:24:10,066 --> 00:24:14,308
+Quincy Larson: So basically back where they keep all the mobs and they keep all the, you know, inventory.
+
+283
+00:24:14,328 --> 00:24:17,469
+Quincy Larson: There will be like a little rack and sometimes they'll have baked goods.
+
+284
+00:24:17,489 --> 00:24:21,851
+Quincy Larson: They're like, it's still good, but we can't really sell it because it's going to expire in like a day or two.
+
+285
+00:24:21,931 --> 00:24:24,652
+Quincy Larson: So like I stole snacks and bargains from there.
+
+286
+00:24:25,513 --> 00:24:28,874
+Quincy Larson: But but yeah, just pro tip, if you're going to a U.S.
+
+287
+00:24:29,475 --> 00:24:34,277
+Quincy Larson: grocery store, you can often find like food that's about to expire that you can get like at a heavy discount.
+
+288
+00:24:35,257 --> 00:24:36,958
+Quincy Larson: So that's really cool.
+
+289
+00:24:36,998 --> 00:24:38,699
+Quincy Larson: So how did things unfold from there?
+
+290
+00:24:38,759 --> 00:24:49,887
+Quincy Larson: So how did you go from that first contract work, essentially, that client that you landed through Craigslist, which is how I landed, I think I landed some early clients through Craigslist.
+
+291
+00:24:49,927 --> 00:24:51,148
+Quincy Larson: Craigslist, amazing tool.
+
+292
+00:24:51,168 --> 00:24:55,831
+Quincy Larson: I'm not sure if it's still amazing today, like 12 years since I last used it.
+
+293
+00:24:55,871 --> 00:24:59,753
+Quincy Larson: But yeah, like a lot of early gigs were found on Craigslist.
+
+294
+00:25:00,294 --> 00:25:08,676
+Quincy Larson: How did you go from that to, the deciding, I am a dev, like taking that identity, if you will, and going deeper with it.
+
+295
+00:25:09,216 --> 00:25:09,957
+Leon Noel: Yeah, sure.
+
+296
+00:25:10,097 --> 00:25:19,238
+Leon Noel: So my junior year at Yale, I started a small website called Listful of Hope.
+
+297
+00:25:19,518 --> 00:25:26,000
+Leon Noel: It was kind of like a reverse Craigslist, where if you needed something, you could say what you needed.
+
+298
+00:25:26,020 --> 00:25:30,481
+Leon Noel: So if you needed a jacket and someone in the area had a jacket, you would meet up and they would give you a jacket.
+
+299
+00:25:30,561 --> 00:25:31,981
+Leon Noel: So it was kind of like a gift economy.
+
+300
+00:25:32,641 --> 00:25:37,482
+Leon Noel: It was a very simple site that was just enabling folks to help others in their community.
+
+301
+00:25:37,502 --> 00:25:41,043
+Leon Noel: And it really kind of popped off in New Haven.
+
+302
+00:25:41,423 --> 00:25:44,724
+Leon Noel: And so there was the one winter where it was really popular.
+
+303
+00:25:44,744 --> 00:25:48,925
+Leon Noel: I remember people getting Christmas presents, jackets, gloves, anything you needed.
+
+304
+00:25:49,706 --> 00:25:58,128
+Leon Noel: And I could really see that transition from something that was just a raw skill to me having to build an actual application and having real users.
+
+305
+00:25:59,168 --> 00:25:59,908
+Leon Noel: I was hooked.
+
+306
+00:25:59,948 --> 00:26:01,149
+Leon Noel: I saw the power.
+
+307
+00:26:01,189 --> 00:26:03,490
+Leon Noel: I saw that it could help so many people.
+
+308
+00:26:03,570 --> 00:26:07,212
+Leon Noel: And I knew that these skills would be really advantageous to keep going.
+
+309
+00:26:07,252 --> 00:26:09,913
+Leon Noel: So my junior year, I kind of slowly stopped.
+
+310
+00:26:11,004 --> 00:26:12,826
+Leon Noel: kind of really wanting to do coursework.
+
+311
+00:26:13,586 --> 00:26:30,320
+Leon Noel: Senior year, it became an even bigger problem, and I was trying to finish my thesis to graduate, and I had to get, like, 300 men to spit in a tube, tell me about their sexual histories so I could correlate it to their testosterone levels.
+
+312
+00:26:30,700 --> 00:26:37,506
+Leon Noel: I was trying to, like, show that or find something about BPA in relation to testosterone.
+
+313
+00:26:37,526 --> 00:26:40,609
+Leon Noel: So we drank a lot of plastic water bottles.
+
+314
+00:26:40,949 --> 00:26:44,973
+Leon Noel: And so I was trying to do that before it became really popular, like something people would actually think about.
+
+315
+00:26:44,993 --> 00:26:47,435
+Quincy Larson: BPA-free plastic, which would be good for the kids.
+
+316
+00:26:47,655 --> 00:26:50,597
+Quincy Larson: Just in case, BPA does have deleterious effects.
+
+317
+00:26:50,637 --> 00:26:53,280
+Quincy Larson: We don't want our kids to be drinking from BPA water bottles.
+
+318
+00:26:53,920 --> 00:27:05,395
+Leon Noel: really hard time running that that experiment and apparently people didn't want to you know spit in a tube and tell me about their sexual history for like a bottle of Gatorade and like a pack of gum or something.
+
+319
+00:27:05,456 --> 00:27:26,245
+Leon Noel: and so I wasn't able to recruit enough people for that experiment and I decided to use my coding skills to set up a landing page where a lot of students were always trying to find studies or experiments to participate in because one, they were a lot of fun sometimes and you actually got paid pretty well to do the experiments.
+
+320
+00:27:27,006 --> 00:27:36,556
+Leon Noel: There is one really famous one that people loved where you basically went to a lab, they got you drunk and you played poker, and they're just watching you, how you make risky decisions and things like that.
+
+321
+00:27:37,037 --> 00:27:38,738
+Leon Noel: You got paid a couple hundred dollars to do it.
+
+322
+00:27:39,139 --> 00:27:39,379
+Leon Noel: Wow.
+
+323
+00:27:39,439 --> 00:27:48,608
+Leon Noel: So I made a landing page that had all the studies from Yale, Harvard, Princeton that were trying to get people to come, and I just slipped mine in there.
+
+324
+00:27:49,489 --> 00:28:03,365
+Leon Noel: And it took off because we had all these professors that were promoting it, we had all these students that got real value, they went to the site, they found something fun to do, they got money, and I dropped out my senior year to turn that into a business.
+
+325
+00:28:04,546 --> 00:28:10,610
+Leon Noel: which became SocialSci, and we wound up building academic surveying tools.
+
+326
+00:28:11,110 --> 00:28:15,933
+Leon Noel: We had over 4,000 different universities that used our tools to power their academic research.
+
+327
+00:28:16,573 --> 00:28:23,497
+Leon Noel: And even though that company has been wrapped up for a long time now, we still have research that gets published based off of the data that they collected.
+
+328
+00:28:24,018 --> 00:28:26,299
+Leon Noel: I needed to know more.
+
+329
+00:28:26,579 --> 00:28:32,742
+Leon Noel: My engineers had these magical powers, and I needed to learn that skill for myself.
+
+330
+00:28:32,842 --> 00:28:36,423
+Leon Noel: And so I took my coding education more seriously.
+
+331
+00:28:37,203 --> 00:28:47,127
+Leon Noel: Eventually, I was building other products, other startups as well, and started teaching at General Assembly, helping others acquire these skills too.
+
+332
+00:28:47,187 --> 00:28:48,508
+Leon Noel: So that was the journey.
+
+333
+00:28:49,248 --> 00:28:49,708
+Quincy Larson: It's interesting.
+
+334
+00:28:49,748 --> 00:29:03,634
+Quincy Larson: So first of all, congratulations on building something that 4,000 universities Yeah, it's not easy to get universities to use your stuff like there's like this notorious like sales cycle adoption cycle among universities.
+
+335
+00:29:03,674 --> 00:29:06,875
+Quincy Larson: They're they're very like slow to adopt new tools.
+
+336
+00:29:06,895 --> 00:29:19,697
+Quincy Larson: Yeah, I mean that's that's phenomenal to go from basically like mechanical Turk for being a human test subject to having like an actual project that is getting wide usage.
+
+337
+00:29:20,477 --> 00:29:20,958
+Quincy Larson: That's really amazing.
+
+338
+00:29:20,978 --> 00:29:23,018
+Leon Noel: It's funny that you bring up Mechanical Turk.
+
+339
+00:29:23,078 --> 00:29:29,381
+Leon Noel: That was the reason why we were able to raise VC funding, was because MTurk was becoming more popular.
+
+340
+00:29:29,401 --> 00:29:37,704
+Leon Noel: And what Social Science solved was not just the survey creation, but the participants taking the surveys.
+
+341
+00:29:38,244 --> 00:29:43,827
+Leon Noel: And so part of my pitch deck, and I'll never forget it, was I decided to get my mom a Christmas card.
+
+342
+00:29:44,187 --> 00:29:46,168
+Leon Noel: And I had people on MTurk.
+
+343
+00:29:47,642 --> 00:29:50,625
+Leon Noel: just like hold up the Merry Christmas sign.
+
+344
+00:29:51,306 --> 00:29:56,993
+Leon Noel: And what we had was this one person with a hundred different, like not a hundred, but like a lot of different accounts.
+
+345
+00:29:57,273 --> 00:30:00,136
+Leon Noel: that was just like changing their hat, putting on a different shirt.
+
+346
+00:30:00,437 --> 00:30:02,419
+Leon Noel: But it was like clearly the same person.
+
+347
+00:30:02,879 --> 00:30:08,506
+Leon Noel: And so at this point, Mechanical Turk hadn't solved the like identity online and like how do you stop?
+
+348
+00:30:08,886 --> 00:30:20,076
+Leon Noel: like false participants and that was kind of why we were able to be able to raise money and why we were able to have so many universities trust and use our service because we were solving that problem specifically.
+
+349
+00:30:20,472 --> 00:30:22,152
+Quincy Larson: So it was your mom like, who is this person?
+
+350
+00:30:22,212 --> 00:30:26,674
+Quincy Larson: And why are they so passionate about wishing me a happy birthday?
+
+351
+00:30:26,734 --> 00:30:27,434
+Quincy Larson: It was cool.
+
+352
+00:30:27,474 --> 00:30:33,735
+Leon Noel: There was like 100 people from all over the world with different backgrounds, different cities, different places.
+
+353
+00:30:33,835 --> 00:30:35,336
+Leon Noel: And they all were saying Merry Christmas.
+
+354
+00:30:35,776 --> 00:30:37,556
+Leon Noel: Nowadays, you can probably facilitate that.
+
+355
+00:30:37,596 --> 00:30:39,877
+Leon Noel: But back when we did it, it was pretty cool.
+
+356
+00:30:40,856 --> 00:30:47,158
+Quincy Larson: Yeah, and Mechanical Turk, just for people that are unfamiliar with it, they call it artificial intelligence.
+
+357
+00:30:47,879 --> 00:30:54,541
+Quincy Larson: Obviously, nowadays, a lot of things you would pay someone on Mechanical Turk to do, you just form out to an LLM or something.
+
+358
+00:30:54,601 --> 00:30:58,102
+Quincy Larson: But it was like, hey, I need you.
+
+359
+00:30:58,462 --> 00:31:01,203
+Quincy Larson: Early on, it was like, hey, I need you to solve a capture for me.
+
+360
+00:31:01,364 --> 00:31:05,945
+Quincy Larson: Or hey, I need you to create a Facebook account and like this Facebook group or something like that.
+
+361
+00:31:06,005 --> 00:31:07,706
+Quincy Larson: It was basically getting around.
+
+362
+00:31:08,146 --> 00:31:10,688
+Quincy Larson: the restrictions that different platforms might have in place.
+
+363
+00:31:11,589 --> 00:31:20,956
+Quincy Larson: But in the good, as designed use, would be, for example, getting people to do precisely what Leon said.
+
+364
+00:31:21,056 --> 00:31:25,000
+Quincy Larson: So everybody would get maybe just a few pennies.
+
+365
+00:31:25,660 --> 00:31:28,522
+Quincy Larson: Or doing a hit, I think, or a job or something.
+
+366
+00:31:28,542 --> 00:31:29,463
+Quincy Larson: I can't remember what they were called.
+
+367
+00:31:29,963 --> 00:31:32,385
+Quincy Larson: But yeah, you would do those.
+
+368
+00:31:32,985 --> 00:31:33,745
+Quincy Larson: Is that accurate?
+
+369
+00:31:33,765 --> 00:31:34,946
+Quincy Larson: I haven't actually used it.
+
+370
+00:31:35,006 --> 00:31:36,287
+Leon Noel: Yeah, no, that's pretty close.
+
+371
+00:31:36,667 --> 00:31:40,490
+Leon Noel: It's this whole subfield called human computation, right?
+
+372
+00:31:40,530 --> 00:31:41,371
+Quincy Larson: Human computation.
+
+373
+00:31:43,792 --> 00:31:52,339
+Leon Noel: Some things that computers can't yet do that humans can still do, but figuring out how to do them at scale is really important.
+
+374
+00:31:52,359 --> 00:32:00,466
+Leon Noel: And so Mechanical Turk, you can take a task, break it down into a very small subtask and have thousands and thousands of people do it.
+
+375
+00:32:01,047 --> 00:32:03,209
+Leon Noel: Need for human computation is like labeling data.
+
+376
+00:32:03,229 --> 00:32:05,290
+Leon Noel: Think of like AI training and things like that.
+
+377
+00:32:06,211 --> 00:32:06,752
+Leon Noel: Who are the people?
+
+378
+00:32:06,812 --> 00:32:13,658
+Leon Noel: Like there had to be real people that said that was a a fire hose, or that was a car, or that was a bicycle.
+
+379
+00:32:13,738 --> 00:32:15,620
+Quincy Larson: That's a chihuahua and not a muffin.
+
+380
+00:32:16,060 --> 00:32:17,222
+Leon Noel: Exactly.
+
+381
+00:32:17,242 --> 00:32:19,484
+Quincy Larson: Chihuahuas look a lot like muffins to a computer.
+
+382
+00:32:20,966 --> 00:32:26,996
+Leon Noel: And so figuring out all of that was necessary for a lot of the advancements that we're seeing now.
+
+383
+00:32:27,356 --> 00:32:31,360
+Leon Noel: And there are still things that humans can do very quickly that machines just can't do yet.
+
+384
+00:32:31,800 --> 00:32:34,863
+Leon Noel: And so MTurk still has a good place.
+
+385
+00:32:34,883 --> 00:32:41,569
+Leon Noel: There are other companies that do similar things nowadays, of course, but that labeling and small tasks done at scale.
+
+386
+00:32:42,029 --> 00:32:43,551
+Leon Noel: And there are other cool things you can do too.
+
+387
+00:32:43,611 --> 00:32:53,845
+Leon Noel: So where it's like Instead of giving it to just one person, you give it to five, and if four out of the five do one thing, you know that you can probably trust that thing as opposed to the one person that did it.
+
+388
+00:32:53,885 --> 00:32:55,467
+Quincy Larson: As opposed to the minority report.
+
+389
+00:32:56,068 --> 00:32:57,190
+Quincy Larson: Yeah.
+
+390
+00:32:57,931 --> 00:32:58,792
+Quincy Larson: The dissenting opinion.
+
+391
+00:32:58,812 --> 00:33:01,136
+Quincy Larson: Yeah, that's a good kind of consensus mechanism.
+
+392
+00:33:01,896 --> 00:33:03,397
+Quincy Larson: So, um, okay cool.
+
+393
+00:33:03,498 --> 00:33:04,378
+Quincy Larson: So you built this project.
+
+394
+00:33:04,678 --> 00:33:07,421
+Quincy Larson: we could talk about that a lot more but we have so much more to talk about.
+
+395
+00:33:07,561 --> 00:33:08,862
+Quincy Larson: Yeah, where do you go from there?
+
+396
+00:33:08,902 --> 00:33:12,565
+Quincy Larson: You you basically had a successful project, right?
+
+397
+00:33:12,585 --> 00:33:14,986
+Quincy Larson: Like everybody's dream, especially at this point.
+
+398
+00:33:15,007 --> 00:33:20,311
+Quincy Larson: It sounds like you're pretty young like yeah, like had you finished college at this point like I.
+
+399
+00:33:20,531 --> 00:33:22,072
+Leon Noel: so I dropped out and never finished.
+
+400
+00:33:22,532 --> 00:33:27,598
+Leon Noel: Oh, wow In my senior year at Yale, I had this idea for Social Sci.
+
+401
+00:33:27,618 --> 00:33:28,799
+Leon Noel: I dropped out.
+
+402
+00:33:28,879 --> 00:33:30,001
+Leon Noel: I did Techstars.
+
+403
+00:33:30,021 --> 00:33:32,263
+Quincy Larson: Techstars, an accelerator.
+
+404
+00:33:32,764 --> 00:33:33,164
+Leon Noel: Yeah.
+
+405
+00:33:33,305 --> 00:33:38,290
+Quincy Larson: Popular, like they give you some seed money and then you're in like a program where they kind of coach you?
+
+406
+00:33:38,991 --> 00:33:39,291
+Leon Noel: Exactly.
+
+407
+00:33:39,351 --> 00:33:40,192
+Quincy Larson: Is that accurate?
+
+408
+00:33:40,292 --> 00:33:40,892
+Leon Noel: Yeah, exactly.
+
+409
+00:33:41,152 --> 00:33:47,515
+Leon Noel: They help you lay the foundation for a company and all the skills you might need to know to do that effectively.
+
+410
+00:33:48,095 --> 00:33:49,556
+Leon Noel: TechStars really changed my life.
+
+411
+00:33:49,636 --> 00:33:51,737
+Leon Noel: It really gave me a lot of the skills that I was missing.
+
+412
+00:33:52,477 --> 00:34:00,541
+Leon Noel: Gave me my initial network outside of university and the initial seed funding and then helped me go on to raise more funds for SocialSci.
+
+413
+00:34:01,101 --> 00:34:15,033
+Leon Noel: yeah, while I was running Social Sci, I started teaching at General Assembly, and so General Assembly is one of the first like really big coding boot camp programs, and I was doing their part-time courses for a very long time.
+
+414
+00:34:15,053 --> 00:34:29,350
+Leon Noel: I'm a distinguished faculty with GA even until today, and I was having just hundreds, if not thousands of people be successful, like learning these new skills, learning how to code, getting great jobs.
+
+415
+00:34:30,091 --> 00:34:39,255
+Leon Noel: And at one point it kind of just got overwhelming that I didn't notice anyone that looked like me taking advantage of this program.
+
+416
+00:34:40,097 --> 00:34:41,918
+Leon Noel: One, because it costs a lot of money.
+
+417
+00:34:41,938 --> 00:34:43,779
+Leon Noel: It also costs a lot of time.
+
+418
+00:34:43,799 --> 00:35:07,173
+Leon Noel: And so I started looking for orgs near me in Boston that I could help or support, and I came across Resilient Coders, which at that time, our founder, David Delmar, was really trying to work with court-involved youth and show them, hey, there are these things you could be doing, like coding or things like that, that might help you long-term in life.
+
+419
+00:35:07,233 --> 00:35:22,981
+Leon Noel: And so, I started just going to, we had what are called community hours, where it was just myself, a few other mentors, and a bunch of young folks that were typically court involved or a returning citizen, and just trying to give them these skills.
+
+420
+00:35:23,141 --> 00:35:28,182
+Leon Noel: And then we had the idea of starting a boot camp.
+
+421
+00:35:28,542 --> 00:35:33,783
+Leon Noel: And our founder, David Delmar, said, hey, you've been running these other boot camp programs.
+
+422
+00:35:34,003 --> 00:35:35,384
+Leon Noel: Could you do it for RC?
+
+423
+00:35:35,764 --> 00:35:36,284
+Leon Noel: Said yes.
+
+424
+00:35:36,384 --> 00:35:54,088
+Leon Noel: And then for the past six years, we've built a program that can help folks traditionally of color that have Particularly not completed a degree, go from zero to employable as a software engineer and we've been pretty successful at it.
+
+425
+00:35:54,108 --> 00:35:55,769
+Leon Noel: we've helped hundreds of folks get jobs.
+
+426
+00:35:56,869 --> 00:35:58,190
+Leon Noel: And what starting salaries?
+
+427
+00:35:58,230 --> 00:35:58,530
+Leon Noel: around $92,000.
+
+428
+00:35:58,530 --> 00:35:59,750
+Leon Noel: and for us that's huge because.
+
+429
+00:36:03,331 --> 00:36:11,037
+Leon Noel: for each person we can get from those communities, we're talking about millions and millions of dollars back into those communities over the lifespan of their career.
+
+430
+00:36:11,117 --> 00:36:13,939
+Leon Noel: So started doing resilient coders.
+
+431
+00:36:13,979 --> 00:36:15,440
+Leon Noel: that eventually led me to 100 devs.
+
+432
+00:36:15,520 --> 00:36:17,421
+Quincy Larson: And that's kind of the way forward.
+
+433
+00:36:17,822 --> 00:36:25,447
+Quincy Larson: I want to dive a little more into because we're going to talk a lot about 100 devs, but like resilient coders, you said court involved youth.
+
+434
+00:36:26,668 --> 00:36:53,776
+Quincy Larson: I'm not familiar with the term, but like, you know, I have lots of friends who are like convicted felons and I'm not sure if that if that is essentially like people who early on in life get into trouble maybe because they actually did something wrong or maybe they were profiled and like the very unequal justice system in the United States didn't do its job very well and you know gave them much harsher penalty than a kid should probably have in many cases.
+
+435
+00:36:54,736 --> 00:36:58,022
+Quincy Larson: but Uh, is that like accurate?
+
+436
+00:36:58,062 --> 00:36:58,702
+Quincy Larson: It's like, yeah.
+
+437
+00:36:58,842 --> 00:37:11,653
+Leon Noel: So we had a lot of individuals that we say court involved because exactly the things that you brought up, a lot of the folks that we were working with, they didn't do anything wrong and they were just the wrong place, the wrong time.
+
+438
+00:37:11,673 --> 00:37:19,439
+Leon Noel: We did have folks that had gone down a different path in life to do the things they needed to do, provide for themselves and their families.
+
+439
+00:37:19,500 --> 00:37:26,125
+Leon Noel: And so we wanted to give them a clear path forward to do the the thing with their loved ones.
+
+440
+00:37:26,186 --> 00:37:36,297
+Leon Noel: And so we're trying to get them skills, just skills that they can put into practice to get to a point to where they had a strong, stable, high growth career.
+
+441
+00:37:36,357 --> 00:37:38,459
+Leon Noel: And then that's kind of the birth of RC.
+
+442
+00:37:39,901 --> 00:37:54,855
+Leon Noel: And our dirty little secret that I guess some folks know is that the first dollars we ever took in were from the Boston Police Department because they saw our program as, hey, we're going to spend all this money on incarceration, rehabilitation.
+
+443
+00:37:56,156 --> 00:37:58,138
+Leon Noel: Why not get ahead of it?
+
+444
+00:37:58,799 --> 00:38:01,021
+Leon Noel: And they gave us some funding to help run our first boot camp.
+
+445
+00:38:01,874 --> 00:38:02,734
+Quincy Larson: Yeah, that's awesome.
+
+446
+00:38:03,395 --> 00:38:09,338
+Quincy Larson: Well, it sounds like it was money well spent, given the impact you all have had over the past six years, I think you said.
+
+447
+00:38:10,658 --> 00:38:13,260
+Quincy Larson: So you've got resilient coders going.
+
+448
+00:38:13,480 --> 00:38:24,305
+Quincy Larson: You're teaching there, and it sounds like you're having a big impact, but was there a moment where you're like, I can have an even bigger impact by leveraging the power of the internet?
+
+449
+00:38:24,325 --> 00:38:29,767
+Quincy Larson: Like, what was the process that, and maybe I can back up a second and just say, what is 100 devs?
+
+450
+00:38:31,164 --> 00:38:33,325
+Leon Noel: Yeah, sure.
+
+451
+00:38:33,345 --> 00:38:44,429
+Leon Noel: So 100Devs is a collection of engineers that help build a completely free, live software engineering training program for anyone, anywhere.
+
+452
+00:38:45,470 --> 00:38:46,991
+Leon Noel: That was kind of our genesis.
+
+453
+00:38:47,251 --> 00:38:57,395
+Leon Noel: Now we're also building, and we're going to be piloting this year, a full-service digital agency where real clients come to us to build products.
+
+454
+00:38:58,335 --> 00:39:03,880
+Leon Noel: and get to tap into our amazing alumni that have gone on to work at some of the best tech companies in the world.
+
+455
+00:39:03,920 --> 00:39:07,183
+Leon Noel: We're talking Amazon, LinkedIn, Slack, you name it.
+
+456
+00:39:07,203 --> 00:39:08,384
+Leon Noel: We have an alumni there.
+
+457
+00:39:08,404 --> 00:39:10,546
+Leon Noel: They come back to work on these projects.
+
+458
+00:39:11,267 --> 00:39:13,789
+Leon Noel: Each project is getting broken down into individual tasks.
+
+459
+00:39:14,250 --> 00:39:21,876
+Leon Noel: And then as you're learning, you're also building real code for real companies and getting paid actual money to do it.
+
+460
+00:39:22,557 --> 00:39:38,882
+Leon Noel: We mentioned early on that free isn't always free because it requires you to have an extreme privilege of time to work through all this material to give up your nights and weekends, and we want to do something that helps soften the blow for folks that are going through our program.
+
+461
+00:39:39,562 --> 00:39:40,943
+Leon Noel: Our program is entirely free.
+
+462
+00:39:41,864 --> 00:39:45,186
+Leon Noel: Every resource I have ever given out is always free.
+
+463
+00:39:45,226 --> 00:39:50,369
+Leon Noel: I don't work with anybody that doesn't have a free version or something that we can have access to.
+
+464
+00:39:50,829 --> 00:40:02,917
+Leon Noel: But we did a poll not too long ago that said, hey, we realize a lot of you can't commit the time or take the time away from putting food on the table.
+
+465
+00:40:03,317 --> 00:40:03,897
+Leon Noel: What would it take?
+
+466
+00:40:04,998 --> 00:40:05,939
+Leon Noel: for you to be able to focus.
+
+467
+00:40:06,379 --> 00:40:08,981
+Leon Noel: And it was $200 a week was the average.
+
+468
+00:40:09,561 --> 00:40:10,342
+Leon Noel: We can make that happen.
+
+469
+00:40:10,362 --> 00:40:16,987
+Leon Noel: We can figure out a way to get folks those funds so that they can focus and get through a program like 100 Devs.
+
+470
+00:40:17,067 --> 00:40:18,988
+Leon Noel: And yeah, so now we're a global community.
+
+471
+00:40:19,028 --> 00:40:22,150
+Leon Noel: Our Discord is 60,000 plus strong.
+
+472
+00:40:22,791 --> 00:40:24,612
+Leon Noel: We have alumni all around the world.
+
+473
+00:40:24,752 --> 00:40:41,001
+Leon Noel: And we're just trying to figure out a way for folks to be able to unlock a stable, high growth career put food on the table, support themselves and their family and their loved ones, and luckily we found a lot of folks that believe in that idea in mission
+
+474
+00:40:41,001 --> 00:40:41,521
+Quincy Larson: 2 and we built
+
+475
+00:40:41,541 --> 00:40:42,482
+Leon Noel: a wonderful community around
+
+476
+00:40:42,522 --> 00:40:42,582
+Quincy Larson: it.
+
+477
+00:40:42,802 --> 00:40:47,443
+Quincy Larson: Yeah, and so the mechanics of the community, like.
+
+478
+00:40:47,463 --> 00:41:03,452
+Quincy Larson: first of all, it goes without saying that I'm in awe of what you all are accomplishing with HunterDevs and I've had so many positive interactions with people who are both using like the free CodeCamp curriculum and in the 100 devs, I guess you'd call it like a cohort or an intake.
+
+479
+00:41:03,772 --> 00:41:10,176
+Quincy Larson: Like basically a bunch of people working together through a set kind of like week-to-week program.
+
+480
+00:41:10,276 --> 00:41:16,559
+Quincy Larson: And I, you know, free CodeCamp, we have experimented with like cohorted programs and like, let's see if we can get all these people.
+
+481
+00:41:16,920 --> 00:41:19,541
+Quincy Larson: But what we found is like, it's a lot of work to organize.
+
+482
+00:41:20,962 --> 00:41:26,807
+Quincy Larson: very aware of and like free code camp philosophy is like, let's just build the resources at scale, put them out there.
+
+483
+00:41:27,988 --> 00:41:28,248
+Quincy Larson: Yes.
+
+484
+00:41:28,809 --> 00:41:36,876
+Quincy Larson: Lots of kids who are the, you know, the son or daughter of like software engineers in Palo Alto are going to use free code camp and they're going to use it for free.
+
+485
+00:41:36,976 --> 00:41:42,461
+Quincy Larson: And they, you know, probably could have paid a bunch of money to have a computer science student, like tutor them or something.
+
+486
+00:41:42,481 --> 00:41:42,621
+Quincy Larson: Right.
+
+487
+00:41:43,161 --> 00:41:57,049
+Quincy Larson: But also a lot of kids who are in like a village in rural India or in like kind of like a failed state, which a lot of people have smartphones and can't get on the Internet, even in places like Somalia.
+
+488
+00:41:57,109 --> 00:41:57,309
+Quincy Larson: Right.
+
+489
+00:41:58,550 --> 00:41:59,211
+Quincy Larson: North Korea.
+
+490
+00:41:59,751 --> 00:41:59,971
+Quincy Larson: Right.
+
+491
+00:42:00,031 --> 00:42:02,332
+Quincy Larson: People in North Korea use free code camp sometimes.
+
+492
+00:42:02,973 --> 00:42:05,334
+Quincy Larson: And essentially they can.
+
+493
+00:42:05,514 --> 00:42:06,015
+Quincy Larson: they can learn.
+
+494
+00:42:06,895 --> 00:42:17,820
+Quincy Larson: even though it would be normally prohibitively expensive for them to buy a $20 course on a course website, for example.
+
+495
+00:42:18,080 --> 00:42:27,844
+Quincy Larson: And so our philosophy is we need to make sure that there is a baseline, that everybody has access to comprehensive math, programming, computer science, and English education.
+
+496
+00:42:28,884 --> 00:42:36,953
+Quincy Larson: So that everybody, regardless of their circumstances, if they have time, which not everybody does, but if they have time or they can figure out techniques to make
+
+497
+00:42:36,993 --> 00:42:37,273
+Leon Noel: time,
+
+498
+00:42:38,354 --> 00:42:45,622
+Quincy Larson: to learn even a little each day, then they can make steady forward progress toward the eventual goal of working as a software engineer.
+
+499
+00:42:46,078 --> 00:42:46,238
+Quincy Larson: Right?
+
+500
+00:42:46,538 --> 00:42:59,402
+Quincy Larson: So, so that is kind of like our philosophy is like, let's just make tons of really high quality, free stuff that's essentially subsidized by the community, like the people who are able to give the alumni.
+
+501
+00:43:00,202 --> 00:43:04,663
+Quincy Larson: Sometimes, like we got a gift for $250,000 the other day from CompTIA.
+
+502
+00:43:04,983 --> 00:43:10,565
+Quincy Larson: The CEO of CompTIA is a fan of FreeCodeCamp and uses FreeCodeCamp to expand his JavaScript knowledge.
+
+503
+00:43:10,685 --> 00:43:11,325
+Quincy Larson: Super chill dude.
+
+504
+00:43:11,945 --> 00:43:17,327
+Quincy Larson: You know, Daryl Silver, founder of Thinkful, kicked in $150,000.
+
+505
+00:43:17,327 --> 00:43:25,130
+Quincy Larson: And then, of course, we're getting grants from, like, you know, Linux Foundation and MongoDB and Google and a lot of other organizations.
+
+506
+00:43:25,470 --> 00:43:29,552
+Quincy Larson: But a vast majority of our support comes directly from the community, from people who donate.
+
+507
+00:43:29,592 --> 00:43:31,432
+Quincy Larson: So, freecodegame.org slash donate.
+
+508
+00:43:31,812 --> 00:43:33,533
+Leon Noel: All right, but my point is.
+
+509
+00:43:34,093 --> 00:43:35,354
+Quincy Larson: Oh, yeah, and thank you.
+
+510
+00:43:35,374 --> 00:43:36,754
+Quincy Larson: Thank you for supporting our charity.
+
+511
+00:43:37,135 --> 00:43:38,775
+Quincy Larson: I didn't even realize, I apologize.
+
+512
+00:43:39,856 --> 00:43:44,157
+Quincy Larson: But maybe you're getting my periodic donor email, like I said, a donor email.
+
+513
+00:43:44,338 --> 00:43:44,478
+Quincy Larson: Yeah.
+
+514
+00:43:47,102 --> 00:43:54,026
+Quincy Larson: My point in all this little tangent is to say that Free Code Camp, we don't have the bandwidth to do things that don't scale.
+
+515
+00:43:55,147 --> 00:43:58,849
+Quincy Larson: And you are doing things that don't scale at all, really.
+
+516
+00:43:58,909 --> 00:44:02,171
+Quincy Larson: Maybe you figured out some techniques to get cohorts to scale.
+
+517
+00:44:02,351 --> 00:44:04,472
+Quincy Larson: Because you mentioned your Discord has 60,000 people in it.
+
+518
+00:44:08,855 --> 00:44:14,858
+Quincy Larson: actually getting on stream and like teaching for like a marathon three five hours like however long you go.
+
+519
+00:44:14,878 --> 00:44:16,258
+Quincy Larson: it's really inspiring.
+
+520
+00:44:16,958 --> 00:44:19,580
+Quincy Larson: uh definitely catch some of the live streams if you can or i've watched.
+
+521
+00:44:20,040 --> 00:44:22,341
+Quincy Larson: i watch everything at double speed so i watch like the video on demand.
+
+522
+00:44:22,801 --> 00:44:23,321
+Quincy Larson: yeah that.
+
+523
+00:44:23,741 --> 00:44:35,771
+Quincy Larson: but uh like I guess you saw from coming from the like intensive program where you're teaching folks like you saw the merit of quality not just quantity or like.
+
+524
+00:44:36,211 --> 00:44:37,172
+Quincy Larson: I guess like content.
+
+525
+00:44:37,212 --> 00:44:40,315
+Quincy Larson: like I'm not like doing things that don't scale really.
+
+526
+00:44:40,835 --> 00:44:46,897
+Quincy Larson: And helping people individually doesn't really scale, but that's not necessarily the idea.
+
+527
+00:44:46,957 --> 00:44:59,441
+Quincy Larson: The idea is to give a whole lot of attention to a smaller number of people and to really make sure that those people can ramp up to, you know, an impressive, he said like, what was the figure?
+
+528
+00:44:59,461 --> 00:45:02,962
+Quincy Larson: you said was like the median income of people who graduated?
+
+529
+00:45:02,962 --> 00:45:04,782
+Leon Noel: $19,000 for first time coders, yeah.
+
+530
+00:45:06,883 --> 00:45:12,285
+Quincy Larson: That's a lot more than I made in my first developer job, given if it is in Boston, like the cost of living might be higher.
+
+531
+00:45:12,325 --> 00:45:16,327
+Quincy Larson: But I mean, that's a lot of freaking money for people that like.
+
+532
+00:45:16,347 --> 00:45:19,848
+Quincy Larson: I imagine some of these people don't have university degrees.
+
+533
+00:45:19,928 --> 00:45:28,152
+Quincy Larson: I didn't even know that you hadn't completed your degree, although dropping out of Yale is probably very different from dropping out of like, you know, Central State University, right?
+
+534
+00:45:29,452 --> 00:45:29,672
+Quincy Larson: Yeah.
+
+535
+00:45:30,072 --> 00:45:32,413
+Quincy Larson: But sorry, I've been talking for the last three minutes.
+
+536
+00:45:32,493 --> 00:45:35,494
+Quincy Larson: I'm just very excited about how you approach this.
+
+537
+00:45:35,954 --> 00:45:42,896
+Quincy Larson: And I want to make sure our audience appreciates the, I guess, counterintuitiveness of what you've done.
+
+538
+00:45:44,416 --> 00:45:49,863
+Quincy Larson: And how you've been able to like, people weren't doing this because it was perhaps counterintuitive to do so.
+
+539
+00:45:49,943 --> 00:45:50,903
+Quincy Larson: It was probably very daunting.
+
+540
+00:45:50,923 --> 00:45:51,524
+Leon Noel: It's a bad idea.
+
+541
+00:45:51,624 --> 00:45:52,284
+Leon Noel: Don't do it.
+
+542
+00:45:54,266 --> 00:45:54,546
+Leon Noel: Yeah.
+
+543
+00:45:54,586 --> 00:46:02,872
+Quincy Larson: So maybe you can talk about that, how you have to do stuff that doesn't scale, and ways that it doesn't scale, and then ways, techniques you figured out to scale it a little bit.
+
+544
+00:46:03,593 --> 00:46:03,813
+Leon Noel: Sure.
+
+545
+00:46:03,833 --> 00:46:04,493
+Leon Noel: Yeah, happy to.
+
+546
+00:46:04,934 --> 00:46:07,916
+Leon Noel: I think the first thing, though, is just shout out Free Code Camp.
+
+547
+00:46:08,036 --> 00:46:11,679
+Leon Noel: You all laid the foundation for so many folks to learn.
+
+548
+00:46:11,739 --> 00:46:26,200
+Leon Noel: And one of the things I am always hyping, especially in 100,000, our Discord is, I think a lot of folks that go into this space don't put in the work to do the things that really matter the most.
+
+549
+00:46:26,701 --> 00:46:31,044
+Leon Noel: And so one of the things I've always admired about free code camp is like this commitment to filling the gaps.
+
+550
+00:46:31,184 --> 00:46:35,688
+Leon Noel: And so realizing that most people don't have the privilege of speaking English.
+
+551
+00:46:35,708 --> 00:46:38,290
+Leon Noel: So we're gonna build a full, like, how do you speak English?
+
+552
+00:46:38,410 --> 00:46:40,072
+Leon Noel: course, right?
+
+553
+00:46:40,112 --> 00:46:40,552
+Leon Noel: That's huge.
+
+554
+00:46:40,612 --> 00:46:48,808
+Leon Noel: It's like very progressively thinking about what do our folks going through our program absolutely need.
+
+555
+00:46:48,848 --> 00:46:52,651
+Leon Noel: And so that's why I'm so happy that Free Code Camp exists.
+
+556
+00:46:52,712 --> 00:47:00,499
+Leon Noel: It's why it's one of the first things I always recommend to new folks getting into tech and why I think you all will continue to be so successful.
+
+557
+00:47:00,519 --> 00:47:05,183
+Leon Noel: because it's just like this relentless pursuit of making tech more equitable to everyone.
+
+558
+00:47:06,264 --> 00:47:14,795
+Leon Noel: That's why I said really early on in this conversation, I look up to you so much, and a lot of that ethos is what I've tried to bring to 100Devs.
+
+559
+00:47:15,115 --> 00:47:20,301
+Leon Noel: For 100Devs, we got started during the pandemic, and the pandemic hit.
+
+560
+00:47:21,511 --> 00:47:23,473
+Leon Noel: things got really bad really quickly.
+
+561
+00:47:23,814 --> 00:47:35,567
+Leon Noel: So people always like to talk in Boston about like a 2% unemployment rate, but I knew just from looking at the actual data, we looked in our communities of color is already at 12%.
+
+562
+00:47:35,567 --> 00:47:36,808
+Leon Noel: This is pre-pandemic.
+
+563
+00:47:37,369 --> 00:47:42,013
+Leon Noel: If you look during the pandemic, it jumped from 12 to like 33% in some communities.
+
+564
+00:47:42,653 --> 00:47:45,175
+Leon Noel: And so it got real bad real quick.
+
+565
+00:47:45,195 --> 00:48:00,808
+Leon Noel: And I just, if you are already in tech or if you already come from a privileged background, I don't think people really understand what that means when right now, like if you look at the most recent like labor data, like the median income, median, median is 56,000 in the US.
+
+566
+00:48:01,429 --> 00:48:09,893
+Leon Noel: And so if we have, that percent of folks under it, and we're seeing 33 percent unemployment, and then labor data actually includes eligible workers.
+
+567
+00:48:10,393 --> 00:48:15,275
+Leon Noel: It just got real bad real quick and it continues to be a really rough situation for folks.
+
+568
+00:48:16,236 --> 00:48:17,216
+Leon Noel: I'm not a doctor.
+
+569
+00:48:17,896 --> 00:48:30,382
+Leon Noel: I didn't have a skill that I thought that could be helpful to folks that were being affected by the pandemic, but I had been teaching for a while and I knew that I could get folks skills to make them more employable.
+
+570
+00:48:30,382 --> 00:48:36,927
+Leon Noel: 100 Devs started as a way of getting 100 folks into software engineering jobs.
+
+571
+00:48:37,327 --> 00:48:38,869
+Leon Noel: We're way beyond that now.
+
+572
+00:48:39,709 --> 00:48:46,235
+Leon Noel: And I wanted to make a live cohort where we would meet twice a week on the internet.
+
+573
+00:48:46,756 --> 00:48:50,559
+Leon Noel: And I really thought it would be, like you said, just a handful of folks, maybe 5, 10 people.
+
+574
+00:48:51,320 --> 00:48:53,522
+Leon Noel: We did a pilot that was really successful.
+
+575
+00:48:53,962 --> 00:48:57,465
+Leon Noel: Our first cohort was about 300 people every single class.
+
+576
+00:48:58,527 --> 00:48:59,167
+Leon Noel: That was successful.
+
+577
+00:48:59,187 --> 00:49:04,109
+Leon Noel: We did another cohort that was like 3,000 people every single live, every single class.
+
+578
+00:49:04,489 --> 00:49:05,890
+Leon Noel: And so we kind of just built slowly.
+
+579
+00:49:06,390 --> 00:49:11,552
+Leon Noel: We were able to kind of jump from zero to 300, 300 to 3,000.
+
+580
+00:49:11,552 --> 00:49:14,093
+Leon Noel: And we always joke that we're baddies.
+
+581
+00:49:14,553 --> 00:49:16,014
+Leon Noel: Like we're baddies writing bad code.
+
+582
+00:49:16,034 --> 00:49:16,834
+Leon Noel: Like it doesn't matter.
+
+583
+00:49:17,575 --> 00:49:19,435
+Leon Noel: It's about getting the skills that we need.
+
+584
+00:49:19,475 --> 00:49:21,576
+Leon Noel: It's about figuring out things on the fly.
+
+585
+00:49:21,596 --> 00:49:25,718
+Leon Noel: And we just live up to being kind always to ourselves, to others.
+
+586
+00:49:25,838 --> 00:49:27,979
+Leon Noel: And as long as you're willing to say, you know what?
+
+587
+00:49:28,559 --> 00:49:36,365
+Leon Noel: we gotta figure this out, we gotta figure out how do we do this at scale, how do we have 3,000 people live in a class getting help and not feeling lost.
+
+588
+00:49:37,146 --> 00:49:44,031
+Leon Noel: We had to figure systems and ways of doing that and building community that wanted to support that number of folks.
+
+589
+00:49:44,964 --> 00:49:45,244
+Quincy Larson: Awesome.
+
+590
+00:49:45,545 --> 00:49:48,648
+Quincy Larson: What you said there, first of all, I just want to call it that particular insight.
+
+591
+00:49:48,668 --> 00:49:50,210
+Quincy Larson: We're baddies writing bad code.
+
+592
+00:49:50,290 --> 00:49:50,891
+Quincy Larson: It doesn't matter.
+
+593
+00:49:51,371 --> 00:50:02,544
+Quincy Larson: So when I was a teenager, really interested in writing and reading lots of fiction and literary journalism and stuff like that.
+
+594
+00:50:04,565 --> 00:50:07,086
+Quincy Larson: I would always hang out at Denny's like till 2 a.m.
+
+595
+00:50:07,126 --> 00:50:09,968
+Quincy Larson: just talking to random people and learning from them and just writing and stuff.
+
+596
+00:50:10,588 --> 00:50:15,671
+Quincy Larson: And one time like our server, he was kind of a grizzled looking dude.
+
+597
+00:50:15,811 --> 00:50:23,815
+Quincy Larson: Like he would not look at a place in like a bullpen in a newspaper newsroom, if such things even exist in 2024.
+
+598
+00:50:23,815 --> 00:50:27,459
+Quincy Larson: But his advice to me, I'll never forget what he said.
+
+599
+00:50:28,440 --> 00:50:32,064
+Quincy Larson: He said, throw away your first million words.
+
+600
+00:50:34,367 --> 00:50:36,870
+Leon Noel: And I was like, damn, a million words.
+
+601
+00:50:36,910 --> 00:50:38,111
+Quincy Larson: That's like years of writing.
+
+602
+00:50:39,072 --> 00:50:41,794
+Quincy Larson: But just accept that it's gonna suck.
+
+603
+00:50:42,275 --> 00:50:47,319
+Quincy Larson: And the same thing with your code projects, and really the same with any endeavor you take.
+
+604
+00:50:47,819 --> 00:50:55,064
+Quincy Larson: I've been trying to get better at base for the past three or four years, and it takes me forever to record the base intros.
+
+605
+00:50:57,006 --> 00:50:59,328
+Leon Noel: One of the videos I watched, you did it and then sat down.
+
+606
+00:50:59,348 --> 00:51:02,510
+Leon Noel: So I'm telling you that's what I was expecting for today.
+
+607
+00:51:02,610 --> 00:51:06,853
+Leon Noel: So I'm a little sad that I didn't get the base intro live just for me.
+
+608
+00:51:07,774 --> 00:51:11,036
+Quincy Larson: I didn't want to bother you with like watching me screw it up several times.
+
+609
+00:51:11,697 --> 00:51:12,477
+Leon Noel: Yeah, I love it.
+
+610
+00:51:12,517 --> 00:51:22,864
+Quincy Larson: But but yeah, like you just have to accept that the first few thousand hours you spend with an instrument or with like a programming language or with anything is going to be not ready for prime time.
+
+611
+00:51:23,644 --> 00:51:26,406
+Quincy Larson: You know, my wife, she grew up in China.
+
+612
+00:51:26,426 --> 00:51:28,807
+Quincy Larson: We met in grad school and she's now a U.S.
+
+613
+00:51:28,847 --> 00:51:29,248
+Quincy Larson: citizen.
+
+614
+00:51:29,288 --> 00:51:32,270
+Quincy Larson: We brought her over and naturalized her after grad school.
+
+615
+00:51:32,750 --> 00:51:39,253
+Quincy Larson: After we got married, we've been married 19 years and she loved playing piano, right?
+
+616
+00:51:39,393 --> 00:51:54,138
+Quincy Larson: And one of the things that she says in China, people take piano extremely seriously, and they have this saying in Chinese, which is basically, you spend thousands of hours behind the stage practicing for five minutes on the stage.
+
+617
+00:51:54,499 --> 00:51:56,479
+Quincy Larson: That's just the nature of the game.
+
+618
+00:51:57,200 --> 00:52:25,754
+Quincy Larson: And with code, if you're writing some serious system that's gonna, code that's gonna be run millions of times, If you're making an open source contribution to FreeCodeCamp's code base, and it's in the platform itself, and this component is going to be rendered 50,000 times a day or something like that, it's okay that it took you a whole lot of work to get that code into the shape, and it's okay that it took a lot of practice and trial and error before you got the skills to be able to create that code.
+
+619
+00:52:26,154 --> 00:52:27,215
+Quincy Larson: That code is just going to keep going.
+
+620
+00:52:28,135 --> 00:52:38,223
+Quincy Larson: you know, uh, when Elvis goes up on the stage and he's being filmed, uh, and he's playing, I use Elvis because I love Elvis.
+
+621
+00:52:38,243 --> 00:52:40,745
+Quincy Larson: I'm sure he's overrated or whatever, but he's, he's the man.
+
+622
+00:52:41,126 --> 00:52:44,989
+Quincy Larson: So, I mean, like that guy practiced like crazy.
+
+623
+00:52:45,369 --> 00:52:51,694
+Quincy Larson: That's definitely the same with, uh, for example, like James Jamerson, the greatest bassist of all time, basically.
+
+624
+00:52:52,095 --> 00:52:57,360
+Quincy Larson: Uh, or, um, You know, like pretty much any musician, they're going to practice like crazy.
+
+625
+00:52:57,400 --> 00:53:00,783
+Quincy Larson: They're going to rehearse obsessively and they're not going to be satisfied.
+
+626
+00:53:00,983 --> 00:53:10,613
+Quincy Larson: But once that recording is made, once that record is cut, if you there's a great documentary about Thelonious Monk, the jazz pianist.
+
+627
+00:53:11,054 --> 00:53:11,274
+Quincy Larson: Right.
+
+628
+00:53:11,434 --> 00:53:13,456
+Quincy Larson: And he would only do like two takes.
+
+629
+00:53:14,757 --> 00:53:16,599
+Quincy Larson: And he's just like after two takes.
+
+630
+00:53:16,699 --> 00:53:18,100
+Quincy Larson: whatever I do is gonna be garbage.
+
+631
+00:53:18,300 --> 00:53:20,302
+Quincy Larson: I'm done like use one of those takes.
+
+632
+00:53:20,342 --> 00:53:25,686
+Quincy Larson: but how we got how he got so good that he could actually Nail it in one or two takes.
+
+633
+00:53:26,047 --> 00:53:35,895
+Quincy Larson: was he practiced like a maniac and he spent so much time at the piano Where a lot of you know, I guess amateurs would just be like good enough.
+
+634
+00:53:36,275 --> 00:53:50,306
+Quincy Larson: He was not done with that and so I feel the same way about like any undertaking, but certainly with coding, it may seem like coding is not like a synchronous performative event, like where you're having to sit down and perform in that regard.
+
+635
+00:53:50,346 --> 00:53:51,647
+Quincy Larson: You can go and you can edit your code.
+
+636
+00:53:51,667 --> 00:53:52,448
+Quincy Larson: You can iterate on it.
+
+637
+00:53:52,508 --> 00:53:53,769
+Quincy Larson: The tools have gotten so much better.
+
+638
+00:53:54,249 --> 00:54:02,175
+Quincy Larson: Like Free Code Camp, every millisecond or two, you're going to get the tests telling you whether you've met all the test conditions or whether you need to keep tweaking your code, right?
+
+639
+00:54:02,555 --> 00:54:08,210
+Quincy Larson: So you have all these tools to iterate, but at the end of the day, you should still try to approach it like a performance.
+
+640
+00:54:08,310 --> 00:54:12,152
+Quincy Larson: You'll get a lot better if you don't rely so much on the tools catching what you're doing.
+
+641
+00:54:12,192 --> 00:54:18,254
+Quincy Larson: But anyway, I'm kind of going on a tangent, but I just wanted to riff on the insight that it is.
+
+642
+00:54:18,294 --> 00:54:18,994
+Quincy Larson: We're all baddies.
+
+643
+00:54:19,695 --> 00:54:20,895
+Quincy Larson: We're writing bad code.
+
+644
+00:54:20,955 --> 00:54:23,556
+Quincy Larson: It doesn't matter, because you throw away your first million words.
+
+645
+00:54:24,057 --> 00:54:28,699
+Quincy Larson: You spent thousands of hours at the piano before you're playing anything that's worth anybody listening to.
+
+646
+00:54:28,719 --> 00:54:32,120
+Quincy Larson: You just have to accept that this is the nature of reality.
+
+647
+00:54:32,140 --> 00:54:33,801
+Quincy Larson: This is the nature of doing anything that's hard.
+
+648
+00:54:34,947 --> 00:54:36,509
+Quincy Larson: is it's going to be hard.
+
+649
+00:54:36,689 --> 00:54:42,174
+Quincy Larson: You're going to have to work hard and you have to just have that mental fortitude and that's something that comes through in your.
+
+650
+00:54:42,294 --> 00:54:44,236
+Quincy Larson: your video is like it's so supportive.
+
+651
+00:54:44,836 --> 00:54:44,977
+Quincy Larson: Like.
+
+652
+00:54:45,037 --> 00:54:47,399
+Quincy Larson: I love the way that you're just like it's all good.
+
+653
+00:54:47,539 --> 00:54:49,120
+Quincy Larson: Like just this happens to everybody.
+
+654
+00:54:49,161 --> 00:54:50,242
+Quincy Larson: Everybody has to go through this.
+
+655
+00:54:51,738 --> 00:55:02,125
+Quincy Larson: I always like to say, some people may be slightly better at programming aptitude-wise, or they may have some intrinsic quirk that makes them marginally better at programming.
+
+656
+00:55:02,646 --> 00:55:07,389
+Quincy Larson: But those people have probably just forgotten how much time they spent at the keyboard when they were a kid.
+
+657
+00:55:07,409 --> 00:55:09,330
+Quincy Larson: They were privileged enough to grow up with computers.
+
+658
+00:55:09,771 --> 00:55:16,716
+Quincy Larson: When you hear Bill Gates talk about how, oh, I don't actually write out the code until I've figured everything out in my head.
+
+659
+00:55:16,736 --> 00:55:18,377
+Quincy Larson: And then I said, that's nonsense.
+
+660
+00:55:19,403 --> 00:55:24,968
+Quincy Larson: Bill Gates does not just sit down and like write basic from memory because he'd like been moving everything around his head.
+
+661
+00:55:25,068 --> 00:55:25,768
+Quincy Larson: People can't do that.
+
+662
+00:55:25,828 --> 00:55:26,449
+Quincy Larson: I don't believe that.
+
+663
+00:55:26,509 --> 00:55:31,853
+Quincy Larson: Maybe there are some people that have like some extreme form of like, like extreme brains.
+
+664
+00:55:32,154 --> 00:55:35,236
+Quincy Larson: They could do something like that, but I don't believe that Bill Gates could do that sort of stuff.
+
+665
+00:55:35,296 --> 00:55:36,738
+Quincy Larson: I think he's just talking up the mythos.
+
+666
+00:55:37,358 --> 00:55:39,420
+Quincy Larson: You know, he's trying to build up hype for himself.
+
+667
+00:55:39,860 --> 00:55:46,065
+Quincy Larson: And like it's this old kind of like old school elitism that a lot of the early devs, the old guard have.
+
+668
+00:55:46,245 --> 00:55:49,227
+Quincy Larson: And just don't buy that hype is all I want to say.
+
+669
+00:55:49,287 --> 00:55:53,611
+Quincy Larson: And I want to thank you for like dispelling a lot of that, whether you're intentionally dispelling it or not.
+
+670
+00:55:53,691 --> 00:55:57,113
+Quincy Larson: Just telling people like coding is hard, right?
+
+671
+00:55:57,173 --> 00:55:58,835
+Quincy Larson: Like not sugarcoating it.
+
+672
+00:55:59,546 --> 00:56:03,889
+Leon Noel: We call it the trough of sorrow which actually comes from like startup worlds is one of the things.
+
+673
+00:56:03,909 --> 00:56:29,422
+Leon Noel: there's this very classic graph of like Just like really big hill that you go up when you're really excited about something like yeah I'm gonna learn the code on you buy a thousand demi courses cuz buying stuff feels good even though you're not gonna do them and at the very top and then you start like day one of any actual coding program and then you just plummet once you realize how long it's going to take and then you spend all that time going through the trough of sorrow.
+
+674
+00:56:29,802 --> 00:56:38,944
+Leon Noel: and then the most like sick thing about this is that I shouldn't say that but the most twisted thing about this is at the very end there's an even further dip that you have to go through.
+
+675
+00:56:38,964 --> 00:56:42,825
+Leon Noel: yeah where you it's the and then you get into what they call the wiggles of false hope.
+
+676
+00:56:42,845 --> 00:56:45,366
+Leon Noel: so even after you've gone through you've learned everything you needed to learn.
+
+677
+00:56:45,766 --> 00:56:49,588
+Leon Noel: you start actually interviewing to get the job and you're just getting rejected, rejected, rejected.
+
+678
+00:56:49,648 --> 00:56:57,111
+Leon Noel: And so there's just this huge curve, long trough of sorrow that for a lot of folks takes years to get through.
+
+679
+00:56:57,131 --> 00:57:03,954
+Leon Noel: Then once you get to the end where you're like trying to actually get something out of it, it gets even worse and then slowly, slowly gets better.
+
+680
+00:57:04,054 --> 00:57:11,157
+Leon Noel: So I think the big thing for what we do, like you mentioned at 100Devs is just helping folks manage that frustration.
+
+681
+00:57:11,937 --> 00:57:14,799
+Leon Noel: We kind of have like three key things that we just say every class almost.
+
+682
+00:57:14,919 --> 00:57:18,342
+Leon Noel: Manage your frustration, be consistent, and take care of yourself.
+
+683
+00:57:18,882 --> 00:57:30,050
+Leon Noel: When you look at how adults learn, the reason why adults kind of probably don't learn as well as they think they could is because they don't manage that frustration piece.
+
+684
+00:57:30,070 --> 00:57:33,753
+Leon Noel: When they look at Language fluency and like language acquisition.
+
+685
+00:57:33,773 --> 00:57:40,334
+Leon Noel: Yeah, they thought that we probably lost the ability to be fluent in our teenage years But they found that that probably isn't true.
+
+686
+00:57:40,375 --> 00:57:49,876
+Leon Noel: It's just once you get out of those years your time is entirely your own and so would you rather do this thing that sucks for two years or would you actually Sit down and do it.
+
+687
+00:57:49,896 --> 00:57:54,737
+Leon Noel: And so yeah folks that can manage that frustration to actually be get through the things they want to do.
+
+688
+00:57:55,177 --> 00:57:57,977
+Leon Noel: And so that's a big part and it's also why we're live.
+
+689
+00:57:58,958 --> 00:58:02,691
+Leon Noel: when you look at other programs.
+
+690
+00:58:02,831 --> 00:58:04,292
+Leon Noel: I love Dr.
+
+691
+00:58:04,312 --> 00:58:05,872
+Leon Noel: Malan out of Harvard, CS50.
+
+692
+00:58:06,013 --> 00:58:07,273
+Leon Noel: I love that.
+
+693
+00:58:07,473 --> 00:58:09,214
+Leon Noel: CS50 is now on FreeCodeCamp.
+
+694
+00:58:09,534 --> 00:58:11,754
+Leon Noel: I read every single article they've ever put out.
+
+695
+00:58:12,215 --> 00:58:19,537
+Leon Noel: And one of the ones that are really interesting is they actually published all of their data for CS50 in the beginning, which was really cool to read through.
+
+696
+00:58:19,557 --> 00:58:27,212
+Leon Noel: And you notice that They had like 150,000 people that signed up for like the first run of the course.
+
+697
+00:58:27,812 --> 00:58:34,014
+Leon Noel: They said like 100,000 people that engaged, but only like 1% completed it, right?
+
+698
+00:58:34,534 --> 00:58:45,457
+Leon Noel: And so that was something that really kind of stuck in my brain because when you looked at the like in-person program, like the live in-person program, it was like 99% completion.
+
+699
+00:58:47,037 --> 00:59:02,598
+Leon Noel: So there's something there, and I think being live, being with a cohort of other individuals, being with real people, being with community can help you ease that frustration, get help when you need it, and be a little bit more consistent and actually get to the end.
+
+700
+00:59:03,806 --> 00:59:04,687
+Quincy Larson: Yeah, absolutely.
+
+701
+00:59:04,907 --> 00:59:10,750
+Quincy Larson: There's positive peer pressure, essentially, of having your peers go into it with you.
+
+702
+00:59:10,770 --> 00:59:14,392
+Quincy Larson: That's the beauty of cohorted models, that it's difficult to reproduce.
+
+703
+00:59:14,432 --> 00:59:23,137
+Quincy Larson: But if you can reproduce it, like Leon Noel has, then bam, you've got like... lighting in a bottle, like you've got people who are going to have each other's backs.
+
+704
+00:59:23,797 --> 00:59:27,600
+Quincy Larson: And like when you're down, they're up and they'll help you get back up.
+
+705
+00:59:27,660 --> 00:59:27,880
+Quincy Larson: Right.
+
+706
+00:59:28,040 --> 00:59:29,100
+Quincy Larson: So you help one another.
+
+707
+00:59:29,781 --> 00:59:32,622
+Quincy Larson: So that's kind of the genius of 100 devs.
+
+708
+00:59:32,762 --> 00:59:34,483
+Quincy Larson: Maybe you can talk a little about the mechanics of it.
+
+709
+00:59:34,523 --> 00:59:40,346
+Quincy Larson: Obviously, you've got the discord, you've got the twice weekly streams when classes in session, so to speak.
+
+710
+00:59:41,407 --> 00:59:42,167
+Quincy Larson: And they are.
+
+711
+00:59:43,368 --> 00:59:44,629
+Quincy Larson: high energy streams, man.
+
+712
+00:59:44,669 --> 00:59:45,889
+Quincy Larson: I just have to comment like that.
+
+713
+00:59:46,349 --> 00:59:50,190
+Quincy Larson: You got like the like the cool astronaut background.
+
+714
+00:59:50,571 --> 00:59:57,813
+Quincy Larson: It's like watching like a gamer on Twitch, like like watching somebody play and like, you know, see us go at a high level or something.
+
+715
+00:59:57,833 --> 00:59:59,354
+Quincy Larson: But it's education, right?
+
+716
+00:59:59,414 --> 01:00:04,896
+Quincy Larson: Like in my mind, like you're pioneering kind of a new approach to education that is.
+
+717
+01:00:05,896 --> 01:00:15,587
+Quincy Larson: based off of like people are already familiar with like games and anime and all the other cultural kind of touchstones and you're just like hey let's let's relate this to software engineering.
+
+718
+01:00:15,767 --> 01:00:18,390
+Quincy Larson: right and so you're doing a great job of that.
+
+719
+01:00:18,430 --> 01:00:23,276
+Quincy Larson: but maybe you can talk about in addition to the stream in addition to the discord what are the other aspects of 100 devs?
+
+720
+01:00:23,296 --> 01:00:25,358
+Quincy Larson: what are the other instruments?
+
+721
+01:00:26,115 --> 01:00:26,355
+Leon Noel: Sure.
+
+722
+01:00:26,435 --> 01:00:29,717
+Leon Noel: So we do a live cohort model.
+
+723
+01:00:29,737 --> 01:00:31,357
+Leon Noel: We basically do a cohort a year.
+
+724
+01:00:32,338 --> 01:00:39,661
+Leon Noel: And when that cohort is live, we're live on Twitch twice a week for about three hours for a class.
+
+725
+01:00:40,241 --> 01:00:45,524
+Leon Noel: We take about an hour to do review, spaced repetition, active recall is super important.
+
+726
+01:00:46,404 --> 01:00:50,926
+Leon Noel: So we spend that first hour just like reviewing, and then about two hours of something new, we do that twice a week.
+
+727
+01:00:51,326 --> 01:00:57,389
+Leon Noel: And then we have office hours on Sunday, which is another stream, typically on Twitch or on Discord.
+
+728
+01:00:57,409 --> 01:01:01,391
+Leon Noel: But it's just people asking questions and getting things answered.
+
+729
+01:01:02,330 --> 01:01:06,994
+Leon Noel: Outside of that, there are so many other expectations and things that you're working on.
+
+730
+01:01:07,034 --> 01:01:10,717
+Leon Noel: that's about 10 to 20 hours outside of that twice a week class.
+
+731
+01:01:11,197 --> 01:01:14,260
+Leon Noel: Networking, all the things that are going to actually move the needle for you to get a job.
+
+732
+01:01:14,600 --> 01:01:18,623
+Leon Noel: Our joke is that we're not really a coding program, we're a getting a job program.
+
+733
+01:01:18,663 --> 01:01:22,767
+Leon Noel: And so all the things we get to be doing to get a job have to be happening when we're not live.
+
+734
+01:01:23,467 --> 01:01:33,989
+Leon Noel: Then for folks that can't participate in a live experience, we have our illustrious catch up crew, which is a group of folks that are working through the classes at maybe a little bit more of their own pace.
+
+735
+01:01:34,370 --> 01:01:38,351
+Leon Noel: We have a lot of folks that are around the world that can't make that live time work for them.
+
+736
+01:01:38,731 --> 01:01:42,151
+Leon Noel: So they get together, they're on our discord working through the classes together.
+
+737
+01:01:42,411 --> 01:01:52,936
+Leon Noel: You'll often see like 20 people just in a voice channel watching a class together that they've just, they've, Come together to do and so you can move through the material at your own pace.
+
+738
+01:01:53,616 --> 01:02:01,161
+Leon Noel: when we're outside of a cohort like right now We have we have our huddles twice a week and the huddles are just like a traditional stand-up.
+
+739
+01:02:01,181 --> 01:02:03,083
+Leon Noel: We're just trying to move away from that.
+
+740
+01:02:03,403 --> 01:02:04,924
+Leon Noel: I think it's a slightly ableist term.
+
+741
+01:02:04,964 --> 01:02:06,665
+Leon Noel: So we introduce them as huddles
+
+742
+01:02:07,346 --> 01:02:10,128
+Quincy Larson: and yeah, I never thought about stand-up as an ableist term,
+
+743
+01:02:10,468 --> 01:02:10,788
+Leon Noel: but it
+
+744
+01:02:10,808 --> 01:02:12,169
+Quincy Larson: is a lot of people can't stand up
+
+745
+01:02:13,210 --> 01:02:28,211
+Leon Noel: and so we We'll have anywhere from like 500 to 700 people every huddle, just asking questions, sharing, we call the job hunt, the hunt, sharing what's happening on the hunt, how they are negotiating.
+
+746
+01:02:28,271 --> 01:02:30,493
+Leon Noel: They'll come up live, we'll help them negotiate offers.
+
+747
+01:02:30,933 --> 01:02:35,197
+Leon Noel: They'll talk about an interview that went great or poorly.
+
+748
+01:02:35,597 --> 01:02:51,200
+Leon Noel: And just by showing up to these huddles, you're learning all these, like, it's so hard to go through life with everything that you're experiencing being the first time you've experienced it, it doesn't have to be that way, specifically when you have a community that's also doing it.
+
+749
+01:02:51,300 --> 01:02:59,488
+Leon Noel: So the huddles are our way to expose people to the realities of getting a job, going and interviewing and actually seeing all this knowledge.
+
+750
+01:02:59,508 --> 01:03:02,792
+Leon Noel: And so that when you're in that situation, you can experience it too.
+
+751
+01:03:04,053 --> 01:03:08,755
+Leon Noel: We have the huddles twice a week, and then we have a lot of independently generated community things.
+
+752
+01:03:08,835 --> 01:03:17,778
+Leon Noel: So we have Banky Brunch, shout out Banky Brunch, which is a group of folks that come together to work through behavioral questions, technical questions pretty much every single day.
+
+753
+01:03:18,418 --> 01:03:21,639
+Leon Noel: We have groups that are working on projects, our voice channels are always going.
+
+754
+01:03:22,580 --> 01:03:27,765
+Leon Noel: None of this works without community and a wonderful group of mods.
+
+755
+01:03:28,225 --> 01:03:41,779
+Leon Noel: I'd be remiss to not say Miriam, Diviker, MayanWolf, Claire, these folks that make all this work and for free and volunteering so much of their life to make this happen.
+
+756
+01:03:42,717 --> 01:03:45,720
+Quincy Larson: amazing yeah like free code camp.
+
+757
+01:03:45,780 --> 01:03:50,785
+Quincy Larson: similarly to draw parallels to our organization very community driven like.
+
+758
+01:03:51,225 --> 01:03:56,651
+Quincy Larson: we have tons of mods on the forum on discord and we have open source contributors that are just dropping in.
+
+759
+01:03:56,711 --> 01:04:02,797
+Quincy Larson: and like fixing little bugs making sure that like our copy is as readable as possible to non-native english speakers.
+
+760
+01:04:03,157 --> 01:04:23,976
+Quincy Larson: making sure that like It's a lot of contributor driven activity and it sounds like you've figured out a way to encourage a lot of people in your community, empower them with like, you know, you can delegate some degree of, I guess, authority to them so that they can go out and they can just experiment and build out different things.
+
+761
+01:04:25,097 --> 01:04:33,582
+Quincy Larson: One of the things that you said that I thought was really interesting, I do want to talk about, let's talk about spaced repetition and active recall, I believe are the terms.
+
+762
+01:04:34,523 --> 01:04:43,929
+Quincy Larson: Barbara Oakley teaches the learn course, the most popular MOOC, massive open online course ever, other than maybe like CS50, which we were talking about earlier.
+
+763
+01:04:45,229 --> 01:04:48,852
+Quincy Larson: Learning how to learn, it's not just obvious how to learn their tactics.
+
+764
+01:04:49,312 --> 01:04:49,512
+Quincy Larson: Right?
+
+765
+01:04:49,552 --> 01:05:05,588
+Quincy Larson: There are phenomena that are ingrained in the human brain from evolution, from the savannas of Africa, basically, that we carry with us today, that we can use if we know how to use them.
+
+766
+01:05:05,628 --> 01:05:07,710
+Quincy Larson: And one of them, you mentioned, is space repetition.
+
+767
+01:05:08,111 --> 01:05:09,152
+Quincy Larson: What is space repetition?
+
+768
+01:05:09,892 --> 01:05:10,653
+Leon Noel: Yeah, sure.
+
+769
+01:05:10,793 --> 01:05:17,077
+Leon Noel: So I guess kind of to set the stage real quick is that a lot of folks that attempt to learn how to code are not successful.
+
+770
+01:05:17,597 --> 01:05:20,759
+Leon Noel: We know that, we know the drop-offs, we know that that's just a reality.
+
+771
+01:05:21,399 --> 01:05:27,803
+Leon Noel: And a lot of time those people feel like that it is them, that it's a, they, they do not have the ability to learn how to code.
+
+772
+01:05:27,863 --> 01:05:32,466
+Leon Noel: They do not have, there's something about them that would stop them from being successful as a software engineer.
+
+773
+01:05:33,166 --> 01:05:38,672
+Leon Noel: And as someone that's worked with thousands of people, like literally in the classroom, my finger is on their keyboard.
+
+774
+01:05:39,132 --> 01:05:45,599
+Leon Noel: I just know fundamentally my heart of hearts, like outside of a cognitive impairment.
+
+775
+01:05:45,639 --> 01:05:46,900
+Leon Noel: that's just not true.
+
+776
+01:05:47,421 --> 01:05:53,847
+Leon Noel: And the thing that I found is it's just that most people don't know how to learn.
+
+777
+01:05:54,908 --> 01:06:07,512
+Leon Noel: And it's almost criminal that our school system doesn't actually teach us how to learn, that every textbook doesn't have some very fundamental things at the beginning that help you remember and learn this material.
+
+778
+01:06:07,972 --> 01:06:11,693
+Leon Noel: So the difficult thing about software engineering is that it's a cumulative career.
+
+779
+01:06:11,753 --> 01:06:15,254
+Leon Noel: The things you learn this week, you might need two years from now.
+
+780
+01:06:15,874 --> 01:06:21,706
+Leon Noel: And so there are two really fundamental learning techniques that Dr.
+
+781
+01:06:21,726 --> 01:06:22,908
+Leon Noel: Barbara Oakley does walk through.
+
+782
+01:06:22,928 --> 01:06:25,090
+Leon Noel: that I really it's my favorite one of my favorite courses of all time.
+
+783
+01:06:25,651 --> 01:06:29,495
+Leon Noel: that brings up where as humans.
+
+784
+01:06:30,774 --> 01:06:32,655
+Leon Noel: we forget stuff very quickly.
+
+785
+01:06:33,436 --> 01:06:52,490
+Leon Noel: So if I gave you a three-letter code, this is called the Evan-Haas curve, it was a study of one, it's somewhat been replicated since then, but basically this person just tracked a new three-letter word, a three-letter code every day, and they found within the first like 30 minutes, there was a 20% chance they'd just forgotten it.
+
+786
+01:06:53,069 --> 01:06:54,290
+Leon Noel: the first 30 minutes.
+
+787
+01:06:54,310 --> 01:06:57,631
+Leon Noel: So imagine trying to learn this really complicated coding stuff.
+
+788
+01:06:58,232 --> 01:06:59,993
+Leon Noel: And within the first 30 minutes, you're going to forget it.
+
+789
+01:07:00,513 --> 01:07:07,196
+Leon Noel: Then if you look at that forgetting curve by the end of the month, there's an 80% chance that you've forgotten that very simple thing.
+
+790
+01:07:07,216 --> 01:07:13,840
+Leon Noel: And so For a lot of folks that are going into coding education, they just don't realize that the forgetting curve is very steep.
+
+791
+01:07:13,880 --> 01:07:19,843
+Leon Noel: They'll learn something, a month later, they've completely forgotten it, and they have to start back over, and that's super frustrating.
+
+792
+01:07:20,344 --> 01:07:27,628
+Leon Noel: So spaced repetition is using a tool that makes the material come back to you when you need it most.
+
+793
+01:07:28,228 --> 01:07:32,410
+Leon Noel: And so a typical tool for this is Anki or Anki, however you want to call it.
+
+794
+01:07:32,430 --> 01:07:35,872
+Quincy Larson: Yeah, Anki, it means to commit to memory in Japanese.
+
+795
+01:07:35,892 --> 01:07:35,992
+Quincy Larson: Yeah.
+
+796
+01:07:36,032 --> 01:07:36,493
+Quincy Larson: Anki suru.
+
+797
+01:07:37,253 --> 01:07:37,813
+Leon Noel: Exactly.
+
+798
+01:07:38,213 --> 01:07:45,875
+Leon Noel: And so it is a flashcard tool that has an algorithm behind it, so that surfaces the information when you need to see it.
+
+799
+01:07:45,935 --> 01:07:57,837
+Leon Noel: So if you're doing good study habits, which is a huge portion of what we teach at 100Devs, it's just like how to study, you're using this tool so that the things you learned about HTML, you're not forgetting when we're talking about like MongoDB, right?
+
+800
+01:07:57,897 --> 01:08:03,958
+Leon Noel: And so that spaced repetition is going to help you remember stuff for the long haul, which is really important for a cumulative career.
+
+801
+01:08:04,558 --> 01:08:10,221
+Leon Noel: But then the other thing that's even more important, in my opinion, than spatial repetition is something called active recall.
+
+802
+01:08:12,002 --> 01:08:21,987
+Leon Noel: Coding can be done through video tutorials, it can be done through text, but it's a lot of information to process, and most people just go through it.
+
+803
+01:08:23,240 --> 01:08:25,040
+Leon Noel: that's not active learning.
+
+804
+01:08:25,479 --> 01:08:34,982
+Leon Noel: They feel maybe some sort of productivity from having watched a tutorial or having read a blog post, but they didn't actually engage with that material or learn.
+
+805
+01:08:35,323 --> 01:08:38,243
+Leon Noel: And a lot of times, like for me, I teleport through information.
+
+806
+01:08:38,263 --> 01:08:42,743
+Leon Noel: Like if I'm reading a book, I'll get through three paragraphs and I'm like, what the heck just happened?
+
+807
+01:08:42,764 --> 01:08:45,145
+Leon Noel: I feel like I've just teleported through that.
+
+808
+01:08:45,165 --> 01:08:55,327
+Quincy Larson: I haven't heard that expression, but that's a good way to describe the phenomenon, especially, you know, people who have like ADHD and stuff, they may just be like, halfway through a book, maybe.
+
+809
+01:08:56,768 --> 01:08:58,087
+Quincy Larson: Your mind wanders.
+
+810
+01:08:58,787 --> 01:09:03,910
+Quincy Larson: And if you're not constantly trying to engage with it, you won't necessarily retain it.
+
+811
+01:09:03,930 --> 01:09:08,892
+Leon Noel: So active recall is the way that helps me as someone that does have ADHD do this.
+
+812
+01:09:08,971 --> 01:09:14,234
+Leon Noel: And so active recall is just recalling the things that you just learned or just read or just watched.
+
+813
+01:09:14,854 --> 01:09:18,935
+Leon Noel: And for folks that do have attention issues, I recommend doing that after each paragraph.
+
+814
+01:09:20,417 --> 01:09:22,318
+Leon Noel: I recommend doing it after each chapter end.
+
+815
+01:09:22,899 --> 01:09:26,020
+Leon Noel: And you're just literally talking to yourself, what did I just read?
+
+816
+01:09:26,041 --> 01:09:27,002
+Leon Noel: What did I just learn?
+
+817
+01:09:27,022 --> 01:09:28,263
+Leon Noel: And you're saying it out loud.
+
+818
+01:09:28,743 --> 01:09:32,527
+Leon Noel: The research behind it is really shocking, like staggering differences.
+
+819
+01:09:33,228 --> 01:09:39,752
+Leon Noel: You can learn something once, actively recall it once, and do better than somebody that reread it four times.
+
+820
+01:09:40,314 --> 01:09:40,474
+Quincy Larson: Yeah.
+
+821
+01:09:41,107 --> 01:09:45,609
+Leon Noel: Like you can do a quarter of the effort and have better results just with this one technique.
+
+822
+01:09:45,890 --> 01:09:50,372
+Leon Noel: And the fact that that's not like stamped in every single textbook ever made is absurd.
+
+823
+01:09:50,732 --> 01:09:55,655
+Quincy Larson: Yeah, it's, I mean, like we could talk all day about like the shortcomings of the U.S.
+
+824
+01:09:56,155 --> 01:09:59,477
+Quincy Larson: education system, like both K through 12 and higher ed.
+
+825
+01:09:59,517 --> 01:10:05,761
+Quincy Larson: And to be completely clear, there are a lot of very smart people who are working very hard to address a lot of these deficiencies.
+
+826
+01:10:06,451 --> 01:10:15,636
+Quincy Larson: But the fact that we're having to explain what active recall and space repetition are when they're time-tested phenomena that you can leverage.
+
+827
+01:10:16,137 --> 01:10:18,438
+Quincy Larson: So just a quick note about active recall.
+
+828
+01:10:18,458 --> 01:10:22,100
+Quincy Larson: This is one of the reasons why Free Code Camp's entire curriculum is interactive.
+
+829
+01:10:22,640 --> 01:10:24,561
+Quincy Larson: It's because you have to grapple with things.
+
+830
+01:10:24,862 --> 01:10:28,043
+Quincy Larson: Otherwise, it could have just blown right past you, right?
+
+831
+01:10:28,644 --> 01:10:32,046
+Quincy Larson: Everything needs some sort of evaluation criteria, some sort of comprehension check.
+
+832
+01:10:32,706 --> 01:10:41,889
+Quincy Larson: And if you're doing something that doesn't have comprehensive check, if there's not some right or wrong answer, taking a moment to summarize what you just learned or relate it to something else you've learned, thinking about
+
+833
+01:10:41,929 --> 01:10:42,949
+Leon Noel: it, just grappling with it,
+
+834
+01:10:43,429 --> 01:10:48,371
+Quincy Larson: that can absolutely help cement those, you know, synapses, right?
+
+835
+01:10:49,211 --> 01:10:53,712
+Quincy Larson: What's the thing that connects synapse axioms, not axioms, dendrites?
+
+836
+01:10:53,732 --> 01:10:54,873
+Quincy Larson: I can't remember.
+
+837
+01:10:55,393 --> 01:10:55,873
+Quincy Larson: Sorry.
+
+838
+01:10:56,353 --> 01:10:57,153
+Quincy Larson: You probably know.
+
+839
+01:10:57,313 --> 01:11:01,849
+Quincy Larson: But yeah, like, And it's something anybody can do.
+
+840
+01:11:02,049 --> 01:11:06,031
+Quincy Larson: When I'm reading a news article or something like that, that's not interactive.
+
+841
+01:11:06,071 --> 01:11:11,373
+Quincy Larson: Now with GPT or something, I can throw it in GPT and say, hey, come up with a multiple choice question based off this article.
+
+842
+01:11:11,413 --> 01:11:12,254
+Quincy Larson: And I'll do that sometimes.
+
+843
+01:11:14,234 --> 01:11:17,216
+Quincy Larson: Not just for active recall, but spaced repetition.
+
+844
+01:11:17,916 --> 01:11:20,177
+Quincy Larson: write a bunch of notes, and then review them a few days later.
+
+845
+01:11:20,277 --> 01:11:25,460
+Quincy Larson: Or use a tool like Anki that can systematically do that, where you can like load a bunch of flashcards.
+
+846
+01:11:25,900 --> 01:11:29,182
+Quincy Larson: A lot of learning platforms have spaced repetition just built into them.
+
+847
+01:11:29,222 --> 01:11:37,806
+Quincy Larson: If you go through the Free Code Camp curriculum, it's designed in such a way that we're going to reintroduce concepts over and over, and you're going to be like, oh yeah, I kind of remember this from like
+
+848
+01:11:38,286 --> 01:11:38,486
+Leon Noel: A few
+
+849
+01:11:38,526 --> 01:11:45,073
+Quincy Larson: hours ago, you know, it was like, or a few days ago, like, but but we're intentionally trying to, you know, incorporate that.
+
+850
+01:11:45,133 --> 01:11:53,001
+Quincy Larson: And one of the things I think talking about the free cocaine curriculum, let's talk about 100 devs and like what you all are, is it 100 devs or 100 devs?
+
+851
+01:11:55,154 --> 01:11:57,397
+Leon Noel: I can say either 100 devs.
+
+852
+01:11:57,397 --> 01:11:59,940
+Quincy Larson: 100 devs is shorter.
+
+853
+01:11:59,980 --> 01:12:00,200
+Quincy Larson: Yeah.
+
+854
+01:12:00,380 --> 01:12:00,620
+Quincy Larson: Yeah.
+
+855
+01:12:00,640 --> 01:12:02,823
+Quincy Larson: That's more, uh, more like easy to say.
+
+856
+01:12:03,123 --> 01:12:07,268
+Quincy Larson: So with 100 devs, like what is the coursework that you're going through?
+
+857
+01:12:07,308 --> 01:12:08,569
+Quincy Larson: Like, are you, are you using MOOCs?
+
+858
+01:12:08,630 --> 01:12:10,211
+Quincy Larson: Are you using open textbooks?
+
+859
+01:12:10,251 --> 01:12:12,114
+Quincy Larson: Are you creating a lot of the stuff yourself?
+
+860
+01:12:12,494 --> 01:12:12,834
+Leon Noel: Yeah.
+
+861
+01:12:12,914 --> 01:12:14,797
+Leon Noel: So I think there's like two important things.
+
+862
+01:12:15,097 --> 01:12:18,398
+Leon Noel: One, I really don't believe the content matters.
+
+863
+01:12:20,079 --> 01:12:21,299
+Leon Noel: We're a jobs program.
+
+864
+01:12:21,759 --> 01:12:33,241
+Leon Noel: I think one of the biggest mistakes people make is an overinvestment in the idea that the learning aspect and not all the other things that move the needle.
+
+865
+01:12:33,541 --> 01:12:35,781
+Leon Noel: We're very much two tracks.
+
+866
+01:12:35,801 --> 01:12:39,922
+Leon Noel: We have all this other stuff we're doing outside of the learning and then the learning as well.
+
+867
+01:12:39,962 --> 01:12:41,462
+Leon Noel: The learning is very simple.
+
+868
+01:12:42,062 --> 01:12:44,243
+Leon Noel: We do full stack JavaScript.
+
+869
+01:12:45,043 --> 01:12:51,668
+Leon Noel: And I do a lot of like custom, like I make all the lectures basically with the slides and all the funny stuff that you mentioned on Twitch.
+
+870
+01:12:52,069 --> 01:12:54,090
+Leon Noel: And we move through that material together.
+
+871
+01:12:54,571 --> 01:12:59,454
+Leon Noel: But a lot of it is supplementing with other things that I think are just the best free courses out there.
+
+872
+01:12:59,575 --> 01:13:02,617
+Leon Noel: So in the beginning, our students will use some free code camp.
+
+873
+01:13:03,197 --> 01:13:12,365
+Leon Noel: As they get a little bit further along, they'll use some things maybe from full stack open that are trying to supplement the things that we're doing in the classroom.
+
+874
+01:13:13,005 --> 01:13:15,966
+Leon Noel: And anytime that we're doing something, it's always a free resource.
+
+875
+01:13:16,226 --> 01:13:20,388
+Leon Noel: It always has a free trial or not trial, like a free level of access.
+
+876
+01:13:20,908 --> 01:13:21,849
+Leon Noel: Yeah.
+
+877
+01:13:21,969 --> 01:13:25,710
+Leon Noel: And so we give you the skills to be a full stack web developer.
+
+878
+01:13:26,111 --> 01:13:33,134
+Leon Noel: We do some of the other kind of rounding out to give you the software engineering skill set, the tooling and things that you might use.
+
+879
+01:13:33,174 --> 01:13:37,976
+Leon Noel: And then as you're getting ready to go on the hunt, the data structures and algorithms, you're going to need to be successful.
+
+880
+01:13:38,576 --> 01:13:40,677
+Leon Noel: But that's kind of like the coding stuff.
+
+881
+01:13:41,377 --> 01:13:46,979
+Leon Noel: Outside of that, from the very beginning, there's pretty stringent requirements in terms of your networking.
+
+882
+01:13:47,099 --> 01:13:54,182
+Leon Noel: So you are supposed to be getting three connections and two coffee chats every single week throughout program.
+
+883
+01:13:54,602 --> 01:13:59,263
+Leon Noel: You're doing things that are going to be opening all these doors to help you get a job.
+
+884
+01:13:59,603 --> 01:14:01,644
+Leon Noel: And that's kind of another.
+
+885
+01:14:01,664 --> 01:14:07,946
+Leon Noel: really, I think that's where our curriculum shines is those things that are really helpful and impactful for helping you get a job.
+
+886
+01:14:07,966 --> 01:14:11,087
+Leon Noel: We actually have a lot of folks that do other boot camps, which we love.
+
+887
+01:14:11,827 --> 01:14:16,048
+Leon Noel: I don't really care where you come from, what you do, as long as you're getting to where you want to go.
+
+888
+01:14:16,768 --> 01:14:21,710
+Leon Noel: And a lot of folks will join us just for the how to get a job portion, which I think we're pretty strong at.
+
+889
+01:14:22,210 --> 01:14:22,470
+Quincy Larson: Awesome.
+
+890
+01:14:22,930 --> 01:14:31,896
+Quincy Larson: So it's so interesting and important that you distinguish yourself as not a learn coding program, but a get a job program.
+
+891
+01:14:32,756 --> 01:14:47,626
+Quincy Larson: And I just want to emphasize, even though we put a great deal of time and energy into our curriculum, it's absolutely like if you look at where all the donations we get and things like that go toward, it's instructional design, platform development, mainly for the core curriculum.
+
+892
+01:14:48,787 --> 01:14:56,495
+Quincy Larson: Because for us it is important that there's a really good core curriculum, but I'll be the first to tell you or I guess the second since Leon just said it.
+
+893
+01:14:58,356 --> 01:15:02,079
+Quincy Larson: Getting a job as a developer is really three things, in my humble opinion.
+
+894
+01:15:02,519 --> 01:15:10,624
+Quincy Larson: And if you haven't read my free book that I published about a year ago, Learn to Code and Get a Developer Job, literally the name of the book.
+
+895
+01:15:10,864 --> 01:15:16,648
+Quincy Larson: Just Google that, or Google code book, or learn to code book, I think you should find it pretty quickly.
+
+896
+01:15:17,769 --> 01:15:23,233
+Quincy Larson: And by finding it, and clicking on it, and spending a lot of time on the webpage, you help ensure that Google continues to recommend it to other people.
+
+897
+01:15:26,684 --> 01:15:28,465
+Quincy Larson: Skills are only one leg of the stool.
+
+898
+01:15:29,306 --> 01:15:32,108
+Quincy Larson: Network and reputation are the other two.
+
+899
+01:15:32,348 --> 01:15:35,631
+Quincy Larson: And we've talked enough about skills.
+
+900
+01:15:35,651 --> 01:15:42,857
+Quincy Larson: Let's jump into networking and building your reputation, which are two things that are also instrumental to the 100 Devs program.
+
+901
+01:15:44,158 --> 01:15:44,378
+Quincy Larson: Yeah.
+
+902
+01:15:44,498 --> 01:15:44,658
+Quincy Larson: Yeah.
+
+903
+01:15:44,718 --> 01:15:48,020
+Quincy Larson: Like what is the value of a network?
+
+904
+01:15:48,121 --> 01:15:53,204
+Quincy Larson: Why is networking worth your time and energy when it's such an awkward thing to do?
+
+905
+01:15:54,666 --> 01:15:55,666
+Leon Noel: Yeah, we have.
+
+906
+01:15:58,158 --> 01:16:03,539
+Leon Noel: It's just like we have a lot of in jokes and things like that, that if you're not part of the community, it's kind of weird to bring up.
+
+907
+01:16:03,599 --> 01:16:05,939
+Leon Noel: But we refer to most people as clickers.
+
+908
+01:16:07,720 --> 01:16:11,420
+Leon Noel: People that learn how to code and then they just click apply.
+
+909
+01:16:11,440 --> 01:16:13,681
+Leon Noel: And clickers don't get jobs.
+
+910
+01:16:13,881 --> 01:16:18,922
+Leon Noel: Maybe every once in a while, somebody gets lucky and they click on a button and they magically get a job.
+
+911
+01:16:19,082 --> 01:16:22,262
+Leon Noel: But especially in this market, clickers don't get jobs.
+
+912
+01:16:22,402 --> 01:16:26,303
+Leon Noel: And so we do everything in our power to never click apply.
+
+913
+01:16:27,003 --> 01:16:38,292
+Leon Noel: We want to make sure that we're talking to like real humans that can see our humanity that can see our ability and our skills and the things that we can do so that we're not just.
+
+914
+01:16:39,253 --> 01:16:42,015
+Leon Noel: discarded by some AI ATS system.
+
+915
+01:16:42,715 --> 01:16:47,919
+Leon Noel: And so from the very beginning of 100 devs, we're tasking you with generalized networking.
+
+916
+01:16:48,539 --> 01:16:53,683
+Leon Noel: And networking, I think it's like a scary term that I don't think should be, to me, networking is just making friends.
+
+917
+01:16:54,563 --> 01:16:56,244
+Leon Noel: And you want to do things.
+
+918
+01:16:56,304 --> 01:16:59,707
+Leon Noel: in the beginning that gets you comfortable with making friends.
+
+919
+01:17:00,187 --> 01:17:04,150
+Leon Noel: And so you don't have to start networking by going to like your local Python meetup.
+
+920
+01:17:04,190 --> 01:17:05,651
+Leon Noel: that's like super hardcore, like no.
+
+921
+01:17:06,491 --> 01:17:10,454
+Leon Noel: if you like Pokemon, go play Pokemon at your local league, right?
+
+922
+01:17:10,514 --> 01:17:19,540
+Leon Noel: Or like, if you like hiking, join like a hiking group and just like share passion with some others, get comfortable talking to people.
+
+923
+01:17:19,560 --> 01:17:30,066
+Leon Noel: And then eventually apply those skills that you learn to places where developers are more likely to hang out and turn those acquaintances into friends.
+
+924
+01:17:30,467 --> 01:17:40,331
+Leon Noel: And then by the time you're ready to go on the job hunt, you ultimately want hundreds of people that you've interacted with over the past year that you could go to and say, hey, you saw me where I was.
+
+925
+01:17:40,431 --> 01:17:41,472
+Leon Noel: Here's where I'm at now.
+
+926
+01:17:41,893 --> 01:17:42,973
+Leon Noel: Who should I talk to?
+
+927
+01:17:42,993 --> 01:17:44,175
+Leon Noel: I'm looking for a job.
+
+928
+01:17:44,515 --> 01:17:46,016
+Leon Noel: And that's really successful for people.
+
+929
+01:17:46,096 --> 01:17:47,658
+Leon Noel: So that's phase one of networking.
+
+930
+01:17:47,678 --> 01:17:51,201
+Leon Noel: Phase two is once you go on the hunt, it's very targeted.
+
+931
+01:17:51,281 --> 01:17:55,684
+Leon Noel: We call it building our hit list where we identify the companies that are actively hiring.
+
+932
+01:17:56,616 --> 01:18:04,347
+Leon Noel: We identify like three to five people at each of those companies, and we're doing outreach to get in communication with those folks, learn more.
+
+933
+01:18:04,867 --> 01:18:09,814
+Leon Noel: And what we're finding is that a lot of jobs just don't get posted.
+
+934
+01:18:10,618 --> 01:18:16,904
+Leon Noel: a lot of times folks will be applying for one job that they wind up getting a different one just because they like the person.
+
+935
+01:18:17,565 --> 01:18:23,590
+Leon Noel: We have this idea that tech is this meritocracy where if you know the skills, you get the job, it's not.
+
+936
+01:18:23,610 --> 01:18:34,461
+Leon Noel: People want to work with people that they like, they want to work with people that they know and trust, and you can make that happen for yourself by really going this networking your way in pathway.
+
+937
+01:18:36,112 --> 01:18:44,799
+Quincy Larson: So the term meritocracy is, it was actually like a joke because the author was like, this doesn't exist.
+
+938
+01:18:44,819 --> 01:18:45,860
+Quincy Larson: This is absurd.
+
+939
+01:18:46,640 --> 01:18:48,762
+Quincy Larson: It's who you know.
+
+940
+01:18:49,062 --> 01:18:56,909
+Quincy Larson: You're a skill unless you're, I mean, even the most demonstrably good pianists, for example, to talk about pianists as we talked about it earlier.
+
+941
+01:18:57,469 --> 01:19:02,914
+Quincy Larson: like somebody saw you know um skill in them and like help them get observed.
+
+942
+01:19:02,994 --> 01:19:08,298
+Quincy Larson: you know enrolled in some observatory or they had the time to play piano a lot with all.
+
+943
+01:19:08,339 --> 01:19:08,599
+Quincy Larson: the other.
+
+944
+01:19:08,639 --> 01:19:10,300
+Quincy Larson: kids were working in the shoe factory.
+
+945
+01:19:10,721 --> 01:19:11,261
+Quincy Larson: you know in the.
+
+946
+01:19:11,441 --> 01:19:14,804
+Quincy Larson: you know industrial revolution or whatever right like it takes.
+
+947
+01:19:16,045 --> 01:19:18,327
+Quincy Larson: So everybody's circumstances are different.
+
+948
+01:19:18,387 --> 01:19:28,694
+Quincy Larson: So I just want to like put the bed because I've never talked about this on the podcast, but we don't use the word meritocracy on here except to say that things aren't a meritocracy because they aren't.
+
+949
+01:19:28,934 --> 01:19:30,255
+Quincy Larson: It's ridiculous to think that they are.
+
+950
+01:19:31,015 --> 01:19:35,899
+Quincy Larson: The person who came up with it, I think, in a book was like just joking about it.
+
+951
+01:19:35,919 --> 01:19:36,559
+Quincy Larson: Yeah.
+
+952
+01:19:38,640 --> 01:19:45,163
+Quincy Larson: Yeah, but there's like He defined meritocracy is like I think effort and intelligence.
+
+953
+01:19:45,683 --> 01:19:48,545
+Quincy Larson: and how do you build intelligence through effort, right?
+
+954
+01:19:48,605 --> 01:19:55,928
+Quincy Larson: Some of it may be like, you know endowed upon you But for most part we all work really hard.
+
+955
+01:19:56,008 --> 01:19:59,009
+Quincy Larson: I study You know foreign languages like an hour a day.
+
+956
+01:19:59,069 --> 01:20:01,891
+Quincy Larson: I play bass an hour a day you know.
+
+957
+01:20:01,951 --> 01:20:03,591
+Quincy Larson: and like I still suck at those things.
+
+958
+01:20:03,671 --> 01:20:07,413
+Quincy Larson: but sucking at something is the first step to being good at something and Right.
+
+959
+01:20:08,313 --> 01:20:12,974
+Quincy Larson: So I also wanted to describe or like define like an acronym.
+
+960
+01:20:13,354 --> 01:20:16,875
+Quincy Larson: ATS is Applicant Tracking System.
+
+961
+01:20:17,075 --> 01:20:17,495
+Leon Noel: System.
+
+962
+01:20:17,555 --> 01:20:17,815
+Leon Noel: Yeah.
+
+963
+01:20:17,875 --> 01:20:18,075
+Leon Noel: Yeah.
+
+964
+01:20:18,115 --> 01:20:22,056
+Quincy Larson: When you apply through like a web form, you're like applying into some algorithm.
+
+965
+01:20:22,076 --> 01:20:28,417
+Quincy Larson: that's going to be like, OK, we didn't ask if they have a college degree because it's hip to say that we don't look for people who have college degrees.
+
+966
+01:20:28,477 --> 01:20:33,178
+Quincy Larson: But in reality, our system is going to just filter you out because you don't have a college degree.
+
+967
+01:20:33,238 --> 01:20:34,238
+Quincy Larson: We didn't put it on the thing.
+
+968
+01:20:35,058 --> 01:20:37,762
+Quincy Larson: You know, I think I heard some study that like.
+
+969
+01:20:39,023 --> 01:20:44,409
+Quincy Larson: it was a recent study like 700 job postings that didn't say they required a degree like zero.
+
+970
+01:20:44,469 --> 01:20:49,875
+Quincy Larson: people got those jobs for software engineering for those roles, even though they didn't say because.
+
+971
+01:20:50,556 --> 01:20:53,598
+Quincy Larson: if you don't have a degree, the ATS just simply filters you out.
+
+972
+01:20:53,618 --> 01:20:55,058
+Quincy Larson: No human ever even reviews it, right?
+
+973
+01:20:55,479 --> 01:21:02,782
+Quincy Larson: But the way I got my first job as a developer was through meetup.com, going to local Ruby developer meetup.
+
+974
+01:21:03,122 --> 01:21:06,384
+Quincy Larson: And I got a job as a Rails developer, and the interview was very similar.
+
+975
+01:21:06,644 --> 01:21:12,087
+Quincy Larson: Maybe you can describe the typical interview that 100 devs folks go through, because it's not like a leak code whiteboard.
+
+976
+01:21:12,467 --> 01:21:16,209
+Quincy Larson: Maybe for some of them, but a lot of it is like, hey, I've already seen your projects.
+
+977
+01:21:16,749 --> 01:21:17,470
+Quincy Larson: I know you can code.
+
+978
+01:21:17,930 --> 01:21:19,531
+Quincy Larson: Are you a good fit for our organization, right?
+
+979
+01:21:20,171 --> 01:21:21,693
+Leon Noel: It's about 50 50.
+
+980
+01:21:21,693 --> 01:21:29,440
+Leon Noel: Yeah, we're talking across hundreds of people that have gotten jobs that I've like literally seen right and people have come and talked about them during our huddles.
+
+981
+01:21:29,500 --> 01:21:39,510
+Leon Noel: so we have a celebrations channel on our discord where you can like go through and see hundreds of people their stories how they got the jobs what the interviews were like and so that's really powerful to know that.
+
+982
+01:21:40,211 --> 01:21:49,075
+Leon Noel: but it's about 50 50 and it's when they when they do an interview we're talking about sometimes there's not gonna be like a LeetCode style portion.
+
+983
+01:21:49,095 --> 01:21:51,275
+Leon Noel: There's still gonna be behavioral questions.
+
+984
+01:21:51,615 --> 01:21:53,275
+Leon Noel: There's still gonna be technical questions.
+
+985
+01:21:53,296 --> 01:21:55,076
+Leon Noel: You're still gonna be walking through a project.
+
+986
+01:21:55,376 --> 01:22:02,637
+Leon Noel: You might do some light like coding together, but for about half the folks that have gotten jobs, they haven't done like a LeetCode style question.
+
+987
+01:22:02,657 --> 01:22:06,038
+Leon Noel: The other half you will, and then there's varying degrees of it.
+
+988
+01:22:06,418 --> 01:22:13,924
+Leon Noel: And so, so many folks focus on like grinding out LeetCode until their eyes bleed and it's like, Yeah, if you're going for Fang, sure, that needs to be the thing that you do.
+
+989
+01:22:14,305 --> 01:22:25,430
+Leon Noel: But if you're going for a local healthcare company in your medium-sized city, they're probably not going to know, like they're probably not gonna go through and do that level of interviewing.
+
+990
+01:22:25,951 --> 01:22:29,874
+Leon Noel: And so one of the things we always say is like, don't go into your interviews like an accident.
+
+991
+01:22:30,294 --> 01:22:32,175
+Leon Noel: Always ask what you're about to walk into.
+
+992
+01:22:32,356 --> 01:22:41,342
+Leon Noel: They'll tell you, like almost every single time, if you just say like, hey, like I'm putting a lot of time and energy into this application, I would really appreciate just being fully prepared.
+
+993
+01:22:41,422 --> 01:22:43,203
+Leon Noel: What am I about to walk into in this interview?
+
+994
+01:22:43,564 --> 01:22:46,566
+Leon Noel: And they'll tell you, oh, you're just gonna meet with so-and-so and talk through a project, great.
+
+995
+01:22:47,006 --> 01:22:48,406
+Leon Noel: Now you know how to prep for that interview.
+
+996
+01:22:48,506 --> 01:22:51,247
+Leon Noel: Don't ever go into an interview if you don't know what you're about to walk into.
+
+997
+01:22:51,667 --> 01:22:59,449
+Leon Noel: It's about half of our jobs have been not really needing some of those more aggressive skills, but it's a huge smell test.
+
+998
+01:22:59,489 --> 01:23:00,429
+Leon Noel: It's a sniff test.
+
+999
+01:23:01,009 --> 01:23:03,930
+Leon Noel: We like to say every single person that starts off at 100 dev smells.
+
+1000
+01:23:04,690 --> 01:23:07,651
+Leon Noel: There's something about you that's going to stop you from getting the job.
+
+1001
+01:23:08,031 --> 01:23:19,656
+Leon Noel: And it's your job to figure out what it is, get rid of the smell, and make sure you come across as a cool, confident professional that's done this, been there and is ready to get to work.
+
+1002
+01:23:19,936 --> 01:23:23,818
+Leon Noel: And if you can do that, you're going to be really successful getting jobs.
+
+1003
+01:23:23,938 --> 01:23:30,381
+Leon Noel: And even folks that want to go the other more traditional interviews with like the leet codes and things like that, you're still passing a sniff test.
+
+1004
+01:23:30,861 --> 01:23:39,205
+Leon Noel: I have seen folks that I consider just amazing, even done like competitive programming that do well in interviews and don't get the job and they wonder why.
+
+1005
+01:23:39,245 --> 01:23:42,086
+Leon Noel: And then you look at their resume and you look at how they present themselves.
+
+1006
+01:23:42,546 --> 01:23:44,867
+Leon Noel: their narrative, all that stuff matters.
+
+1007
+01:23:45,347 --> 01:23:46,248
+Leon Noel: It really matters.
+
+1008
+01:23:46,268 --> 01:23:49,289
+Leon Noel: You need to invest time in opening those doors as well.
+
+1009
+01:23:49,649 --> 01:23:50,629
+Quincy Larson: Yeah, absolutely.
+
+1010
+01:23:50,969 --> 01:24:04,455
+Quincy Larson: And I just want to emphasize, if you can figure out what that smell is, maybe it's that I don't have a degree and I'm getting filtered out of ATS or people are just not looking at me as a serious candidate just based on that virtue.
+
+1011
+01:24:04,715 --> 01:24:06,196
+Quincy Larson: You can absolutely correct for that.
+
+1012
+01:24:06,216 --> 01:24:09,197
+Quincy Larson: And I have lots of friends, lots of people on the Free Code Camp team.
+
+1013
+01:24:09,777 --> 01:24:11,959
+Quincy Larson: dropped out of college or never even went to college, right?
+
+1014
+01:24:13,039 --> 01:24:27,269
+Quincy Larson: And it's just one of those things where you have to figure out and empathize with the HR person, whoever you're talking to, and figure out what it is they're sniffing for, because usually they're just trying to figure out a way to quickly weed people out, so to speak.
+
+1015
+01:24:27,289 --> 01:24:28,650
+Quincy Larson: So they're not the entertainment people, right?
+
+1016
+01:24:30,231 --> 01:24:30,491
+Leon Noel: I don't know.
+
+1017
+01:24:30,511 --> 01:24:36,319
+Leon Noel: One of the things we try really hard at 100 Days is make sure you know all the hacks and the secrets and what's really happening.
+
+1018
+01:24:36,919 --> 01:24:40,224
+Leon Noel: Recruiters are using some sort of, like we said, ATS, some sort of filter.
+
+1019
+01:24:40,985 --> 01:24:43,247
+Leon Noel: You know what to add to your resume to get past those filters.
+
+1020
+01:24:43,588 --> 01:24:47,473
+Leon Noel: We use things like CV Compiler, which is a website that'll tell you what you're missing.
+
+1021
+01:24:48,113 --> 01:24:50,974
+Leon Noel: We have our own resume template that's battle-tested.
+
+1022
+01:24:51,314 --> 01:24:53,615
+Leon Noel: We follow the true F-shape pattern.
+
+1023
+01:24:53,695 --> 01:25:02,559
+Leon Noel: If you watch recruiters with eye tracking, there's a video that's going really popular, it's done it again, where you watch the way they look, they read left to right, like most folks that read English.
+
+1024
+01:25:02,819 --> 01:25:06,721
+Leon Noel: They're looking for those specific keywords at the front load of the F-shape pattern.
+
+1025
+01:25:07,041 --> 01:25:13,284
+Leon Noel: If you know these things, you can get past these screen segments.
+
+1026
+01:25:13,645 --> 01:25:16,967
+Leon Noel: And the other thing is people really need to work on how they talk about themselves.
+
+1027
+01:25:17,647 --> 01:25:20,289
+Leon Noel: People go into the hunt too humble.
+
+1028
+01:25:20,809 --> 01:25:26,353
+Leon Noel: This is your one chance in life to talk your talk, be proud of your previous experience.
+
+1029
+01:25:26,373 --> 01:25:35,559
+Leon Noel: I don't care what you've done, having that previous experience makes you a badass and brings different skills to the table than someone that did.
+
+1030
+01:25:35,599 --> 01:25:38,281
+Leon Noel: a four-year CS has only ever worked in computer science.
+
+1031
+01:25:39,722 --> 01:25:42,983
+Leon Noel: you're different and that difference can be a value add to a lot of companies.
+
+1032
+01:25:43,083 --> 01:25:54,928
+Leon Noel: And so knowing how to craft that into a narrative, like a logical reason from what you were doing to why you're the best software engineer they have in their candidate pool and being able to talk about yourself highly is super important.
+
+1033
+01:25:54,968 --> 01:25:56,948
+Leon Noel: So if you're listening, what is your narrative?
+
+1034
+01:25:56,968 --> 01:25:57,729
+Leon Noel: What is your story?
+
+1035
+01:25:58,009 --> 01:25:59,969
+Leon Noel: Why are you the coolest thing since sliced bread?
+
+1036
+01:26:00,009 --> 01:26:01,310
+Leon Noel: walking into that interview?
+
+1037
+01:26:01,330 --> 01:26:06,512
+Leon Noel: And that's what we do a lot during like our huddles and at 100 does we have whole nights where we just craft stories.
+
+1038
+01:26:06,552 --> 01:26:12,696
+Leon Noel: We'll have Dozens of people come up, they give us their life history, and we craft the narrative live.
+
+1039
+01:26:13,116 --> 01:26:16,859
+Leon Noel: And then you just see an instant difference in how they're going through applications.
+
+1040
+01:26:17,499 --> 01:26:17,699
+Quincy Larson: Yeah.
+
+1041
+01:26:18,160 --> 01:26:26,565
+Quincy Larson: And so, first of all, I would love if you can share the links to those, the CV, I'll pull up CV compiler, like if you have a resume template.
+
+1042
+01:26:27,246 --> 01:26:33,750
+Quincy Larson: And like, we've talked a lot about 100 devs, and I feel like we could talk a whole lot more.
+
+1043
+01:26:33,770 --> 01:26:35,912
+Quincy Larson: First of all, I want to make sure you still have a few minutes.
+
+1044
+01:26:36,112 --> 01:26:37,894
+Leon Noel: I'm good to go for as long as you'll have me.
+
+1045
+01:26:37,914 --> 01:26:38,534
+Leon Noel: Awesome.
+
+1046
+01:26:38,734 --> 01:26:39,455
+Quincy Larson: Well, that's great news.
+
+1047
+01:26:42,337 --> 01:26:47,342
+Quincy Larson: The main limiter is going to be the fact that I've drinked literally two liters of tea while I was sitting here talking with you.
+
+1048
+01:26:47,662 --> 01:26:49,123
+Quincy Larson: So I may have to go to the bathroom at some point.
+
+1049
+01:26:49,384 --> 01:26:58,011
+Quincy Larson: But what I really want is just to tease out as many high-level insights that we can get into this podcast.
+
+1050
+01:26:58,031 --> 01:27:20,444
+Quincy Larson: I just want to end on as many pieces of actionable advice as you can share as somebody who has become a developer, who's worked as a software engineer, who's even built a successful project, I guess three or two projects, and then you're very actively high up in Resilient Coders too, which sounds like a really, and I want to tease as many of those out of you as I can.
+
+1051
+01:27:21,725 --> 01:27:26,227
+Quincy Larson: For the benefit of the audience, and for the benefit of myself, I've been furiously taking notes through this whole thing.
+
+1052
+01:27:29,480 --> 01:27:35,627
+Quincy Larson: Some questions I have are, I guess, what are some questions I should be asking?
+
+1053
+01:27:35,988 --> 01:27:45,058
+Quincy Larson: What are some interesting things that people never ask you that are really helpful, that would be helpful for the many people out there learning the code?
+
+1054
+01:27:46,340 --> 01:27:47,741
+Quincy Larson: Okay, what is a big mistake?
+
+1055
+01:27:48,582 --> 01:27:49,443
+Quincy Larson: We can think about that.
+
+1056
+01:27:49,463 --> 01:27:50,864
+Quincy Larson: Maybe you can think of some other things.
+
+1057
+01:27:50,904 --> 01:28:03,374
+Quincy Larson: But what is a big mistake that you see developers make, other than over-optimizing on their skills, for example, and not enough on their network or their reputation, or figuring out how to empathize with recruiters?
+
+1058
+01:28:03,414 --> 01:28:09,478
+Quincy Larson: And I don't mean be buddies with them, but you always want to understand other people's perspectives.
+
+1059
+01:28:09,518 --> 01:28:28,550
+Quincy Larson: There's no disadvantage to having more perspectives compacted in your head, being able to build with more verisimilitude models of other people and how they're approaching the world and what they're looking for, how you can find the job that needs to be done and you can do it for that person, right?
+
+1060
+01:28:28,570 --> 01:28:29,270
+Quincy Larson: Yeah.
+
+1061
+01:28:29,930 --> 01:28:33,772
+Leon Noel: I guess I'll, I'll gear it towards folks that are like learning how to code and trying to get a job.
+
+1062
+01:28:34,253 --> 01:28:45,278
+Leon Noel: I think the biggest mistake outside of the things like not investing early in networking and, um, over investing and things that aren't going to really move the needle in terms of you getting a job is there's, there's two things that I think.
+
+1063
+01:28:47,139 --> 01:28:49,360
+Leon Noel: lead to most folks not being successful.
+
+1064
+01:28:50,280 --> 01:28:54,042
+Leon Noel: And the number one thing is going into your days like an accident.
+
+1065
+01:28:55,142 --> 01:29:05,627
+Leon Noel: If you're going into your days like an accident, and you don't have a game plan for your day, your week, your month, and you're trying to commit to a process that's gonna take years, you're not gonna be successful.
+
+1066
+01:29:06,247 --> 01:29:12,910
+Leon Noel: And I've worked for folks from all different walks of life, the folks that make a plan for what they want, like, what do you want for yourself?
+
+1067
+01:29:13,550 --> 01:29:14,590
+Leon Noel: What do you want for your family?
+
+1068
+01:29:14,610 --> 01:29:15,751
+Leon Noel: What do you want for your loved ones?
+
+1069
+01:29:15,771 --> 01:29:17,031
+Leon Noel: Like, what do you want?
+
+1070
+01:29:17,631 --> 01:29:20,332
+Leon Noel: And then what are the steps you're going to take to get there?
+
+1071
+01:29:20,732 --> 01:29:23,293
+Leon Noel: That plan helps you get through the trough of sorrow.
+
+1072
+01:29:23,313 --> 01:29:28,354
+Leon Noel: It helps you get through the days where you don't have motivation, when the discipline is fleeting.
+
+1073
+01:29:30,555 --> 01:29:32,958
+Leon Noel: how do you stay true to what you want?
+
+1074
+01:29:32,978 --> 01:29:34,160
+Leon Noel: And you should have it written down.
+
+1075
+01:29:34,180 --> 01:29:35,942
+Leon Noel: You should have it on your wall.
+
+1076
+01:29:36,182 --> 01:29:41,028
+Leon Noel: There's a reason why I have your photo as the background of my wallpaper every once in a while.
+
+1077
+01:29:41,048 --> 01:29:43,831
+Leon Noel: It's because I need to know what I'm shooting for and what do I want?
+
+1078
+01:29:43,851 --> 01:29:44,692
+Leon Noel: What do I want for myself?
+
+1079
+01:29:44,712 --> 01:29:45,673
+Leon Noel: What do I want for my community?
+
+1080
+01:29:46,054 --> 01:29:56,162
+Leon Noel: And having that why, everyone that's trying to learn code needs to go on some long walks with no podcast, no music, no anything, and just ask yourself, what do I want?
+
+1081
+01:29:56,202 --> 01:29:57,002
+Leon Noel: Like, what's my future?
+
+1082
+01:29:57,022 --> 01:29:58,223
+Leon Noel: Like, what do I want for myself?
+
+1083
+01:29:58,563 --> 01:30:02,126
+Leon Noel: Because until you have that, it's really hard to push through.
+
+1084
+01:30:02,166 --> 01:30:07,849
+Leon Noel: And so I have a lot of people that come and they say they want it, but they only kind of want it, right?
+
+1085
+01:30:08,010 --> 01:30:09,170
+Leon Noel: It's like a very famous Dr.
+
+1086
+01:30:09,350 --> 01:30:09,971
+Leon Noel: Thomas speech.
+
+1087
+01:30:09,991 --> 01:30:11,232
+Leon Noel: Like, they just kind of want it.
+
+1088
+01:30:11,792 --> 01:30:14,894
+Leon Noel: And until you really want it, and that can come from a lot of different ways.
+
+1089
+01:30:14,914 --> 01:30:16,415
+Leon Noel: It can come from being fucking hungry.
+
+1090
+01:30:16,735 --> 01:30:20,037
+Leon Noel: It can come from wanting the respect of your family.
+
+1091
+01:30:20,257 --> 01:30:21,518
+Leon Noel: It can come from a lot of different places.
+
+1092
+01:30:21,878 --> 01:30:24,500
+Leon Noel: But until you have that, you're not gonna make it through.
+
+1093
+01:30:26,501 --> 01:30:40,005
+Leon Noel: So having that hammered down and really having it visible, putting it somewhere on the wall, knowing what it is, and then every day, Before I go to bed, I write out the three things I wanna get done the next day.
+
+1094
+01:30:40,805 --> 01:30:42,666
+Leon Noel: Once a month, what are my goals for the month?
+
+1095
+01:30:43,286 --> 01:30:46,927
+Leon Noel: Once a year, not once a year, every couple of months, what am I trying to get done for the year?
+
+1096
+01:30:47,507 --> 01:30:48,968
+Leon Noel: And I hold myself to it.
+
+1097
+01:30:49,328 --> 01:30:53,009
+Leon Noel: And the last piece I'll say about this is I get buy-in from the folks that matter most to me.
+
+1098
+01:30:53,629 --> 01:30:54,849
+Leon Noel: So it's not something internal to me.
+
+1099
+01:30:55,049 --> 01:31:00,471
+Leon Noel: I know if I wanna be successful in this, I need to get the buy-in of my wife, right?
+
+1100
+01:31:00,931 --> 01:31:02,211
+Leon Noel: Hey, this is the thing I wanna do.
+
+1101
+01:31:02,772 --> 01:31:03,772
+Leon Noel: It's gonna take a lot of time.
+
+1102
+01:31:04,795 --> 01:31:23,112
+Leon Noel: It's gonna take some nights and weekends away from us being together and with our family, and I need you to understand why I'm doing it, why it's important, and can I have a little bit of your trust, and I'll prove that to you over time that it's a worthwhile investment, but I need you to know why I'm doing this and get that buy-in.
+
+1103
+01:31:23,852 --> 01:31:36,262
+Leon Noel: Because if you don't have that buy-in, especially if you stay still at home with family that doesn't get it, if you're not being as present with your loved ones, that's going to build up some resentment.
+
+1104
+01:31:36,723 --> 01:31:39,245
+Leon Noel: And for a lot of folks, that's another reason why they're not successful.
+
+1105
+01:31:39,325 --> 01:31:41,346
+Leon Noel: So don't go into your days like an accident.
+
+1106
+01:31:41,486 --> 01:31:42,627
+Leon Noel: Have a plan for your days.
+
+1107
+01:31:43,068 --> 01:31:45,670
+Leon Noel: Know what your why is and get buy-in from the folks that matter most.
+
+1108
+01:31:46,564 --> 01:31:51,847
+Quincy Larson: Yeah, that giving buy-in is so important because learning to code is a long, long journey.
+
+1109
+01:31:52,027 --> 01:31:53,588
+Quincy Larson: And you get all hyped up.
+
+1110
+01:31:53,628 --> 01:31:59,991
+Quincy Larson: You get like these, you know, probably YouTube ads or, you know, ads on the side of your coding tutorials.
+
+1111
+01:32:00,351 --> 01:32:04,093
+Quincy Larson: Learn to code in just three months and get a job paying like 200K.
+
+1112
+01:32:04,333 --> 01:32:06,815
+Quincy Larson: Like, you know, whatever, you know, and.
+
+1113
+01:32:07,515 --> 01:32:12,640
+Quincy Larson: To be fair, there are plenty of developers who do learn to code very quickly and do get jobs.
+
+1114
+01:32:13,521 --> 01:32:23,630
+Quincy Larson: I've had lots of friends who transitioned from working on Wall Street and they went to some expensive, intensive coding program and they were able to then go get a job in Silicon Valley.
+
+1115
+01:32:23,990 --> 01:32:25,512
+Quincy Larson: But they already had college degrees.
+
+1116
+01:32:26,232 --> 01:32:29,955
+Quincy Larson: They already had, you know, like, Probably figured out how to plan.
+
+1117
+01:32:30,955 --> 01:32:47,241
+Quincy Larson: they probably had an understanding of like a lot of the you know learning Techniques that we've been talking about and most importantly they had a lot of money and they were able to just focus on it exclusively and Attend an intensive in-person boot camp like and that era may have passed.
+
+1118
+01:32:47,521 --> 01:32:53,704
+Quincy Larson: it may be that it's just a little harder now to to be able to get a job just because you should learn math, right?
+
+1119
+01:32:53,744 --> 01:33:00,307
+Quincy Larson: Like it used to be back in the day, you could just learn some WordPress and you could probably go get some clients do WordPress work.
+
+1120
+01:33:00,367 --> 01:33:18,993
+Quincy Larson: And it may be that case, but with the global market and the level of competition you're going to get from places like India, Nigeria China like tons of extremely educated extremely hungry people are coming from all these places and You know, frankly, they're gonna eat your lunch if you're not putting in the time and effort.
+
+1121
+01:33:19,354 --> 01:33:23,015
+Quincy Larson: Benjamin Franklin said few people plan to fail.
+
+1122
+01:33:23,455 --> 01:33:26,439
+Quincy Larson: most people who fail are fail to plan.
+
+1123
+01:33:27,140 --> 01:33:28,460
+Quincy Larson: That's a paraphrase of what he said.
+
+1124
+01:33:28,580 --> 01:33:29,561
+Quincy Larson: It's not an exact note.
+
+1125
+01:33:29,621 --> 01:33:32,142
+Quincy Larson: But it is like 100% what Leon's saying here.
+
+1126
+01:33:33,862 --> 01:33:37,944
+Quincy Larson: And yeah, so I just want to emphasize, like, getting buy-in from your family.
+
+1127
+01:33:37,984 --> 01:33:46,830
+Quincy Larson: Like, when I learned to code, again, I don't want to make this all about me, but like, I told my wife, like, hey, like, I've got this job as a soft as a school director.
+
+1128
+01:33:46,890 --> 01:33:47,030
+Quincy Larson: Right.
+
+1129
+01:33:47,110 --> 01:33:49,291
+Quincy Larson: And I would like to become a software engineer.
+
+1130
+01:33:49,972 --> 01:33:51,593
+Quincy Larson: And we had double income.
+
+1131
+01:33:51,613 --> 01:33:53,835
+Quincy Larson: We had insurance, which is a huge deal here in the U.S.
+
+1132
+01:33:55,196 --> 01:33:55,937
+Quincy Larson: through her work.
+
+1133
+01:33:56,777 --> 01:33:59,760
+Quincy Larson: So even if I left my job, we could continue to have health insurance.
+
+1134
+01:34:00,320 --> 01:34:02,863
+Quincy Larson: And I just grinded every single day and I ever.
+
+1135
+01:34:03,223 --> 01:34:05,465
+Quincy Larson: I didn't precisely what you're talking about planning out.
+
+1136
+01:34:05,605 --> 01:34:07,527
+Quincy Larson: Okay, what am I going to accomplish the next few days?
+
+1137
+01:34:07,847 --> 01:34:09,488
+Quincy Larson: because planning is everything like.
+
+1138
+01:34:09,809 --> 01:34:17,976
+Quincy Larson: it's so important to have a plan and to stick to plan and to have goals that are Measurable and that are within your control.
+
+1139
+01:34:17,996 --> 01:34:18,677
+Quincy Larson: That's another mistake.
+
+1140
+01:34:18,717 --> 01:34:21,299
+Quincy Larson: I see a lot of people make is People be like?
+
+1141
+01:34:21,499 --> 01:34:38,852
+Quincy Larson: my goal is to get you know 100,000 YouTube subscribers this year or my goal is to get you know a job paying like N thousand dollars or to get in freelance clients, you know, those are not things that you can directly control and You can't control the outcome, but you can control the input.
+
+1142
+01:34:39,273 --> 01:34:45,978
+Quincy Larson: My goal is to play bass for an hour a day or whatever goal I might have at a given moment.
+
+1143
+01:34:46,018 --> 01:34:54,845
+Leon Noel: James Clear of Atomic Habits has a very famous quote that I love so much that says, we don't rise to the level of our goals, we fall to the levels of our systems.
+
+1144
+01:34:55,385 --> 01:35:09,101
+Leon Noel: And so this idea that we have all these lofty goals, but if you're not putting in the systems, how you're going to play the bass for an hour each day, study your languages for an hour each day, and the process for that, it's just not going to work out for you in the long run.
+
+1145
+01:35:09,881 --> 01:35:10,342
+Quincy Larson: Yeah, absolutely.
+
+1146
+01:35:12,952 --> 01:35:16,156
+Quincy Larson: We've talked a lot, and of course you and I, we grew up in the U.S.
+
+1147
+01:35:16,296 --> 01:35:18,038
+Quincy Larson: You grew up in Philly, I grew up in Oklahoma City.
+
+1148
+01:35:19,259 --> 01:35:20,561
+Quincy Larson: And here in the
+
+1149
+01:35:20,641 --> 01:35:20,941
+Quincy Larson: U.S.,
+
+1150
+01:35:21,182 --> 01:35:33,834
+Quincy Larson: even though things are not equal by a long shot, it's a very unequal society, we still have vestiges of, you know, history, going back 400 years, right?
+
+1151
+01:35:34,274 --> 01:35:38,855
+Quincy Larson: Like the warp, essentially the haves and the have-nots.
+
+1152
+01:35:41,156 --> 01:35:46,317
+Quincy Larson: But in the US, we're pretty well off compared to folks in a lot of countries.
+
+1153
+01:35:47,157 --> 01:35:57,960
+Quincy Larson: For example, like the hyper-competition in places like India and China, where you've got so many people getting CS degrees and trying to compete and so few employers.
+
+1154
+01:35:58,400 --> 01:36:08,803
+Quincy Larson: Or Nigeria, where there are so many amazing developers, like, I think it's like the third or fourth largest community in Free Code Camp, people that use Free Code Camp is Nigeria.
+
+1155
+01:36:09,143 --> 01:36:11,784
+Quincy Larson: But if you look at Nigeria, there aren't a lot of big employers.
+
+1156
+01:36:12,404 --> 01:36:13,904
+Quincy Larson: And the government's kind of a mess.
+
+1157
+01:36:14,444 --> 01:36:17,385
+Quincy Larson: And as a result, there's not a lot of opportunity, even though there's a lot of talent.
+
+1158
+01:36:17,445 --> 01:36:25,027
+Quincy Larson: So a lot of those people have to move overseas to like Europe or to the United States or wherever they can find opportunity, right?
+
+1159
+01:36:25,527 --> 01:36:31,329
+Quincy Larson: Like, a lot of the, What is the proportion of people doing 100 devs who are outside of the U.S.
+
+1160
+01:36:31,549 --> 01:36:32,790
+Quincy Larson: and how?
+
+1161
+01:36:33,150 --> 01:36:36,711
+Quincy Larson: what have you observed about those people that might be helpful for them?
+
+1162
+01:36:38,472 --> 01:36:38,792
+Quincy Larson: Yeah.
+
+1163
+01:36:38,872 --> 01:36:41,873
+Quincy Larson: And like just a follow up question I'll tack on is like, do they need to move to the U.S.
+
+1164
+01:36:42,093 --> 01:36:44,634
+Quincy Larson: to be able to be successful in software engineering?
+
+1165
+01:36:44,754 --> 01:36:47,234
+Quincy Larson: or are there other paths you've seen people succeed with?
+
+1166
+01:36:47,314 --> 01:36:47,595
+Quincy Larson: Yeah.
+
+1167
+01:36:47,935 --> 01:36:50,355
+Leon Noel: So I would say about half our community is from the U.S.
+
+1168
+01:36:50,415 --> 01:36:51,876
+Leon Noel: and about half is from everywhere else.
+
+1169
+01:36:52,316 --> 01:37:00,326
+Leon Noel: In fact, the first jobs we ever got were not from the U.S They were from Brazil, then Poland, UK, and then a bunch of other places in South America.
+
+1170
+01:37:01,027 --> 01:37:05,793
+Leon Noel: And so a lot of our community and folks that have gotten jobs haven't been from the U.S.
+
+1171
+01:37:05,853 --> 01:37:06,273
+Leon Noel: centric.
+
+1172
+01:37:06,353 --> 01:37:09,878
+Leon Noel: And so the first thing I always say is whenever somebody from outside the U.S.
+
+1173
+01:37:10,618 --> 01:37:15,738
+Leon Noel: says I want to get a job, I just tell them bluntly, it's way harder.
+
+1174
+01:37:16,459 --> 01:37:19,860
+Leon Noel: Don't let anyone convince you that it's going to be the same pathway as somebody from the US.
+
+1175
+01:37:19,880 --> 01:37:21,741
+Leon Noel: It's going to be a way more difficult journey.
+
+1176
+01:37:22,082 --> 01:37:25,523
+Leon Noel: And there's a very couple of like very key things that you have to keep in mind.
+
+1177
+01:37:26,624 --> 01:37:31,446
+Leon Noel: One, the visa sponsorship issue in the United States is wild.
+
+1178
+01:37:31,566 --> 01:37:33,828
+Leon Noel: It goes to a lottery most years, right?
+
+1179
+01:37:34,288 --> 01:37:37,710
+Leon Noel: And so banking on that is like a pathway into an engineering career.
+
+1180
+01:37:37,770 --> 01:37:42,173
+Leon Noel: if you're from a area that doesn't have like that strong of a local tech economy is very hard.
+
+1181
+01:37:42,733 --> 01:37:47,116
+Leon Noel: The competition for companies that hire remotely is brutal.
+
+1182
+01:37:47,577 --> 01:37:50,719
+Leon Noel: It's even more brutal when you look at the companies that hire globally.
+
+1183
+01:37:50,839 --> 01:37:52,820
+Leon Noel: So a lot of people think, oh, I'll get a remote tech job.
+
+1184
+01:37:52,880 --> 01:37:58,324
+Leon Noel: No, even though they're remote, they only hire folks from the US or from a very specific select countries.
+
+1185
+01:37:58,785 --> 01:38:06,437
+Leon Noel: So finding a group of folks that hire globally, remotely, that's a very narrow pool.
+
+1186
+01:38:06,838 --> 01:38:11,160
+Leon Noel: So the first thing I would recommend that you do is build a hit list of those companies.
+
+1187
+01:38:11,180 --> 01:38:12,581
+Leon Noel: There are lists you can find online.
+
+1188
+01:38:12,941 --> 01:38:15,183
+Leon Noel: There are a couple hundred of those companies.
+
+1189
+01:38:15,783 --> 01:38:17,864
+Leon Noel: You need to be best friends with everybody that works at that company.
+
+1190
+01:38:18,064 --> 01:38:20,246
+Leon Noel: And you mentioned building your reputation.
+
+1191
+01:38:20,306 --> 01:38:22,247
+Leon Noel: This is something I really recommend.
+
+1192
+01:38:22,287 --> 01:38:28,291
+Leon Noel: folks that are coming from a location that doesn't have a traditional tech economy, is your reputation matters a lot.
+
+1193
+01:38:29,131 --> 01:38:36,698
+Leon Noel: We talk about building authority a lot in 100Dev, so picking a niche or a topic that you know very, very well, generating content around it.
+
+1194
+01:38:36,718 --> 01:38:43,604
+Leon Noel: So when somebody thinks about, I don't know, authentication, they think about you and the blog post that you've written and the depth of knowledge that you can bring.
+
+1195
+01:38:43,964 --> 01:38:51,531
+Leon Noel: That way, when you're applying to these global remote companies, you have something that nobody else really has, this intangible thing that helps set you apart.
+
+1196
+01:38:51,931 --> 01:38:53,392
+Leon Noel: And so the first thing I say, it's harder.
+
+1197
+01:38:54,261 --> 01:39:09,736
+Leon Noel: Building authority or reputation is super important and not going into your job search like an accident, it's not gonna happen if you don't have a very strong game plan and you're building the references and helping pass that sniff test that these companies are putting out there.
+
+1198
+01:39:09,776 --> 01:39:11,337
+Leon Noel: If you do those things, you'll be successful.
+
+1199
+01:39:11,357 --> 01:39:13,519
+Leon Noel: We've helped hundreds of people in that situation get a job.
+
+1200
+01:39:13,920 --> 01:39:15,281
+Leon Noel: It's just a way more difficult pathway.
+
+1201
+01:39:16,041 --> 01:39:16,281
+Quincy Larson: Yeah.
+
+1202
+01:39:16,902 --> 01:39:25,226
+Quincy Larson: And just on that note of building authority, what are some of the most, I guess, immediate things someone can do?
+
+1203
+01:39:25,506 --> 01:39:26,727
+Quincy Larson: Let's say you already have the skills.
+
+1204
+01:39:26,967 --> 01:39:35,872
+Quincy Larson: Let's say you've been coding for a long time and you just want to be able to get a job, preferably at a multinational company, many of which are, of course, US-based.
+
+1205
+01:39:37,333 --> 01:39:50,182
+Quincy Larson: And you would love over the next five or ten years to eventually get a visa and come to the US where salaries are double what they are in Europe and where we have a high degree of freedom that people in other countries don't necessarily enjoy.
+
+1206
+01:39:50,542 --> 01:39:51,843
+Quincy Larson: I mean, it is a good place to live.
+
+1207
+01:39:52,084 --> 01:39:53,725
+Quincy Larson: I like living in the US.
+
+1208
+01:39:54,265 --> 01:40:06,929
+Quincy Larson: I guess it's easy for me to say that as a middle class guy who speaks English natively and has US citizenship and doesn't have to deal with my H1B being shifted around and getting companies to sponsor me and all that stuff.
+
+1209
+01:40:06,949 --> 01:40:09,509
+Quincy Larson: But I can definitely understand the appeal.
+
+1210
+01:40:09,549 --> 01:40:15,191
+Quincy Larson: I can understand why so many people are trying to immigrate to the US every day.
+
+1211
+01:40:15,271 --> 01:40:21,413
+Quincy Larson: But what would be some practical ways that they can establish authority, as you said?
+
+1212
+01:40:22,313 --> 01:40:32,762
+Leon Noel: Yeah, so I think when you are trying to stand out amongst lots of other talented individuals, it doesn't have to be anything wild.
+
+1213
+01:40:32,782 --> 01:40:41,590
+Leon Noel: I really do think building a list of companies that are on your targeted range, and the H1B processes, I've helped sponsor a lot of H1Bs.
+
+1214
+01:40:41,650 --> 01:40:42,191
+Quincy Larson: Oh, okay, cool.
+
+1215
+01:40:42,731 --> 01:40:45,053
+Leon Noel: We can talk about like, that's a whole other beast in and of itself.
+
+1216
+01:40:45,133 --> 01:40:47,534
+Leon Noel: That's like, you have to be an exceptional talent.
+
+1217
+01:40:47,554 --> 01:40:49,115
+Leon Noel: You have to do these things that will just stand out.
+
+1218
+01:40:49,135 --> 01:40:50,036
+Leon Noel: Like that's a whole other thing.
+
+1219
+01:40:50,376 --> 01:40:51,777
+Leon Noel: You're talking about like global remote company.
+
+1220
+01:40:51,797 --> 01:40:52,498
+Leon Noel: Like what can you do right now?
+
+1221
+01:40:52,538 --> 01:40:56,280
+Leon Noel: I'm thinking about somebody right now that wants to get a job.
+
+1222
+01:40:57,481 --> 01:41:00,924
+Leon Noel: My process probably wouldn't be the H1B coming to the US right away.
+
+1223
+01:41:00,944 --> 01:41:06,527
+Leon Noel: It'd be these like global remote companies and then maybe expanding to companies that could sponsor.
+
+1224
+01:41:07,568 --> 01:41:15,291
+Leon Noel: But a lot of times you're gonna need more, more credentials you're going to need, like degrees might actually become a thing if you're trying to go that sponsorship route.
+
+1225
+01:41:16,092 --> 01:41:33,018
+Leon Noel: So I recommend right now, if you're someone in Nigeria or India, looking at these global hire and remote companies, figuring out what they do, building a list of them, building a list of all the people that you know that work there, adding them to a Twitter list, right?
+
+1226
+01:41:33,058 --> 01:41:46,688
+Leon Noel: Like each person added to a Twitter list, start engaging with their content, just liking stuff at first, don't be spammy, don't be weird, just like engaging with them, liking their content, congratulating them when they get a new project built, right?
+
+1227
+01:41:46,728 --> 01:42:02,379
+Leon Noel: Like building that network of folks that know who you are over time, like you become like an acquaintance, like you can go from a nobody to like, they have no idea who you are to an acquaintance just by regular interaction on LinkedIn, Twitter, And there's a fine line between being weird with it, right?
+
+1228
+01:42:02,659 --> 01:42:05,421
+Leon Noel: We at 100 Dozen always joke, it's not stalking, it's networking.
+
+1229
+01:42:05,761 --> 01:42:08,362
+Leon Noel: And so you wanna make sure that you're not crossing that line.
+
+1230
+01:42:10,043 --> 01:42:14,366
+Leon Noel: And then starting to realize what these companies have trouble with, right?
+
+1231
+01:42:14,706 --> 01:42:17,468
+Leon Noel: You're engaging with these content, you're seeing the things that they're doing.
+
+1232
+01:42:17,948 --> 01:42:22,711
+Leon Noel: Are they having trouble implementing, I don't know, AI or LLMs?
+
+1233
+01:42:23,211 --> 01:42:25,113
+Leon Noel: Great, that's the content you need to start regenerating.
+
+1234
+01:42:25,753 --> 01:42:31,866
+Leon Noel: Build your authority about, How do they integrate these tools into their daily process?
+
+1235
+01:42:31,906 --> 01:42:32,846
+Leon Noel: You should have a blog.
+
+1236
+01:42:33,706 --> 01:42:35,807
+Leon Noel: You should have a YouTube.
+
+1237
+01:42:36,528 --> 01:42:38,609
+Leon Noel: You should have something where you're putting content out there.
+
+1238
+01:42:38,929 --> 01:42:46,452
+Leon Noel: You're getting feedback from them and from community of some sort to where you're building up that, hey, I'm not just somebody that says I do this.
+
+1239
+01:42:46,512 --> 01:42:47,812
+Leon Noel: You can look at my content.
+
+1240
+01:42:47,832 --> 01:42:49,033
+Leon Noel: You can look at the things I'm doing.
+
+1241
+01:42:49,573 --> 01:42:53,355
+Leon Noel: You can look at the things that I say I've done and be able to see that very clearly.
+
+1242
+01:42:53,935 --> 01:42:57,296
+Leon Noel: And also, by doing that, you're practicing how you talk about these things.
+
+1243
+01:42:57,316 --> 01:43:12,780
+Leon Noel: You're practicing, maybe if English is your second language, you're getting more comfortable with these things that when it comes time to pass the sniff test, you are, because these people you've been engaging with for a year plus, they've seen your content, they know who you are, they know what you're capable of.
+
+1244
+01:43:13,121 --> 01:43:15,361
+Leon Noel: That makes getting into these orgs a little bit easier.
+
+1245
+01:43:16,001 --> 01:43:16,501
+Quincy Larson: Absolutely.
+
+1246
+01:43:16,501 --> 01:43:18,202
+Quincy Larson: 100% agreed.
+
+1247
+01:43:18,602 --> 01:43:19,562
+Quincy Larson: Based on my limited knowledge.
+
+1248
+01:43:19,922 --> 01:43:21,623
+Quincy Larson: I think it sounds like you have a lot more knowledge about that.
+
+1249
+01:43:22,034 --> 01:43:26,138
+Quincy Larson: So what I would like to ask then is like, let's flip this around.
+
+1250
+01:43:26,779 --> 01:43:34,326
+Quincy Larson: Employers who want to bring in more folks and this can, we can definitely start by talking about folks from overseas.
+
+1251
+01:43:34,766 --> 01:43:47,078
+Quincy Larson: If you want talent, if you want to be able to tap that talent and you don't want to like go to some consultancy or something in some other country and say, give me like 20 devs, right, go to Infosys or whatever, like you want to literally get the best talent
+
+1252
+01:43:47,638 --> 01:43:47,859
+Leon Noel: from
+
+1253
+01:43:48,219 --> 01:43:52,423
+Quincy Larson: India or from Nigeria just by picking developer by developer yourself.
+
+1254
+01:43:52,783 --> 01:43:56,848
+Quincy Larson: You're trying to build out your company or you're a hiring manager and you're just trying to build a team.
+
+1255
+01:43:58,289 --> 01:44:05,596
+Quincy Larson: What strategies, what advice would you give to those people so that they can actually find talented people and what should they be looking for?
+
+1256
+01:44:06,377 --> 01:44:07,978
+Leon Noel: I think partnerships are really great.
+
+1257
+01:44:08,018 --> 01:44:10,719
+Leon Noel: So we work with a lot of hiring partners at Resilient Coders.
+
+1258
+01:44:11,219 --> 01:44:15,101
+Leon Noel: We've sent dozens of folks to Amazon through Resilient Coders.
+
+1259
+01:44:15,361 --> 01:44:21,284
+Leon Noel: We have these very strong partnerships with a lot of orgs that need a good solid pipeline of talent.
+
+1260
+01:44:21,624 --> 01:44:24,125
+Leon Noel: And so partnering with communities is a really good way to do that.
+
+1261
+01:44:25,005 --> 01:44:31,050
+Leon Noel: If you came to RC, it was encoders, or you came to 100 devs, and you said, give me the best of the best, I would talk to you.
+
+1262
+01:44:31,070 --> 01:44:35,774
+Leon Noel: I'd make sure that your job is doing all the things that it needs to be done to be done equitably.
+
+1263
+01:44:35,814 --> 01:44:52,288
+Leon Noel: And if I felt that that was the case, I would give you all the folks, you would have a pipeline that was full for days of highly, qualified, incredibly talented talent from wherever you need them to be from or anywhere you'd want to support as well, like we can make that happen.
+
+1264
+01:44:52,328 --> 01:44:57,692
+Leon Noel: And so I think for folks that are looking for a good pipeline, just working with communities.
+
+1265
+01:44:57,753 --> 01:45:12,179
+Leon Noel: So I would of course say Working with myself you, I always think of Paris black tech pipeline does this work really well where they're able to get you a very strong source of talent from anywhere from entry level to super senior.
+
+1266
+01:45:12,859 --> 01:45:15,781
+Leon Noel: And so, figuring out these different orgs that have.
+
+1267
+01:45:16,741 --> 01:45:23,067
+Leon Noel: a surplus of talented engineering talent could be a great way to build those funnels for you.
+
+1268
+01:45:23,187 --> 01:45:24,768
+Quincy Larson: Yeah, absolutely.
+
+1269
+01:45:25,168 --> 01:45:40,942
+Quincy Larson: And then for organizations that just want to be more representative of the folks in their community, let's say like it's not necessarily remote, but here in the US, Los Angeles, for example, like there's a tech startup and they're looking for engineers.
+
+1270
+01:45:41,362 --> 01:45:54,616
+Quincy Larson: What I guess, general tips would you give to employers so that they can be inclusive and they can make sure that they're bringing on talent that actually represents the local population instead of just bringing in a bunch of, you know, Stanford grads or something like that, right?
+
+1271
+01:45:54,956 --> 01:45:58,981
+Leon Noel: Yeah, I think it takes champions within a company that actually care about these things.
+
+1272
+01:45:59,421 --> 01:46:03,644
+Leon Noel: Of course, you can read like the McKinsey reports, a more diverse workforce equals better outcomes, right?
+
+1273
+01:46:03,664 --> 01:46:16,212
+Leon Noel: So a lot of companies know these things to be true, but it takes someone on the inside that cares about building an equitable workforce for this to actually happen, especially when things like DEI and these initiatives are being contested in the courts.
+
+1274
+01:46:16,633 --> 01:46:23,058
+Leon Noel: A lot of companies are becoming a little bit more shy around being 10 toes down, right?
+
+1275
+01:46:23,478 --> 01:46:27,141
+Leon Noel: And so I think if this is the case, it really doesn't come from top down.
+
+1276
+01:46:27,202 --> 01:46:31,286
+Leon Noel: It comes from individuals looking around and saying, you know what?
+
+1277
+01:46:31,686 --> 01:46:38,853
+Leon Noel: I live in a community that is 25% black and brown, but only 1% of our workforce is of color.
+
+1278
+01:46:39,113 --> 01:46:40,735
+Leon Noel: There's something fundamentally wrong here.
+
+1279
+01:46:40,795 --> 01:46:49,360
+Leon Noel: When we looked in Boston, where I spent most of my career, We had the second largest tech economy, but double-digit unemployment rates in our communities of color.
+
+1280
+01:46:49,640 --> 01:46:51,060
+Leon Noel: There's a fundamental mismatch.
+
+1281
+01:46:51,480 --> 01:47:04,805
+Leon Noel: And so we had a group of individuals that realized that this is just woefully inequitable, and they would go to town, they would go to fight the fight every single day to bring one person along, then to bring two along.
+
+1282
+01:47:04,865 --> 01:47:07,365
+Leon Noel: And the thing is, it can compound.
+
+1283
+01:47:08,166 --> 01:47:13,388
+Leon Noel: Once you have folks in these positions of power, you can turn around and help lift up more along with you.
+
+1284
+01:47:13,488 --> 01:47:16,369
+Leon Noel: So I don't think it needs to be like, like a company-wide thing.
+
+1285
+01:47:16,389 --> 01:47:25,573
+Leon Noel: I think anybody that's listening to this call has this ability to fight for what they know is right, to turn around and say, you know what, I want to make an equitable pathway in my company.
+
+1286
+01:47:25,593 --> 01:47:33,896
+Leon Noel: And I'm going to work really, really hard for the next open role for it to be someone that deserves to be here, but might not have the opportunity.
+
+1287
+01:47:34,727 --> 01:47:39,631
+Quincy Larson: yeah and that's a huge part of 100 devs like as far as i can tell from like.
+
+1288
+01:47:39,671 --> 01:48:07,408
+Quincy Larson: listening to a lot of your episodes and stuff like instead of asking people to like necessarily donate to 100 devs or uh like you tell them send the elevator back down is something you've said a few times like like try for every one of the 100 devs cohort members, the learners, they should try to find somebody else who's an alum and bring them onto their company so that they can kind of essentially
+
+1289
+01:48:07,868 --> 01:48:08,109
+Leon Noel: be
+
+1290
+01:48:09,009 --> 01:48:11,789
+Quincy Larson: increasing the number of alumni within these organizations.
+
+1291
+01:48:11,809 --> 01:48:15,590
+Leon Noel: So in the free software community, we have a word gratis, right?
+
+1292
+01:48:15,810 --> 01:48:20,271
+Leon Noel: It's not free, it's gratis, meaning that there's like no cost, like there's no like monetary cost.
+
+1293
+01:48:20,792 --> 01:48:23,693
+Leon Noel: And so 100 devs is gratis.
+
+1294
+01:48:23,713 --> 01:48:24,794
+Leon Noel: I mean, there's no money.
+
+1295
+01:48:25,094 --> 01:48:26,315
+Leon Noel: No money should ever come out of your pocket.
+
+1296
+01:48:26,355 --> 01:48:29,157
+Leon Noel: I never want to see a dollar come out of your pocket for anything.
+
+1297
+01:48:29,898 --> 01:48:31,259
+Leon Noel: There's no way that you can give us that dollar.
+
+1298
+01:48:31,279 --> 01:48:31,840
+Leon Noel: We don't want it.
+
+1299
+01:48:32,360 --> 01:48:33,061
+Leon Noel: But it's not free.
+
+1300
+01:48:33,421 --> 01:48:49,014
+Leon Noel: And the reason why it's not free is because we expect that when you get the job, that you turn around and help three more get into the same position that you have, whether it's helping answer questions, whether it is literally helping people apply and get into the pipeline for your company.
+
+1301
+01:48:49,674 --> 01:48:56,857
+Leon Noel: The expectation is that this community has invested thousands of hours into your success.
+
+1302
+01:48:57,317 --> 01:49:00,838
+Leon Noel: And the thing that we ask is that you turn around and give a little bit of that time back.
+
+1303
+01:49:01,298 --> 01:49:19,322
+Leon Noel: And that's the reason why 100Devs has been so successful is that we have folks that have made it to the upper echelon that are now senior developers at the best tech companies in the world that are still giving up their time every single day on our discord and our huddles to make sure that the next folks are successful.
+
+1304
+01:49:21,468 --> 01:49:28,631
+Quincy Larson: That is a beautiful note to end on, just the virtue of this organization that you've birthed into the world.
+
+1305
+01:49:29,592 --> 01:49:33,173
+Quincy Larson: But let's not end quite yet, because I want to ask, what are the future initiatives?
+
+1306
+01:49:33,694 --> 01:49:38,856
+Quincy Larson: What does 2024, the rest of 2024, maybe even 2025, 2026?
+
+1307
+01:49:38,856 --> 01:49:47,840
+Quincy Larson: Free Code Camp, we think, literally a decade out, like working on this computer science degree program that will take another six years to complete all the coursework for, plus another.
+
+1308
+01:49:48,380 --> 01:49:57,326
+Quincy Larson: Five years together longitudinal data plus probably another five years to have the data, you know Approved by a creditor so we can get the degree program accredited.
+
+1309
+01:49:57,806 --> 01:50:01,049
+Quincy Larson: free computer science bachelor's degree free.
+
+1310
+01:50:01,289 --> 01:50:06,332
+Leon Noel: I was tweeting up a storehouse telling everybody in their mom.
+
+1311
+01:50:06,412 --> 01:50:10,495
+Leon Noel: I was running and showing my way like look this is this is the future like this is.
+
+1312
+01:50:10,575 --> 01:50:14,398
+Leon Noel: this is the thing that We need the most in the world right now.
+
+1313
+01:50:14,478 --> 01:50:17,800
+Leon Noel: And so yeah, I'm super happy that that's like on your your vision.
+
+1314
+01:50:18,540 --> 01:50:19,782
+Quincy Larson: Education wants to be free.
+
+1315
+01:50:20,142 --> 01:50:37,459
+Leon Noel: Yeah, exactly like this is it right like doing the work like and like we said earlier I think free co-camp is amazing at identifying the real gaps like the things that people really need to be successful and Filling them and having a community that's willing to step up and do that work to fill those gaps.
+
+1316
+01:50:38,280 --> 01:50:39,080
+Leon Noel: so it's something I've.
+
+1317
+01:50:40,221 --> 01:50:42,642
+Leon Noel: It's the reason why it's the best donation I make every single week.
+
+1318
+01:50:42,722 --> 01:50:50,485
+Leon Noel: It's the reason why I always send folks to free code camps, because I know that they're in safe hands to get the things they need done.
+
+1319
+01:50:51,866 --> 01:50:53,607
+Leon Noel: Free isn't free for everyone, right?
+
+1320
+01:50:53,627 --> 01:51:01,390
+Leon Noel: In terms of time and commitment, a lot of folks that would be extremely successful at 100 devs, right?
+
+1321
+01:51:01,410 --> 01:51:10,251
+Leon Noel: The cliche line is that Skill and talent is distributed, opportunity is not, right?
+
+1322
+01:51:10,291 --> 01:51:18,916
+Leon Noel: And so we have a lot of folks that are extremely talented that could be phenomenal software engineers, but don't have the opportunity or the privilege of time.
+
+1323
+01:51:19,536 --> 01:51:20,617
+Leon Noel: They need to take that time.
+
+1324
+01:51:20,657 --> 01:51:23,399
+Leon Noel: they would be spending learning, driving for Uber.
+
+1325
+01:51:23,979 --> 01:51:24,920
+Leon Noel: doing DoorDash.
+
+1326
+01:51:25,340 --> 01:51:28,503
+Leon Noel: They need to take that time to put food on the table for their family.
+
+1327
+01:51:29,143 --> 01:51:38,731
+Leon Noel: And when we polled our collective, we saw that folks really only needed around $200 a week to make this a viable pathway.
+
+1328
+01:51:39,211 --> 01:51:46,858
+Leon Noel: So our huge, big goal is to build out an agency model where real companies come.
+
+1329
+01:51:47,518 --> 01:51:50,560
+Leon Noel: They have work that they need for us to accomplish.
+
+1330
+01:51:50,881 --> 01:52:07,352
+Leon Noel: We have super seasoned professional engineers that lead those projects, and then we break those projects down into individual issues or tasks, so that as you're learning, you're also maybe picking up some of these tasks in a real code base, like your skills become intensely practical.
+
+1331
+01:52:07,913 --> 01:52:21,243
+Leon Noel: By the time you graduate or leave 100 Devs, you've built real projects for real companies with production level code, And all the money that comes into agency goes directly into those issues, so that you're also getting a little bit of money coming in as you're working through it.
+
+1332
+01:52:21,684 --> 01:52:29,810
+Leon Noel: And we think that might make our program more equitable for folks that just don't have that last little bit of privilege of free time.
+
+1333
+01:52:29,870 --> 01:52:36,491
+Leon Noel: And so Like I said, we talked about earlier, we're a group of people that run ahead first into really big audacious goals.
+
+1334
+01:52:36,531 --> 01:52:37,791
+Leon Noel: Sometimes it works, sometimes it doesn't.
+
+1335
+01:52:37,811 --> 01:52:41,832
+Leon Noel: We're going to have a lot of mistakes, a lot of things are going to go wrong, but we're going to figure it out.
+
+1336
+01:52:42,232 --> 01:52:52,135
+Leon Noel: And our goal is that when we launch our next cohort, we also have this agency model in place as well, so that you're not only learning, but getting this practical paid experience as well.
+
+1337
+01:52:52,455 --> 01:52:53,316
+Quincy Larson: Yeah, that's so cool.
+
+1338
+01:52:53,376 --> 01:52:54,076
+Leon Noel: I mean, that's like
+
+1339
+01:52:55,097 --> 01:53:09,725
+Quincy Larson: we're all about taking away excuses from people like it is in like to be fair, like a lot of excuses, like if you have young kids or you're taking care of your folks, if you're working like three jobs to be able to pay exorbitant rent in your city, you know, like those are very.
+
+1340
+01:53:10,754 --> 01:53:14,057
+Quincy Larson: reasonable reasons for not being able to spend a lot of time coding.
+
+1341
+01:53:14,117 --> 01:53:23,904
+Quincy Larson: But if there are things you can do to remove some of those barriers, to make it easier for people to commit to an already arduous process of learning to code, right?
+
+1342
+01:53:24,384 --> 01:53:30,869
+Quincy Larson: And nobody, anybody who says learning to code is easy is trying to tell you something like, it is hard as heck.
+
+1343
+01:53:31,750 --> 01:53:32,811
+Quincy Larson: It's getting easier every year.
+
+1344
+01:53:33,072 --> 01:53:34,193
+Quincy Larson: We're not dealing with punch cards.
+
+1345
+01:53:34,393 --> 01:53:35,875
+Quincy Larson: We're getting higher levels of abstraction.
+
+1346
+01:53:36,235 --> 01:53:39,259
+Quincy Larson: It is becoming easier, but it's not Star Trek easy where you just talk to the computer, right?
+
+1347
+01:53:40,120 --> 01:53:43,343
+Quincy Larson: Eventually it will be, but maybe in the 24th century.
+
+1348
+01:53:45,406 --> 01:53:49,808
+Quincy Larson: The more immediate problem... helping people free up their time so they can actually learn.
+
+1349
+01:53:50,088 --> 01:53:53,028
+Quincy Larson: I just want to commend you on this program.
+
+1350
+01:53:53,088 --> 01:54:08,151
+Quincy Larson: Like, I love the idea of getting people out there doing real world work, getting compensation through some sort of program where they can just, I mean, even $200 a week, it sounds like it's going to be a huge lifeline for a lot of these folks and free up a lot of time and energy.
+
+1351
+01:54:09,692 --> 01:54:21,881
+Quincy Larson: This is extremely exciting and I would be very excited to have you back on in the future to catch up and like, see what you learned from running this this new uh experiment that you're running this bold endeavor.
+
+1352
+01:54:22,742 --> 01:54:23,523
+Leon Noel: i'll let you know how it goes.
+
+1353
+01:54:24,404 --> 01:54:24,825
+Quincy Larson: awesome man.
+
+1354
+01:54:24,865 --> 01:54:36,719
+Quincy Larson: well it's been such a joy learning so much from you not just from this conversation but just you know following you on twitter I'm going to add links to a lot of stuff that we've talked about in here.
+
+1355
+01:54:36,819 --> 01:54:38,940
+Quincy Larson: I'm going to, of course, link to 100Devs.
+
+1356
+01:54:39,480 --> 01:54:54,348
+Quincy Larson: And I just encourage people to learn more about the work of Leon, learn more about 100Devs, Resilient Coders, these organizations that, you know, like Resilient Coders is a charity, like Free Code Camp, 501C3.
+
+1357
+01:54:55,088 --> 01:55:01,012
+Quincy Larson: And, you know, like there are lots of charities out there that are doing important work.
+
+1358
+01:55:01,992 --> 01:55:06,235
+Quincy Larson: I'm going to try to encourage people to do what we've done, the two of us.
+
+1359
+01:55:06,776 --> 01:55:19,745
+Quincy Larson: And yes, you can create a startup and make a lot of money and life-changing money, especially if you've got family that are back in a home country that needs support.
+
+1360
+01:55:19,865 --> 01:55:24,168
+Quincy Larson: I will never give people a hard time about just wanting to make a whole lot of money.
+
+1361
+01:55:25,249 --> 01:55:38,646
+Quincy Larson: If you have the means, if you are somebody who's mid-career and wants to do something in the charity space, I hope that the accomplishments of Leon and Modestly, Free Co-Camp, and the project that I...
+
+1362
+01:55:38,766 --> 01:55:39,707
+Leon Noel: Not so Modestly.
+
+1363
+01:55:39,727 --> 01:55:41,830
+Leon Noel: There's no Modesty that needs to be had there.
+
+1364
+01:55:42,170 --> 01:55:42,370
+Quincy Larson: Yes.
+
+1365
+01:55:43,251 --> 01:55:50,435
+Quincy Larson: I hope some of this will inspire you to also consider, you know, doing work in the public space, right, as a tax exempt public charity.
+
+1366
+01:55:51,195 --> 01:55:57,239
+Quincy Larson: And again, I just want to commend the work you're doing, Leon, and I hope everybody has learned a great deal.
+
+1367
+01:55:58,416 --> 01:55:59,016
+Leon Noel: I appreciate it.
+
+1368
+01:55:59,036 --> 01:55:59,717
+Leon Noel: Thank you so much.
+
+1369
+01:55:59,797 --> 01:56:02,198
+Leon Noel: Like I said, this is a dream come true.
+
+1370
+01:56:02,578 --> 01:56:06,140
+Leon Noel: You've inspired me so much throughout my entire journey into this.
+
+1371
+01:56:06,260 --> 01:56:09,482
+Leon Noel: And I know you do the same for so many other folks each and every single day.
+
+1372
+01:56:09,522 --> 01:56:14,105
+Leon Noel: So thank you for the work that you do and in our communities, right, that help push this stuff through.
+
+1373
+01:56:14,445 --> 01:56:14,845
+Quincy Larson: Yeah.
+
+1374
+01:56:14,925 --> 01:56:19,568
+Quincy Larson: And to everybody in the 100 devs community that's watching this, hang in there.
+
+1375
+01:56:19,788 --> 01:56:21,849
+Quincy Larson: Keep it up, man and woman.
+
+1376
+01:56:22,490 --> 01:56:31,124
+Quincy Larson: You all are doing a long, grueling process, but you're helping one another, and you're making friends along the way.
+
+1377
+01:56:31,725 --> 01:56:35,835
+Quincy Larson: So with that, I just want to thank everybody for tuning in.
+
+1378
+01:56:36,055 --> 01:56:38,260
+Quincy Larson: Until next week, happy coding.
+

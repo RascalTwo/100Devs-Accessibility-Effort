@@ -1,0 +1,5332 @@
+﻿1
+00:00:36,940 --> 00:00:07,958
+Speaker 1: Thank you.
+
+2
+00:00:36,044 --> 00:00:38,626
+Speaker 1: Welcome back to the Free Code Camp podcast.
+
+3
+00:00:38,766 --> 00:00:41,869
+Speaker 1: I'm Quincy Larson teacher and founder of Free Code Camp.org.
+
+4
+00:00:42,289 --> 00:00:47,854
+Speaker 1: Each week, we're bringing you insight from developers, founders and ambitious people that are getting into tech.
+
+5
+00:00:48,094 --> 00:00:57,602
+Speaker 1: Today, we're talking with Leon Noelle, who, I don't know if you've heard of 100 devs, but it's amazing and it's a huge source of inspiration for me personally.
+
+6
+00:00:58,003 --> 00:01:02,547
+Speaker 1: He is the founder of 100 devs and he is head of engineering at Resilient Co.
+
+7
+00:01:03,956 --> 00:01:08,279
+Speaker 1: Leon, joining us from sunny Los Angeles.
+
+8
+00:01:08,719 --> 00:01:09,679
+Speaker 1: How's it going with you?
+
+9
+00:01:09,759 --> 00:01:10,720
+Speaker 1: It's a little early.
+
+10
+00:01:10,740 --> 00:01:11,821
+Speaker 0: We'll see if this thing comes out.
+
+11
+00:01:11,901 --> 00:01:12,941
+Speaker 0: Things are going well.
+
+12
+00:01:14,022 --> 00:01:16,403
+Speaker 0: This is surreal experience.
+
+13
+00:01:16,443 --> 00:01:20,486
+Speaker 0: Thank you so much for having me and we'll get weird with it real quick.
+
+14
+00:01:22,087 --> 00:01:25,869
+Speaker 0: I always joke that like my wife knows how serious I am.
+
+15
+00:01:26,409 --> 00:01:38,840
+Speaker 0: if your face is like the background of my like screens or I've had a picture of you on my desk for a little while so she knows if it's go time or not based off of like she's seeing you so well.
+
+16
+00:01:38,880 --> 00:01:39,481
+Speaker 0: it's honor.
+
+17
+00:01:39,501 --> 00:01:42,563
+Speaker 0: it's a huge privilege like this is a dream come true for me.
+
+18
+00:01:42,864 --> 00:01:49,890
+Speaker 0: you're a huge hero of mine and had done so much to help so many folks and you're who I want to be when I grow up so I really appreciate it.
+
+19
+00:01:49,930 --> 00:01:50,951
+Speaker 0: thanks for having me on.
+
+20
+00:01:51,789 --> 00:01:54,392
+Speaker 1: Yeah, well, I just want to say that it's like very kind.
+
+21
+00:01:54,932 --> 00:01:57,415
+Speaker 1: And I want to say that that goes both ways.
+
+22
+00:01:57,455 --> 00:02:04,061
+Speaker 1: Like often when I'm feeling like a little bit low energy and I, you know, I don't know if I can get a lot done today.
+
+23
+00:02:04,081 --> 00:02:12,790
+Speaker 1: Maybe I'll just, you know, go and answer a bunch of emails and not do like curriculum design or You know I'll go into like the.
+
+24
+00:02:13,812 --> 00:02:15,393
+Speaker 1: I'm like what would Leon do?
+
+25
+00:02:15,553 --> 00:02:22,121
+Speaker 1: he would dive in head first he would have so much energy overflowing and he would just go in there and get things done.
+
+26
+00:02:22,621 --> 00:02:36,693
+Speaker 1: and so yeah like I do think about you a lot when I'm just feeling low energy because I've watched your streams, and I've seen the amount of energy, both like literal energy like bursting, forth, and the positive energy that you bring to the community.
+
+27
+00:02:36,833 --> 00:02:39,014
+Speaker 1: So thank you for that.
+
+28
+00:02:39,094 --> 00:02:42,457
+Speaker 1: And I'll make a little meme of Wolverine holding the picture.
+
+29
+00:02:42,477 --> 00:02:44,398
+Speaker 0: And then there you go.
+
+30
+00:02:44,458 --> 00:02:46,860
+Speaker 1: We leave out holding the picture of me.
+
+31
+00:02:46,900 --> 00:02:49,121
+Speaker 1: I won't really do that, but like I just said, what did you said that?
+
+32
+00:02:49,141 --> 00:02:50,522
+Speaker 1: That's just so hot to do in my mind.
+
+33
+00:02:51,043 --> 00:02:52,744
+Speaker 1: Because I love X-Men.
+
+34
+00:02:53,124 --> 00:02:55,266
+Speaker 0: So, um, Leon.
+
+35
+00:02:55,566 --> 00:02:57,227
+Speaker 0: Did you see the new announcement?
+
+36
+00:02:57,227 --> 00:02:59,489
+Speaker 0: 97.
+
+37
+00:02:59,489 --> 00:02:59,969
+Speaker 0: What's happening?
+
+38
+00:03:00,149 --> 00:03:02,491
+Speaker 0: The redo in the old school cartoon.
+
+39
+00:03:03,272 --> 00:03:03,912
+Speaker 0: Oh my goodness.
+
+40
+00:03:03,992 --> 00:03:05,033
+Speaker 0: Like post professor.
+
+41
+00:03:05,053 --> 00:03:05,774
+Speaker 0: Yeah, 90s Saturday morning.
+
+42
+00:03:09,156 --> 00:03:11,077
+Speaker 0: All right, no more everybody.
+
+43
+00:03:11,097 --> 00:03:12,818
+Speaker 0: Stop the podcast and go watch the trail.
+
+44
+00:03:13,658 --> 00:03:14,299
+Speaker 0: It's really good.
+
+45
+00:03:14,339 --> 00:03:15,039
+Speaker 0: It looks really good.
+
+46
+00:03:15,079 --> 00:03:16,640
+Speaker 1: I will put a link to the trailer.
+
+47
+00:03:16,960 --> 00:03:23,343
+Speaker 0: Here's my eyes when there's a specific catchphrase that is said, but yeah.
+
+48
+00:03:23,363 --> 00:03:25,224
+Speaker 1: Okay, I'm going to link to that.
+
+49
+00:03:25,564 --> 00:03:40,932
+Speaker 1: We should watch that immediately after you finish watching this podcast interview because we've got a ton of advice that's practical and not just, you know, something that you can do to escape from your day that they experienced but to build up your day-to-day experience and accomplish your goals.
+
+50
+00:03:41,332 --> 00:03:59,784
+Speaker 1: So Leon, before we dive into 100 devs and resilient coders and all the work you've done, I like to always start these interviews with more autobiographical stuff, just so people can have context into who you are, your lived experience, where you're coming from, and where you're heading, and things like that.
+
+51
+00:04:00,264 --> 00:04:13,334
+Speaker 1: So maybe you could take it back to where you grew up, and what your earliest ambitions were as a kid, Yeah, so I grew up in Philly, definitely 100% of product of Philly.
+
+52
+00:04:13,354 --> 00:04:18,476
+Speaker 0: I was always kind of the very kind of tinkering, wanting to build type of kid.
+
+53
+00:04:19,297 --> 00:04:27,401
+Speaker 0: I grew up with a huge household, a big family, all in one row home in South Philly, which was amazing.
+
+54
+00:04:27,901 --> 00:04:34,325
+Speaker 0: And I was blessed to have amazing libraries where I had access to computers and kid.
+
+55
+00:04:34,745 --> 00:04:42,073
+Speaker 0: Tinker and build and I was really blessed to even have a lot of even just computer science education early throughout my life.
+
+56
+00:04:42,413 --> 00:04:49,300
+Speaker 0: I had a Q-basic class in middle school where I would get a sailboat to go from one side of the screen to the other.
+
+57
+00:04:49,340 --> 00:04:51,162
+Speaker 0: I thought I had magical powers and yeah.
+
+58
+00:04:51,602 --> 00:04:55,123
+Speaker 0: I was very lucky to have these skills so early.
+
+59
+00:04:55,143 --> 00:05:05,106
+Speaker 0: We also infill have magnet schools, which are kind of like exams schools that you test into, and so I want to engineering in science, where I had two years of C++.
+
+60
+00:05:06,807 --> 00:05:08,948
+Speaker 0: in high school, and this is like 20 years ago.
+
+61
+00:05:09,488 --> 00:05:25,835
+Speaker 0: And so, yeah, I just, I'm very lucky to have grown up in an environment that supported my passions and interest, even when I didn't have access to those technologies or knowledge that there was a way for me to get access to it.
+
+62
+00:05:25,895 --> 00:05:27,616
+Speaker 0: So, very, very thankful for that.
+
+63
+00:05:28,357 --> 00:05:28,897
+Speaker 1: That's awesome.
+
+64
+00:05:28,957 --> 00:05:37,121
+Speaker 1: Yeah, it sounds like a really kind of like a dillic upbringing in the sense that like, you've got access.
+
+65
+00:05:37,762 --> 00:05:38,442
+Speaker 1: What about teachers?
+
+66
+00:05:38,623 --> 00:05:41,865
+Speaker 1: Did you have any teachers as a kid who like really propelled you forward?
+
+67
+00:05:41,925 --> 00:05:50,512
+Speaker 1: I always talked very passionately about my seventh grade teacher or eighth grade teacher, science teacher, Mr.
+
+68
+00:05:50,552 --> 00:05:53,434
+Speaker 1: Krieger, whom I've failed to track down.
+
+69
+00:05:53,474 --> 00:05:54,735
+Speaker 1: If you know Mr.
+
+70
+00:05:54,775 --> 00:06:04,683
+Speaker 1: Krieger who taught at, you know, Hoover Middle School, which was like a now destroyed bulldozed school in Oklahoma City.
+
+71
+00:06:05,583 --> 00:06:07,284
+Speaker 1: If anybody has heard of that person, let me know.
+
+72
+00:06:07,364 --> 00:06:09,646
+Speaker 1: But did you have anybody like a Mr.
+
+73
+00:06:09,706 --> 00:06:15,749
+Speaker 1: Krieger in your life who was eccentric and interesting, but kept giving you like interesting books about space and stuff like that?
+
+74
+00:06:15,829 --> 00:06:18,310
+Speaker 0: Yeah, so I've have been lucky to have a few.
+
+75
+00:06:19,191 --> 00:06:19,791
+Speaker 0: So Mr.
+
+76
+00:06:19,931 --> 00:06:34,201
+Speaker 0: and Sheen was my fifth grade teacher that when I was done my coursework would not let me just sit there totally my thumbs but always had like puzzles and things to build and tinker with in the background and I like what.
+
+77
+00:06:34,221 --> 00:06:35,183
+Speaker 0: I've tried to find them.
+
+78
+00:06:35,203 --> 00:06:38,993
+Speaker 0: I haven't been able to find them, but they really kind of showed me that.
+
+79
+00:06:40,256 --> 00:06:51,278
+Speaker 0: I could be in control of my learning that it wasn't a one way to positive of knowledge that I could have some sort of control or command over the things I was doing with my free time.
+
+80
+00:06:51,358 --> 00:06:55,639
+Speaker 0: that would enable me to think creatively and to do things I wanted to do.
+
+81
+00:06:55,659 --> 00:07:09,042
+Speaker 0: I had a lot of wonderful folks throughout high school that really helped guide me that pushed me that maybe saw something inside of me that I didn't see inside of myself and would try and pull that out.
+
+82
+00:07:09,722 --> 00:07:12,584
+Speaker 0: my, we're talking about, like, code education, shout out Mr.
+
+83
+00:07:12,624 --> 00:07:16,826
+Speaker 0: Schipper would push me to learn my, my C++.
+
+84
+00:07:17,147 --> 00:07:28,233
+Speaker 0: and we had the old school like matrix printers where you'd print out, yeah, hold on them and, and I'd look through it and take it to them and try to point out bugs or errors.
+
+85
+00:07:28,714 --> 00:07:33,338
+Speaker 0: and you talk about folks in your life that do like the small things right.
+
+86
+00:07:33,358 --> 00:07:34,259
+Speaker 0: and mr.
+
+87
+00:07:34,279 --> 00:07:39,463
+Speaker 0: shipper every every birthday for years and years would just send me like a happy birthday message.
+
+88
+00:07:39,503 --> 00:08:10,765
+Speaker 0: so talking about folks that just support you long term uh... that was there and then in university it was doctor bps guess the person that showed me that I could be what I wanted to be, and supported my ability to learn, and supported what I wanted to do, made sure that I had funding over the summer, to live, made sure that I got to do the research I wanted to do, and ultimately gave me the skills that I thought I needed to.
+
+89
+00:08:10,785 --> 00:08:18,408
+Speaker 0: Either person I wanted to be in life, and so yeah, definitely the product of amazing teachers throughout my entire life.
+
+90
+00:08:18,888 --> 00:08:25,031
+Speaker 0: That's something that I try to think of with resilient coders and 100 devs.
+
+91
+00:08:25,471 --> 00:08:34,196
+Speaker 0: What was about those folks that inspired me to do more to learn to feel comfortable and trying to bring that into the classroom as well?
+
+92
+00:08:34,756 --> 00:08:46,889
+Speaker 1: yeah yeah it's so cool to talk with another teacher because obviously your software engineer but you're also a teacher to many many people not necessarily in the conventional way maybe in the conventional way too.
+
+93
+00:08:46,969 --> 00:08:55,137
+Speaker 1: maybe you actually give lectures occasionally in person but like through 100 devs you're essentially like the classroom teacher that people need.
+
+94
+00:08:55,598 --> 00:09:09,604
+Speaker 1: you know like yeah You know, the VAT signals up in the air, the 100-dev signal and you're answering that call and you're helping people with the not just practical challenges of learning the code, but the motivational challenges as well.
+
+95
+00:09:10,084 --> 00:09:12,665
+Speaker 1: And that's a huge thing I take away from your stream.
+
+96
+00:09:13,425 --> 00:09:17,767
+Speaker 1: Sounds like you went on to do really well academically.
+
+97
+00:09:17,787 --> 00:09:22,109
+Speaker 1: I presume because you went to university in the world.
+
+98
+00:09:23,269 --> 00:09:29,612
+Speaker 1: Maybe you could talk a little bit about what that process was like, what is it like getting into a relatively elite school?
+
+99
+00:09:30,292 --> 00:09:33,374
+Speaker 1: And was that?
+
+100
+00:09:34,274 --> 00:09:35,715
+Speaker 1: how long did you have that plan?
+
+101
+00:09:35,895 --> 00:09:36,935
+Speaker 1: What age did you kind of like?
+
+102
+00:09:36,975 --> 00:09:37,876
+Speaker 1: snap to awareness?
+
+103
+00:09:38,416 --> 00:09:41,919
+Speaker 1: I always like to tell people like I kind of snap to awareness much later in life.
+
+104
+00:09:42,700 --> 00:09:53,689
+Speaker 1: I was maybe like 20 21 and that's when I got really into like journalism and studying foreign languages and stuff like themes that would kind of run throughout the rest of life living abroad.
+
+105
+00:09:53,769 --> 00:09:56,192
+Speaker 1: and ultimately like much later I had kind of like.
+
+106
+00:09:56,232 --> 00:10:05,339
+Speaker 1: second thing where I learned like technologies really really gosh darn useful like and that's when I learned to code and like automated stuff from my school and stuff.
+
+107
+00:10:05,359 --> 00:10:18,748
+Speaker 1: but like did you have like an early kind of awakening at some point you remember a distinct period of your life where you're like hey you know I can do a lot more than other people around me are doing my peers.
+
+108
+00:10:19,169 --> 00:10:21,010
+Speaker 1: what was there such an awakening?
+
+109
+00:10:22,391 --> 00:10:27,417
+Speaker 0: yeah I think I want it to be comfortable.
+
+110
+00:10:27,437 --> 00:10:30,841
+Speaker 0: I want it to have a good life.
+
+111
+00:10:31,301 --> 00:10:38,710
+Speaker 0: And I think early on, especially as a kid of color, you're going to talk this very, it's just a doctor learned that this.
+
+112
+00:10:38,770 --> 00:10:40,452
+Speaker 0: It comes up over and over and over again.
+
+113
+00:10:40,472 --> 00:10:55,297
+Speaker 0: And it comes from maybe our families and the folks in our community not knowing kind of all of the opportunities that are available, but those are the safe pathways, the doctor learned dentists and so.
+
+114
+00:10:55,317 --> 00:10:55,397
+Speaker 0: Yeah.
+
+115
+00:10:56,519 --> 00:10:59,683
+Speaker 0: Yeah, it's proven.
+
+116
+00:10:59,703 --> 00:11:05,107
+Speaker 0: So that's kind of the path that I got put on at someone that who was successful pretty early academically.
+
+117
+00:11:05,127 --> 00:11:06,967
+Speaker 0: I did well in elementary school.
+
+118
+00:11:07,047 --> 00:11:12,389
+Speaker 0: I got, I used to have to go from my school to another school every week to do like other programs.
+
+119
+00:11:13,210 --> 00:11:20,233
+Speaker 0: And I saw how hard my grandparents had to work.
+
+120
+00:11:20,933 --> 00:11:26,015
+Speaker 0: I saw how hard my grandfather works specifically in a boiler room every day.
+
+121
+00:11:26,055 --> 00:11:26,695
+Speaker 0: It was hot.
+
+122
+00:11:26,775 --> 00:11:43,512
+Speaker 0: They were pulling vows and I saw what hardware could do, and I wanted to do something that would enable me to have a good life, but maybe not be so sweaty.
+
+123
+00:11:44,893 --> 00:11:48,936
+Speaker 0: And so the idea, let me look into Dr.
+
+124
+00:11:48,976 --> 00:11:49,817
+Speaker 0: Leridentis, Dr.
+
+125
+00:11:49,877 --> 00:11:59,273
+Speaker 0: Leridentis, As I went through middle school, I was very focused on getting into one of our magnet schools.
+
+126
+00:11:59,673 --> 00:12:04,775
+Speaker 0: So Philly has some amazing schools that you kind of test in and it's more of like a lottery now too as well.
+
+127
+00:12:05,335 --> 00:12:06,775
+Speaker 0: And I went to engineering and science.
+
+128
+00:12:07,095 --> 00:12:18,558
+Speaker 0: And engineering and science was geared around getting folks into engineering and science and had tracks that you could follow and a really good placement rate into universities.
+
+129
+00:12:20,519 --> 00:12:37,890
+Speaker 0: For a while my sophomore junior senior year, pretty much every lunch period was spent with Miss Brown, who's my guidance counselor, and would make sure that I was getting access to everything I needed to do well academically and to get into really good schools.
+
+130
+00:12:38,491 --> 00:12:42,173
+Speaker 0: And coming from a low income family, it's really expensive.
+
+131
+00:12:42,313 --> 00:12:54,542
+Speaker 0: So Miss Brown would make sure that I had vouchers for everything that I could take the SAT for free that I could apply to schools for free.
+
+132
+00:12:54,623 --> 00:12:59,845
+Speaker 0: that would get me into all the best summer programs that could help me academically.
+
+133
+00:13:00,305 --> 00:13:02,527
+Speaker 0: I was a did up or bound for a while.
+
+134
+00:13:03,467 --> 00:13:08,510
+Speaker 0: Make sure I had access to things that I'd get in the calculators and things like that.
+
+135
+00:13:08,590 --> 00:13:17,014
+Speaker 0: And so my school, I owe a lot to in terms of getting me prepared for eventually, which I would go to as Yale.
+
+136
+00:13:17,474 --> 00:13:49,754
+Speaker 0: And so for me, I think I've just been really blessed to be the product of a school system that if I wanted it, if I wanted to work hard, if I wanted to put in the hours and I played through sports, I did every club imaginable, but I had really amazing people that guided me through that process, and then I was able to make it from in us into Yale and then went into hard sciences and was on this track to be a doctor, right?
+
+137
+00:13:50,354 --> 00:13:50,615
+Speaker 0: Dr.
+
+138
+00:13:50,635 --> 00:13:52,016
+Speaker 0: Larry Dentist, I chose Dr.
+
+139
+00:13:52,036 --> 00:14:04,623
+Speaker 0: My mom was an LPN and I got to grow up in doctors offices and see and talk to folks and that was kind of the path that was on.
+
+140
+00:14:04,683 --> 00:14:19,389
+Speaker 0: and it's kind of funny because I was doing computer science, I was in an engineering high school and I just didn't allow myself to see that as my path or my career even though that's where I eventually I should have been or eventually did make it to.
+
+141
+00:14:19,789 --> 00:14:22,030
+Speaker 0: and so that's kind of the long-wine path.
+
+142
+00:14:22,090 --> 00:14:27,475
+Speaker 1: and to Awesome, and LPN is licensed practitioner, licensed practicing nurse?
+
+143
+00:14:27,956 --> 00:14:30,339
+Speaker 0: Yeah, it's like a vocational nurse, basically.
+
+144
+00:14:30,379 --> 00:14:38,649
+Speaker 0: So instead of doing, now I guess the track is like your bachelor's and you get like your RN, this was a vocational pathway to being a nurse.
+
+145
+00:14:39,591 --> 00:14:52,195
+Speaker 1: Yeah, yeah, I just want to make sure I got that right, and I have like this policy that like no matter how common the acronym is, I always try to like spell it out for especially for our listeners abroad, not even being the speaker of listeners as well.
+
+146
+00:14:52,255 --> 00:14:56,396
+Speaker 1: So okay, so just recapitulate some of that.
+
+147
+00:14:56,416 --> 00:15:02,398
+Speaker 1: I've been telling you to tell this as you talk just because this is so interesting and I'll email these to myself.
+
+148
+00:15:02,778 --> 00:15:05,599
+Speaker 1: These are not properly, but it's basically the contents of this conversation.
+
+149
+00:15:05,659 --> 00:15:06,200
+Speaker 1: It's public now.
+
+150
+00:15:09,119 --> 00:15:11,541
+Speaker 1: it sounds like you didn't.
+
+151
+00:15:11,641 --> 00:15:12,441
+Speaker 1: it just didn't even click.
+
+152
+00:15:12,461 --> 00:15:32,455
+Speaker 1: it didn't even really occur to you that software engineering was a field you could go into because like so many people coming from underprivileged backgrounds so many you know second generation and we're going to start even first generation and we're going so many people growing up who are kind of still in the shadow of inequality like racial inequality.
+
+153
+00:15:32,575 --> 00:15:33,555
+Speaker 1: that's systemic.
+
+154
+00:15:33,675 --> 00:15:34,996
+Speaker 1: that is the reason.
+
+155
+00:15:35,477 --> 00:15:43,463
+Speaker 1: one of the reasons why you know wealth among black families is like Something like one tenth of like white families that have been in the U.S.
+
+156
+00:15:43,503 --> 00:15:44,524
+Speaker 1: the same duration of time.
+
+157
+00:15:44,564 --> 00:15:45,485
+Speaker 1: I mean, it's like ridiculous.
+
+158
+00:15:45,945 --> 00:15:51,310
+Speaker 1: But because of these circumstances, uh, you were pushed to do Dr.
+
+159
+00:15:51,350 --> 00:15:56,834
+Speaker 1: lawyer dentist, and again, like most of my doctors dentists
+
+160
+00:15:57,395 --> 00:15:57,555
+Speaker 0: that
+
+161
+00:15:57,655 --> 00:16:24,888
+Speaker 1: I haven't had any lawyers lately, like over the years have been people who came from a different country, like their parents came from a different country, or in many cases, as doctors, they literally came from India past the USMLE, which is this incredibly stringent test, essentially re-certified as doctors, a very lengthy costly process, just so they could practice in the US, because the US is like a great place to live, and it's a great place to work as a physician.
+
+162
+00:16:25,569 --> 00:16:27,252
+Speaker 1: generally I guess I shouldn't speak for all.
+
+163
+00:16:27,272 --> 00:16:33,843
+Speaker 1: there may be some positions in the audience who take issue with that because of regulatory issues and like all this other stuff.
+
+164
+00:16:34,263 --> 00:16:42,407
+Speaker 1: but My point is you were so focused on that because that is what success sounded like.
+
+165
+00:16:42,927 --> 00:16:47,430
+Speaker 1: That was like the family's perception of success and software engineers like a relatively new thing.
+
+166
+00:16:47,490 --> 00:16:53,614
+Speaker 1: that is not well understood and it's not a surprise because software engineers only existed a few decades.
+
+167
+00:16:53,774 --> 00:17:12,515
+Speaker 1: Maybe you could talk about like What that awakening to software engineering was like, and how you went about, okay, I'm gonna go much deeper on coding and learning about computer science and math, like all these things that you need to be a successful software engineer.
+
+168
+00:17:13,776 --> 00:17:18,178
+Speaker 1: Now now I you may take issue with me saying like you need a whole lot of math for example or something like that.
+
+169
+00:17:18,438 --> 00:17:24,702
+Speaker 1: I don't think that's necessary true for a lot of jobs but I always tell people like there is no knowledge that is not power.
+
+170
+00:17:24,842 --> 00:17:27,823
+Speaker 1: like you should definitely learn math if you have the time.
+
+171
+00:17:27,903 --> 00:17:30,725
+Speaker 1: it's probably not the highest priority if you just want to go get a job as a developer.
+
+172
+00:17:31,092 --> 00:17:32,753
+Speaker 1: Sorry, but my question for you.
+
+173
+00:17:33,274 --> 00:17:33,614
+Speaker 1: Leon.
+
+174
+00:17:34,614 --> 00:17:36,055
+Speaker 1: All right, complete introduction.
+
+175
+00:17:36,616 --> 00:17:36,956
+Speaker 1: Right on.
+
+176
+00:17:37,076 --> 00:17:45,802
+Speaker 1: Okay, so I'm glad to hear that like, yeah, because a lot of times I hear like, I think one of the pieces of misinformation that's going around is like, oh, you don't need math to be a developer.
+
+177
+00:17:46,242 --> 00:17:47,323
+Speaker 1: Like, I don't know any math.
+
+178
+00:17:47,343 --> 00:17:49,164
+Speaker 1: Like, I just took high school math and I'm a developer.
+
+179
+00:17:49,565 --> 00:17:55,168
+Speaker 1: And like, That is true to an extent, but there is kind of like a ceiling that you're going to hit in your engineering career.
+
+180
+00:17:55,188 --> 00:17:55,368
+Speaker 1: Yeah.
+
+181
+00:17:55,588 --> 00:18:02,311
+Speaker 1: If you don't like at least take some time to learn some mathematics and you can learn mathematics right here on free code camps, YouTube channel.
+
+182
+00:18:02,732 --> 00:18:10,256
+Speaker 1: We have courses on pretty much every engineering math topic that you would learn at like an undergraduate engineering program.
+
+183
+00:18:10,916 --> 00:18:14,358
+Speaker 1: So, you know, it's just investment of time.
+
+184
+00:18:14,418 --> 00:18:19,921
+Speaker 1: And that's a big thing we'll talk about in a little bit is like, is it really free in the sense that you have to invest your time and energy.
+
+185
+00:18:20,401 --> 00:18:23,463
+Speaker 1: And not everybody has equal time and energy.
+
+186
+00:18:23,483 --> 00:18:28,245
+Speaker 1: Some people have all kinds of different circumstances that inform their availability of the learning to code.
+
+187
+00:18:28,725 --> 00:18:29,986
+Speaker 1: So, we'll talk about that in a minute.
+
+188
+00:18:30,006 --> 00:18:36,690
+Speaker 1: But like, how did you, a person, and like, maybe how old were you, were you still in school when you realized that you wanted to do CS?
+
+189
+00:18:37,850 --> 00:18:42,761
+Speaker 0: Yeah, so I, was always building.
+
+190
+00:18:43,521 --> 00:18:50,705
+Speaker 0: So when I started in sixth grade, I learned Q-basic and I would go to the libraries and tinker and build.
+
+191
+00:18:50,745 --> 00:18:57,308
+Speaker 0: When I was in high school, upper bound got me a TI-83 plus calculator, which I still have.
+
+192
+00:18:57,348 --> 00:18:58,989
+Speaker 0: It's like in my drawer over here somewhere.
+
+193
+00:19:01,130 --> 00:19:03,192
+Speaker 0: You could write code for that calculator.
+
+194
+00:19:03,572 --> 00:19:05,113
+Speaker 0: And I remember swapping.
+
+195
+00:19:05,153 --> 00:19:06,274
+Speaker 0: I felt like it was like old school.
+
+196
+00:19:06,294 --> 00:19:08,135
+Speaker 0: You know, like how you people used to swap flopbies.
+
+197
+00:19:08,255 --> 00:19:14,379
+Speaker 0: I would swap the games and programs from the calculator and go to the library.
+
+198
+00:19:14,419 --> 00:19:24,966
+Speaker 0: And like I remember the thing I wanted for one Christmas was like the cable that connected the calculator to the computer so that I could like put my code on it.
+
+199
+00:19:25,086 --> 00:19:36,837
+Speaker 0: And so I remember very early working on calculator games and other fun stuff that I just went to bring into the world or modify and hack God and so that was always really fun.
+
+200
+00:19:36,857 --> 00:19:44,524
+Speaker 0: And then I had that kind of formal C++ in high school and then when I got to university, it all went out the window.
+
+201
+00:19:44,544 --> 00:19:45,946
+Speaker 0: I was doing hard biology.
+
+202
+00:19:45,966 --> 00:19:49,429
+Speaker 0: I was doing eventually biological anthropology.
+
+203
+00:19:49,469 --> 00:19:52,032
+Speaker 0: I was looking at hormones, testosterone, and stuff like that.
+
+204
+00:19:52,552 --> 00:19:57,858
+Speaker 0: But this entire time I'd always been building, tinkering, I really liked entrepreneurship.
+
+205
+00:19:58,178 --> 00:20:02,462
+Speaker 0: I was always trying to start ideas, small companies, things like that.
+
+206
+00:20:02,562 --> 00:20:13,053
+Speaker 0: And I had started one simple project that went pretty viral in New Haven, New York area.
+
+207
+00:20:13,833 --> 00:20:25,239
+Speaker 0: And that kind of really showed me some of the power of these skills that I had been kind of accumulating, but the real kind of awakening for me for computer science was every summer I was doing lab work.
+
+208
+00:20:25,699 --> 00:20:35,864
+Speaker 0: And I had figured out how to survive when you're low income going into an Ivy League school, basically they give you a full ride right out the rip.
+
+209
+00:20:36,024 --> 00:20:48,611
+Speaker 0: And so I had figured out that if I didn't live on campus, they would give me like whatever the amount of money was to stay on campus they would give me and I was able to use that to like do stuff.
+
+210
+00:20:48,671 --> 00:20:58,297
+Speaker 0: I would pay rent and food but I was happy eating pasta and pasta sauce and I actually hadn't money to like live and and do all the things that all my my fellow students were doing.
+
+211
+00:20:58,397 --> 00:21:06,221
+Speaker 0: because I figured out this like way of doing it but I ran out of money whatsoever and it was getting pretty dicey pretty quickly.
+
+212
+00:21:06,322 --> 00:21:14,645
+Speaker 0: I really didn't have any money for food left and I was literally hungry and I realized that I could do things like.
+
+213
+00:21:14,805 --> 00:21:19,306
+Speaker 0: I was looking up like put jobs and then I was like wait a minute let me let me see if I can build somebody at website.
+
+214
+00:21:19,366 --> 00:21:19,966
+Speaker 0: I know how to do it.
+
+215
+00:21:19,986 --> 00:21:23,607
+Speaker 0: I've been building all these like landing pages and in small things with code before.
+
+216
+00:21:24,107 --> 00:21:25,308
+Speaker 0: so I put on Craigslist.
+
+217
+00:21:25,348 --> 00:21:26,348
+Speaker 0: hey I'll build GSA.
+
+218
+00:21:26,368 --> 00:21:27,528
+Speaker 0: I can get it done today.
+
+219
+00:21:27,548 --> 00:21:31,950
+Speaker 0: and somebody responded and they paid a deposit.
+
+220
+00:21:31,970 --> 00:21:36,373
+Speaker 0: and My life changed from that moment.
+
+221
+00:21:36,713 --> 00:21:38,595
+Speaker 0: I skipped all the way to the grocery store.
+
+222
+00:21:38,955 --> 00:21:41,517
+Speaker 0: I bought my pasta, bought my pasta sauce for the month.
+
+223
+00:21:42,138 --> 00:21:49,303
+Speaker 0: I built them this site and in that moment something very clear happened in my brain that I had a real skill.
+
+224
+00:21:50,264 --> 00:21:54,447
+Speaker 0: A skill that can provide, that can put food on the table, a skill that would.
+
+225
+00:21:55,470 --> 00:21:57,731
+Speaker 0: make it so I was never fucking hungry again.
+
+226
+00:21:57,751 --> 00:21:58,531
+Speaker 0: Sorry, oops, sorry, Chris.
+
+227
+00:21:58,992 --> 00:21:59,552
+Speaker 1: It's cool.
+
+228
+00:21:59,572 --> 00:22:00,492
+Speaker 0: I get it again.
+
+229
+00:22:00,912 --> 00:22:01,493
+Speaker 1: Yeah.
+
+230
+00:22:01,753 --> 00:22:04,374
+Speaker 1: If anybody like, like, we don't edit this podcast at all.
+
+231
+00:22:04,394 --> 00:22:05,914
+Speaker 1: So I'm like, that's where it was.
+
+232
+00:22:05,954 --> 00:22:10,216
+Speaker 1: That's like a, unless there's like something really bad that happens like I had a coughing film once.
+
+233
+00:22:13,137 --> 00:22:17,719
+Speaker 0: And so that that changed everything until this day I stole freelance.
+
+234
+00:22:17,960 --> 00:22:34,926
+Speaker 0: And I, that's the reason why a lot of the things I do today, the, the resilient coders, the 100 does is like, I want anybody that has ever felt that way to know that there is this option, this ability to develop skills that no one can take away from you, that can put legitimate food on the table.
+
+235
+00:22:35,367 --> 00:22:38,728
+Speaker 0: And so that's when I kind of went all in on more of the engineering piece.
+
+236
+00:22:40,396 --> 00:22:41,337
+Speaker 1: awesome yeah.
+
+237
+00:22:41,557 --> 00:22:49,565
+Speaker 1: well um that sounds like an amazing discovery of like powers that you just had latent within you that necessity brought forth.
+
+238
+00:22:49,665 --> 00:22:52,247
+Speaker 1: you know necessity is the mother of invention right?
+
+239
+00:22:52,568 --> 00:22:56,952
+Speaker 1: uh you were forced to basically buy your circumstance to like.
+
+240
+00:22:57,112 --> 00:23:01,256
+Speaker 1: think outside the proverbial box come up with a way to to get money to buy your pasta.
+
+241
+00:23:01,936 --> 00:23:06,880
+Speaker 1: Um, I, you know, I definitely remember the lean cause.
+
+242
+00:23:06,900 --> 00:23:08,521
+Speaker 1: you're subsisting off pasta.
+
+243
+00:23:08,881 --> 00:23:10,102
+Speaker 1: We got the smack ramen.
+
+244
+00:23:10,262 --> 00:23:14,945
+Speaker 1: If anybody, like, not the good, like, hit ramen, like, Korean ramen, but like, it was just called smack.
+
+245
+00:23:16,386 --> 00:23:17,467
+Speaker 1: We don't always joke about it.
+
+246
+00:23:17,547 --> 00:23:24,811
+Speaker 1: Like, when you're hungry, you know, it's almost like, you know, like a drug because it's just like, you feel so sated afterward.
+
+247
+00:23:24,832 --> 00:23:26,753
+Speaker 1: Um, it's like terrible for you.
+
+248
+00:23:27,193 --> 00:23:29,134
+Speaker 1: But what kind of pasta did you always do?
+
+249
+00:23:29,354 --> 00:23:32,396
+Speaker 1: Like, did you have a particular like build of pasta that you liked?
+
+250
+00:23:32,416 --> 00:23:36,559
+Speaker 0: Uh, this is like way back, whatever the cheapest was.
+
+251
+00:23:36,659 --> 00:23:38,280
+Speaker 0: I was, I was, I was, I'm gonna survive.
+
+252
+00:23:38,340 --> 00:23:38,820
+Speaker 0: I didn't care.
+
+253
+00:23:38,880 --> 00:23:47,245
+Speaker 0: Nowadays, I have some preferences, but back then, whatever, whatever it was on sale, whatever it was the cheapest, there was the supermarket nearest had like this like clearance aisle.
+
+254
+00:23:47,725 --> 00:23:50,287
+Speaker 0: And in that clearance aisle, they would put like this stuff they couldn't sell.
+
+255
+00:23:50,447 --> 00:23:52,628
+Speaker 0: And so whatever it was on that rack is what I had.
+
+256
+00:23:54,301 --> 00:23:55,381
+Speaker 0: Yeah,
+
+257
+00:23:55,902 --> 00:24:09,626
+Speaker 1: and to this day by the way, like a lot of grocery stores like Walmart, like they'll take their baked goods and they'll put them on a rack like right by the exit like the staff only place where they have like the garbage compactor where they compact the boxes like I worked in grocery stores for a few years.
+
+258
+00:24:10,066 --> 00:24:17,829
+Speaker 1: so basically back where they keep all the mobs and they keep all the you know inventory helps that there will be like a little rack and sometimes they'll have big good that like
+
+259
+00:24:18,250 --> 00:24:18,570
+Speaker 0: it's still
+
+260
+00:24:18,630 --> 00:24:21,851
+Speaker 1: good but we can't really sell it because it's gonna expire like a day or two.
+
+261
+00:24:21,931 --> 00:24:24,652
+Speaker 1: so like I still snag some buttons from there.
+
+262
+00:24:25,793 --> 00:24:34,277
+Speaker 1: but yeah just pro tip if you're going to a US grocery store you can often find like food that's about to expire that you can get like at a discount.
+
+263
+00:24:35,257 --> 00:24:36,958
+Speaker 1: So that's really cool.
+
+264
+00:24:36,998 --> 00:24:38,699
+Speaker 1: So how do things unfold from there?
+
+265
+00:24:38,759 --> 00:24:48,226
+Speaker 1: So how did you go from that first contract work, essentially, that client that you landed through Craigslist, which is how I landed.
+
+266
+00:24:48,286 --> 00:24:49,887
+Speaker 1: I think I landed some early clients through Craigslist.
+
+267
+00:24:49,927 --> 00:24:51,148
+Speaker 1: Craigslist, amazing tool.
+
+268
+00:24:51,168 --> 00:24:55,831
+Speaker 1: I'm not sure if it's still amazing today, like 12 years since I last used it.
+
+269
+00:24:55,871 --> 00:24:59,753
+Speaker 1: But yeah, like a lot of early gigs were found on Craigslist.
+
+270
+00:25:00,294 --> 00:25:03,395
+Speaker 1: How did you go from that to the deciding?
+
+271
+00:25:03,415 --> 00:25:08,676
+Speaker 1: I am a death like taking that identity if you will and going deeper with it.
+
+272
+00:25:09,216 --> 00:25:09,957
+Speaker 0: Yeah, sure.
+
+273
+00:25:10,097 --> 00:25:19,238
+Speaker 0: So my junior year at Yale, I started a small website called Listful of Hope.
+
+274
+00:25:19,518 --> 00:25:26,000
+Speaker 0: It was kind of like a reverse Craigslist where if you needed something, you could say what you needed.
+
+275
+00:25:26,020 --> 00:25:30,481
+Speaker 0: So if you needed a jacket and someone in the area had a jacket, you would meet up and they would give you a jacket.
+
+276
+00:25:30,561 --> 00:25:31,981
+Speaker 0: So it was kind of like a gift economy.
+
+277
+00:25:32,641 --> 00:25:37,482
+Speaker 0: It was a very simple site that was just enabling folks to help others in their community.
+
+278
+00:25:37,502 --> 00:25:41,043
+Speaker 0: And it really kind of popped off in New Haven.
+
+279
+00:25:41,423 --> 00:25:44,724
+Speaker 0: And so there is the one winter where it was like really popular.
+
+280
+00:25:44,744 --> 00:25:48,925
+Speaker 0: I remember people getting Christmas present, jackets, gloves, anything you needed.
+
+281
+00:25:49,706 --> 00:25:58,128
+Speaker 0: And I could really see that transition from something that was like just a raw skill to like me having to build an actual application and having really users.
+
+282
+00:25:59,168 --> 00:26:07,092
+Speaker 0: I was like I could I saw the power I saw that it could help so many people and I knew that these skills would be really advantageous to keep going.
+
+283
+00:26:07,112 --> 00:26:09,913
+Speaker 0: and so my junior year I kind of slowly stopped.
+
+284
+00:26:11,004 --> 00:26:12,826
+Speaker 0: kind of really wanting to do coursework.
+
+285
+00:26:13,586 --> 00:26:30,320
+Speaker 0: Senior year, it became even bigger problem and I was trying to finish my thesis to graduate and I had to get like 300 men to spit in a tube, tell me about their sexual histories, I could correlate it to their testosterone levels.
+
+286
+00:26:30,700 --> 00:26:39,768
+Speaker 0: I was trying to like show that or find something about BPA in relation to the costumes and we drank a lot of, like, it's the classic models.
+
+287
+00:26:40,208 --> 00:26:40,609
+Speaker 0: Yeah.
+
+288
+00:26:40,949 --> 00:26:44,973
+Speaker 0: And so I was trying to do that before it, before it became really popular, like, something people would actually think about.
+
+289
+00:26:45,013 --> 00:26:50,597
+Speaker 1: Yeah, for you, plastic, which for the kids, like just in case, it does have, like, deleterious effects.
+
+290
+00:26:50,637 --> 00:26:51,838
+Speaker 1: We don't want our kids to be drinking.
+
+291
+00:26:52,039 --> 00:27:05,395
+Speaker 0: And so, really hard time running that that experiment and apparently people didn't want to, you know, spit into tube and tell me about their sexual history for a like a bottle of gatoria and like a package on or something.
+
+292
+00:27:05,456 --> 00:27:38,738
+Speaker 0: And so I wasn't able to recruit enough people for that experiment and I decided to use my coding skills to set up just like a landing page where a lot of students were always trying to find studies or experiments to participate in because when they were a lot of fun sometimes and you actually got paid pretty well to do the experiments and so There is one really famous one that people loved where you basically went to a lab, they got you drunk and you played poker and they're just like watching you like how you make risky decisions and things like that and you got paid a couple of dollars to do it.
+
+293
+00:27:39,439 --> 00:27:48,608
+Speaker 0: So I made a landing page that had all the studies from Yale, Harvard, Princeton that we're like trying to get people to come and I just slipped mine in there.
+
+294
+00:27:49,489 --> 00:27:52,813
+Speaker 0: And it took off because we had all these professors that were promoting it.
+
+295
+00:27:53,093 --> 00:27:54,815
+Speaker 0: We had all these students that got real value.
+
+296
+00:27:54,855 --> 00:27:55,656
+Speaker 0: They went to the site.
+
+297
+00:27:55,696 --> 00:27:56,758
+Speaker 0: They found something fun to do.
+
+298
+00:27:56,818 --> 00:28:03,365
+Speaker 0: They got money and I dropped out my senior year to turn that into a business.
+
+299
+00:28:04,546 --> 00:28:06,287
+Speaker 0: which became social science.
+
+300
+00:28:07,168 --> 00:28:10,590
+Speaker 0: We wound up building academic surveying tools.
+
+301
+00:28:10,610 --> 00:28:15,933
+Speaker 0: They have over 4,000 different universities that used our tools to power their academic research.
+
+302
+00:28:16,573 --> 00:28:23,497
+Speaker 0: And even though that company has been wrapped up for a long time now, we still have research that gets published based off of the data that they collect it.
+
+303
+00:28:24,018 --> 00:28:26,299
+Speaker 0: I need it to know more.
+
+304
+00:28:26,579 --> 00:28:36,423
+Speaker 0: My engineers had these like magical powers and I needed to learn that skill for myself and so I took my cutting education more seriously.
+
+305
+00:28:37,203 --> 00:28:47,127
+Speaker 0: Eventually I was building other products, other striaps as well and started teaching at General Assembly, helping others kind of acquire these skills too.
+
+306
+00:28:47,187 --> 00:28:48,508
+Speaker 0: So that was kind of the journey.
+
+307
+00:28:49,108 --> 00:28:49,708
+Speaker 1: And it's interesting.
+
+308
+00:28:49,748 --> 00:28:54,670
+Speaker 1: So first of all, congratulations on building something that 4000 universities.
+
+309
+00:28:54,710 --> 00:28:54,990
+Speaker 1: Yeah.
+
+310
+00:28:55,371 --> 00:28:58,012
+Speaker 1: It's not easy to get universities to use your stuff.
+
+311
+00:28:58,472 --> 00:29:03,634
+Speaker 1: There's like this notorious like sales cycle adoption cycle among universities.
+
+312
+00:29:03,674 --> 00:29:06,875
+Speaker 1: They're very like slow to adopt new tools.
+
+313
+00:29:06,895 --> 00:29:09,396
+Speaker 0: Yeah, I mean, that's that's phenomenal.
+
+314
+00:29:09,436 --> 00:29:19,377
+Speaker 1: To go from basically like mechanical torque for being a human test subject to having like an actual project that is getting wide usage.
+
+315
+00:29:19,537 --> 00:29:21,598
+Speaker 1: Like, that's really amazing.
+
+316
+00:29:21,718 --> 00:29:23,018
+Speaker 0: Bring up mechanical Turk.
+
+317
+00:29:23,078 --> 00:29:29,381
+Speaker 0: Those are the reason why we were able to raise like VC funding was because M Turk was becoming more popular.
+
+318
+00:29:29,401 --> 00:29:31,262
+Speaker 0: And what social size.
+
+319
+00:29:31,302 --> 00:29:37,704
+Speaker 0: soft was not just the survey creation, but the participants taking the surveys.
+
+320
+00:29:38,244 --> 00:29:43,827
+Speaker 0: And so part of my pitch deck and I'll know if I get it was I decided to get my mom a Christmas card.
+
+321
+00:29:44,187 --> 00:29:56,993
+Speaker 0: And I had people on M Turk like just like hold up the Merry Christmas sign and what we had was this one person with a hundred different like not a hundred but like a lot of different accounts.
+
+322
+00:29:57,273 --> 00:30:08,506
+Speaker 0: that was just like changing their hat putting on a different shirt but it was like clearly the same person and so at this point the kind of took had it solved the like identity online and like how do you stop?
+
+323
+00:30:08,886 --> 00:30:10,047
+Speaker 0: like false participants?
+
+324
+00:30:10,087 --> 00:30:20,076
+Speaker 0: and that was kind of why we were able to be able to raise money and why we were able to have so many universities trust and use our service because we were solving that problem specifically.
+
+325
+00:30:20,472 --> 00:30:22,793
+Speaker 1: So what's your mom like, who is this person and where is this?
+
+326
+00:30:22,833 --> 00:30:26,674
+Speaker 1: So, you know, passionate about like, we should be happy with it.
+
+327
+00:30:26,734 --> 00:30:27,434
+Speaker 1: It was cool.
+
+328
+00:30:27,474 --> 00:30:35,336
+Speaker 0: There's like a hundred people from all over the world with like different backgrounds, different cities, different places, and they all were saying Merry Christmas.
+
+329
+00:30:35,596 --> 00:30:36,116
+Speaker 0: Merry Christmas.
+
+330
+00:30:36,156 --> 00:30:39,877
+Speaker 0: I like to facilitate that, but back when we did it, it was pretty cool.
+
+331
+00:30:40,856 --> 00:30:47,158
+Speaker 1: yeah and make mechanical turk just for people that are unfamiliar with it is like they call it artificial artificial intelligence.
+
+332
+00:30:47,699 --> 00:30:51,660
+Speaker 1: it obviously nowadays like a lot of things you would pay someone on mechanical the turk to do.
+
+333
+00:30:51,700 --> 00:30:56,882
+Speaker 1: you just like format to like an all-embers something but it was like um... like.
+
+334
+00:30:56,902 --> 00:30:58,863
+Speaker 1: hey I need you like early on.
+
+335
+00:30:58,883 --> 00:31:01,203
+Speaker 1: it was like hey I need you to solve a capture for me.
+
+336
+00:31:01,364 --> 00:31:05,905
+Speaker 1: or yeah I need you to create a Facebook account and like like this this Facebook group or something like that.
+
+337
+00:31:05,925 --> 00:31:10,688
+Speaker 1: it was like basically getting around the restrictions, the different platforms might have in place.
+
+338
+00:31:11,589 --> 00:31:20,956
+Speaker 1: But, you know, in the good, like, as designed use would be, for example, getting people to do precisely what they had said.
+
+339
+00:31:21,056 --> 00:31:25,000
+Speaker 1: So it was everybody would get, like, maybe just a few pennies.
+
+340
+00:31:25,600 --> 00:31:32,385
+Speaker 1: for doing a hit, I think, or a job or something, I can't remember what they were called, but yeah, you would do those.
+
+341
+00:31:32,985 --> 00:31:33,585
+Speaker 1: Is that accurate?
+
+342
+00:31:33,605 --> 00:31:34,946
+Speaker 1: Like, I haven't actually used it.
+
+343
+00:31:35,006 --> 00:31:36,287
+Speaker 0: No, that's that's pretty close.
+
+344
+00:31:36,908 --> 00:31:40,430
+Speaker 0: There was, it's this whole subfield called human computation, right?
+
+345
+00:31:40,450 --> 00:31:52,339
+Speaker 0: So there's there's Some things that computers can't yet do, that humans can still do, but figuring out how to do them at scale, is really important.
+
+346
+00:31:52,359 --> 00:32:00,466
+Speaker 0: And so, mechanical Turk, you can take a task, break it down into a very small sub-task and have thousands of thousands of people do it.
+
+347
+00:32:01,047 --> 00:32:05,290
+Speaker 0: Need for human competition is like labeling data, think of AI training, and it's like that.
+
+348
+00:32:06,451 --> 00:32:07,652
+Speaker 0: There had to be real.
+
+349
+00:32:07,692 --> 00:32:15,620
+Speaker 0: people that said that was a a fire hose or that was a part that was a bicycle and you know what and not a muffin.
+
+350
+00:32:15,640 --> 00:32:26,996
+Speaker 0: that's like a famous like you always look a lot like muffins to a computer and so figuring out all of that was necessary for a lot of the advanceers that we're seeing now.
+
+351
+00:32:27,356 --> 00:32:31,360
+Speaker 0: And there are still things that humans can do very quickly that machines just can't do yet.
+
+352
+00:32:31,800 --> 00:32:34,863
+Speaker 0: And so M.Turk still has a place.
+
+353
+00:32:34,883 --> 00:32:41,569
+Speaker 0: There are other companies that do similar things nowadays, of course, but that labeling and small tasks done at scale.
+
+354
+00:32:42,029 --> 00:32:50,080
+Speaker 0: And there are other cool things you can do too, so where it's like It's that giving it to just one person you give it to five and a four out of the five do one thing.
+
+355
+00:32:50,600 --> 00:32:55,467
+Speaker 0: You know that you can probably trust that thing is opposed to the one person that did it as opposed to the minority report.
+
+356
+00:32:56,068 --> 00:32:58,792
+Speaker 1: Yeah dissenting dissenting opinion.
+
+357
+00:32:58,812 --> 00:33:01,136
+Speaker 1: Yeah, that that's a good kind of consensus mechanism.
+
+358
+00:33:01,896 --> 00:33:03,397
+Speaker 1: So um, okay cool.
+
+359
+00:33:03,498 --> 00:33:04,378
+Speaker 1: So you built this project.
+
+360
+00:33:04,678 --> 00:33:07,421
+Speaker 1: We could talk about that a lot more, but we have so much more to talk about.
+
+361
+00:33:07,561 --> 00:33:07,781
+Speaker 1: Yeah.
+
+362
+00:33:07,801 --> 00:33:08,862
+Speaker 1: Like where do you go from there?
+
+363
+00:33:08,902 --> 00:33:12,565
+Speaker 1: You you basically had a successful project, right?
+
+364
+00:33:12,585 --> 00:33:15,007
+Speaker 1: Like everybody's dream, especially at this point.
+
+365
+00:33:15,367 --> 00:33:16,368
+Speaker 1: Sounds like you were pretty strong.
+
+366
+00:33:16,948 --> 00:33:17,428
+Speaker 1: Like yeah.
+
+367
+00:33:17,488 --> 00:33:19,490
+Speaker 1: Like, like, had you finished college at this point?
+
+368
+00:33:19,570 --> 00:33:22,072
+Speaker 0: Like I, so I dropped out and never finished.
+
+369
+00:33:22,532 --> 00:33:22,893
+Speaker 1: Oh, wow.
+
+370
+00:33:23,473 --> 00:33:24,995
+Speaker 0: and my senior year at Yale.
+
+371
+00:33:25,896 --> 00:33:27,638
+Speaker 0: I had this idea for social side.
+
+372
+00:33:28,099 --> 00:33:28,799
+Speaker 0: I dropped out.
+
+373
+00:33:28,879 --> 00:33:30,001
+Speaker 0: I did tech stars.
+
+374
+00:33:30,021 --> 00:33:32,263
+Speaker 1: Tech stars and accelerator.
+
+375
+00:33:32,764 --> 00:33:33,785
+Speaker 0: Yeah, popular.
+
+376
+00:33:33,865 --> 00:33:38,290
+Speaker 1: Like they give you some some seed money and then you're in like a program where they kind of coach you.
+
+377
+00:33:38,991 --> 00:33:39,291
+Speaker 0: Exactly.
+
+378
+00:33:39,351 --> 00:33:39,611
+Speaker 1: Exactly.
+
+379
+00:33:39,631 --> 00:33:40,192
+Speaker 1: They help you.
+
+380
+00:33:40,292 --> 00:33:40,892
+Speaker 0: Yeah, exactly.
+
+381
+00:33:41,152 --> 00:33:41,852
+Speaker 0: They help you.
+
+382
+00:33:42,032 --> 00:33:47,515
+Speaker 0: Lay the foundation for a company and all the skills you might need to know to do that effectively.
+
+383
+00:33:48,095 --> 00:33:49,556
+Speaker 0: Textaries really changed my life.
+
+384
+00:33:49,636 --> 00:33:51,737
+Speaker 0: It really gave me a lot of the skills that I was missing.
+
+385
+00:33:52,477 --> 00:34:00,681
+Speaker 0: Give me my initial network outside of university and yeah, the initial seed funding and then help me go on to raise more funds for for social science.
+
+386
+00:34:01,101 --> 00:34:15,033
+Speaker 0: Yeah, while I was running social-side, I started teaching at General Assembly, and so General Assembly was one of the first really big coding bootcamp programs, and I was doing their part-time courses for a very long time.
+
+387
+00:34:15,053 --> 00:34:23,847
+Speaker 0: I'm a distinguished faculty with GA, even till today, and I was having just hundreds, if not thousands of people.
+
+388
+00:34:23,927 --> 00:34:43,799
+Speaker 0: be successful, like learning these new skills, learning how to code, getting great jobs, and at one point it kind of just got overwhelming that I didn't notice anyone that looked like me taking advantage of this program, one because it cost a lot of money, that also cost a lot of time.
+
+389
+00:34:43,819 --> 00:34:52,463
+Speaker 0: So I started looking for orgs near me in Boston that I could help or support.
+
+390
+00:34:52,603 --> 00:35:07,553
+Speaker 0: And I came across resilient coders, which at that time, our founder David Delmar, I was really trying to work with court-involved youth and show them, hey, like, there are these things you can be doing like coding or things like that that might help you long-term in life.
+
+391
+00:35:08,053 --> 00:35:22,981
+Speaker 0: I started just going to, we had what are called community hours where it was just myself, a few other mentors and a bunch of young folks that particularly court involved or returning citizen and just trying to like give them these skills.
+
+392
+00:35:23,141 --> 00:35:28,182
+Speaker 0: and then we had the idea of starting a boot camp.
+
+393
+00:35:28,542 --> 00:35:35,404
+Speaker 0: and our founder Dave Delmar said hey like you've been running these other boot camp programs could you do it for our sea?
+
+394
+00:35:35,764 --> 00:35:36,284
+Speaker 0: said yes.
+
+395
+00:35:36,384 --> 00:35:54,088
+Speaker 0: and then for the past six years we've built a program that can help folks traditionally of color that have particularly not completed a degree, though from zero to employable as a software engineer and we've been pretty successful at it.
+
+396
+00:35:54,108 --> 00:36:05,813
+Speaker 0: We've helped hundreds of folks get jobs and with starting salaries around $92,000 and for us that's huge because For each person, we can get from those communities.
+
+397
+00:36:06,193 --> 00:36:11,037
+Speaker 0: We're talking about millions and millions of dollars back into those communities over the lifespan of their career.
+
+398
+00:36:11,117 --> 00:36:13,939
+Speaker 0: So it's not even doing resilient colors.
+
+399
+00:36:13,979 --> 00:36:16,301
+Speaker 0: that adventure led me to a hundred devs and that's kind of the.
+
+400
+00:36:16,521 --> 00:36:17,421
+Speaker 1: Yeah, yeah.
+
+401
+00:36:17,822 --> 00:36:21,384
+Speaker 1: I want to dive a little more into because we're going to talk a lot about 100 devs.
+
+402
+00:36:21,424 --> 00:36:25,447
+Speaker 1: But like, uh, resulting in coders, you said, uh, court involved youth.
+
+403
+00:36:26,248 --> 00:36:53,776
+Speaker 1: Uh, I'm not familiar with firm, but like, you know, I have lots of friends who are like convicted felons and you're not sure if that if that is essentially like people who early on in life get into trouble maybe because they actually did something wrong or maybe they were profiled and like the the very unequal justice system in the United States didn't do it's job very well and and you know gave them much hardship penalty that kids should probably have in many cases.
+
+404
+00:36:54,736 --> 00:36:58,702
+Speaker 1: but Is that like accurately like yeah,
+
+405
+00:36:58,842 --> 00:37:08,350
+Speaker 0: so we had a lot of individuals that we say court involved because exactly the things that you brought up a lot of the folks that we were working with they didn't do anything
+
+406
+00:37:08,390 --> 00:37:08,650
+Speaker 1: wrong
+
+407
+00:37:09,571 --> 00:37:10,992
+Speaker 0: and they were just the wrong place the
+
+408
+00:37:11,032 --> 00:37:11,653
+Speaker 1: wrong time.
+
+409
+00:37:11,673 --> 00:37:27,847
+Speaker 0: we did have folks that Had gone down a different path in life to do the things they need to do provide for themselves and their families and so we wanted to give them a clear path forward to do the the thing that I love ones and so we're trying to get them skills.
+
+410
+00:37:27,928 --> 00:37:38,459
+Speaker 0: It's just skills that they can put into practice to get to a point where they had a strong stable high-growth career and then that's that's kind of the birth of RC.
+
+411
+00:37:39,901 --> 00:37:58,138
+Speaker 0: And our dirty little secret that I guess some folks know is that the first dollars we ever took in were from the Boston Police Department, because they saw our program as, hey, we're going to spend all this money on incarceration, rehabilitation, why not get ahead of it?
+
+412
+00:37:58,799 --> 00:38:01,021
+Speaker 0: And they have some funding to help one of our first bootcamp.
+
+413
+00:38:01,874 --> 00:38:02,734
+Speaker 1: Yeah, that's awesome.
+
+414
+00:38:03,395 --> 00:38:09,338
+Speaker 1: Well, it sounds like there's money well spent given the impact you all have had over the past six years, I think he said.
+
+415
+00:38:10,658 --> 00:38:13,260
+Speaker 1: So you've got resilient coders going.
+
+416
+00:38:13,480 --> 00:38:14,280
+Speaker 1: You're teaching there.
+
+417
+00:38:15,401 --> 00:38:17,842
+Speaker 1: And it sounds like you're having a big impact.
+
+418
+00:38:17,882 --> 00:38:24,305
+Speaker 1: But was there a moment where you're like, I can have an even bigger impact by leveraging the power of the internet?
+
+419
+00:38:24,325 --> 00:38:29,767
+Speaker 1: Like, what was the process that, and maybe I can back up a second to just say, what is 100 devs?
+
+420
+00:38:31,164 --> 00:38:32,845
+Speaker 0: Yeah, sure.
+
+421
+00:38:33,045 --> 00:38:44,429
+Speaker 0: So 100 devs is a collection of engineers that help build a completely free live software engineering training program for anyone anywhere.
+
+422
+00:38:45,470 --> 00:38:46,991
+Speaker 0: That was kind of our Genesis.
+
+423
+00:38:47,251 --> 00:38:57,395
+Speaker 0: Now we're also building and we're going to be piloting this year a full service digital agency where real clients come to us to build products.
+
+424
+00:38:58,335 --> 00:39:03,880
+Speaker 0: and get to tap into our amazing alumni that have gone on to work at some of the best tech companies in the world.
+
+425
+00:39:03,920 --> 00:39:08,384
+Speaker 0: we're talking Amazon, LinkedIn, Slack, you name it, we have an alumni there.
+
+426
+00:39:08,404 --> 00:39:10,546
+Speaker 0: They come back to work on these projects.
+
+427
+00:39:11,267 --> 00:39:13,789
+Speaker 0: Each project is getting broken down into the individual tasks.
+
+428
+00:39:14,250 --> 00:39:21,876
+Speaker 0: And then as you're learning, you're also building real code for real companies and getting paid actual money to do it.
+
+429
+00:39:22,557 --> 00:39:38,882
+Speaker 0: We mentioned early on that free isn't always free because it required you to have an extreme privilege of time to work through all this material to give up your nights and weekends and we wanted to do something that helps soften the blow for folks that are going through our program.
+
+430
+00:39:39,562 --> 00:39:40,943
+Speaker 0: Our program is entirely free.
+
+431
+00:39:41,864 --> 00:39:45,186
+Speaker 0: Every resource I have ever given out is always free.
+
+432
+00:39:45,226 --> 00:39:46,086
+Speaker 0: I don't work with anybody.
+
+433
+00:39:46,106 --> 00:39:50,369
+Speaker 0: It doesn't have a free version or something that we can have access to.
+
+434
+00:39:50,829 --> 00:40:02,917
+Speaker 0: But we did a poll not too long ago that said, hey, we realized a lot of you can't commit the time or the take the time away from putting food on the table.
+
+435
+00:40:03,317 --> 00:40:03,897
+Speaker 0: What would it take?
+
+436
+00:40:04,998 --> 00:40:05,939
+Speaker 0: for you to be able to focus.
+
+437
+00:40:06,379 --> 00:40:07,540
+Speaker 0: And it was $200 a week.
+
+438
+00:40:07,780 --> 00:40:08,981
+Speaker 0: It was the average.
+
+439
+00:40:09,561 --> 00:40:10,342
+Speaker 0: We can make that happen.
+
+440
+00:40:10,362 --> 00:40:16,987
+Speaker 0: We can figure out a way to get folks those funds that they can focus and get through a program like a hundred doves.
+
+441
+00:40:17,067 --> 00:40:22,150
+Speaker 0: And yeah, so now we're at the opportunity of discord is 60,000 plus strong.
+
+442
+00:40:22,791 --> 00:40:24,612
+Speaker 0: We have alumni all around the world.
+
+443
+00:40:24,752 --> 00:40:37,080
+Speaker 0: And we're just trying to figure out a way for folks to be able to unlock a stable high-growth career put food on the table, support themselves, and their family, and their loved ones.
+
+444
+00:40:37,600 --> 00:40:42,582
+Speaker 0: Luckily we found a lot of folks that believe in that idea, and mission two, we felt a wonderful community around it.
+
+445
+00:40:42,802 --> 00:40:43,102
+Speaker 1: Yeah.
+
+446
+00:40:43,902 --> 00:40:47,443
+Speaker 1: And so the mechanics of the community, like.
+
+447
+00:40:47,463 --> 00:40:53,026
+Speaker 1: first of all, it goes with that thing that I'm in awe of what you all are accomplishing with hunter devs.
+
+448
+00:40:53,186 --> 00:41:00,950
+Speaker 1: I've had so many positive interactions with people who are both using like the free cocaine curriculum and in the hundred devs.
+
+449
+00:41:01,270 --> 00:41:03,271
+Speaker 1: I guess you call it like a cohort or an intake group.
+
+450
+00:41:03,291 --> 00:41:03,452
+Speaker 1: Yeah.
+
+451
+00:41:03,772 --> 00:41:10,176
+Speaker 1: Like basically a bunch of people working together through a set kind of like week to week program.
+
+452
+00:41:10,276 --> 00:41:16,559
+Speaker 1: And I, you know, for your co camp, we have experimented with like cohorted programs and like, let's see if we can get all these people.
+
+453
+00:41:16,920 --> 00:41:19,541
+Speaker 1: But what we found is like, it's, it's a lot of work to organize.
+
+454
+00:41:20,962 --> 00:41:26,807
+Speaker 1: very aware of and like frecocians philosophy is like let's just build the resources at scale put them out there.
+
+455
+00:41:27,988 --> 00:41:42,621
+Speaker 1: Yes, lots of kids who are the you know the son or daughter of like software engineers in Palo Alto are going to use frecocamp and they're going to use them or free and they you know probably could have paid a bunch of money to have computer science student like tutor them or sling right.
+
+456
+00:41:43,161 --> 00:41:57,049
+Speaker 1: but also a lot of kids who are in like a village in rural India or in like kind of like a failed state which a lot of people have smartphones and can get on the internet even in places like Somalia.
+
+457
+00:41:57,109 --> 00:42:05,334
+Speaker 1: right North Korea right people in North Korea use free code camp sometimes and essentially they can.
+
+458
+00:42:05,514 --> 00:42:18,220
+Speaker 1: they can learn Even though it would be normally prohibitively expensive for them to buy a 20 dollar course on a course website, for example.
+
+459
+00:42:18,880 --> 00:42:27,844
+Speaker 1: Our philosophy is we need to make sure that there is a baseline that everybody has access to comprehensive math programming computer science and English education.
+
+460
+00:42:28,884 --> 00:42:36,953
+Speaker 1: So that everybody, regardless of their circumstances, if they have time, which not everybody does, but if they have time, or they can figure out techniques to make
+
+461
+00:42:36,993 --> 00:42:37,273
+Speaker 0: time,
+
+462
+00:42:38,354 --> 00:42:45,622
+Speaker 1: to learn even a little each day, then they can make steady forward progress toward the eventual goal of working as a software engineer.
+
+463
+00:42:46,078 --> 00:42:47,818
+Speaker 1: right so so that is kind of like.
+
+464
+00:42:47,959 --> 00:43:04,343
+Speaker 1: our philosophy is like let's just make tons of really high quality free stuff that's essentially subsidized by the community like the people who are able to give the alumni sometime like we got a gift for $250,000 the other day from companies.
+
+465
+00:43:04,383 --> 00:43:10,565
+Speaker 1: Yeah, the CEO of Comtea is a fan of free co-camp and uses free co-camp to expand his JavaScript knowledge.
+
+466
+00:43:10,685 --> 00:43:11,325
+Speaker 1: super chill dude.
+
+467
+00:43:11,945 --> 00:43:17,327
+Speaker 1: You know we Darrell Silver founder of Thinkful kicked in $150,000.
+
+468
+00:43:17,327 --> 00:43:25,130
+Speaker 1: And then, of course, we're getting grants from like, you know, Linux foundation and MongoDB and Google and a lot of other organizations.
+
+469
+00:43:25,470 --> 00:43:29,552
+Speaker 1: But a vast majority of our support comes directly from the community from people who donate.
+
+470
+00:43:29,592 --> 00:43:31,432
+Speaker 1: So free code gives it already slash donate.
+
+471
+00:43:31,812 --> 00:43:32,053
+Speaker 0: All right.
+
+472
+00:43:32,493 --> 00:43:33,533
+Speaker 0: But my point is, yeah.
+
+473
+00:43:34,954 --> 00:43:36,754
+Speaker 1: And thank you for supporting our charity.
+
+474
+00:43:37,135 --> 00:43:38,775
+Speaker 1: I didn't even realize I apologize.
+
+475
+00:43:39,856 --> 00:43:44,157
+Speaker 1: But maybe you're getting my periodic donor email, like I said, donor email.
+
+476
+00:43:44,338 --> 00:43:44,478
+Speaker 1: Yeah.
+
+477
+00:43:47,102 --> 00:43:58,849
+Speaker 1: my point in all all this little tangent is to say that like free co camp like we don't have the bandwidth to do things that don't scale and you are doing things that don't scale at all really like.
+
+478
+00:43:58,909 --> 00:44:14,858
+Speaker 1: maybe you figured out some techniques to get like cohort to scale and get like because I mean you mentioned your discord has 60 thousand people in it but like actually getting on stream and like teaching for like a marathon on three five hours like how long you go.
+
+479
+00:44:14,878 --> 00:44:16,978
+Speaker 1: it's really inspiring.
+
+480
+00:44:17,139 --> 00:44:19,580
+Speaker 1: definitely catch some of the livestreams you can or I've watched.
+
+481
+00:44:20,040 --> 00:44:35,771
+Speaker 1: I watch everything at double speed so I watched like the video on demand but like I guess you saw it from coming from the like intensive program where you're teaching folks like you saw the merit of quality not just quantity or like.
+
+482
+00:44:36,211 --> 00:44:37,352
+Speaker 1: I guess like content like.
+
+483
+00:44:37,713 --> 00:44:46,897
+Speaker 1: I'm not like doing things that don't scale really And helping in people individually, it doesn't really scale, but that's not necessarily the idea.
+
+484
+00:44:46,957 --> 00:44:55,720
+Speaker 1: The idea is to give a whole lot of attention to a smaller number of people and to really make sure that those people can ramp up to an impressive.
+
+485
+00:44:56,220 --> 00:45:02,982
+Speaker 1: He said, like, what was the figure you said was like the median income of people who graduated?
+
+486
+00:45:02,982 --> 00:45:04,342
+Speaker 0: 90,000 per person.
+
+487
+00:45:06,883 --> 00:45:09,584
+Speaker 1: That's a lot more than I made in my first developer job, a given.
+
+488
+00:45:10,024 --> 00:45:16,327
+Speaker 1: if this is embossed in like the cost living might be higher, but I mean, that's a lot of freaking money for people that like.
+
+489
+00:45:16,347 --> 00:45:19,848
+Speaker 1: I imagine some of these people don't have university degrees.
+
+490
+00:45:19,928 --> 00:45:27,291
+Speaker 1: I didn't even know that you hadn't completed your degree, although dropping out of Yale is probably very different from dropping out of like, you know, that's all right.
+
+491
+00:45:27,311 --> 00:45:28,152
+Speaker 1: University, right?
+
+492
+00:45:29,452 --> 00:45:32,413
+Speaker 1: Yeah, but sorry I've been talking for the last three minutes.
+
+493
+00:45:32,493 --> 00:45:49,562
+Speaker 1: I'm just very excited about how you approach this and I want to make sure our audience appreciates the I guess counterintuitiveness of what you've done and how you've been able to like people weren't doing this because it was perhaps counterintuitive to do so.
+
+494
+00:45:49,622 --> 00:45:50,903
+Speaker 1: It was like, for all of you, very dumb.
+
+495
+00:45:50,923 --> 00:45:51,984
+Speaker 0: That idea, don't you?
+
+496
+00:45:52,004 --> 00:45:54,546
+Speaker 0: Yeah.
+
+497
+00:45:54,586 --> 00:45:56,247
+Speaker 1: So maybe you can talk about that.
+
+498
+00:45:56,307 --> 00:45:58,669
+Speaker 1: Like, how do you have to do stuff that doesn't scale?
+
+499
+00:45:58,729 --> 00:46:00,070
+Speaker 1: And like, ways that it doesn't scale.
+
+500
+00:46:00,110 --> 00:46:02,872
+Speaker 1: And then ways, like, techniques you figured out to scale in a little bit.
+
+501
+00:46:03,593 --> 00:46:04,493
+Speaker 0: Sure, yeah, happy to.
+
+502
+00:46:04,934 --> 00:46:07,716
+Speaker 0: I think the first thing that was just like shout out for your code camp.
+
+503
+00:46:07,756 --> 00:46:11,679
+Speaker 0: Like, you all laid the foundation for so many folks to learn.
+
+504
+00:46:11,739 --> 00:46:26,200
+Speaker 0: And one of the things I am always, I've been, especially, and I think that was on our discord as I think a lot of folks that go into this space don't put in the work to do the things that really matter the most.
+
+505
+00:46:26,701 --> 00:46:31,044
+Speaker 0: And so one of the things I've always admired about free code camp is this commitment to filling the gaps.
+
+506
+00:46:31,184 --> 00:46:35,688
+Speaker 0: And so realizing that most people don't have the privilege of speaking English.
+
+507
+00:46:35,708 --> 00:46:38,290
+Speaker 0: So we're going to build a full, like how do you speak English?
+
+508
+00:46:38,410 --> 00:46:40,072
+Speaker 0: course, right?
+
+509
+00:46:40,112 --> 00:46:40,552
+Speaker 0: That's huge.
+
+510
+00:46:40,612 --> 00:46:52,651
+Speaker 0: It's like very progressively thinking about what do our folks going through our program absolutely need and so that's why I'm so happy that Free Code Camp exists.
+
+511
+00:46:52,712 --> 00:47:08,467
+Speaker 0: It's why it's one of the first things I always recommend to new folks getting into tech and why I think you all continue to be so successful because it's just like this relentless pursuit of making tech more equitable to everyone and so That's why I said really early on in this conversation.
+
+512
+00:47:08,507 --> 00:47:16,136
+Speaker 0: I look up to you so much and it's a lot of that ethos that I've tried to bring to a hundred devs for 400 devs.
+
+513
+00:47:16,497 --> 00:47:20,301
+Speaker 0: we got started during the pandemic and the pandemic hit.
+
+514
+00:47:21,511 --> 00:47:23,473
+Speaker 0: things got really bad really quickly.
+
+515
+00:47:23,814 --> 00:47:28,419
+Speaker 0: so people always like to talk and boss and about like a 2% unemployment rate.
+
+516
+00:47:28,559 --> 00:47:35,567
+Speaker 0: but I knew just from looking at the actual data we looked in our communities of color is already at 12%.
+
+517
+00:47:35,567 --> 00:47:36,808
+Speaker 0: this is pre-pandemic.
+
+518
+00:47:37,429 --> 00:47:42,013
+Speaker 0: He looked during the pandemic, it jumped from 12 to like 33% in some communities.
+
+519
+00:47:42,653 --> 00:47:45,175
+Speaker 0: And so it got real bad, real quick.
+
+520
+00:47:45,195 --> 00:47:52,241
+Speaker 0: And I just, if you are already in tech, or if you already come from a privileged background, I don't think people really understand what that means.
+
+521
+00:47:52,301 --> 00:48:00,808
+Speaker 0: when right now, like if you look at the most recent like labor data, like the median income, median, median is 56,000 in the US.
+
+522
+00:48:01,429 --> 00:48:14,915
+Speaker 0: And so if we have that percent of folks under it and we're seeing 33% unemployment and then labor data actually includes like eligible workers it just got real bad real quick and it continues to be a really rough situation from folks.
+
+523
+00:48:14,975 --> 00:48:17,216
+Speaker 0: and so I'm not a doctor.
+
+524
+00:48:17,896 --> 00:48:30,402
+Speaker 0: I didn't have like a skill that I thought that could be helpful to folks that were being affected by the pandemic but I had been teaching for a while and I knew that I could get folks skills to make them more employable.
+
+525
+00:48:30,622 --> 00:48:36,386
+Speaker 0: and so a hundred dev started as a way of getting a hundred folks into software engineering.
+
+526
+00:48:36,467 --> 00:48:50,559
+Speaker 0: jobs were way beyond that now and I wanted to make a live cohort where we would meet twice a week on the internet and I really thought it would be like you said just a handful of folks maybe five ten people.
+
+527
+00:48:51,320 --> 00:48:53,522
+Speaker 0: we did a pilot that was really successful.
+
+528
+00:48:53,962 --> 00:48:57,465
+Speaker 0: our first cohort was about three hundred people every single class.
+
+529
+00:48:58,527 --> 00:48:59,187
+Speaker 0: That was successful.
+
+530
+00:48:59,207 --> 00:49:04,109
+Speaker 0: with another cohort that was like 30,000 people every single live, every single class.
+
+531
+00:49:04,489 --> 00:49:11,552
+Speaker 0: And so we kind of just built slowly where we were able to kind of jump from zero to 300, 300, 300,000.
+
+532
+00:49:11,552 --> 00:49:14,093
+Speaker 0: And we always joke that we're baddies.
+
+533
+00:49:14,333 --> 00:49:16,014
+Speaker 0: We're baddies writing bad code.
+
+534
+00:49:16,034 --> 00:49:16,834
+Speaker 0: Like it doesn't matter.
+
+535
+00:49:17,575 --> 00:49:19,435
+Speaker 0: It's about getting the skills that we need.
+
+536
+00:49:19,475 --> 00:49:21,576
+Speaker 0: It's about figuring out things on the fly.
+
+537
+00:49:21,596 --> 00:49:25,718
+Speaker 0: And we just live up to being kind always to ourselves to others.
+
+538
+00:49:25,838 --> 00:49:27,979
+Speaker 0: And as long as you're willing to say, you know what?
+
+539
+00:49:28,559 --> 00:49:29,560
+Speaker 0: We got to figure this out.
+
+540
+00:49:29,640 --> 00:49:31,481
+Speaker 0: We got to figure out how do we do this at scale?
+
+541
+00:49:31,561 --> 00:49:36,365
+Speaker 0: How do we have 3,000 people live in a class getting help and not feeling lost?
+
+542
+00:49:37,146 --> 00:49:44,031
+Speaker 0: We had to figure systems and ways of doing that and building community that wanted to support that number of folks.
+
+543
+00:49:44,964 --> 00:49:45,244
+Speaker 1: Awesome.
+
+544
+00:49:45,365 --> 00:49:50,891
+Speaker 1: Well, what you said there first, like I just want to call it that, that particular insight, we're baddies, writing back, it doesn't matter.
+
+545
+00:49:51,371 --> 00:50:07,086
+Speaker 1: So when I was a teenager, like really interested in writing and reading lots of fiction and literary journalism and stuff like that, I would always hang out at Denny's like till 2 a.m.
+
+546
+00:50:07,126 --> 00:50:16,251
+Speaker 1: just talking to random people and learning from them and just writing and stuff and one time like our server he he was kind of a drizzle looking dude like he would.
+
+547
+00:50:16,331 --> 00:50:23,815
+Speaker 1: he would not look at a place in like a bullpen in a newspaper newsroom if such thing exists in 2024.
+
+548
+00:50:23,815 --> 00:50:27,459
+Speaker 1: But he's advice me, I'll never forget what he said.
+
+549
+00:50:28,440 --> 00:50:32,064
+Speaker 1: He said, throw away your first million words.
+
+550
+00:50:34,367 --> 00:50:35,268
+Speaker 0: And I love that.
+
+551
+00:50:35,528 --> 00:50:36,870
+Speaker 1: Damn, a million words.
+
+552
+00:50:36,910 --> 00:50:38,111
+Speaker 1: That's like years of writing.
+
+553
+00:50:39,072 --> 00:50:41,794
+Speaker 1: but just accept that it's gonna suck.
+
+554
+00:50:42,275 --> 00:50:44,136
+Speaker 1: and the same thing with your code projects.
+
+555
+00:50:44,456 --> 00:50:47,118
+Speaker 1: and really the same with any endeavor you take.
+
+556
+00:50:47,158 --> 00:50:47,319
+Speaker 1: like.
+
+557
+00:50:47,819 --> 00:50:55,064
+Speaker 1: I've been trying to get better at base for the past three or four years and like takes me forever to record the base intros for like.
+
+558
+00:50:55,565 --> 00:50:57,927
+Speaker 0: I thought you like the one of the videos I watched.
+
+559
+00:50:57,967 --> 00:50:59,328
+Speaker 0: you did it and then sat down.
+
+560
+00:50:59,348 --> 00:50:59,968
+Speaker 0: so that's what I was.
+
+561
+00:51:00,008 --> 00:51:02,510
+Speaker 0: I'm telling you that's what I was expecting for for today.
+
+562
+00:51:02,610 --> 00:51:06,954
+Speaker 0: so yeah that I'd think of the base intro live just for me.
+
+563
+00:51:07,034 --> 00:51:11,036
+Speaker 1: but I didn't want to bother you with, like, watching me screw it up with several times.
+
+564
+00:51:11,697 --> 00:51:12,697
+Speaker 0: Yeah, I love it.
+
+565
+00:51:13,138 --> 00:51:22,864
+Speaker 1: But yeah, like, you just have to accept that the first few thousand hours you spend with an instrument or with like a programming language or with anything is going to be not ready for prime time.
+
+566
+00:51:23,644 --> 00:51:26,406
+Speaker 1: You know, my wife, she grew up in China.
+
+567
+00:51:26,426 --> 00:51:28,807
+Speaker 1: We met in grad school and she's now a U.S.
+
+568
+00:51:28,847 --> 00:51:29,248
+Speaker 1: citizen.
+
+569
+00:51:29,288 --> 00:51:32,270
+Speaker 1: We brought her over in naturalized or after grad school.
+
+570
+00:51:32,750 --> 00:51:33,991
+Speaker 1: If we got married, we've been married 19 years.
+
+571
+00:51:37,733 --> 00:51:39,253
+Speaker 1: She loved, like, piano, right?
+
+572
+00:51:39,393 --> 00:51:43,735
+Speaker 1: And one of the things that she says in China, like, people take piano extremely seriously.
+
+573
+00:51:44,275 --> 00:51:53,458
+Speaker 1: And they have this saying in Chinese, which is basically, like, these spent thousands of hours behind the stage practicing for, you know, five minutes on the stage.
+
+574
+00:51:53,858 --> 00:51:56,479
+Speaker 1: You know, like, that's just the nature of the game.
+
+575
+00:51:57,200 --> 00:52:14,748
+Speaker 1: And with code, like, if you're writing some serious system that's gonna, like, code that can be run millions of times, right like if you're making an open source contribution to free code camps code base and it's in the platform itself and this component is going to be rendered 50,000 times a day or something like that.
+
+576
+00:52:14,808 --> 00:52:16,109
+Speaker 1: like.
+
+577
+00:52:16,409 --> 00:52:33,640
+Speaker 1: it's okay that it took you a whole lot of work to get that like code into the shape and it's okay that it took a lot of practice and trial and error before you got the skills to be able to create that code that code just going to keep going right like when Elvis goes up on the stage and he's being filmed and he's playing.
+
+578
+00:52:33,660 --> 00:52:39,564
+Speaker 1: I use Elvis because I love Elvis.
+
+579
+00:52:39,604 --> 00:52:44,989
+Speaker 1: He's the man so I mean like that guy practice like crazy.
+
+580
+00:52:45,369 --> 00:52:51,034
+Speaker 1: that's definitely the same with for example like James Jamerson the greatest basis of all time.
+
+581
+00:52:51,254 --> 00:52:57,360
+Speaker 1: basically or You know, like pretty much any musician, they're going to practice like crazy.
+
+582
+00:52:57,400 --> 00:53:00,783
+Speaker 1: They're going to rehearse obsessively, and they're not going to be satisfied.
+
+583
+00:53:00,983 --> 00:53:03,766
+Speaker 1: But once that recording is made, once that record is cut.
+
+584
+00:53:04,287 --> 00:53:11,274
+Speaker 1: If you, uh, there's a great, um, documentary about Lonious Monk, uh, the Jazz pianist, right?
+
+585
+00:53:11,434 --> 00:53:13,456
+Speaker 1: And he would only do like two takes.
+
+586
+00:53:14,757 --> 00:53:16,599
+Speaker 1: And he's just like after two takes.
+
+587
+00:53:16,699 --> 00:53:18,100
+Speaker 1: whatever I do is going to be garbage.
+
+588
+00:53:18,300 --> 00:53:25,686
+Speaker 1: I'm done like use one of those takes, but how we got how he got so good that he could actually nail it in one or two takes.
+
+589
+00:53:26,047 --> 00:53:34,473
+Speaker 1: was he practiced like a maniac and he spent so much time in the piano where a lot of you know I guess amateurs would.
+
+590
+00:53:34,493 --> 00:53:35,895
+Speaker 1: it would just be like good enough.
+
+591
+00:53:36,275 --> 00:53:40,319
+Speaker 1: he was not with that and so I feel the same way about.
+
+592
+00:53:40,359 --> 00:53:50,306
+Speaker 1: like any undertaking, but like certainly with coding, it may seem like coding is not like a synchronous, performative event, like where you're having to sit down and perform in that regard.
+
+593
+00:53:50,346 --> 00:53:51,647
+Speaker 1: You can go in, you can edit your code.
+
+594
+00:53:51,667 --> 00:53:52,448
+Speaker 1: You can iterate on it.
+
+595
+00:53:52,508 --> 00:53:53,769
+Speaker 1: The tools have gotten so much better.
+
+596
+00:53:54,249 --> 00:54:02,175
+Speaker 1: Like free cooking up every millisecond or two, you're going to get the tests, like telling you whether you've met all the test conditions or what you need to keep tweaking your code, right?
+
+597
+00:54:02,555 --> 00:54:08,210
+Speaker 1: So you have all these tools to iterate, but at the end of the day, like you should still try to approach it like a performance.
+
+598
+00:54:08,310 --> 00:54:12,292
+Speaker 1: You'll get a lot better if you don't rely so much on the tools catching what you're doing.
+
+599
+00:54:12,432 --> 00:54:18,254
+Speaker 1: Anyway, I'm kind of going on a tangent, but I just wanted to riff on like the insight that it is.
+
+600
+00:54:18,294 --> 00:54:18,994
+Speaker 1: We're all baddies.
+
+601
+00:54:19,695 --> 00:54:20,895
+Speaker 1: We've been writing badgoat.
+
+602
+00:54:20,955 --> 00:54:23,556
+Speaker 1: It doesn't matter because you throw away your first million words.
+
+603
+00:54:24,057 --> 00:54:29,419
+Speaker 1: You spent thousands of hours at the piano before you're playing anything that's worth anybody listening to, right?
+
+604
+00:54:29,439 --> 00:54:32,120
+Speaker 1: Like you just have to accept that this is the nature of reality.
+
+605
+00:54:32,140 --> 00:54:33,241
+Speaker 1: This is the nature of doing anything.
+
+606
+00:54:33,261 --> 00:54:36,509
+Speaker 1: that's hard is it's going to be hard?
+
+607
+00:54:36,689 --> 00:54:42,174
+Speaker 1: you're going to have to work hard and you have to just have that mental fortitude and that's something that comes through in your.
+
+608
+00:54:42,294 --> 00:54:48,760
+Speaker 1: your video is like it's so supportive like I love the way that you're just like it's all good like just this happens to.
+
+609
+00:54:48,860 --> 00:54:52,699
+Speaker 1: everybody has to go through this you know, I always like to say like.
+
+610
+00:54:53,339 --> 00:55:00,024
+Speaker 1: there's some people maybe like slightly better at programming like aptitude-wise or like they may have some intrinsic like cork.
+
+611
+00:55:00,064 --> 00:55:02,125
+Speaker 1: that makes them marginally better at programming.
+
+612
+00:55:02,646 --> 00:55:09,330
+Speaker 1: but those people were probably just forgotten how much time they spent at the keyboard when they were kid if they were publishing enough to grow up with computers.
+
+613
+00:55:09,771 --> 00:55:18,377
+Speaker 1: right like you know when you hear like Bill Gates talk about how like oh I don't actually like write out the code until I figured everything out in my head and then I said that's nonsense.
+
+614
+00:55:19,403 --> 00:55:24,968
+Speaker 1: Bill Gates did not just sit down and like right basic from memory because he'd like been moving everything around his head.
+
+615
+00:55:25,068 --> 00:55:25,768
+Speaker 1: people can't do that.
+
+616
+00:55:25,828 --> 00:55:26,449
+Speaker 1: I don't believe that.
+
+617
+00:55:26,509 --> 00:55:33,155
+Speaker 1: maybe there are some people that have like some extreme form of like like extreme brains that you do something like that.
+
+618
+00:55:33,195 --> 00:55:35,236
+Speaker 1: but I don't believe that Bill Gates could do that sort of stuff.
+
+619
+00:55:35,296 --> 00:55:47,646
+Speaker 1: I think he's just talking up the mythos You know, he's trying to build up hype for himself and like it's this old kind of like old school elitism that a lot of the early devs the old guard have and just don't buy.
+
+620
+00:55:47,666 --> 00:55:53,611
+Speaker 1: that hype is all I want to say and I want to thank you for like dispelling a lot of that whether you're intentionally dispelling or not.
+
+621
+00:55:53,691 --> 00:56:03,889
+Speaker 0: just telling people like coding is hard right like not not sugar coding it we call it the trough the sorrow which actually comes from like startup worlds one of the things.
+
+622
+00:56:03,909 --> 00:56:29,422
+Speaker 0: there's this very classic graph of like um this like really big hill that you go up when you're really excited about something like yeah I'm going to wear the coat on you buy a thousand demi courses because buying stuff feels good even though you're not going to do them and get the very top and then you start like day one of any actual coding program and then you just plumb it once you realize how long it's going to take and then you spend all that time going through the trough of sorrow.
+
+623
+00:56:29,802 --> 00:56:38,024
+Speaker 0: and then the most like sick thing about this is that the most twisted thing about this is at the very end there's even further dip.
+
+624
+00:56:38,044 --> 00:56:42,825
+Speaker 0: they have to go through where you it's the and then you get into what they call the wiggles of false hope.
+
+625
+00:56:42,845 --> 00:56:45,366
+Speaker 0: so even after you've gone through you've learned everything needed to learn.
+
+626
+00:56:45,766 --> 00:56:49,588
+Speaker 0: You start actually interviewing you and you get the job and you just get rejected, rejected, rejected.
+
+627
+00:56:49,648 --> 00:56:57,111
+Speaker 0: And so there's just this huge curve, long-trough of sorrow that for a lot of folks takes years to get through.
+
+628
+00:56:57,131 --> 00:57:03,954
+Speaker 0: Then once you get to the end where you're like trying to actually get something out of it, it gets even worse and then slowly, slowly gets better.
+
+629
+00:57:04,054 --> 00:57:11,157
+Speaker 0: So the thing that big thing for what we do like you mentioned at a hundred devs is just helping folks manage that frustration.
+
+630
+00:57:11,937 --> 00:57:18,342
+Speaker 0: We have like three key things that we just say every class almost, imagine frustration, be consistent and take care of yourself.
+
+631
+00:57:18,882 --> 00:57:30,050
+Speaker 0: When you look at how adults learn, the reason why adults kind of probably don't learn as well as they think they could is because they don't manage that frustration piece.
+
+632
+00:57:30,070 --> 00:57:33,933
+Speaker 0: When they look that, language fluency in like language acquisition.
+
+633
+00:57:34,253 --> 00:57:40,334
+Speaker 0: They thought that we probably lost the ability to be fluent in our teenage years, but they found that that probably isn't true.
+
+634
+00:57:40,375 --> 00:57:43,835
+Speaker 0: It's just once you get out of those years, your time is entirely your own.
+
+635
+00:57:43,895 --> 00:57:49,876
+Speaker 0: And so what you rather do is think that sucks for two years or would you actually sit down and do it.
+
+636
+00:57:49,896 --> 00:57:54,737
+Speaker 0: And so it folks that can manage that frustration to actually be get through the things they want to do.
+
+637
+00:57:55,177 --> 00:57:56,317
+Speaker 0: And so that's a big part.
+
+638
+00:57:56,557 --> 00:57:57,977
+Speaker 0: And it's also why we're live.
+
+639
+00:57:58,958 --> 00:58:02,691
+Speaker 0: When you look at of their programs.
+
+640
+00:58:02,831 --> 00:58:04,292
+Speaker 0: I love Dr.
+
+641
+00:58:04,312 --> 00:58:05,372
+Speaker 0: Malen out of Harvard.
+
+642
+00:58:05,652 --> 00:58:06,713
+Speaker 0: Yeah, 50.
+
+643
+00:58:06,713 --> 00:58:09,834
+Speaker 0: Usually the CS50 is now on free cooking.
+
+644
+00:58:10,094 --> 00:58:27,212
+Speaker 0: Every single article they've ever put out and one of the ones that are really interesting is they actually published all of their data for CS50 in the beginning, which is really cool to read through and you notice that They had like 150,000 people that signed up for like the first one of the course.
+
+645
+00:58:27,812 --> 00:58:34,014
+Speaker 0: They said like 100,000 people that engaged, but only like 1% completed it, right?
+
+646
+00:58:34,534 --> 00:58:45,457
+Speaker 0: And so that was something that really kind of stuck in my brain because when you look at that, you like in-person program, like the live in-person program, it was like 99% completion.
+
+647
+00:58:47,037 --> 00:59:02,598
+Speaker 0: So there's something there and I think the being lied, being with the cohort of other individuals, being with real people, being with community, can help you ease that frustration, get help when you need it and be a little bit more consistent and actually get to the end.
+
+648
+00:59:03,806 --> 00:59:04,687
+Speaker 1: Yeah, absolutely.
+
+649
+00:59:04,727 --> 00:59:10,590
+Speaker 1: Like there's positive peer pressure, essentially you have like having your peers going through it with you.
+
+650
+00:59:10,630 --> 00:59:14,392
+Speaker 1: Like that's the beauty of cohort of models that is difficult to reproduce.
+
+651
+00:59:14,432 --> 00:59:20,095
+Speaker 1: But if you can reproduce it, like Leon Noel has, then man, you've got like lighting in a bottle.
+
+652
+00:59:20,135 --> 00:59:27,880
+Speaker 1: like you've got people who are going to have each other's backs and like when you're down they're up and they'll help you get back up right.
+
+653
+00:59:28,040 --> 00:59:29,100
+Speaker 1: so you help each other.
+
+654
+00:59:29,781 --> 00:59:32,622
+Speaker 1: so that's kind of the genes of 100 devs.
+
+655
+00:59:32,762 --> 00:59:34,483
+Speaker 1: maybe you can talk a little bit about the mechanics of it.
+
+656
+00:59:34,523 --> 00:59:35,524
+Speaker 1: obviously you've got the discord.
+
+657
+00:59:35,564 --> 00:59:44,428
+Speaker 1: you've got the twice weekly streams when classes in session so to speak and they are high energy streams.
+
+658
+00:59:44,448 --> 00:59:45,569
+Speaker 1: man, I just had to comment.
+
+659
+00:59:45,609 --> 00:59:50,190
+Speaker 1: like you go like the boom boom boom, like you're like the cool astronaut back around.
+
+660
+00:59:50,571 --> 01:00:15,587
+Speaker 1: It's like watching like a gamer on twitch like like watching somebody play and like you know CSGO at a high level or something a little bit of education right like into in my mind like you're pioneering kind of a new approach to education that is based off of like people already familiar with like games and anime and all the other cultural kind of touchstones and you're just like hey let's let's relate this to software engineering.
+
+661
+01:00:15,767 --> 01:00:18,390
+Speaker 1: right and is so you're doing a great job of that.
+
+662
+01:00:18,430 --> 01:00:23,276
+Speaker 1: but if you can talk about an addition to the stream in addition to the discord what are the other aspects of 100 devs?
+
+663
+01:00:23,296 --> 01:00:25,358
+Speaker 1: what are the other instruments?
+
+664
+01:00:26,115 --> 01:00:29,717
+Speaker 0: Sure, so we do a live cohort model.
+
+665
+01:00:29,737 --> 01:00:31,357
+Speaker 0: We basically do a cohort a year.
+
+666
+01:00:32,338 --> 01:00:39,661
+Speaker 0: And when that cohort is live, we're live on Twitch twice a week for about three hours for a class.
+
+667
+01:00:40,241 --> 01:00:45,524
+Speaker 0: We take about an hour to do review, space repetition, active recall is super important.
+
+668
+01:00:46,404 --> 01:00:50,086
+Speaker 0: So we start that first hour just like reviewing and then about two hours is something new.
+
+669
+01:00:50,106 --> 01:00:50,926
+Speaker 0: We do that twice a week.
+
+670
+01:00:51,326 --> 01:01:01,391
+Speaker 0: and then we have office hours on Sunday, which is another stream typically on Twitch or on Discord but it's just people asking questions and getting things answered.
+
+671
+01:01:02,330 --> 01:01:06,994
+Speaker 0: Outside of that, there are so many other expectations and things that you're working on.
+
+672
+01:01:07,034 --> 01:01:10,717
+Speaker 0: that's about 10 to 20 hours outside of that twice a week class.
+
+673
+01:01:11,197 --> 01:01:14,260
+Speaker 0: Networking, all the things that are going to actually move the needle for you to get a job.
+
+674
+01:01:14,600 --> 01:01:22,767
+Speaker 0: Our joke is that we're not really a coding program, we're a getting a job program and so all the things that you can be doing to get a job have to be happening when we're not live.
+
+675
+01:01:23,467 --> 01:01:33,989
+Speaker 0: Then for folks that can't participate in a live experience, we have our lustrous ketchup crew, which is a group of folks that are working through the classes at maybe a little bit more of their own pace.
+
+676
+01:01:34,370 --> 01:01:38,351
+Speaker 0: We have a lot of folks that are around the world that can't make that live time work for them.
+
+677
+01:01:38,731 --> 01:01:42,151
+Speaker 0: So they get together, they're on our discord, working through the classes together.
+
+678
+01:01:42,411 --> 01:01:47,053
+Speaker 0: You'll often see like 20 people just in a voice channel watching a class together.
+
+679
+01:01:47,073 --> 01:01:50,354
+Speaker 0: They've just, they've come together to do.
+
+680
+01:01:51,014 --> 01:01:52,936
+Speaker 0: So you can move through the material at your own pace.
+
+681
+01:01:53,616 --> 01:01:59,000
+Speaker 0: When we're outside of the cohort right now, we have our huddles twice a week.
+
+682
+01:01:59,480 --> 01:02:03,083
+Speaker 0: And the huddles are just like a traditional stand-up, we're just trying to move away from the back.
+
+683
+01:02:03,403 --> 01:02:06,665
+Speaker 0: I think it's a slightly ableist term, so we're, we introduce them as huddles.
+
+684
+01:02:07,346 --> 01:02:08,226
+Speaker 1: And yeah, that makes sense.
+
+685
+01:02:08,246 --> 01:02:10,128
+Speaker 1: I never thought about stand-up as an ableist term.
+
+686
+01:02:10,468 --> 01:02:12,169
+Speaker 1: But yeah, a lot of people can't stand up.
+
+687
+01:02:13,210 --> 01:02:35,197
+Speaker 0: And so we We'll have anywhere from like 500 to 700 people every huddle, just asking questions, sharing, we call the job hunt, the hunt, sharing what's happening on the hunt, how they are negotiating, they'll come up live, we'll help them negotiate offers, they'll talk about an interview that went great or poorly.
+
+688
+01:02:35,597 --> 01:02:45,994
+Speaker 0: and just by showing up to these huddles, you're learning all these, it's so hard to go through life, with everything that you're experiencing, being the first time you've experienced it.
+
+689
+01:02:46,295 --> 01:02:51,200
+Speaker 0: It doesn't have to be that way, specifically with when you have a community that's also doing it.
+
+690
+01:02:51,300 --> 01:03:02,792
+Speaker 0: So the huddles are our way to expose people to the realities of getting a job going and interviewing and actually seeing all this knowledge and so that when you're in that situation, you can experience it too.
+
+691
+01:03:04,053 --> 01:03:08,755
+Speaker 0: We have the huddles twice a week, and then we have a lot of independently generated community things.
+
+692
+01:03:08,835 --> 01:03:17,778
+Speaker 0: So we have Bankie Brunch, shot up Bankie Brunch, which is a group of folks that come together to work through behavioral questions, technical questions, pretty much every single day.
+
+693
+01:03:18,418 --> 01:03:21,639
+Speaker 0: We have groups that are working on projects of which channels are always going.
+
+694
+01:03:22,580 --> 01:03:27,765
+Speaker 0: None of this works without community and a wonderful group of mods.
+
+695
+01:03:28,225 --> 01:03:41,779
+Speaker 0: I'd be remiss to not say, Miriam, Devaker, Mayan Wolfe, Claire, these folks that like blow that make like all this work and for free and volunteering so much of their life to like make this happen.
+
+696
+01:03:42,717 --> 01:03:43,097
+Speaker 1: amazing.
+
+697
+01:03:43,558 --> 01:03:50,785
+Speaker 1: Yeah, like free cocaine, similarly, to drop our lives through our organization, very community driven like.
+
+698
+01:03:51,225 --> 01:03:53,648
+Speaker 1: we have tons of mods on the forum on discord.
+
+699
+01:03:54,148 --> 01:04:23,976
+Speaker 1: We open source contributors that are just dropping in and fixing little bugs making sure that our copy is readable as possible to monitor being the speakers making sure that like It's a lot of contributor driven activity and it sounds like you've figured out a way to encourage a lot of people in your community and power them with, you know, you can delegate some degree of, I guess, authority to them so that they can go out and they can just experiment and build out different things.
+
+700
+01:04:25,097 --> 01:04:29,480
+Speaker 1: One of the things that you said that I thought was really interesting, I do want to talk about it.
+
+701
+01:04:29,700 --> 01:04:33,582
+Speaker 1: Let's talk about space repetition and active recall, I believe, of the terms.
+
+702
+01:04:34,523 --> 01:04:37,165
+Speaker 1: Barbara Oakley teaches the learn course.
+
+703
+01:04:37,605 --> 01:04:45,870
+Speaker 1: The most popular MOOC massive open online course ever other than maybe like CS50, which we were talking about earlier, learning how to learn.
+
+704
+01:04:45,930 --> 01:04:49,112
+Speaker 1: It's not just obvious how to learn where tactics are.
+
+705
+01:04:49,312 --> 01:04:59,782
+Speaker 1: Right, there are phenomena that are ingrained in the human brain from, you know, evolution from like the, you know, Savannah's of Africa basically.
+
+706
+01:05:00,043 --> 01:05:00,443
+Speaker 1: Yeah.
+
+707
+01:05:00,623 --> 01:05:05,588
+Speaker 1: That we carry with us today that we can use if we know how to use them.
+
+708
+01:05:05,628 --> 01:05:07,710
+Speaker 1: And one of them you mentioned is space repetition.
+
+709
+01:05:08,111 --> 01:05:09,152
+Speaker 1: What is space repetition?
+
+710
+01:05:09,892 --> 01:05:17,077
+Speaker 0: Yeah sure so I guess kind of to set the stage real quick is that a lot of folks that attempt to learn how to code are not successful.
+
+711
+01:05:17,597 --> 01:05:19,018
+Speaker 0: We know that we know the drop-offs.
+
+712
+01:05:19,058 --> 01:05:20,759
+Speaker 0: We know that that's just the reality.
+
+713
+01:05:21,399 --> 01:05:25,562
+Speaker 0: and a lot of times those people feel like that it is them that it's a they.
+
+714
+01:05:26,102 --> 01:05:28,503
+Speaker 0: they do not have the ability to learn how to code they do not have.
+
+715
+01:05:28,523 --> 01:05:32,466
+Speaker 0: there's something about them that would stop them from being successful as a software engineer.
+
+716
+01:05:33,166 --> 01:05:45,599
+Speaker 0: And if someone that's worked with thousands of people, like literally in the classroom, my finger is on their keyboard, I just know fundamentally my heart of hearts, like outside of a cognitive impairment.
+
+717
+01:05:45,639 --> 01:05:46,900
+Speaker 0: that's just not true.
+
+718
+01:05:47,421 --> 01:05:53,847
+Speaker 0: And the thing that I found is it's just that most people don't know how to learn.
+
+719
+01:05:54,908 --> 01:06:07,512
+Speaker 0: And it's almost criminal that our school system doesn't actually teach us how to learn that every textbook doesn't have some very fundamental things at the beginning that help you remember and learn this material.
+
+720
+01:06:07,972 --> 01:06:11,693
+Speaker 0: So the difficult thing about software engineering is that it's a cumulative career.
+
+721
+01:06:11,753 --> 01:06:15,254
+Speaker 0: The things you learn this week, you might need two years from now.
+
+722
+01:06:15,874 --> 01:06:21,706
+Speaker 0: And so there are two really fundamental Learning techniques that Dr.
+
+723
+01:06:21,726 --> 01:06:22,908
+Speaker 0: Barbara Oakley does walk through.
+
+724
+01:06:22,928 --> 01:06:23,268
+Speaker 0: that I really.
+
+725
+01:06:23,308 --> 01:06:25,090
+Speaker 0: it's my favorite one of my favorite courses of all time.
+
+726
+01:06:25,651 --> 01:06:32,655
+Speaker 0: that brings up where as humans we forget stuff very quickly.
+
+727
+01:06:33,436 --> 01:06:41,702
+Speaker 0: So, if I gave you a three letter code, this is called the M&H curve, it was a study of one, it's somewhat been replicated since then.
+
+728
+01:06:42,042 --> 01:06:47,046
+Speaker 0: But basically, this person just tracked a new three letter word, a three letter code every day.
+
+729
+01:06:47,566 --> 01:06:52,490
+Speaker 0: And they found within the first like 30 minutes, there was a 20% chance they'd just forgotten it.
+
+730
+01:06:53,069 --> 01:06:57,631
+Speaker 0: The first 30 minutes, so imagine trying to learn is really complicated coding stuff.
+
+731
+01:06:58,232 --> 01:06:59,993
+Speaker 0: And within the first three minutes, you're going to forget it.
+
+732
+01:07:00,513 --> 01:07:07,156
+Speaker 0: Then if you look at that forgetting curve by the end of the month, there's an 80% chance that you forgot in that very simple thing.
+
+733
+01:07:08,737 --> 01:07:12,299
+Speaker 0: for a lot of folks that are going into coding education, they don't realize that they're forgetting.
+
+734
+01:07:12,339 --> 01:07:13,840
+Speaker 0: curve is very steep.
+
+735
+01:07:13,880 --> 01:07:17,442
+Speaker 0: They learn something a month later, they've completely forgotten it.
+
+736
+01:07:17,482 --> 01:07:17,762
+Speaker 0: Yeah.
+
+737
+01:07:17,822 --> 01:07:19,843
+Speaker 0: Start back over and that's super frustrating.
+
+738
+01:07:20,344 --> 01:07:27,628
+Speaker 0: So space repetition is using a tool that makes the material come back to you when you need it most.
+
+739
+01:07:28,228 --> 01:07:32,410
+Speaker 0: And so a typical tool for this is Ankee or Ankee, how do you want to call it?
+
+740
+01:07:32,751 --> 01:07:33,611
+Speaker 0: That's like Ankee.
+
+741
+01:07:33,691 --> 01:07:35,872
+Speaker 1: It means to commit to memory in Japanese.
+
+742
+01:07:35,892 --> 01:07:35,992
+Speaker 1: Yeah.
+
+743
+01:07:36,032 --> 01:07:36,493
+Speaker 1: Ankee, so do.
+
+744
+01:07:37,253 --> 01:07:37,813
+Speaker 0: Exactly.
+
+745
+01:07:38,213 --> 01:07:42,994
+Speaker 0: And so it is a flash card tool that has an algorithm behind it.
+
+746
+01:07:43,314 --> 01:07:45,875
+Speaker 0: So that surfaces the information when you need to see it.
+
+747
+01:07:45,935 --> 01:07:50,736
+Speaker 0: So if you're doing good study habits, which is a huge portion of what we teach at 100 devs, it's just like how to study.
+
+748
+01:07:51,036 --> 01:07:57,397
+Speaker 0: You're using this tool so that the things you learned about HTML, you're not forgetting when we're talking about like MongoDB.
+
+749
+01:07:57,617 --> 01:07:57,837
+Speaker 0: Right?
+
+750
+01:07:57,897 --> 01:08:03,958
+Speaker 0: And so that speech repetition is going to help you remember stuff for the long call, which is really important for a cumulative career.
+
+751
+01:08:04,558 --> 01:08:10,221
+Speaker 0: But then the other thing that's even more important in my opinion than spatial rotation is something called active recall.
+
+752
+01:08:12,002 --> 01:08:21,987
+Speaker 0: Coding can be done through like video tutorials can be done through text but it's a lot of information the process and most people just go through it.
+
+753
+01:08:23,240 --> 01:08:25,040
+Speaker 0: That's not active learning.
+
+754
+01:08:25,479 --> 01:08:34,982
+Speaker 0: They feel maybe some sort of productivity from having watched tutorial or having read a blog post, but they didn't actually engage with that material or learn.
+
+755
+01:08:35,323 --> 01:08:42,743
+Speaker 0: And a lot of times, like for me, I teleport through information, like I found reading a book, I'll get through three paragraphs and like what the heck just happened?
+
+756
+01:08:42,764 --> 01:08:45,145
+Speaker 0: I feel like I've just teleported through that.
+
+757
+01:08:45,165 --> 01:08:55,327
+Speaker 1: I even heard that expression, but that's a good way to describe the phenomenon, especially, you know, people who have like ADHD and stuff they may just be like, halfway through, you know, a book maybe.
+
+758
+01:08:56,768 --> 01:08:58,087
+Speaker 1: You just, your mind wanders.
+
+759
+01:08:58,787 --> 01:09:03,950
+Speaker 1: And if you're not constantly kind of trying to engage with it, you won't necessarily retain it.
+
+760
+01:09:04,130 --> 01:09:08,892
+Speaker 0: Active recall is the way that that helps me as someone that does a VHD like do this.
+
+761
+01:09:08,971 --> 01:09:14,234
+Speaker 0: And so, Active recall is just recalling the things that you just learned or just read or just watched.
+
+762
+01:09:14,854 --> 01:09:18,935
+Speaker 0: And for folks that do have attention issues, I recommend doing that after each paragraph.
+
+763
+01:09:20,417 --> 01:09:22,318
+Speaker 0: I recommend doing after each chapter end.
+
+764
+01:09:22,899 --> 01:09:26,020
+Speaker 0: And you're just literally talking to yourself, what did I just read?
+
+765
+01:09:26,041 --> 01:09:27,002
+Speaker 0: What did I just learn?
+
+766
+01:09:27,022 --> 01:09:28,263
+Speaker 0: And you're saying it out loud.
+
+767
+01:09:28,743 --> 01:09:32,527
+Speaker 0: The research behind it is really shocking, like staggering differences.
+
+768
+01:09:33,228 --> 01:09:39,733
+Speaker 0: You can learn something once, actively recall it once and do better than somebody that re-read it four times.
+
+769
+01:09:41,107 --> 01:09:45,609
+Speaker 0: Like you can do a quarter of the effort and have better results, just with this one technique.
+
+770
+01:09:45,890 --> 01:09:50,372
+Speaker 0: And the fact that that's not like stamped in every single textbook ever made is absurd.
+
+771
+01:09:50,732 --> 01:09:51,393
+Speaker 1: Yeah, it's.
+
+772
+01:09:52,033 --> 01:09:59,477
+Speaker 1: I mean, like we could talk all day about like the shortcomings of the US education system, like both both K through 12 and higher ed.
+
+773
+01:09:59,517 --> 01:10:01,038
+Speaker 1: And that would be completely clear.
+
+774
+01:10:01,238 --> 01:10:05,761
+Speaker 1: There are a lot of very smart people who are working very hard to address a lot of these deficiencies.
+
+775
+01:10:06,451 --> 01:10:15,636
+Speaker 1: but the fact that we're having to explain what active recall and, you know, space for a petitioner, when they're, you know, like time-tested phenomenon that you can leverage.
+
+776
+01:10:16,137 --> 01:10:22,100
+Speaker 1: So just a quick note about actually recall, this is one of the reasons why Free Code Camp's entire curriculum is interactive.
+
+777
+01:10:22,640 --> 01:10:24,561
+Speaker 1: It's because you have to grapple with things.
+
+778
+01:10:24,862 --> 01:10:27,743
+Speaker 1: Otherwise, it's just, it could've just blown right past you, right?
+
+779
+01:10:27,863 --> 01:10:32,046
+Speaker 1: Like, everything needs some sort of evaluation criteria, some sort of comprehension check.
+
+780
+01:10:32,706 --> 01:10:42,949
+Speaker 1: And if you're doing something that doesn't have a comprehensive check, if there's not some right or wrong answer, take your moment to summarize what you just learned or relate it to something else you've learned, thinking about it, just grappling with it.
+
+781
+01:10:43,429 --> 01:10:48,371
+Speaker 1: That can absolutely help submit those, you know, synapses, right?
+
+782
+01:10:48,391 --> 01:10:51,172
+Speaker 1: Well, that's the thing that connects the synapses.
+
+783
+01:10:51,412 --> 01:10:53,712
+Speaker 1: Actually, not the synapses.
+
+784
+01:10:53,732 --> 01:10:54,873
+Speaker 1: I can't remember.
+
+785
+01:10:55,313 --> 01:11:05,170
+Speaker 1: But yeah, like, And it's something anybody can do, like when I'm reading a news article or something like that, right?
+
+786
+01:11:05,190 --> 01:11:06,031
+Speaker 1: That's not interactive.
+
+787
+01:11:06,071 --> 01:11:12,254
+Speaker 1: Now, with GPT or something, I can throw it in GPT and say, hey, come up with like a multiple choice question based off the started, but I'll do that sometimes.
+
+788
+01:11:13,014 --> 01:11:17,216
+Speaker 1: And not just for like actual recall, but space for repetition.
+
+789
+01:11:17,936 --> 01:11:25,460
+Speaker 1: right a bunch of notes and then review them a few days later or use a tool like onkey that can systematically do that, we can load a bunch of flashcards.
+
+790
+01:11:25,900 --> 01:11:29,182
+Speaker 1: A lot of learning platforms have space for repetition just built into them.
+
+791
+01:11:29,222 --> 01:11:30,402
+Speaker 1: If you go through the free code can't?
+
+792
+01:11:30,422 --> 01:11:37,806
+Speaker 1: curriculum, it's designed in such a way that we're going to reintroduce concepts over and over and over and you're going to be like, oh yeah, I kind of remember this from like
+
+793
+01:11:38,286 --> 01:11:38,486
+Speaker 0: a few
+
+794
+01:11:38,526 --> 01:11:45,073
+Speaker 1: hours ago, you know, like, or a few days ago, like, but, but we're intentionally trying to, you know, incorporate that.
+
+795
+01:11:45,133 --> 01:11:53,001
+Speaker 1: And one of the things I think talking about the free cocaine curriculum, let's talk about 100 devs and like what you all are, and is it 100 devs or 100 devs?
+
+796
+01:11:55,154 --> 01:11:55,795
+Speaker 0: I could say either.
+
+797
+01:11:55,795 --> 01:11:57,397
+Speaker 0: 100 devs.
+
+798
+01:11:57,397 --> 01:11:59,940
+Speaker 1: 100 devs is shorter.
+
+799
+01:11:59,980 --> 01:12:00,200
+Speaker 1: Yeah.
+
+800
+01:12:00,420 --> 01:12:02,823
+Speaker 1: It sounds more like easy to say.
+
+801
+01:12:03,123 --> 01:12:07,548
+Speaker 1: So with 100 devs, what is the coursework that you're going through?
+
+802
+01:12:07,688 --> 01:12:08,569
+Speaker 1: Are you using MOOCs?
+
+803
+01:12:08,630 --> 01:12:10,211
+Speaker 1: Are you using open textbooks?
+
+804
+01:12:10,251 --> 01:12:12,114
+Speaker 1: Are you creating a lot of the stuff yourself?
+
+805
+01:12:12,494 --> 01:12:12,834
+Speaker 0: Yeah.
+
+806
+01:12:13,295 --> 01:12:14,777
+Speaker 0: I think there's like two important things.
+
+807
+01:12:16,158 --> 01:12:18,398
+Speaker 0: I really don't believe the content matters.
+
+808
+01:12:19,039 --> 01:12:32,981
+Speaker 0: It's all like where jobs program and I think the biggest mistakes people make is like an over-investment and the idea that the thing like that the learning aspect and not all the other things that move the needle.
+
+809
+01:12:33,041 --> 01:12:39,742
+Speaker 0: So we're very much to kind of tracks like we have all this other stuff we're doing outside of the learning and then the learning as well.
+
+810
+01:12:39,802 --> 01:12:41,462
+Speaker 0: So the learning is very simple.
+
+811
+01:12:42,062 --> 01:12:51,668
+Speaker 0: We do full-stack JavaScript and And I do a lot of custom, like I make all the lectures basically with the slides and all the funny stuff that you mentioned on Twitch.
+
+812
+01:12:52,069 --> 01:12:54,090
+Speaker 0: And we move through that material together.
+
+813
+01:12:54,571 --> 01:12:59,454
+Speaker 0: But a lot of it is supplementing with other things that I think are just the best free courses out there.
+
+814
+01:12:59,575 --> 01:13:02,617
+Speaker 0: So in the beginning, our students will use some free codecab.
+
+815
+01:13:03,197 --> 01:13:04,739
+Speaker 0: as they get a little bit further along.
+
+816
+01:13:05,179 --> 01:13:12,365
+Speaker 0: They'll use some things maybe from full stack open that are trying to supplement the things that we're doing in the classroom.
+
+817
+01:13:13,005 --> 01:13:15,966
+Speaker 0: And any time that we're doing something, it's always a free resource.
+
+818
+01:13:16,226 --> 01:13:17,887
+Speaker 0: It always is a free trial.
+
+819
+01:13:18,067 --> 01:13:19,248
+Speaker 0: That's like a free app.
+
+820
+01:13:19,508 --> 01:13:20,388
+Speaker 1: Love that.
+
+821
+01:13:20,708 --> 01:13:20,868
+Speaker 0: Yeah.
+
+822
+01:13:20,908 --> 01:13:21,849
+Speaker 0: Yeah.
+
+823
+01:13:21,969 --> 01:13:25,710
+Speaker 0: And so we give you the skills to be a full stack web developer.
+
+824
+01:13:26,111 --> 01:13:31,033
+Speaker 0: We do some of the other kind of rounding out to give you the software engineering skills set.
+
+825
+01:13:31,573 --> 01:13:33,134
+Speaker 0: The tooling and things that you might use.
+
+826
+01:13:33,174 --> 01:13:37,976
+Speaker 0: And then as you're getting ready to go in the hunt, the data structures and algorithms, you're going to need to be successful.
+
+827
+01:13:38,576 --> 01:13:40,677
+Speaker 0: But that's kind of like the coding stuff.
+
+828
+01:13:41,377 --> 01:13:46,159
+Speaker 0: outside of that from the very beginning there's pretty stringent requirements in terms of like.
+
+829
+01:13:46,179 --> 01:13:54,182
+Speaker 0: you're networking so you are posted beginning three connections and two coffee chats every single week throughout program.
+
+830
+01:13:54,602 --> 01:14:01,644
+Speaker 0: you're doing things that are going to be opening all these doors to help you get a job and that's kind of another.
+
+831
+01:14:01,664 --> 01:14:11,087
+Speaker 0: really I think that's where our curriculum shines is those things that are really helpful and impactful for helping you get a job actually have a lot of folks that do other boot camps which we love like.
+
+832
+01:14:11,827 --> 01:14:22,470
+Speaker 0: I don't really care where you come from what you do as long as like you're getting to where you want to go and a lot of folks will join us just for like the how to get a job portion which I think we're pretty strong at awesome.
+
+833
+01:14:22,930 --> 01:14:31,896
+Speaker 1: So it's so interesting and important that you distinguish yourself as like a not learning coding program, but a get a job program.
+
+834
+01:14:32,756 --> 01:14:47,626
+Speaker 1: And I just want to emphasize like even though we put a great deal of time and energy into our curriculum, it's absolutely like if you took a look at where all the donations we get and things like that go toward its instructional design platform development mainly for the core curriculum.
+
+835
+01:14:48,787 --> 01:14:56,495
+Speaker 1: because for us it is important that there's a really good core curriculum, but I'll be the first to tell you or I guess the second since Leon just said it.
+
+836
+01:14:58,356 --> 01:15:02,079
+Speaker 1: Getting a job as a developer is really three things in my humble opinion.
+
+837
+01:15:02,519 --> 01:15:09,504
+Speaker 1: And if you haven't read my free book that I published about a year ago, learn to code and get a developer job.
+
+838
+01:15:09,664 --> 01:15:10,624
+Speaker 1: I'm not really the name of the book.
+
+839
+01:15:10,864 --> 01:15:13,146
+Speaker 1: Just Google that or Google code book.
+
+840
+01:15:13,246 --> 01:15:14,527
+Speaker 1: And I learned to code book.
+
+841
+01:15:14,627 --> 01:15:16,648
+Speaker 1: I think you should find it pretty quickly.
+
+842
+01:15:17,769 --> 01:15:20,671
+Speaker 1: And by finding it and clicking on it, it's spending a lot of time on the page.
+
+843
+01:15:20,711 --> 01:15:23,233
+Speaker 1: You help ensure that Google can do needs to recommend it to people.
+
+844
+01:15:26,684 --> 01:15:28,465
+Speaker 1: skills are only one leg of the stool.
+
+845
+01:15:29,306 --> 01:15:32,108
+Speaker 1: Network and reputation are the other two.
+
+846
+01:15:32,348 --> 01:15:35,631
+Speaker 1: And we've talked enough about skills.
+
+847
+01:15:35,651 --> 01:15:42,857
+Speaker 1: Let's jump into networking and building your reputation, which are two things that are also instrumental to the 100 devs program.
+
+848
+01:15:44,158 --> 01:15:44,378
+Speaker 1: Yeah.
+
+849
+01:15:44,438 --> 01:15:48,020
+Speaker 1: Like what is the value of a network?
+
+850
+01:15:48,121 --> 01:15:53,204
+Speaker 1: Why is networking worth your time and energy when it's such an awkward thing to do?
+
+851
+01:15:54,666 --> 01:15:55,666
+Speaker 0: Yeah, we have.
+
+852
+01:15:58,158 --> 01:16:03,539
+Speaker 0: It's just like we have like a lot of like in jokes and things like that that if like you're not part of the community it's like weird to bring up.
+
+853
+01:16:03,599 --> 01:16:05,939
+Speaker 0: but we refer to most people as clickers.
+
+854
+01:16:07,720 --> 01:16:13,681
+Speaker 0: People that learn how to code and then they just click apply and clickers don't get jobs.
+
+855
+01:16:13,881 --> 01:16:14,661
+Speaker 0: Maybe everyone's.
+
+856
+01:16:14,681 --> 01:16:18,922
+Speaker 0: in a while somebody gets lucky and they click on a button and they magic can get a job.
+
+857
+01:16:19,082 --> 01:16:26,303
+Speaker 0: but especially in this market, clickers don't get jobs and so we do everything in our power to never click apply.
+
+858
+01:16:27,003 --> 01:16:42,015
+Speaker 0: We want to make sure that we're talking to real humans that can see our humanity, that can see our ability and our skills and the things that we can do so that we're not just discarded by some AI, ATS system.
+
+859
+01:16:42,715 --> 01:16:47,919
+Speaker 0: And so from the very beginning of 100 devs, we're asking you with generalized networking.
+
+860
+01:16:48,539 --> 01:16:53,683
+Speaker 0: And networking, I think it's like a scary term that I don't think should be, to me networking is just making friends.
+
+861
+01:16:54,563 --> 01:16:59,707
+Speaker 0: And you want to do things in the beginning that gets you comfortable with making friends.
+
+862
+01:17:00,187 --> 01:17:05,410
+Speaker 0: And so you don't have to start networking by going to your local Python meetup, super hard core.
+
+863
+01:17:05,430 --> 01:17:05,851
+Speaker 0: Like, oh no.
+
+864
+01:17:06,491 --> 01:17:10,454
+Speaker 0: If you like Pokemon, go play Pokemon on at your local league, right?
+
+865
+01:17:10,514 --> 01:17:19,540
+Speaker 0: Or like, if you like hiking, going to join like a hiking group and just like share, passion with some others, get comfortable talking to people.
+
+866
+01:17:19,560 --> 01:17:23,122
+Speaker 0: And then eventually apply those skills that you learn to.
+
+867
+01:17:23,402 --> 01:17:30,066
+Speaker 0: Places where developers are more likely to hang out and turn those acquaintances into friends.
+
+868
+01:17:30,467 --> 01:17:33,549
+Speaker 0: And then by the time you're ready to go on the job point, you ultimately won.
+
+869
+01:17:34,386 --> 01:17:40,331
+Speaker 0: hundreds of people that you've interacted with over the past year, that you could go to and say, hey, you saw me where I was.
+
+870
+01:17:40,431 --> 01:17:41,472
+Speaker 0: Here's where I'm at now.
+
+871
+01:17:41,893 --> 01:17:42,973
+Speaker 0: Who should I talk to?
+
+872
+01:17:42,993 --> 01:17:44,175
+Speaker 0: I'm looking for a job.
+
+873
+01:17:44,515 --> 01:17:46,016
+Speaker 0: And that's really successful for people.
+
+874
+01:17:46,096 --> 01:17:47,658
+Speaker 0: So that's phase one of networking.
+
+875
+01:17:47,678 --> 01:17:49,899
+Speaker 0: Phase two is once you go on the hunt.
+
+876
+01:17:50,180 --> 01:17:51,201
+Speaker 0: It's very targeted.
+
+877
+01:17:51,281 --> 01:17:55,684
+Speaker 0: We call it building our hit list where we identify the companies that are actively hiring.
+
+878
+01:17:56,736 --> 01:18:03,706
+Speaker 0: identify like three to five people in each of those companies and we're doing outreach to getting communication with those folks.
+
+879
+01:18:03,786 --> 01:18:16,904
+Speaker 0: learn more and what we're finding is that a lot of jobs just don't get posted A lot of times folks will be applying for one job that they wind up getting a different one just because they like the person.
+
+880
+01:18:17,565 --> 01:18:23,450
+Speaker 0: We have this idea that tech is this meritocracy where if you know the skills, you get the job, it's not.
+
+881
+01:18:23,470 --> 01:18:34,461
+Speaker 0: So people want to work with people that they like, they want to work with people that they know and trust and you can make that happen for yourself by really kind of going this networking your way in pathway.
+
+882
+01:18:36,112 --> 01:18:38,914
+Speaker 1: So the term meritocracy is.
+
+883
+01:18:39,635 --> 01:18:44,038
+Speaker 1: it was like actually like a joke because the author was like.
+
+884
+01:18:44,058 --> 01:18:44,799
+Speaker 1: this doesn't exist.
+
+885
+01:18:44,819 --> 01:18:45,860
+Speaker 1: This is absurd.
+
+886
+01:18:46,500 --> 01:18:48,682
+Speaker 1: Like it's who you know it.
+
+887
+01:18:48,702 --> 01:18:54,227
+Speaker 1: like your skill unless you're I mean even like the most demonstrably good pianists.
+
+888
+01:18:54,667 --> 01:18:56,909
+Speaker 1: for example to talk about pianists we talked about it earlier.
+
+889
+01:18:57,469 --> 01:19:14,804
+Speaker 1: like somebody saw, you know, um, skill in them and like help them get absurd, you know, enrolled in some observatory or they had that time to play piano a lot with all the other kids were working in the few factory, you know, in the, you know, industrial revolution or whatever, like it takes.
+
+890
+01:19:16,045 --> 01:19:18,327
+Speaker 1: So everybody circumstances are different.
+
+891
+01:19:18,387 --> 01:19:28,674
+Speaker 1: So I just want to, like, put the bed, because I've never talked about this on the podcast, but we don't use the word meritocracy on here, except to say that things aren't meritocracy because they are.
+
+892
+01:19:28,934 --> 01:19:29,474
+Speaker 1: It's really good.
+
+893
+01:19:29,494 --> 01:19:30,255
+Speaker 1: It's the thing that they are.
+
+894
+01:19:31,015 --> 01:19:35,899
+Speaker 1: The person who came up with it, I think, in a book was like just joking about it.
+
+895
+01:19:35,919 --> 01:19:36,559
+Speaker 1: Yeah.
+
+896
+01:19:39,140 --> 01:19:45,163
+Speaker 1: But he defined meritocracy is like, I think effort and intelligence.
+
+897
+01:19:45,683 --> 01:19:47,664
+Speaker 1: And how do you build intelligence?
+
+898
+01:19:47,684 --> 01:19:48,545
+Speaker 1: through effort, right?
+
+899
+01:19:48,605 --> 01:19:52,546
+Speaker 1: Some of it may be like, you know, endowed upon you.
+
+900
+01:19:53,407 --> 01:19:55,928
+Speaker 1: But for most part, we all work really hard.
+
+901
+01:19:56,008 --> 01:19:59,009
+Speaker 1: I study, you know, foreign languages like an hour a day.
+
+902
+01:19:59,069 --> 01:20:00,590
+Speaker 1: I play bass an hour a day.
+
+903
+01:20:01,531 --> 01:20:06,873
+Speaker 1: And I'm like, I still suck at those things, but sucking at something is the first step to being good at something.
+
+904
+01:20:07,213 --> 01:20:07,413
+Speaker 0: Right.
+
+905
+01:20:08,313 --> 01:20:12,974
+Speaker 1: So I also wanted to describe or like define like an acronym.
+
+906
+01:20:13,354 --> 01:20:17,495
+Speaker 1: A T S is applicant tracking system system.
+
+907
+01:20:17,875 --> 01:20:18,075
+Speaker 0: Yeah.
+
+908
+01:20:18,115 --> 01:20:22,096
+Speaker 1: When you apply through like a web form, you're like applying into some algorithms.
+
+909
+01:20:22,116 --> 01:20:33,178
+Speaker 1: that can be like, OK, we didn't ask if they have a college degree because it's hip to say that we don't look for people who have college degrees, but in reality, our system is going to just filter you out because you don't have a college degree.
+
+910
+01:20:33,238 --> 01:20:43,488
+Speaker 1: We didn't put it on the thing, but you know I think I heard some study that like it was a recent study like 700 job postings that didn't say they required a degree.
+
+911
+01:20:43,528 --> 01:20:53,598
+Speaker 1: like zero people got those jobs for software engineering for those roles even though they didn't say because If you don't have a degree, the ATS just simply filters you out.
+
+912
+01:20:53,618 --> 01:20:55,058
+Speaker 1: No human ever even reviews it, right?
+
+913
+01:20:55,479 --> 01:21:02,782
+Speaker 1: But like the way I got my first job as a developer was through meetup.com, going to like local Ruby developer, meetup.
+
+914
+01:21:03,122 --> 01:21:04,423
+Speaker 1: And I got a job as a Rails developer.
+
+915
+01:21:04,523 --> 01:21:06,384
+Speaker 1: And the interview was very similar.
+
+916
+01:21:06,644 --> 01:21:12,087
+Speaker 1: Maybe you can describe the typical interview, the hundred devs folks go through because it's not like a lead code white board.
+
+917
+01:21:12,467 --> 01:21:16,209
+Speaker 1: Maybe some of them, but a lot of it is like, hey, I've already seen your projects.
+
+918
+01:21:16,749 --> 01:21:17,470
+Speaker 1: I know you can code.
+
+919
+01:21:17,610 --> 01:21:17,870
+Speaker 1: Yeah.
+
+920
+01:21:17,930 --> 01:21:19,531
+Speaker 1: Are you a good fit for our organization, right?
+
+921
+01:21:20,171 --> 01:21:21,693
+Speaker 0: It's about 50, 50.
+
+922
+01:21:21,693 --> 01:21:21,933
+Speaker 1: Yeah.
+
+923
+01:21:22,093 --> 01:21:26,798
+Speaker 0: We're talking across hundreds of people that have gotten jobs that I've literally seen, right?
+
+924
+01:21:27,098 --> 01:21:29,440
+Speaker 0: And people have come and talked about them during our huddle.
+
+925
+01:21:29,500 --> 01:21:37,729
+Speaker 0: So we have a celebrations channel on our discord, where you can go through and see hundreds of people, their stories, how they got the jobs with the interviews we're like.
+
+926
+01:21:37,749 --> 01:21:39,510
+Speaker 0: And so that's really powerful to know that.
+
+927
+01:21:40,211 --> 01:21:41,492
+Speaker 0: But it's about 50, 50.
+
+928
+01:21:41,492 --> 01:21:49,075
+Speaker 0: And it's when they, when they do an interview, We're talking about sometimes there's not going to be like a lead code style portion.
+
+929
+01:21:49,095 --> 01:21:51,275
+Speaker 0: There's still going to be behavioral questions.
+
+930
+01:21:51,615 --> 01:21:53,275
+Speaker 0: There's still going to be technical questions.
+
+931
+01:21:53,296 --> 01:21:55,076
+Speaker 0: There's still going to be walking through a project.
+
+932
+01:21:55,376 --> 01:22:02,637
+Speaker 0: You might do some light like coding together, but for about half the folks that have got jobs, they haven't done like a lead code style question.
+
+933
+01:22:02,657 --> 01:22:06,038
+Speaker 0: The other half you will, and then there's varying degrees of it.
+
+934
+01:22:06,418 --> 01:22:13,924
+Speaker 0: And so so many folks focus on like grinding out lead code until their eyes bleed and they're just like Yeah, if you're going for Fang, sure, that needs to be the thing that you do.
+
+935
+01:22:14,305 --> 01:22:25,430
+Speaker 0: But if you're going for a local health care company in your medium-sized city, They're probably not going to know, like, they're probably not going to go through and do that level of interviewing.
+
+936
+01:22:25,951 --> 01:22:32,175
+Speaker 0: And so one of the things we always say is, like, don't go into interviews like an accident, always ask what you're about to walk into.
+
+937
+01:22:32,356 --> 01:22:41,342
+Speaker 0: They'll tell you, like, almost every single time, if you just say, like, hey, like, I'm putting a lot of time and energy into this application, I would really appreciate just being fully prepared.
+
+938
+01:22:41,422 --> 01:22:43,203
+Speaker 0: What am I about to walk into in this interview?
+
+939
+01:22:43,564 --> 01:22:46,286
+Speaker 0: And they'll tell you, oh, you're just going to meet with so-and-so and talk through a project.
+
+940
+01:22:46,346 --> 01:22:46,566
+Speaker 0: Great.
+
+941
+01:22:47,006 --> 01:22:48,406
+Speaker 0: Now you know how to prep for that interview.
+
+942
+01:22:48,506 --> 01:22:51,247
+Speaker 0: Don't ever go into an interview if you don't know what you're about to walk into.
+
+943
+01:22:51,667 --> 01:22:59,449
+Speaker 0: It's about half of our jobs have been not really needing some of those more aggressive skills, but it's a huge smell test.
+
+944
+01:22:59,489 --> 01:23:00,429
+Speaker 0: It's a sniff test.
+
+945
+01:23:01,009 --> 01:23:03,930
+Speaker 0: We like to say every single person that starts off at 100 dev smells.
+
+946
+01:23:04,690 --> 01:23:10,171
+Speaker 0: There's something about you that's going to stop you from getting the job and it's your job to like figure out what it is.
+
+947
+01:23:10,331 --> 01:23:19,656
+Speaker 0: Get rid of the smell and make sure you come across as a who will confident professional that's done this been there and is ready to get to work.
+
+948
+01:23:19,936 --> 01:23:23,818
+Speaker 0: And if you can do that, you're gonna be really successful getting jobs.
+
+949
+01:23:23,938 --> 01:23:30,381
+Speaker 0: And even folks that wanna go the other more traditional interviews with like the leaked codes and things like that, you're still passing a sniff test.
+
+950
+01:23:30,861 --> 01:23:39,205
+Speaker 0: I have seen folks that I consider just amazing, even done like competitive programming that do well in interviews and don't get the job and they wonder why.
+
+951
+01:23:39,245 --> 01:23:42,086
+Speaker 0: And then you look at the resume and you look at how they present themselves.
+
+952
+01:23:42,546 --> 01:23:44,867
+Speaker 0: They're narrative, all that stuff matters.
+
+953
+01:23:45,347 --> 01:23:46,248
+Speaker 0: It really matters.
+
+954
+01:23:46,268 --> 01:23:49,289
+Speaker 0: You need to invest time and opening that stuff, those doors as well.
+
+955
+01:23:49,649 --> 01:23:50,629
+Speaker 1: Yeah, absolutely.
+
+956
+01:23:50,969 --> 01:23:57,292
+Speaker 1: And I just want to emphasize, like, if you can figure out what that smell is, maybe it's that I don't have a degree.
+
+957
+01:23:57,372 --> 01:24:04,455
+Speaker 1: And like, I'm getting filtered out of ATS, or people are just not looking at me as a serious, like, a serious candidate just based on that virtue.
+
+958
+01:24:04,715 --> 01:24:06,196
+Speaker 1: You can absolutely correct for that.
+
+959
+01:24:06,216 --> 01:24:09,197
+Speaker 1: And I have lots of friends, like, like, a lot of people in the free code campaign.
+
+960
+01:24:09,777 --> 01:24:11,959
+Speaker 1: dropped out of college or never went to college, right?
+
+961
+01:24:13,039 --> 01:24:26,048
+Speaker 1: And it's just one of those things where you had to figure out like an empathize with like the HR person, whoever you're talking to and figure out what is their their specific for because usually they're just trying to figure out a way to quickly weed people out.
+
+962
+01:24:26,889 --> 01:24:28,650
+Speaker 1: So to speak, so they're like, why don't you know like?
+
+963
+01:24:30,231 --> 01:24:35,958
+Speaker 0: I don't know, one of the things we're trying to really hard to understand is make sure you know all the hacks and the secrets and what's really happening.
+
+964
+01:24:35,998 --> 01:24:43,247
+Speaker 0: and so recruiters are using some sort of like we said ATS, some sort of filter, you know what the adds to your resume to get past those filters.
+
+965
+01:24:43,588 --> 01:24:47,473
+Speaker 0: We use things like CV compiler which is like a website that will tell you what you're missing.
+
+966
+01:24:48,113 --> 01:24:49,754
+Speaker 0: We have like our own resume template.
+
+967
+01:24:49,774 --> 01:24:50,974
+Speaker 0: that's like battle tested.
+
+968
+01:24:51,314 --> 01:24:53,615
+Speaker 0: We follow like the true F shape pattern.
+
+969
+01:24:53,635 --> 01:25:02,559
+Speaker 0: Like if you watch recruiters with eye tracking as a video that's going really popular is done it again where we like watch the way they look they read left the right like most folks that read English.
+
+970
+01:25:02,819 --> 01:25:06,741
+Speaker 0: They're looking for those specific keywords at the front load of the F shape pattern right.
+
+971
+01:25:06,961 --> 01:25:08,161
+Speaker 0: So if you know these things you can.
+
+972
+01:25:08,602 --> 01:25:13,284
+Speaker 0: you can get past these, like, screen segments.
+
+973
+01:25:13,645 --> 01:25:16,967
+Speaker 0: And the other thing is people really need to work on how they talk about themselves.
+
+974
+01:25:17,647 --> 01:25:20,289
+Speaker 0: People go into the hunt too humble.
+
+975
+01:25:20,809 --> 01:25:26,353
+Speaker 0: This is like your one chance in life to talk, your talk, be proud of your previous experience.
+
+976
+01:25:26,373 --> 01:25:38,281
+Speaker 0: I don't care what you've done, having that prior experience, but previous experience makes you a badass and brings different skills to the table than someone that did a four year CS has only ever worked in computer science.
+
+977
+01:25:39,722 --> 01:25:54,928
+Speaker 0: You're different and that difference can be a value add to a lot of companies and so knowing how to craft that into a narrative, like a logical reason from what you were doing to why you're the best software engineer they have in their candidate pool and being able to talk about yourself highly is super important.
+
+978
+01:25:54,968 --> 01:25:56,948
+Speaker 0: So if you're listening, what is your narrative?
+
+979
+01:25:56,968 --> 01:25:57,729
+Speaker 0: What is your story?
+
+980
+01:25:58,009 --> 01:25:59,969
+Speaker 0: Why are you the coolest thing since sliced bread?
+
+981
+01:26:00,009 --> 01:26:01,330
+Speaker 0: walking into that interview?
+
+982
+01:26:01,350 --> 01:26:16,859
+Speaker 0: That's what we do a lot during our huddles and 100 does we have whole nights where we just craft stories, we'll have dozens of people come up to give us their life history and we craft the narrative live and then you just see an instant difference and how they're going through applications.
+
+983
+01:26:17,499 --> 01:26:17,699
+Speaker 1: Yeah.
+
+984
+01:26:18,160 --> 01:26:25,024
+Speaker 1: And so first of all, I would love if you can share the links to those, the CD, I'll pull up CD compassion.
+
+985
+01:26:25,044 --> 01:26:26,565
+Speaker 1: Like via resume template.
+
+986
+01:26:27,246 --> 01:26:33,750
+Speaker 1: And like we've talked a lot about 100 and I feel like we could talk a whole lot more.
+
+987
+01:26:33,770 --> 01:26:35,912
+Speaker 1: First of all, I want to make sure you still have a few minutes.
+
+988
+01:26:36,112 --> 01:26:37,914
+Speaker 0: I'm gonna finish the go for as long as you have me.
+
+989
+01:26:38,314 --> 01:26:39,455
+Speaker 1: Oh, well, that's great news.
+
+990
+01:26:42,337 --> 01:26:47,342
+Speaker 1: The main limit is going to be the fact that I've drifted like literally like two liters of tea while I was sitting here talking with you.
+
+991
+01:26:47,662 --> 01:26:49,123
+Speaker 1: So I think I have to go to the bathroom at some point.
+
+992
+01:26:49,384 --> 01:26:58,011
+Speaker 1: But what we what I really want is just a tease out as many like high level insights that we can get into this podcast like.
+
+993
+01:26:58,031 --> 01:27:09,596
+Speaker 1: I just want to end on as many pieces of actual advice, as you can share, as somebody who has become a developer, it's worked as a software engineer who's even built a successful project.
+
+994
+01:27:09,616 --> 01:27:23,085
+Speaker 1: I guess three or two projects and then you're very actively high up in resilient coders too, which sounds like a really, and I want to tease as many of those out of you as I can, for the benefit of the audience.
+
+995
+01:27:23,205 --> 01:27:26,227
+Speaker 1: And for the benefit of myself, I've been seriously taking notes through this whole thing.
+
+996
+01:27:29,480 --> 01:27:35,627
+Speaker 1: Some questions I have are, I guess, what are some questions I should be asking?
+
+997
+01:27:35,988 --> 01:27:45,058
+Speaker 1: Well, some interesting things that people never ask you that are really helpful, that would be helpful for the many people out there learning the code.
+
+998
+01:27:45,579 --> 01:27:45,739
+Speaker 1: What?
+
+999
+01:27:46,340 --> 01:27:47,741
+Speaker 1: Okay, what is a big mistake?
+
+1000
+01:27:48,582 --> 01:27:49,443
+Speaker 1: We can think about that.
+
+1001
+01:27:49,463 --> 01:27:50,864
+Speaker 1: Maybe you can think of some other things.
+
+1002
+01:27:50,904 --> 01:28:03,374
+Speaker 1: But what are the big mistake that you see developers make other than, you know, over-optimizing on their skills, for example, and not enough on their network of the reputation or figuring out how to empathize with recruiters.
+
+1003
+01:28:03,414 --> 01:28:09,478
+Speaker 1: And I don't mean like, you buddies with them, but like, you always want to understand other people's perspectives.
+
+1004
+01:28:09,518 --> 01:28:28,550
+Speaker 1: There's no disadvantage to having more perspectives kind of compact in your head, being able to build with more versatility models of other people and how they're approaching the world and what they're looking for, how you can find the job that needs to be done and you can do it for that person, right?
+
+1005
+01:28:28,570 --> 01:28:33,772
+Speaker 0: You know, I guess I'll gear it towards folks that are like learning how to code and trying to get a job.
+
+1006
+01:28:34,253 --> 01:28:43,977
+Speaker 0: I think the biggest mistake outside of the things like not investing early in networking and over investing in things that aren't going to really move the needle in terms of you getting a job is there's.
+
+1007
+01:28:44,037 --> 01:28:49,360
+Speaker 0: there's two things that I think lead to most folks not being successful.
+
+1008
+01:28:50,280 --> 01:28:54,042
+Speaker 0: And the number one thing is going into your day is like an accident.
+
+1009
+01:28:55,142 --> 01:29:03,806
+Speaker 0: If you're going into your day is like an accident and you don't have a game plan for your day, your week, your month and you're trying to commit to a process is going to take years.
+
+1010
+01:29:04,506 --> 01:29:05,627
+Speaker 0: You're not going to be successful.
+
+1011
+01:29:06,247 --> 01:29:12,910
+Speaker 0: And I've worked from where folks from all different walks of life, the folks that make a plan for what they want, like what do you want for yourself?
+
+1012
+01:29:13,550 --> 01:29:14,590
+Speaker 0: What do you want for your family?
+
+1013
+01:29:14,610 --> 01:29:15,751
+Speaker 0: What do you want for your loved ones?
+
+1014
+01:29:15,771 --> 01:29:17,031
+Speaker 0: Like, what do you want?
+
+1015
+01:29:17,631 --> 01:29:20,332
+Speaker 0: And then what are the steps you're going to take to get there?
+
+1016
+01:29:20,732 --> 01:29:28,354
+Speaker 0: That plan helps you get through the trough of sorrow, helps you get through the days where you don't have motivation when the discipline is fleeting.
+
+1017
+01:29:30,555 --> 01:29:32,958
+Speaker 0: How do you stay true to like what you want?
+
+1018
+01:29:32,978 --> 01:29:34,160
+Speaker 0: and you should have it written down.
+
+1019
+01:29:34,180 --> 01:29:35,221
+Speaker 0: you should have it on your wall.
+
+1020
+01:29:35,261 --> 01:29:35,942
+Speaker 0: you should you should.
+
+1021
+01:29:36,182 --> 01:29:43,190
+Speaker 0: there's a reason why I have your photo is like the background of my wall paper every once in a while is because I need to know what I'm shooting for and like.
+
+1022
+01:29:43,210 --> 01:29:43,831
+Speaker 0: what do I want?
+
+1023
+01:29:43,851 --> 01:29:54,360
+Speaker 0: like what I want for myself but I want for my community and like having that why go, everyone that's trying to learn code needs to go on some long walks with no podcasts, no music, no anything.
+
+1024
+01:29:54,721 --> 01:29:56,162
+Speaker 0: And just ask yourself, what do I want?
+
+1025
+01:29:56,202 --> 01:29:57,002
+Speaker 0: Like, what's my future?
+
+1026
+01:29:57,022 --> 01:29:58,223
+Speaker 0: Like, what do I want for myself?
+
+1027
+01:29:58,563 --> 01:30:02,126
+Speaker 0: Because until you have that, it's really hard to push through.
+
+1028
+01:30:02,166 --> 01:30:07,849
+Speaker 0: And so I have a lot of people that come and they say they want it, but they only kind of want it, right?
+
+1029
+01:30:08,010 --> 01:30:11,232
+Speaker 0: It's like a very famous doctor at Thomas speech, like they just kind of want it.
+
+1030
+01:30:11,792 --> 01:30:21,518
+Speaker 0: And until you really want it, and that can come from a lot of different ways, and come from being fucking hungry, it can come from wanting their respect of your family, like it can come from a lot of different places.
+
+1031
+01:30:21,878 --> 01:30:24,500
+Speaker 0: But until you have that, you're not gonna, you're not gonna make it through.
+
+1032
+01:30:25,621 --> 01:30:35,527
+Speaker 0: And yeah, so having that hammered down and really having it visible, putting it somewhere on the wall, like knowing what it is, and then every day.
+
+1033
+01:30:36,664 --> 01:30:40,005
+Speaker 0: Before I go to bed, I write up the three things I want to get done the next day.
+
+1034
+01:30:40,805 --> 01:30:42,666
+Speaker 0: Once a month, I would have my goals for the month.
+
+1035
+01:30:43,286 --> 01:30:46,927
+Speaker 0: Once a year, like, when I went to every couple of months, like, when am I trying to get done for the year?
+
+1036
+01:30:47,507 --> 01:30:48,968
+Speaker 0: And I hold myself to it.
+
+1037
+01:30:49,328 --> 01:30:53,009
+Speaker 0: And the last piece I'll say about this is I get buying from the folks that matter most to me.
+
+1038
+01:30:53,629 --> 01:30:54,849
+Speaker 0: So it's not something eternal to me.
+
+1039
+01:30:54,869 --> 01:30:56,830
+Speaker 0: Like, I know if I want to be successful in this.
+
+1040
+01:30:57,390 --> 01:31:00,471
+Speaker 0: I need to get the buying of my wife, right?
+
+1041
+01:31:00,931 --> 01:31:02,211
+Speaker 0: Hey, this is the thing I want to do.
+
+1042
+01:31:02,772 --> 01:31:03,772
+Speaker 0: It's going to take a lot of time.
+
+1043
+01:31:04,795 --> 01:31:19,789
+Speaker 0: It's going to take some nights and weekends away from us being together and with our family and I need you to understand why I'm doing it, why it's important and can I have a little bit of your trust and I'll prove that to you over time that it's worthwhile investment.
+
+1044
+01:31:20,129 --> 01:31:28,336
+Speaker 0: but I need you to know why I'm doing this and get that by and Because we don't have that buying, especially if you're like, stay still at home with family.
+
+1045
+01:31:28,376 --> 01:31:29,237
+Speaker 0: that doesn't get it.
+
+1046
+01:31:29,657 --> 01:31:36,262
+Speaker 0: If you're not being as present with your loved ones, that's going to build up some resentment.
+
+1047
+01:31:36,723 --> 01:31:39,245
+Speaker 0: And for a lot of folks, it's another reason why they're not successful.
+
+1048
+01:31:39,325 --> 01:31:41,346
+Speaker 0: So yeah, I'm going to go into your days like an accident.
+
+1049
+01:31:41,486 --> 01:31:42,627
+Speaker 0: Have a plan for your days.
+
+1050
+01:31:43,068 --> 01:31:45,670
+Speaker 0: Know what your why is and get buying from the folks that matter most.
+
+1051
+01:31:46,564 --> 01:31:51,847
+Speaker 1: Yeah, that getting by and it's so important because learning to cause a long, long journey.
+
+1052
+01:31:52,027 --> 01:31:59,991
+Speaker 1: And you get all hyped up, you get all these, you know, probably YouTube ads or ads on the side of your coding tutorials.
+
+1053
+01:32:00,351 --> 01:32:05,634
+Speaker 1: Learn to code in just three months and get a job being like, do 100k, like, you know, whatever.
+
+1054
+01:32:07,515 --> 01:32:07,895
+Speaker 1: to be fair.
+
+1055
+01:32:07,915 --> 01:32:12,640
+Speaker 1: There are plenty of developers who do learn to code very quickly and do get jobs.
+
+1056
+01:32:13,521 --> 01:32:23,630
+Speaker 1: I've had lots of friends who transitioned from working on Wall Street and they went to some expensive intensive coding program and they were able to then go get a job in Silicon Valley.
+
+1057
+01:32:23,990 --> 01:32:25,512
+Speaker 1: But they already had college degrees.
+
+1058
+01:32:26,232 --> 01:32:29,955
+Speaker 1: They already had, you know, like They probably figured out how to plan.
+
+1059
+01:32:30,955 --> 01:32:37,697
+Speaker 1: They probably had an understanding of learning techniques that we've been talking about.
+
+1060
+01:32:38,558 --> 01:32:45,140
+Speaker 1: Most importantly, they had a lot of money and they were able to focus on it exclusively and attend an intensive in person bootcamp.
+
+1061
+01:32:46,100 --> 01:32:47,241
+Speaker 1: That error may have passed.
+
+1062
+01:32:47,521 --> 01:32:49,121
+Speaker 1: It may be that it's just a little harder now.
+
+1063
+01:32:50,962 --> 01:32:53,704
+Speaker 1: to be able to get a job just because you should learn math, right?
+
+1064
+01:32:53,744 --> 01:33:00,307
+Speaker 1: Like, you used to be back in the day, you could just learn some WordPress and you could probably go get some clients new WordPress work.
+
+1065
+01:33:00,367 --> 01:33:05,650
+Speaker 1: And it may be that case, but with the global market and the level of competition you're going to get from places like India.
+
+1066
+01:33:06,250 --> 01:33:19,053
+Speaker 1: Nigeria, China, like tons of extremely educated, extremely hungry people are coming from all these places and you know frankly they're getting your lunch if you're not putting in the time and effort to.
+
+1067
+01:33:19,354 --> 01:33:23,015
+Speaker 1: Benjamin Franklin said few people plan to fail.
+
+1068
+01:33:23,455 --> 01:33:26,439
+Speaker 1: most people who fail fail the plan.
+
+1069
+01:33:27,140 --> 01:33:27,760
+Speaker 1: That's a paraphrase.
+
+1070
+01:33:27,800 --> 01:33:28,460
+Speaker 1: What do you say?
+
+1071
+01:33:28,580 --> 01:33:29,801
+Speaker 1: It's not anything that's perfect.
+
+1072
+01:33:30,141 --> 01:33:32,142
+Speaker 1: But it is like 100% with Leon's saying here.
+
+1073
+01:33:33,862 --> 01:33:38,965
+Speaker 1: And yeah, so I just want to emphasize like getting buy in from your family, like when I learned to code.
+
+1074
+01:33:38,985 --> 01:33:41,606
+Speaker 1: Again, I don't want to make this all about me, but like.
+
+1075
+01:33:42,706 --> 01:33:47,030
+Speaker 1: I told my wife, like, hey, I've got this job as a school director, right?
+
+1076
+01:33:47,110 --> 01:33:49,291
+Speaker 1: And I would like to become a software engineer.
+
+1077
+01:33:49,972 --> 01:33:55,937
+Speaker 1: And we had double income, we had insurance, which is a huge deal here in the US through her work.
+
+1078
+01:33:56,777 --> 01:33:59,760
+Speaker 1: So even if I left my job, we could continue to have health insurance.
+
+1079
+01:34:00,320 --> 01:34:02,863
+Speaker 1: And I just grind it every single day and I ever.
+
+1080
+01:34:03,223 --> 01:34:05,465
+Speaker 1: I did precisely what you're talking about planning out.
+
+1081
+01:34:05,605 --> 01:34:07,527
+Speaker 1: Okay, what am I gonna accomplish next few days?
+
+1082
+01:34:07,847 --> 01:34:09,488
+Speaker 1: Because planning is everything like.
+
+1083
+01:34:09,809 --> 01:34:17,976
+Speaker 1: it's so important to have a plan and to stick to a plan and to have goals that are miserable and then are within your control.
+
+1084
+01:34:17,996 --> 01:34:32,149
+Speaker 1: That's another mistake I see a lot of people make is people will be like my goal is to get you know 100,000 YouTube subscribers this year or my goal is to get you know a job paying like $1,000 or to get in freelance files.
+
+1085
+01:34:32,529 --> 01:34:35,332
+Speaker 1: You know those are not things that you can directly control.
+
+1086
+01:34:36,030 --> 01:34:38,852
+Speaker 1: You can't control the outcome, but you can control the input.
+
+1087
+01:34:39,273 --> 01:34:45,978
+Speaker 1: My goal is to, my base for an hour a day, or whatever goal I might have at any given moment.
+
+1088
+01:34:46,018 --> 01:34:53,083
+Speaker 0: James Clear of atomic habits has that very famous quote that I love so much that we don't rise to the level of our goals.
+
+1089
+01:34:53,123 --> 01:34:54,845
+Speaker 0: We fall to the levels of our systems.
+
+1090
+01:34:55,385 --> 01:35:09,101
+Speaker 0: And so this idea, like we have all these lofty goals, but if you're not putting in the systems, the how do you play the base for an hour each day, study your languages for an hour each day and the process for that, it's just not going to work out for you in the long run.
+
+1091
+01:35:09,921 --> 01:35:10,342
+Speaker 1: Absolutely.
+
+1092
+01:35:12,952 --> 01:35:16,156
+Speaker 1: We've talked a lot in, of course, you and I, we grew up in the U.S.
+
+1093
+01:35:16,336 --> 01:35:18,038
+Speaker 1: Europe and Philly, I grew up in Oklahoma City.
+
+1094
+01:35:19,259 --> 01:35:20,941
+Speaker 1: And here in the U.S.
+
+1095
+01:35:21,182 --> 01:35:26,328
+Speaker 1: even though things are not equal by a long shot, it's very unequal society.
+
+1096
+01:35:26,768 --> 01:35:31,473
+Speaker 1: We still have vestiges of, you know, history.
+
+1097
+01:35:32,393 --> 01:35:33,834
+Speaker 1: Going back 400 years, right?
+
+1098
+01:35:34,274 --> 01:35:38,855
+Speaker 1: Like the warp, essentially the halves and the have knots.
+
+1099
+01:35:41,156 --> 01:35:46,317
+Speaker 1: But in the US, we're pretty well off compared to folks in a lot of countries.
+
+1100
+01:35:47,157 --> 01:35:57,960
+Speaker 1: For example, like the hyper competition in places like India and China where you've got like so many people getting like CS degrees and trying to compete and so few employers.
+
+1101
+01:35:58,400 --> 01:36:08,803
+Speaker 1: or Nigeria, where there are so many amazing developers, like I think it's like the third or fourth largest community in free co-camp, people that use free co-camp is Nigeria.
+
+1102
+01:36:09,143 --> 01:36:11,784
+Speaker 1: But if you look at Nigeria, there aren't a lot of big employers.
+
+1103
+01:36:12,404 --> 01:36:13,904
+Speaker 1: And the government's kind of a mess.
+
+1104
+01:36:14,444 --> 01:36:17,385
+Speaker 1: And as a result, there's not a lot of opportunity, even though there's a lot of talent.
+
+1105
+01:36:17,445 --> 01:36:25,027
+Speaker 1: So a lot of those people have to move overseas, so like Europe or to the United States, or wherever they can find opportunity, right?
+
+1106
+01:36:25,527 --> 01:36:31,329
+Speaker 1: Like a lot of the What is the proportion of people doing 100 devs who are outside of the US?
+
+1107
+01:36:31,549 --> 01:36:36,711
+Speaker 1: And what have you observed about those people that might be helpful for them?
+
+1108
+01:36:38,472 --> 01:36:47,234
+Speaker 1: Yeah, and like just a follow-up question will take on is like, do they need to move to the US to be able to be successful in software engineering or other paths that you've seen people succeed with?
+
+1109
+01:36:47,314 --> 01:36:51,876
+Speaker 0: Yeah, so I would say about half our community is from the US and about half is from everywhere else.
+
+1110
+01:36:52,316 --> 01:36:54,839
+Speaker 0: In fact, the first jobs we ever got were not from the US.
+
+1111
+01:36:54,859 --> 01:37:00,326
+Speaker 0: They were from Brazil, then Poland, UK, and then a bunch of other places in South America.
+
+1112
+01:37:01,027 --> 01:37:06,273
+Speaker 0: And so a lot of our community in folks that have that in jobs haven't been from the US centric.
+
+1113
+01:37:06,353 --> 01:37:15,738
+Speaker 0: And so the first thing I always say is whenever somebody from outside the US says I want to get a job, And just tell them bluntly, it's way harder.
+
+1114
+01:37:16,459 --> 01:37:21,741
+Speaker 0: Don't let anyone convince you that it's going to be the same pathway, somebody from the US, it's going to be a way more difficult journey.
+
+1115
+01:37:22,082 --> 01:37:25,523
+Speaker 0: And there's a very couple of very key things that you have to keep in mind.
+
+1116
+01:37:26,624 --> 01:37:31,446
+Speaker 0: One, the visa sponsorship issue in the United States is wild.
+
+1117
+01:37:31,566 --> 01:37:33,828
+Speaker 0: It goes to a lottery most years, right?
+
+1118
+01:37:34,288 --> 01:37:37,710
+Speaker 0: And so banking on that is like a pathway into an engineering career.
+
+1119
+01:37:37,770 --> 01:37:42,173
+Speaker 0: if you're from a area that doesn't have like that strong of a local tech economy is very hard.
+
+1120
+01:37:42,733 --> 01:37:47,116
+Speaker 0: The competition for companies that hire remotely is brutal.
+
+1121
+01:37:47,577 --> 01:37:50,719
+Speaker 0: It's even more brutal when you look at the companies that hire globally.
+
+1122
+01:37:50,839 --> 01:37:52,820
+Speaker 0: So a lot of people think, oh, I'll get a remote tech job.
+
+1123
+01:37:52,880 --> 01:37:58,324
+Speaker 0: No, even though they're remote, they only hire folks from the US or from a very specific select countries.
+
+1124
+01:37:58,785 --> 01:38:06,437
+Speaker 0: So finding a group of folks that hire globally remotely, that's a very narrow pool.
+
+1125
+01:38:06,838 --> 01:38:11,160
+Speaker 0: So the first thing I recommend that you do is build a hit list of those companies.
+
+1126
+01:38:11,180 --> 01:38:12,581
+Speaker 0: They're at least you can find online.
+
+1127
+01:38:12,941 --> 01:38:15,183
+Speaker 0: There are a couple hundred of those companies.
+
+1128
+01:38:15,783 --> 01:38:17,864
+Speaker 0: You need to be best friends with everybody that works at that company.
+
+1129
+01:38:18,064 --> 01:38:20,246
+Speaker 0: And you mentioned building your reputation.
+
+1130
+01:38:20,306 --> 01:38:26,309
+Speaker 0: This is something I really recommend folks that are coming from a location that has a traditional tech economy.
+
+1131
+01:38:26,730 --> 01:38:28,291
+Speaker 0: Is your reputation matters a lot?
+
+1132
+01:38:29,131 --> 01:38:31,433
+Speaker 0: We talk about building authority a lot in a hundred dev.
+
+1133
+01:38:31,473 --> 01:38:36,698
+Speaker 0: So picking a niche or a topic that you know very very well, generating content around it.
+
+1134
+01:38:36,718 --> 01:38:39,220
+Speaker 0: So once somebody thinks about, I don't know, authentication.
+
+1135
+01:38:39,560 --> 01:38:43,604
+Speaker 0: They think about you and the blog post you've written and the depth of knowledge that you can bring.
+
+1136
+01:38:43,964 --> 01:38:48,989
+Speaker 0: That way when you're applying to these global remote companies, you have something that nobody else really has.
+
+1137
+01:38:49,089 --> 01:38:51,531
+Speaker 0: It's like intangible thing that helps set you apart.
+
+1138
+01:38:51,931 --> 01:38:53,392
+Speaker 0: And so the first thing I say is harder.
+
+1139
+01:38:54,261 --> 01:38:59,806
+Speaker 0: Building authority or reputation is super important and not going into your job search like an accident.
+
+1140
+01:38:59,866 --> 01:39:09,736
+Speaker 0: It's not going to happen if you don't have a very strong game plan and you're building the references and helping pass that sniff test that these companies are putting out there.
+
+1141
+01:39:09,776 --> 01:39:13,519
+Speaker 0: If you do those things, you'll be successfully filled hundreds of people in that situation and get a job.
+
+1142
+01:39:13,920 --> 01:39:15,281
+Speaker 0: It's just a way more difficult pathway.
+
+1143
+01:39:16,041 --> 01:39:26,327
+Speaker 1: Yeah and just on that note of like building authority like what are some of the most I guess immediate things someone can do let's say you already have.
+
+1144
+01:39:26,347 --> 01:39:35,872
+Speaker 1: this goes let's say you've been coding for a long time and you just want to be able to get a job preferably like a multinational company many of which are of course US based.
+
+1145
+01:39:37,333 --> 01:39:50,182
+Speaker 1: And you would love over the next five or ten years to eventually get a visa and come to the US where salaries are double what they are in Europe and where we have a high degree of freedom that people in other countries don't necessarily enjoy.
+
+1146
+01:39:50,542 --> 01:39:53,725
+Speaker 1: I mean, it is a good place to live, like living in the US.
+
+1147
+01:39:54,205 --> 01:39:54,405
+Speaker 1: Right.
+
+1148
+01:39:54,765 --> 01:40:06,929
+Speaker 1: I guess it's easy for me to say that it's like a middle class guy who speaks English natively and has US citizenship and doesn't have to deal with like my H1B, you know, being shifted around and like getting companies responsible for me and all that stuff.
+
+1149
+01:40:06,949 --> 01:40:09,509
+Speaker 1: But like I can definitely understand the appeal.
+
+1150
+01:40:09,549 --> 01:40:15,191
+Speaker 1: I can understand why so many people are trying, you know, to immigrate to the US every day.
+
+1151
+01:40:15,271 --> 01:40:21,413
+Speaker 1: But like what would be some practical ways that they can establish authority, as you said?
+
+1152
+01:40:22,313 --> 01:40:41,570
+Speaker 0: Yeah, so I think when you are trying to stand out amongst lots of other talented individuals, doesn't have to be anything wild, I really do think building a list of companies that are on your targeted range and the H&B processes, I've helped sponsor a lot of H&Bs.
+
+1153
+01:40:42,731 --> 01:40:45,053
+Speaker 0: We can talk about, like, that's a whole other beast in it itself.
+
+1154
+01:40:45,133 --> 01:40:47,534
+Speaker 0: That's like, you have to be at an exceptional talent.
+
+1155
+01:40:47,554 --> 01:40:48,315
+Speaker 0: You have to do these things.
+
+1156
+01:40:48,355 --> 01:40:49,115
+Speaker 0: That was your standout.
+
+1157
+01:40:49,135 --> 01:40:50,036
+Speaker 0: Like, that's a whole thing.
+
+1158
+01:40:50,376 --> 01:40:51,777
+Speaker 0: You're talking about, like, global remote company.
+
+1159
+01:40:51,797 --> 01:40:52,498
+Speaker 0: Like, what can you do right now?
+
+1160
+01:40:52,518 --> 01:40:56,280
+Speaker 0: Think about somebody that's right now that wants to, to get a job.
+
+1161
+01:40:56,460 --> 01:41:00,924
+Speaker 0: My, my process probably wouldn't be the H1B coming to the US right away.
+
+1162
+01:41:00,944 --> 01:41:03,325
+Speaker 0: It'd be these, like, global remote companies.
+
+1163
+01:41:03,725 --> 01:41:06,527
+Speaker 0: And then maybe expanding the companies that could sponsor.
+
+1164
+01:41:07,568 --> 01:41:12,231
+Speaker 0: But a lot of times, you're going to need more more credentials you're going to need like.
+
+1165
+01:41:12,251 --> 01:41:15,291
+Speaker 0: the degrees might actually become a thing if you're trying to go that sponsorship route.
+
+1166
+01:41:16,092 --> 01:41:33,018
+Speaker 0: so I recommend right now if you're someone in Nigeria or India looking at these global higher and remote companies figuring out what they do building a list of them building a list of all the people that you know that work there adding them to a Twitter list, right?
+
+1167
+01:41:33,058 --> 01:41:46,688
+Speaker 0: Like each person, either to a Twitter list, start engaging with their content, just liking stuff at first, don't be spammy, don't be weird, just like engaging with them, liking their content, congratulating them when they get a new project built, right?
+
+1168
+01:41:46,728 --> 01:41:52,732
+Speaker 0: Like building that network of folks that know who you are over time, like you become like an acquaintance.
+
+1169
+01:41:52,752 --> 01:42:02,379
+Speaker 0: Like you can go from a nobody to like they have no idea who you are to an acquaintance, just by regular interaction on LinkedIn, Twitter, And there's a fine line between being weird with it, right?
+
+1170
+01:42:02,699 --> 01:42:03,920
+Speaker 0: I don't know how to do this joke.
+
+1171
+01:42:03,960 --> 01:42:04,700
+Speaker 0: It's not stalking.
+
+1172
+01:42:04,740 --> 01:42:05,421
+Speaker 0: It's networking.
+
+1173
+01:42:05,761 --> 01:42:08,362
+Speaker 0: And so we're going to make sure that you're not crossing that line.
+
+1174
+01:42:10,043 --> 01:42:14,166
+Speaker 0: And then starting to realize what these companies have trouble with, right?
+
+1175
+01:42:14,206 --> 01:42:16,067
+Speaker 0: Like you're engaging with these content.
+
+1176
+01:42:16,087 --> 01:42:17,468
+Speaker 0: You're seeing the things that they're doing.
+
+1177
+01:42:17,948 --> 01:42:22,711
+Speaker 0: Are they having trouble implementing, I don't know, AI or LLMs?
+
+1178
+01:42:23,211 --> 01:42:23,452
+Speaker 0: Great.
+
+1179
+01:42:23,592 --> 01:42:25,113
+Speaker 0: That's the content you just started generating.
+
+1180
+01:42:25,753 --> 01:42:31,866
+Speaker 0: Build your authority about How do they integrate these tools into their daily process?
+
+1181
+01:42:31,906 --> 01:42:32,846
+Speaker 0: You should have a blog.
+
+1182
+01:42:33,706 --> 01:42:35,807
+Speaker 0: You should have a YouTube.
+
+1183
+01:42:36,528 --> 01:42:38,609
+Speaker 0: You should have something where you're putting content out there.
+
+1184
+01:42:38,929 --> 01:42:46,452
+Speaker 0: You're getting feedback from them and from community of some sort to where you're building up that, hey, I'm not just the way that says I do that.
+
+1185
+01:42:46,512 --> 01:42:47,812
+Speaker 0: You can look at my content.
+
+1186
+01:42:47,832 --> 01:42:49,033
+Speaker 0: You can look at the things I'm doing.
+
+1187
+01:42:49,573 --> 01:42:53,355
+Speaker 0: You can look at the things that I say I've done and be able to see that very clearly.
+
+1188
+01:42:53,935 --> 01:43:02,638
+Speaker 0: And also, by doing that, you're practicing how you talk about these and you're practicing, maybe English is your second language, you're getting more comfortable with these things.
+
+1189
+01:43:02,698 --> 01:43:15,361
+Speaker 0: that when it comes to hiring the past, the SNF test, you are because these people you've been engaging with for a year plus, they've seen your content, they know who you are, they know what you're capable of, that makes getting into these orgs a little bit easier.
+
+1190
+01:43:16,001 --> 01:43:16,501
+Speaker 1: Absolutely.
+
+1191
+01:43:16,501 --> 01:43:18,202
+Speaker 1: 100% agreed.
+
+1192
+01:43:18,602 --> 01:43:21,623
+Speaker 1: Based on my limited knowledge, I think it sounds like you owe all my knowledge about that.
+
+1193
+01:43:22,034 --> 01:43:31,903
+Speaker 1: So what I would like to ask then is like let's flip this around employers who want to bring in more folks and this can we can.
+
+1194
+01:43:31,963 --> 01:43:34,326
+Speaker 1: we can definitely start by talking about folks from overseas.
+
+1195
+01:43:34,766 --> 01:43:44,876
+Speaker 1: if you want talent if you want to be able to tap that talent and you don't want to like go to some consultancy or something in some other country and say give me like 20 devs right go to info sister whatever you like.
+
+1196
+01:43:44,916 --> 01:43:52,423
+Speaker 1: you want to literally get the best talent from India or from Nigeria just by picking a developer by developer yourself.
+
+1197
+01:43:52,783 --> 01:44:05,616
+Speaker 1: You're trying to build out your company or you're a hiring manager and you're trying to build a team, you know, like what strategies, what advice would you give to those people so that they can actually find talented people and what should they be looking for?
+
+1198
+01:44:05,636 --> 01:44:05,837
+Speaker 1: Yeah.
+
+1199
+01:44:06,377 --> 01:44:09,699
+Speaker 0: I think partnerships are really great, so we work with a lot of hard partners.
+
+1200
+01:44:09,719 --> 01:44:10,719
+Speaker 0: that was leading at coders.
+
+1201
+01:44:11,219 --> 01:44:14,701
+Speaker 0: We sent dozens of folks to Amazon through resilient coders.
+
+1202
+01:44:14,721 --> 01:44:24,125
+Speaker 0: We sent, we have these very strong partnerships with a lot of orgs that need a good solid pipeline of talent, and so partnering with communities is a really good way to do that.
+
+1203
+01:44:25,005 --> 01:44:29,909
+Speaker 0: If you came to RC it was encoders or you came to 100 devs and you said give me the best of the best.
+
+1204
+01:44:30,269 --> 01:44:31,050
+Speaker 0: I would talk to you.
+
+1205
+01:44:31,070 --> 01:44:37,055
+Speaker 0: I'd make sure that your job is doing all the things that it needs to be done to be done equitably and I felt that that was the case.
+
+1206
+01:44:37,455 --> 01:44:38,936
+Speaker 0: I would give you all the folks.
+
+1207
+01:44:39,016 --> 01:44:52,288
+Speaker 0: you would have a pipeline that was full for days of highly qualified, incredibly talented talent from wherever you need them to be from or anywhere you'd want to support as well, like we can make that happen.
+
+1208
+01:44:52,328 --> 01:44:57,692
+Speaker 0: And so I think for folks that are looking for a good pipeline, just working with communities.
+
+1209
+01:44:57,753 --> 01:45:00,835
+Speaker 0: So I would of course say, working with myself.
+
+1210
+01:45:00,935 --> 01:45:12,179
+Speaker 0: You, I always think of Paris Black Tech Pipeline does this work really well where they're able to get you a very strong source of talent from anywhere, from entry level to super senior.
+
+1211
+01:45:12,859 --> 01:45:23,067
+Speaker 0: And so figuring out these different orgs that have a surplus of talented engineering talent could be a great way to build those those funnels for you.
+
+1212
+01:45:23,187 --> 01:45:24,768
+Speaker 1: Yeah absolutely.
+
+1213
+01:45:25,168 --> 01:45:34,416
+Speaker 1: and then for organizations that just want to be more representative of the folks in their community let's say like it's not necessarily remote but here in the U.S.
+
+1214
+01:45:36,218 --> 01:45:48,890
+Speaker 1: Los Angeles for example like there's a tech startup and they're looking for engineers what I guess general tips would you give to employers so that they can be inclusive and make sure that they're bringing on talent.
+
+1215
+01:45:49,170 --> 01:45:50,792
+Speaker 1: That actually represents the local population.
+
+1216
+01:45:50,812 --> 01:45:54,616
+Speaker 1: Instead of just bringing in a bunch of Stanford grads, there's a little like that, right?
+
+1217
+01:45:54,956 --> 01:45:58,981
+Speaker 0: Yeah, I think it takes champions within a company that actually care about these things.
+
+1218
+01:45:59,421 --> 01:46:03,644
+Speaker 0: Of course, you can read like the McKinsey reports and more diverse work for us, equals better outcomes, right?
+
+1219
+01:46:03,664 --> 01:46:16,212
+Speaker 0: So a lot of companies know these things to be true, but it takes someone on the inside that cares about building an equitable workforce for this to actually happen, especially when things like DI and these initiatives are being contested in the courts.
+
+1220
+01:46:16,633 --> 01:46:23,058
+Speaker 0: A lot of companies are becoming a little bit more shy around being tentosed down, right?
+
+1221
+01:46:23,478 --> 01:46:27,141
+Speaker 0: And so I think if this is the case, it really doesn't come from top down.
+
+1222
+01:46:27,202 --> 01:46:31,286
+Speaker 0: It comes from individuals looking around and saying, you know what?
+
+1223
+01:46:31,686 --> 01:46:38,853
+Speaker 0: I live in a community that is 25% black and brown, but only 1% of our workforce is of color.
+
+1224
+01:46:39,113 --> 01:46:40,735
+Speaker 0: There's something fundamentally wrong here.
+
+1225
+01:46:40,795 --> 01:46:49,360
+Speaker 0: When we looked in Boston where I spent most of my career We had the second largest tech economy but double-digit unemployment rates in our communities of colors.
+
+1226
+01:46:49,640 --> 01:46:51,060
+Speaker 0: There's a fundamental mismatch.
+
+1227
+01:46:51,480 --> 01:47:04,805
+Speaker 0: And so we had a group of individuals that realized that this is just woefully inequitable and they would go to town, they would go to fight the fight every single day to bring one person along, then to bring two along.
+
+1228
+01:47:04,865 --> 01:47:07,365
+Speaker 0: And the thing is It can compound.
+
+1229
+01:47:08,166 --> 01:47:13,388
+Speaker 0: Once you have folks in these positions of power, you can turn around and help lift up more along with you.
+
+1230
+01:47:13,488 --> 01:47:22,351
+Speaker 0: So I don't think it needs to be like a company, why I think, I think, anyways, listening to this call, has this ability to fight for what they know is right, to turn around and say, you know what?
+
+1231
+01:47:22,711 --> 01:47:33,896
+Speaker 0: I want to make an equitable pathway in my company, and I'm going to work really, really hard for the next open rule, for to be someone that deserves to be here, but might not have the opportunity.
+
+1232
+01:47:34,727 --> 01:47:37,409
+Speaker 1: Yeah, and that's a huge part of 100 devs.
+
+1233
+01:47:37,429 --> 01:47:39,631
+Speaker 1: like as far as I can tell from like.
+
+1234
+01:47:39,671 --> 01:47:42,133
+Speaker 1: listening to a lot of your episodes and stuff.
+
+1235
+01:47:42,153 --> 01:48:07,408
+Speaker 1: like instead of asking people to like necessarily donate to 100 devs or like you tell them send the elevator back down is something you said a few times like try for every one of the 100 devs cohort members the learners they should try to find somebody else who's an alum and bring them on to their company so that they can kind of uh essentially
+
+1236
+01:48:07,868 --> 01:48:08,109
+Speaker 0: be
+
+1237
+01:48:09,009 --> 01:48:11,849
+Speaker 1: increasing the number of alumnus within these organizations.
+
+1238
+01:48:11,929 --> 01:48:13,350
+Speaker 0: and they're free software community.
+
+1239
+01:48:13,370 --> 01:48:16,450
+Speaker 0: we have a word grottis right it's not it's not free.
+
+1240
+01:48:16,651 --> 01:48:23,673
+Speaker 0: it's grottis meaning that there's like no cost like there's no like monetary cost and so 100 devs is grotesque.
+
+1241
+01:48:23,693 --> 01:48:24,794
+Speaker 0: I mean, there's no money.
+
+1242
+01:48:25,094 --> 01:48:26,315
+Speaker 0: Nobody should ever come out of your pocket.
+
+1243
+01:48:26,355 --> 01:48:29,157
+Speaker 0: I never want to see a dollar come out of your pocket for anything.
+
+1244
+01:48:29,898 --> 01:48:31,259
+Speaker 0: There's no way that you can give us that dollar.
+
+1245
+01:48:31,279 --> 01:48:31,840
+Speaker 0: we don't want it.
+
+1246
+01:48:32,360 --> 01:48:33,061
+Speaker 0: But it's not free.
+
+1247
+01:48:33,421 --> 01:49:00,838
+Speaker 0: And the reason why it's not free is because we expect that when you get the job that you turn around and help three more get into the same position that you have, whether it's helping answer questions, whether it is literally helping people apply and get into the pipeline for your company, the expectation is that This community has invested thousands of hours into your success and the thing that we ask is that you turn around and give a little bit of that time back.
+
+1248
+01:49:01,298 --> 01:49:19,322
+Speaker 0: And that the reason why 100 does have been so successful is that we have folks that have made it to the upper echelon that are now senior developers at the best tech companies in the world that are still giving up their time every single day on our discord and our huddles to make sure that the next folks are successful.
+
+1249
+01:49:21,468 --> 01:49:28,631
+Speaker 1: That is a beautiful note to end on just the virtue of this organization that you birth into the world.
+
+1250
+01:49:29,592 --> 01:49:31,012
+Speaker 1: But let's not end quite yet.
+
+1251
+01:49:31,032 --> 01:49:33,173
+Speaker 1: Because I want to ask what are the future initiatives?
+
+1252
+01:49:33,694 --> 01:49:40,036
+Speaker 1: What does the next, what does 2024, the rest of 2024, maybe even 2025, 2025, 2025?
+
+1253
+01:49:40,036 --> 01:49:44,118
+Speaker 1: Three-cooking we think literally a decade out like working on this computer science degree program.
+
+1254
+01:49:44,418 --> 01:49:47,840
+Speaker 1: that will take another six years to complete all the coursework for plus and another.
+
+1255
+01:49:48,380 --> 01:50:03,090
+Speaker 1: five years together, the loans, two-nil data plus probably another five years to have the data approved by a creditors, so we can get the degree program accredited, free computer science, bachelor's degree, free, and mathematics, a associate degree.
+
+1256
+01:50:03,190 --> 01:50:09,935
+Speaker 0: I was tweeting up a store, I was telling everybody in their mouth, I was running and showing my wife like, look, this is the future.
+
+1257
+01:50:10,135 --> 01:50:17,239
+Speaker 0: This is the thing that we need the most in the world right now, and so super happy that that's on your vision.
+
+1258
+01:50:18,540 --> 01:50:19,782
+Speaker 1: education wants to be free.
+
+1259
+01:50:20,142 --> 01:50:21,323
+Speaker 0: yeah exactly like this.
+
+1260
+01:50:21,403 --> 01:50:21,964
+Speaker 0: is it right?
+
+1261
+01:50:22,004 --> 01:50:23,185
+Speaker 0: like doing the work like in?
+
+1262
+01:50:23,205 --> 01:50:37,459
+Speaker 0: like we said earlier I think free co-camp is amazing at identifying the real gaps like the things that people really need to be successful and filling them and having a community that's willing to step up and do that work to fill those gaps.
+
+1263
+01:50:38,280 --> 01:50:39,060
+Speaker 0: so it's something that.
+
+1264
+01:50:40,221 --> 01:50:50,485
+Speaker 0: It's the reason why it's the best donation I make every single week, it's the reason why I always send folks to free poker because I know that they're in safe hands to get the things they need done.
+
+1265
+01:50:51,866 --> 01:50:53,607
+Speaker 0: Free is it free for everyone, right?
+
+1266
+01:50:53,627 --> 01:51:01,390
+Speaker 0: In terms of time and commitment, a lot of folks that would be extremely successful in a hundred doubts, right?
+
+1267
+01:51:01,410 --> 01:51:08,149
+Speaker 0: The cliche line is that like, skill and talent is distributed.
+
+1268
+01:51:08,730 --> 01:51:10,251
+Speaker 0: Opportunity is not, right?
+
+1269
+01:51:10,291 --> 01:51:18,916
+Speaker 0: And so we have a lot of folks that are extremely talented that that could be phenomenal software engineers, but don't have the opportunity or the privilege of time.
+
+1270
+01:51:19,536 --> 01:51:20,617
+Speaker 0: They need to take that time.
+
+1271
+01:51:20,657 --> 01:51:23,399
+Speaker 0: they would be spending learning, driving for Uber.
+
+1272
+01:51:23,979 --> 01:51:24,920
+Speaker 0: doing that word ash.
+
+1273
+01:51:25,340 --> 01:51:28,503
+Speaker 0: They need to take that time to put food on the table for their family.
+
+1274
+01:51:29,143 --> 01:51:38,731
+Speaker 0: And when we pulled our collective, we saw that folks really only need it around $200 a week to make this a viable pathway.
+
+1275
+01:51:39,211 --> 01:51:46,858
+Speaker 0: So our huge big goal is to build out an agency model where real companies come.
+
+1276
+01:51:47,518 --> 01:51:50,560
+Speaker 0: They have work that they need for us to accomplish.
+
+1277
+01:51:50,881 --> 01:51:55,044
+Speaker 0: We have super-season professional engineers that lead those projects.
+
+1278
+01:51:55,524 --> 01:51:59,367
+Speaker 0: And then we break those projects down into individual issues or tasks.
+
+1279
+01:51:59,727 --> 01:52:07,352
+Speaker 0: So that as you're learning, you're also maybe picking up some of these tasks in a real code base, like your skills become intensely practical.
+
+1280
+01:52:07,793 --> 01:52:21,243
+Speaker 0: And by the time you graduate or leave 100 devs, you've built real projects for real companies with production level code, And all the money that comes into agency goes directly into those issues so that you're also getting a little bit of money coming in as you're working through it.
+
+1281
+01:52:21,684 --> 01:52:29,810
+Speaker 0: And we think that might make our program more equitable for folks that just don't have that last little bit of privilege of free time.
+
+1282
+01:52:29,870 --> 01:52:36,491
+Speaker 0: And so Like I said, we talked earlier, we're a group of people that run ahead first and they're really big audacious goals.
+
+1283
+01:52:36,531 --> 01:52:37,091
+Speaker 0: Sometimes it works.
+
+1284
+01:52:37,111 --> 01:52:37,791
+Speaker 0: Sometimes it doesn't.
+
+1285
+01:52:37,811 --> 01:52:37,911
+Speaker 0: Yeah.
+
+1286
+01:52:37,931 --> 01:52:39,291
+Speaker 0: We're going to have a lot of mistakes.
+
+1287
+01:52:39,351 --> 01:52:41,832
+Speaker 0: A lot of things are going to go wrong, but we're going to figure it out.
+
+1288
+01:52:42,232 --> 01:52:52,135
+Speaker 0: And our goal is that when we launched our next cohort, we also have this agency model in place as well, so that you're not only learning, but getting this practical paid experience as well.
+
+1289
+01:52:52,455 --> 01:52:53,316
+Speaker 1: Yeah, that's so cool.
+
+1290
+01:52:53,376 --> 01:52:58,338
+Speaker 1: I mean, that's like we're all about taking away excuses from people.
+
+1291
+01:52:58,378 --> 01:53:09,725
+Speaker 1: And it's in like to be fair, like a lot of excuses like if you have young kids or if you're taking care of your folks, if you're working like three jobs to be able to pay exorbitant rent in your city, you know, like those are very
+
+1292
+01:53:10,754 --> 01:53:11,194
+Speaker 0: reasonable
+
+1293
+01:53:11,254 --> 01:53:23,904
+Speaker 1: reasons for not being able to spend a lot of time coding, but if there are things you can do to remove some of those barriers to make it easier for people to commit to, and are already archuous process of learning to code, right?
+
+1294
+01:53:24,384 --> 01:53:30,869
+Speaker 1: And nobody, anybody who says learning to code is easy is trying to tell you something like, it is hard as heck.
+
+1295
+01:53:31,750 --> 01:53:32,811
+Speaker 1: It's getting easier every year.
+
+1296
+01:53:33,072 --> 01:53:35,875
+Speaker 1: We're not dealing with punch cards, you know, we're in higher levels of abstraction.
+
+1297
+01:53:36,235 --> 01:53:38,157
+Speaker 1: It's becoming easier, but it's not a Star Trek easy.
+
+1298
+01:53:38,177 --> 01:53:39,259
+Speaker 1: You just talked to the computer, right?
+
+1299
+01:53:39,899 --> 01:53:43,343
+Speaker 1: Uh, eventually won't be, but maybe in the 24th century.
+
+1300
+01:53:45,406 --> 01:53:46,267
+Speaker 1: The more immediate problem.
+
+1301
+01:53:47,027 --> 01:53:49,808
+Speaker 1: helping people free up their time so they can actually learn.
+
+1302
+01:53:50,088 --> 01:53:53,028
+Speaker 1: I just want to commend you on this program.
+
+1303
+01:53:53,128 --> 01:54:08,151
+Speaker 1: I love the idea of getting people out there doing a real-world work, getting compensation through some sort of program where they can just, I mean, even $200 a week, it sounds like it's going to be a huge lifeline for a lot of these folks and free up a lot of time and energy.
+
+1304
+01:54:09,692 --> 01:54:14,313
+Speaker 1: This is extremely exciting and I would be very excited to have you back on in the future.
+
+1305
+01:54:16,613 --> 01:54:21,881
+Speaker 1: see what you learned from running this this new uh... experiment this bold endeavor.
+
+1306
+01:54:22,762 --> 01:54:25,045
+Speaker 0: all i noticed awesome and well.
+
+1307
+01:54:25,226 --> 01:54:32,336
+Speaker 1: it's been such a joy learning so much from you not just from this conversation but just you know falling on twitter.
+
+1308
+01:54:33,217 --> 01:54:35,878
+Speaker 1: I'm going to add links to a lot of stuff that we talked about.
+
+1309
+01:54:36,419 --> 01:54:38,940
+Speaker 1: In here, I'm going to, of course, link to 100 devs.
+
+1310
+01:54:39,480 --> 01:54:43,963
+Speaker 1: And I just encourage people to learn more about the work of Leon.
+
+1311
+01:54:44,383 --> 01:54:47,845
+Speaker 1: Learn more about 100 devs, resulting in coders.
+
+1312
+01:54:48,485 --> 01:54:54,348
+Speaker 1: These organizations that are like, resulting in coders is a charity, like Free Code Camp, 501c3.
+
+1313
+01:54:55,088 --> 01:55:01,012
+Speaker 1: And there are lots of charities out there that are doing important work.
+
+1314
+01:55:01,992 --> 01:55:06,235
+Speaker 1: I'm going to try to encourage people to do what we've done, the two of us.
+
+1315
+01:55:06,776 --> 01:55:09,598
+Speaker 1: And yes, you can create a startup and make a lot of money.
+
+1316
+01:55:10,118 --> 01:55:17,443
+Speaker 1: And life changing money, especially if you've got family that are back in a home country that needs support, right?
+
+1317
+01:55:17,884 --> 01:55:24,168
+Speaker 1: Or if you have any number of different things, I will never give people a hard time about just wanting to make a whole lot of money.
+
+1318
+01:55:25,249 --> 01:55:38,646
+Speaker 1: If you have the means, if you are somebody who's mid-career and wants to do something in the charity space, I hope that the accomplishments of Leon and, and modestly, oh, oh, a free co-camp, like, did I?
+
+1319
+01:55:38,926 --> 01:55:41,830
+Speaker 0: Yeah, there's no modded, there needs to be had there.
+
+1320
+01:55:42,170 --> 01:55:50,435
+Speaker 1: Yes, I hope some of this will inspire you to also consider doing work in the public space, right, as a tax-exhib public charity.
+
+1321
+01:55:51,195 --> 01:55:57,239
+Speaker 1: And again, I just want to commend the work you're doing, Leon, and I hope everybody has learned a great deal.
+
+1322
+01:55:58,416 --> 01:55:59,016
+Speaker 0: I appreciate it.
+
+1323
+01:55:59,036 --> 01:55:59,717
+Speaker 0: Thank you so much.
+
+1324
+01:55:59,797 --> 01:56:02,198
+Speaker 0: Like I said, this is a dream come true.
+
+1325
+01:56:02,578 --> 01:56:09,482
+Speaker 0: You've inspired me so much throughout my entire journey into this and I know you do the same for so many other folks each and every single day.
+
+1326
+01:56:09,522 --> 01:56:14,105
+Speaker 0: So thank you for the work that you do in our communities, right, that help push this stuff through.
+
+1327
+01:56:14,445 --> 01:56:17,807
+Speaker 1: Yeah, and to everybody in the Hunter Devs community is watching this.
+
+1328
+01:56:19,128 --> 01:56:19,568
+Speaker 1: Hang in there.
+
+1329
+01:56:19,788 --> 01:56:21,449
+Speaker 1: Keep it up, man.
+
+1330
+01:56:21,509 --> 01:56:28,538
+Speaker 1: And women, you all are doing a long, grueling process, but you're helping one another.
+
+1331
+01:56:28,859 --> 01:56:31,124
+Speaker 1: And you know, you're making friends along the way.
+
+1332
+01:56:31,725 --> 01:56:35,835
+Speaker 1: So with that, I just wanted to thank everybody for tuning in.
+
+1333
+01:56:36,055 --> 01:56:38,260
+Speaker 1: Until next week, happy coding.
+
