@@ -6,6 +6,4 @@ export interface AnchorInfo {
 	href: string;
 	/** The text content of the anchor. */
 	textContent: string;
-	/** The alternative text for the anchor. */
-	alt?: string;
 }

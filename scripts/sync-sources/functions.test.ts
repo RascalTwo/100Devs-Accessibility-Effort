@@ -9,11 +9,11 @@ describe('promptMissingSources', () => {
 	it('should prompt for missing sources and update records', async () => {
 		// @ts-expect-error TODO - properly type
 		const inquirerPromptMock = jest.spyOn(inquirer, 'prompt').mockImplementation(() => {
-			return Promise.resolve({ alt: 'alt3' });
+			return Promise.resolve({ source: 'source3' });
 		});
 		const records = {
-			url1: 'alt1',
-			url2: 'alt2',
+			url1: 'source1',
+			url2: 'source2',
 		};
 
 		await promptMissingSources(records, [
@@ -23,9 +23,9 @@ describe('promptMissingSources', () => {
 
 		expect(inquirerPromptMock).toHaveBeenCalledTimes(1);
 		expect(records).toEqual({
-			url1: 'alt1',
-			url2: 'alt2',
-			url3: 'alt3',
+			url1: 'source1',
+			url2: 'source2',
+			url3: 'source3',
 		});
 	});
 });
@@ -33,9 +33,9 @@ describe('promptMissingSources', () => {
 describe('removeExtraSources', () => {
 	it('should remove extra sources from records', () => {
 		const records = {
-			url1: 'alt1',
-			url2: 'alt2',
-			url3: 'alt3',
+			url1: 'source1',
+			url2: 'source2',
+			url3: 'source3',
 		};
 
 		removeExtraSources(records, [
@@ -44,8 +44,8 @@ describe('removeExtraSources', () => {
 		]);
 
 		expect(records).toEqual({
-			url1: 'alt1',
-			url3: 'alt3',
+			url1: 'source1',
+			url3: 'source3',
 		});
 	});
 });
@@ -55,18 +55,14 @@ describe('parseEntries', () => {
 		jest
 			.spyOn(fs, 'readFileSync')
 			.mockReturnValueOnce(
-				'<html><body><a href="https://example.com/">Link 1</a><a href="./resources/resource.txt" alt="Alt Text">Link 2</a></body></html>',
+				'<html><body><a href="https://example.com/">Link 1</a><a href="./resources/resource.txt">Link 2</a></body></html>',
 			);
 
 		const entries = parseEntries();
 
 		expect(entries).toEqual([
-			{ href: 'https://example.com/', textContent: 'Link 1', alt: undefined },
-			{
-				href: './resources/resource.txt',
-				textContent: 'Link 2',
-				alt: 'Alt Text',
-			},
+			{ href: 'https://example.com/', textContent: 'Link 1' },
+			{ href: './resources/resource.txt', textContent: 'Link 2' },
 		]);
 	});
 });

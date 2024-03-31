@@ -12,7 +12,6 @@ export function parseEntries(): AnchorInfo[] {
 	return Array.from(dom.window.document.querySelectorAll('a')).map((a) => ({
 		href: a.href,
 		textContent: a.textContent ?? '',
-		alt: a.getAttribute('alt') ?? undefined,
 	}));
 }
 
@@ -37,16 +36,16 @@ export function removeExtraSources(records: Record<string, string>, entries: Anc
  */
 export async function promptMissingSources(records: Record<string, string>, entries: AnchorInfo[]) {
 	const missing = entries.filter(({ href }) => !(href in records));
-	for (const { href, textContent, alt } of missing) {
+	for (const { href, textContent } of missing) {
 		await inquirer
 			.prompt({
 				type: 'input',
-				name: 'alt',
-				default: alt,
-				message: `Alt of ${href}:${textContent ? ` "${textContent}"` : ''}`,
+				name: 'source',
+				default: '',
+				message: `Source of ${href}:${textContent ? ` "${textContent}"` : ''}`,
 			})
 			.then((answers) => {
-				records[href] = answers.alt;
+				records[href] = answers.source;
 			});
 	}
 }
