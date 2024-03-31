@@ -18,7 +18,7 @@ export function generateMarkdownForDateAndCommits(day: string, commits: CommitIn
 	const formattedCommits = (commits as CommitInfo[])
 		.sort((a, b) => b.date.getTime() - a.date.getTime())
 		.map((commit) => `- [${commit.shortDescription}](${REPOSITORY_URL}/commit/${commit.shortHash})`);
-	return `## ${formattedDate}\n${formattedCommits.join('\n')}`;
+	return `## ${formattedDate}\n\n${formattedCommits.join('\n')}`;
 }
 
 /**

@@ -11,6 +11,7 @@ describe('generateMarkdownForDateAndCommits', () => {
 
 		expect(generatedMarkdown)
 			.toEqual(`## ${new Date(day).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+
 - [Third Commit](${REPOSITORY_URL}/commit/third-hash)
 - [Second Commit](${REPOSITORY_URL}/commit/second-hash)`);
 	});
