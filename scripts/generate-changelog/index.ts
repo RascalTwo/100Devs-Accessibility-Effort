@@ -1,6 +1,6 @@
 import fs from 'node:fs';
-import { generateChangelogContentLIs, getGitLog, groupCommitInfoByIsoDay, parseGitLog } from './functions';
-import { generateFullChangelogHTML } from './html-generators';
+import { getGitLog, groupCommitInfoByIsoDay, parseGitLog } from './functions';
+import generateChangelogHTML from './generators/html';
 
 /**
  * Generates a changelog by retrieving git log, parsing the commits, grouping them by ISO day,
@@ -10,8 +10,8 @@ export function main() {
 	const gitLog = getGitLog();
 	const commits = parseGitLog(gitLog);
 	const commitsByIsoDay = groupCommitInfoByIsoDay(commits);
-	const lis = generateChangelogContentLIs(commitsByIsoDay);
-	const fullChangelogHTML = generateFullChangelogHTML(lis.join('\n\n'));
+
+	const fullChangelogHTML = generateChangelogHTML(commitsByIsoDay);
 	fs.writeFileSync('../website/changelog.html', fullChangelogHTML);
 }
 

@@ -8,3 +8,5 @@ export interface CommitInfo {
 	/** A short description of the commit. */
 	shortDescription: string;
 }
+
+export type CommitsByIsoDate = Record<string, CommitInfo[]>;

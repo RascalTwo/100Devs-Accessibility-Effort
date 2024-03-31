@@ -1,6 +1,5 @@
 import { execSync } from 'node:child_process';
-import type { CommitInfo } from './types';
-import { generateHTMLForDateAndCommits } from './html-generators';
+import type { CommitInfo, CommitsByIsoDate } from './types';
 
 /**
  * Converts an object into an array of key-value pairs, with type information.
@@ -47,25 +46,26 @@ export function parseGitLog(gitLog: string): CommitInfo[] {
  * @returns An object where the keys are ISO days and the values are arrays of {@link CommitInfo} objects.
  */
 export function groupCommitInfoByIsoDay(commits: CommitInfo[]) {
-	return commits.reduce(
-		(acc, commit) => {
-			const day = commit.date.toISOString().split('T')[0];
-			if (!acc[day]) acc[day] = [];
-			acc[day].push(commit);
-			return acc;
-		},
-		{} as Record<string, CommitInfo[]>,
-	);
+	return commits.reduce((acc, commit) => {
+		const day = commit.date.toISOString().split('T')[0];
+		if (!acc[day]) acc[day] = [];
+		acc[day].push(commit);
+		return acc;
+	}, {} as CommitsByIsoDate);
 }
 
 /**
- * Generates the content for the changelog as a list of HTML list items.
+ * Generates an array of changelog list items based on the provided commits grouped by ISO day.
  *
  * @param commitsByIsoDay - The commits grouped by ISO day.
- * @returns The list of HTML list items representing the changelog content.
+ * @param transform - A function that transforms a day and its associated commits into a string.
+ * @returns An array of changelog list item strings.
  */
-export function generateChangelogContentLIs(commitsByIsoDay: ReturnType<typeof groupCommitInfoByIsoDay>) {
+export function generateChangelogLIs(
+	commitsByIsoDay: CommitsByIsoDate,
+	transform: (day: string, commits: CommitInfo[]) => string,
+) {
 	return typedEntries(commitsByIsoDay)
 		.sort((a, b) => b[0].localeCompare(a[0]))
-		.map(([day, commits]) => generateHTMLForDateAndCommits(day, commits));
+		.map(([day, commits]) => transform(day, commits));
 }

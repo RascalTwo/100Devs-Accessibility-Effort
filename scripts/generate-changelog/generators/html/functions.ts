@@ -1,5 +1,5 @@
-import { REPOSITORY_URL } from '../constants';
-import type { CommitInfo } from './types';
+import { REPOSITORY_URL } from '../../../constants';
+import type { CommitInfo } from '../../types';
 
 /**
  * Generates HTML markup for a specific date and its associated commits.

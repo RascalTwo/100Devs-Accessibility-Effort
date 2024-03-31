@@ -1,7 +1,7 @@
 import { describe, it } from '@jest/globals';
-import { generateHTMLForDateAndCommits } from './html-generators';
-import { REPOSITORY_URL } from '../constants';
-import { SEVENTEENTH_COMMIT_INFOS } from './test-data';
+import { REPOSITORY_URL } from '../../../constants';
+import { SEVENTEENTH_COMMIT_INFOS } from '../../test-data';
+import { generateHTMLForDateAndCommits } from './functions';
 
 describe('generateHTMLForDateAndCommits', () => {
 	it('should generate HTML for a given date and commits', () => {
