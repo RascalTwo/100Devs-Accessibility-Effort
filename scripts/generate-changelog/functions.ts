@@ -32,11 +32,11 @@ export function parseGitLog(gitLog: string): CommitInfo[] {
 	return gitLog
 		.trim()
 		.split('\n')
-		.slice(1)
 		.map((line) => {
 			const [shortHash, author, date, shortDescription] = line.split('\t');
 			return { shortHash, author, date: new Date(date), shortDescription };
-		});
+		})
+		.filter((commit) => commit.shortDescription !== 'Update CHANGELOG');
 }
 
 /**

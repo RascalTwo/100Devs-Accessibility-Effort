@@ -6,7 +6,7 @@ import { GIT_LOG_OUTPUT, GIT_COMMIT_INFOS, COMMITS_BY_ISO_DAY } from './test-dat
 jest.mock('node:child_process');
 
 describe('parseGitLog', () => {
-	it('should skip latest commit and parse git log string into an array of CommitInfo objects', () => {
+	it('should skip "Update CHANGELOG" commits and parse git log string into an array of CommitInfo objects', () => {
 		const commits = parseGitLog(GIT_LOG_OUTPUT);
 
 		expect(commits).toEqual(GIT_COMMIT_INFOS);
