@@ -1,0 +1,9 @@
+if [ -z "$GIT_COMMITTING_CHANGELOG" ]; then
+  cd scripts
+  npm run generate-changelog
+  git add ../website/changelog.html
+  git add ../CHANGELOG.md
+  export GIT_COMMITTING_CHANGELOG=true
+  git commit --no-verify -m "Update CHANGELOG"
+  unset GIT_COMMITTING_CHANGELOG
+fi

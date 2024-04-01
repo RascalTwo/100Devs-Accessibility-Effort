@@ -5,6 +5,4 @@ npm run test
 npm run build
 npm run sync-sources
 git add ../SOURCES.csv
-npm run generate-changelog
-git add ../website/changelog.html
 git diff --exit-code --quiet || echo "There are unstaged changes. Please stage, stash, or discard them before committing."
