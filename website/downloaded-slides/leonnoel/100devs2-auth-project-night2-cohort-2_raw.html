@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Class 51 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord">
+
+    <title>#100Devs - Auth & Project Night Part 02 (cohort 2)</title>
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.3;
+	background-color: #444444;
+	color: #FFFFFF;
+}
+ul {
+	text-align: left;
+	list-style: bullet;
+}
+
+ol {
+	list-style: number;
+}
+
+.slide {
+	position: relative;
+	border: 1px solid white;
+	transform-origin: top left;
+}
+.slide-indicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - Auth & Project Night Part 02 (cohort 2)</h1>
+      <p>Class 51 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+	        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">Submitting Work</a>
+        </li>
+        <li>
+          <a href="#slide-006">BACKEND REVIEW CLASS</a>
+        </li>
+        <li>
+          <a href="#slide-007">Authentication? Logged In Users? HOW?</a>
+        </li>
+        <li>
+          <a href="#slide-008">MVC</a>
+        </li>
+        <li>
+          <a href="#slide-009">Slide #009</a>
+        </li>
+        <li>
+          <a href="#slide-010">Slide #010</a>
+        </li>
+        <li>
+          <a href="#slide-011">Client Makes A Request</a>
+        </li>
+        <li>
+          <a href="#slide-012">Server Is Setup To Hear That Request</a>
+        </li>
+        <li>
+          <a href="#slide-013">Slide #013</a>
+        </li>
+        <li>
+          <a href="#slide-014">Router Hears The Request</a>
+        </li>
+        <li>
+          <a href="#slide-015">WHAT TYPE OF REQUEST WAS IT?</a>
+        </li>
+        <li>
+          <a href="#slide-016">Check If Logged In</a>
+        </li>
+        <li>
+          <a href="#slide-017">ARE YOU LOGGED IN?</a>
+        </li>
+        <li>
+          <a href="#slide-018">Ok, logged in, but what controller?</a>
+        </li>
+        <li>
+          <a href="#slide-019">Controllaaa</a>
+        </li>
+        <li>
+          <a href="#slide-020">Which METHOD tho...</a>
+        </li>
+        <li>
+          <a href="#slide-021">Slide #021</a>
+        </li>
+        <li>
+          <a href="#slide-022">Who is logged in?</a>
+        </li>
+        <li>
+          <a href="#slide-023">SHOW ME THAT REQUEST</a>
+        </li>
+        <li>
+          <a href="#slide-024">How do I get the todos?</a>
+        </li>
+        <li>
+          <a href="#slide-025">MONGOOSE</a>
+        </li>
+        <li>
+          <a href="#slide-026">Mongoose</a>
+        </li>
+        <li>
+          <a href="#slide-027">Mongoose</a>
+        </li>
+        <li>
+          <a href="#slide-028">Mongoose</a>
+        </li>
+        <li>
+          <a href="#slide-029">It Goes Down In The DB</a>
+        </li>
+        <li>
+          <a href="#slide-030">Pass It To The Views</a>
+        </li>
+        <li>
+          <a href="#slide-031">I was running through...</a>
+        </li>
+        <li>
+          <a href="#slide-032">Render THAT</a>
+        </li>
+        <li>
+          <a href="#slide-033">HAPPY USER</a>
+        </li>
+        <li>
+          <a href="#slide-034">Slide #034</a>
+        </li>
+        <li>
+          <a href="#slide-035">Team Projects!</a>
+        </li>
+        <li>
+          <a href="#slide-036">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001"><span class="slide-indicator">Slide 1 of 36</span><h1 style="width: 960px; left: 0px; top: 140px; height: auto;; position: absolute;z-index: 10;">
+<h2>&nbsp;</h2>
+
+<h1>Auth &amp; Project Night 2</h1>
+</h1>
+<h2 style="height: auto; width: 600px; left: 180px; top: 416px;; position: absolute"><span style="color:#FFFFFF"><span style="font-size:1.0em">Leon Noel</span></span></h2>
+
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 229.276px; height: 237px; left: 365.362px; top: 0px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 600px; left: 180px; top: 318px;; position: absolute">#100Devs</h1>
+<p style="height: auto; width: 960px; left: 0px; top: 505px;; position: absolute;color:rgb(255, 255, 255)">"Who is that surrounding me?<br>
+Enemy, enemy you crossed the wrong boundary, poof!<br>
+Wicked witness wizardry<br>
+Disappear from here and end up in a tree<br>
+Crossed the wrong boundary"</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002"><span class="slide-indicator">Slide 2 of 36</span><h1 style="width: 806px; left: 77px; top: 0px; height: auto;; position: absolute">Agenda</h1>
+<ul style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute">
+	<li>Questions?&nbsp;</li>
+	<li>Let's Talk -&nbsp; #100Devs</li>
+	<li><span style="font-family:montserrat,helvetica,sans-serif; font-size:1.3em; font-weight:normal">Due - Professional Checklist</span></li>
+	<li>Learn - Local Auth</li>
+	<li>Build - Project Night</li>
+	<li>Homework - Start Interview Prep</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003"><span class="slide-indicator">Slide 3 of 36</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h2>Questions</h2>
+
+<h3>About last class or life</h3>
+</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%;width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px;">
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004"><span class="slide-indicator">Slide 4 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Checking In</h2>
+<img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%;width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 806px; left: 77px; top: 521px;; position: absolute;z-index: 12;">
+<h3>Like and Retweet the Tweet</h3>
+
+<h3>!checkin</h3>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005"><span class="slide-indicator">Slide 5 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Submitting Work</h2>
+<img src="https://media3.giphy.com/media/26uf7rl7j6RVibDz2/giphy.gif" width="480" height="248" style="position: absolute; max-width: 100%;width: 709.999px; height: 366.833px; left: 125px; top: 166.583px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 960px; left: 0px; top: 547px;; position: absolute;z-index: 12;">
+<h3>I WANT IT - CHECKLIST</h3>
+
+<p>Homework: <a href="https://forms.gle/MUdE5XCY7VGKup1y8" target="_blank">https://forms.gle/MUdE5XCY7VGKup1y8</a></p>
+
+<p><span style="font-size:0.5em">Please Triple Check Before You Submit! No incomplete / fake work. It just makes my life more difficult and won't help you...</span></p>
+
+<p>&nbsp;</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006"><span class="slide-indicator">Slide 6 of 36</span><h1 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">BACKEND REVIEW CLASS</h1>
+<img src="https://media3.giphy.com/media/5wWf7GW1AzV6pF3MaVW/giphy.gif" width="432" height="250" style="position: absolute; max-width: 100%;width: 414.425px; height: 239.829px; left: 272.788px; top: 244px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 800px; left: 80px; top: 506px;; position: absolute">SUNDAY Sept 11th<br>
+1:00pm EST</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007"><span class="slide-indicator">Slide 7 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Authentication? Logged In Users? HOW?</h2>
+<img src="https://media3.giphy.com/media/xUA7bilj5YByXZkqnS/giphy.gif" width="450" height="450" style="position: absolute; max-width: 100%;width: 476px; height: 476px; left: 240px; top: 190px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008"><span class="slide-indicator">Slide 8 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">MVC</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810849/mvc.png" width="1773" height="1350" style="position: absolute; max-width: 100%;width: 625.147px; height: 476px; left: 167.426px; top: 140px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009"><span class="slide-indicator">Slide 9 of 36</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8462211/mvc.png" width="undefined" height="undefined" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 154px; min-width: 1px; min-height: 1px;">
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8462211/mvc.png" width="1323" height="925" style="position: absolute; max-width: 100%;width: 960px; height: 671.202px; left: -1px; top: 0px; min-width: 1px; min-height: 1px;">
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810551/Screen_Shot_2022-09-01_at_11.54.42_AM.png" width="1607" height="1350" style="position: absolute; max-width: 100%;width: 195.221px; height: 164px; left: 709.085px; top: 253.601px; min-width: 1px; min-height: 1px;">
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810570/Screen_Shot_2022-09-01_at_11.59.36_AM.png" width="1172" height="288" style="position: absolute; max-width: 100%;width: 302.286px; height: 74.282px; left: 377.966px; top: 596.92px; min-width: 1px; min-height: 1px;">
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810578/Screen_Shot_2022-09-01_at_12.03.04_PM.png" width="2500" height="1061" style="position: absolute; max-width: 100%;width: 297.446px; height: 126.236px; left: 280.754px; top: 411.601px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010"><span class="slide-indicator">Slide 10 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<p>Step 1: Go to File &gt; Preferences &gt; Settings</p>
+
+<p>Step 2: search for "workbench.editor.labelFormat"</p>
+
+<p>Step 3: select medium from a drop-down</p>
+</h2>
+<img src="https://media0.giphy.com/media/yJFeycRK2DB4c/giphy.gif" width="450" height="360" style="position: absolute; max-width: 100%;width: 595px; height: 476px; left: 182.5px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011"><span class="slide-indicator">Slide 11 of 36</span><h2 style="width: 806px; left: 58px; top: 58px; height: auto;; position: absolute">Client Makes A Request</h2>
+<img src="https://media0.giphy.com/media/m2Q7FEc0bEr4I/giphy.gif" width="320" height="240" style="position: absolute; max-width: 100%;width: 217.773px; height: 146px; left: 102.227px; top: 226px; min-width: 1px; min-height: 1px;">
+<img src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMDcwNnwwfDF8c2VhcmNofDE1fHxzZXJ2ZXJ8ZW58MHx8fHwxNjYyMDYzMTcy&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1920" width="1920" height="1145" style="position: absolute; max-width: 100%;width: 323.2px; height: 185.84px; left: 558.4px; top: 194px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: -88.8865px; top: 372px;; position: absolute">Client</p>
+<p style="height: auto; width: 600px; left: 420px; top: 381px;; position: absolute">Server</p>
+<p style="height: auto; width: 600px; left: 138px; top: 540.5px;; position: absolute">someurl.com/<span style="color:#FFFF00">todos</span></p>
+<div class="sl-block" data-block-type="shape" data-name="shape-5bc908" data-block-id="249273ab3f39c35cf4c89fa477fce6cf" style="width: 134px; height: 57px; left: 377.113px; top: 269.92px;"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 134 57"><polygon points="0,17.099999999999998 67,17.099999999999998 67,0 134,28.5 67,57 67,39.9 0,39.9" class="shape-element" fill="rgb(255, 255, 0)"></polygon></svg></div></div>
+<p style="height: auto; width: 600px; left: 160px; top: 470.5px;; position: absolute">Loggining In or Signing Up redirects you to</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012"><span class="slide-indicator">Slide 12 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Server Is Setup To Hear That Request</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810770/Screen_Shot_2022-09-01_at_1.09.44_PM.png" width="1610" height="272" style="position: absolute; max-width: 100%;width: 709.998px; height: 119.95px; left: 125.001px; top: 510.05px; min-width: 1px; min-height: 1px;">
+<img src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMDcwNnwwfDF8c2VhcmNofDE1fHxzZXJ2ZXJ8ZW58MHx8fHwxNjYyMDYzMTcy&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1920" width="1920" height="1145" style="position: absolute; max-width: 100%;width: 323.2px; height: 185.84px; left: 98.4px; top: 237px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: -40px; top: 424px;; position: absolute">Server</p>
+<div class="sl-block" data-block-type="shape" data-name="shape-5bc908" style="width: 134px; height: 57px; left: 462px; top: 301.42px;" data-block-id="8bf0eed7b05a477080b8bf61698c7e0d"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 134 57"><polygon points="0,17.099999999999998 67,17.099999999999998 67,0 134,28.5 67,57 67,39.9 0,39.9" class="shape-element" fill="rgb(255, 255, 0)"></polygon></svg></div></div>
+<div style="height: auto; width: 600px; left: 480px; top: 263.92px;; position: absolute;z-index: 15;">
+<p>Running Code</p>
+
+<p>We Wrote</p>
+
+<p>To Handle The Request</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013"><span class="slide-indicator">Slide 13 of 36</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810770/Screen_Shot_2022-09-01_at_1.09.44_PM.png" width="1610" height="272" style="position: absolute; max-width: 100%;width: 709.998px; height: 119.95px; left: 125.001px; top: 20.05px; min-width: 1px; min-height: 1px;">
+<div class="sl-block" data-block-type="shape" data-name="shape-5bc908" style="width: 134px; height: 57px; left: 173px; top: 195.5px;" data-block-id="4c8970e725ef291ce9f8d9c47adac601"><div class="sl-block-style" style="z-index: 11; transform: rotate(90deg);"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 134 57"><polygon points="0,17.099999999999998 67,17.099999999999998 67,0 134,28.5 67,57 67,39.9 0,39.9" class="shape-element" fill="rgb(255, 255, 0)"></polygon></svg></div></div></div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810771/Screen_Shot_2022-09-01_at_1.10.10_PM.png" width="2068" height="1350" style="position: absolute; max-width: 100%;width: 376.445px; height: 245.745px; left: 583.555px; top: 317.882px; min-width: 1px; min-height: 1px;">
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810858/Screen_Shot_2022-09-01_at_1.45.23_PM.png" width="2500" height="1285" style="position: absolute; max-width: 100%;width: 463.988px; height: 238.49px; left: 0px; top: 321.51px; min-width: 1px; min-height: 1px;">
+<div class="sl-block" data-block-type="shape" style="width: 74px; height: 44px; left: 486px; top: 398px;" data-block-id="529224fdfebb21445a9c327eb7ffb7b8" data-name="shape-51653d"><div class="sl-block-style" style="z-index: 14; transform: rotate(0deg);"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(255, 255, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 74 44"><polygon points="0,13.2 37,13.2 37,0 74,22 37,44 37,30.799999999999997 0,30.799999999999997" class="shape-element" fill="rgb(255, 255, 0)"></polygon></svg></div></div></div>
+<p style="height: auto; width: 600px; left: 180px; top: 140px;; position: absolute">Bottom of server.js file</p>
+<p style="height: auto; width: 600px; left: -68.006px; top: 563.627px;; position: absolute">Top of server.js file</p>
+<p style="height: auto; width: 600px; left: 472.777px; top: 563.627px;; position: absolute">routes/todos.js</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014"><span class="slide-indicator">Slide 14 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Router Hears The Request</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810771/Screen_Shot_2022-09-01_at_1.10.10_PM.png" width="2068" height="1350" style="position: absolute; max-width: 100%;width: 710px; height: 463.491px; left: 125px; top: 160.255px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">routes/todos.js</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015"><span class="slide-indicator">Slide 15 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">WHAT TYPE OF REQUEST WAS IT?</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810771/Screen_Shot_2022-09-01_at_1.10.10_PM.png" width="2068" height="1350" style="position: absolute; max-width: 100%;width: 710px; height: 463.491px; left: 125px; top: 190px; min-width: 1px; min-height: 1px;">
+<div class="sl-block" data-block-type="line" data-name="line-e4fbc1" data-block-id="cac6fc19ebbe17c0dbb613760db07d66" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 202px; top: 369px;"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="93" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 12;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="93" height="1" viewBox="0 0 93 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="93" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="93" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-67b795" data-block-id="84daa0d1e76f0c440a1953f86fd11254" style="width: 44px; height: 44px; left: 212px; top: 389px;"><div class="sl-block-content" data-shape-type="symbol-denied" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)" data-viewbox="0 0 32 32"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM16 4c2.59 0 4.973 0.844 6.934 2.242l-16.696 16.688c-1.398-1.961-2.238-4.344-2.238-6.93 0-6.617 5.383-12 12-12zM16 28c-2.59 0-4.973-0.844-6.934-2.242l16.696-16.688c1.398 1.961 2.238 4.344 2.238 6.93 0 6.617-5.383 12-12 12z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 44px; height: 44px; left: 212px; top: 446px;" data-block-id="5c08fdf903bc7cf264866a21562a83dc" data-name="shape-3a5040"><div class="sl-block-content" data-shape-type="symbol-denied" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)" data-viewbox="0 0 32 32"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM16 4c2.59 0 4.973 0.844 6.934 2.242l-16.696 16.688c-1.398-1.961-2.238-4.344-2.238-6.93 0-6.617 5.383-12 12-12zM16 28c-2.59 0-4.973-0.844-6.934-2.242l16.696-16.688c1.398 1.961 2.238 4.344 2.238 6.93 0 6.617-5.383 12-12 12z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 44px; height: 44px; left: 212px; top: 503px;" data-block-id="e5ac295c618d55d706664bfe9855476c" data-name="shape-0fcf31"><div class="sl-block-content" data-shape-type="symbol-denied" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)" data-viewbox="0 0 32 32"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM16 4c2.59 0 4.973 0.844 6.934 2.242l-16.696 16.688c-1.398-1.961-2.238-4.344-2.238-6.93 0-6.617 5.383-12 12-12zM16 28c-2.59 0-4.973-0.844-6.934-2.242l16.696-16.688c1.398 1.961 2.238 4.344 2.238 6.93 0 6.617-5.383 12-12 12z"></path></g></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 44px; height: 44px; left: 212px; top: 560px;" data-block-id="cb829a503b11f3e724376b8f758f8f28" data-name="shape-f74d88"><div class="sl-block-content" data-shape-type="symbol-denied" data-shape-fill-color="rgb(255, 0, 0)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 32 32"><g class="shape-element" fill="rgb(255, 0, 0)" data-viewbox="0 0 32 32"><path d="M16 0c-8.836 0-16 7.164-16 16s7.164 16 16 16 16-7.164 16-16-7.164-16-16-16zM16 4c2.59 0 4.973 0.844 6.934 2.242l-16.696 16.688c-1.398-1.961-2.238-4.344-2.238-6.93 0-6.617 5.383-12 12-12zM16 28c-2.59 0-4.973-0.844-6.934-2.242l16.696-16.688c1.398 1.961 2.238 4.344 2.238 6.93 0 6.617-5.383 12-12 12z"></path></g></svg></div></div>
+<p style="height: auto; width: 600px; left: 169.777px; top: 653.491px;; position: absolute">routes/todos.js</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016"><span class="slide-indicator">Slide 16 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Check If Logged In</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810771/Screen_Shot_2022-09-01_at_1.10.10_PM.png" width="2068" height="1350" style="position: absolute; max-width: 100%;width: 710px; height: 463.491px; left: 125px; top: 188.255px; min-width: 1px; min-height: 1px;">
+<div class="sl-block" data-block-type="line" data-name="line-e4fbc1" style="width: auto; height: auto; left: 327px; top: 367px;" data-block-id="1625c46ebe5e53d3e1562009022c4699"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="93" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 12;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="93" height="1" viewBox="0 0 93 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="93" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="93" y2="0"></line></svg></div></div>
+<p style="height: auto; width: 600px; left: 180px; top: 651.746px;; position: absolute">routes/todos.js</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017"><span class="slide-indicator">Slide 17 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">ARE YOU LOGGED IN?</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810824/Screen_Shot_2022-09-01_at_1.30.19_PM.png" width="2404" height="1212" style="position: absolute; max-width: 100%;width: 709.999px; height: 357.953px; left: 125px; top: 213.024px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 600px; left: 180px; top: 570.977px;; position: absolute;z-index: 12;">
+<p>middleware/auth.js</p>
+
+<p>&nbsp;</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018"><span class="slide-indicator">Slide 18 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Ok, logged in, but what controller?</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810771/Screen_Shot_2022-09-01_at_1.10.10_PM.png" width="2068" height="1350" style="position: absolute; max-width: 100%;width: 710px; height: 463.491px; left: 125px; top: 188.255px; min-width: 1px; min-height: 1px;">
+<div class="sl-block" data-block-type="line" data-name="line-e4fbc1" style="width: auto; height: auto; left: 455px; top: 365.746px;" data-block-id="77ba114b154992064b79e8661458da7c"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="277" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 12;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="277" height="1" viewBox="0 0 277 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="277" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="277" y2="0"></line></svg></div></div>
+<p style="height: auto; width: 600px; left: 180px; top: 651.746px;; position: absolute">routes/todos.js</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019"><span class="slide-indicator">Slide 19 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Controllaaa</h2>
+<img src="https://media1.giphy.com/media/awRkupqDLdLna/giphy.gif" width="300" height="169" style="position: absolute; max-width: 100%;width: 710px; height: 399.967px; left: 125px; top: 160.033px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 610.5px;; position: absolute"><a href="https://youtu.be/qs50R_rRoJM" target="_blank">Get hip...</a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020"><span class="slide-indicator">Slide 20 of 36</span><h2 style="width: 806px; left: 77px; top: 10px; height: auto;; position: absolute">Which METHOD tho...</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810921/Screen_Shot_2022-09-01_at_2.05.07_PM.png" width="2224" height="1350" style="position: absolute; max-width: 100%;width: 884.51px; height: 536.91px; left: 45.644px; top: 93.09px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">controllers/todos.js</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021"><span class="slide-indicator">Slide 21 of 36</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810771/Screen_Shot_2022-09-01_at_1.10.10_PM.png" width="2068" height="1350" style="position: absolute; max-width: 100%;width: 710px; height: 463.491px; left: 125px; top: 195.255px; min-width: 1px; min-height: 1px;">
+<div class="sl-block" data-block-type="line" data-name="line-e4fbc1" style="width: auto; height: auto; left: 641px; top: 368.746px;" data-block-id="bded0d0b5521d02615532a1c3733840e"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="92" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 12;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="92" height="1" viewBox="0 0 92 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="92" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="92" y2="0"></line></svg></div></div>
+<p style="height: auto; width: 600px; left: 180px; top: 658.746px;; position: absolute">routes/todos.js</p>
+<img src="https://media2.giphy.com/media/XAdbHJywVjF5K/giphy.gif" width="245" height="140" style="position: absolute; max-width: 100%;width: 329.446px; height: 188.255px; left: 302.85px; top: 0px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022"><span class="slide-indicator">Slide 22 of 36</span><h2 style="width: 806px; left: 77px; top: 10px; height: auto;; position: absolute">Who is logged in?</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810921/Screen_Shot_2022-09-01_at_2.05.07_PM.png" width="2224" height="1350" style="position: absolute; max-width: 100%;width: 884.51px; height: 536.91px; left: 45.644px; top: 93.09px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">controllers/todos.js</p>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 147.5px; top: 242.746px;" data-block-id="6e3f5cae34b0f6d10d28faf2f4dfd3a9" data-name="line-f92004"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="245" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 14;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="245" height="1" viewBox="0 0 245 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="245" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="245" y2="0"></line></svg></div></div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023"><span class="slide-indicator">Slide 23 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">SHOW ME THAT REQUEST</h2>
+<img src="https://media1.giphy.com/media/AmB1h0yAniXEvrXJ8C/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 192.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024"><span class="slide-indicator">Slide 24 of 36</span><h2 style="width: 806px; left: 77px; top: 10px; height: auto;; position: absolute">How do I get the todos?</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810921/Screen_Shot_2022-09-01_at_2.05.07_PM.png" width="2224" height="1350" style="position: absolute; max-width: 100%;width: 884.51px; height: 536.91px; left: 45.644px; top: 93.09px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">controllers/todos.js</p>
+<div class="sl-block" data-block-type="line" data-name="line-e4fbc1" style="width: auto; height: auto; left: 480px; top: 303.746px;" data-block-id="a167a0156a6acd1ccea947b104f47c52"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="373" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 13;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="373" height="1" viewBox="0 0 373 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="373" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="373" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 53.5px; top: 122.746px;" data-name="line-f92004" data-block-id="68d29b849d8d39e4ff3a88606b3f003f"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="445" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 14;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="445" height="1" viewBox="0 0 445 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="445" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="445" y2="0"></line></svg></div></div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025"><span class="slide-indicator">Slide 25 of 36</span><h2 style="width: 806px; left: -111px; top: 36.92px; height: auto;; position: absolute">MONGOOSE</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810929/Screen_Shot_2022-09-01_at_2.10.05_PM.png" width="1574" height="1350" style="position: absolute; max-width: 100%;width: 554.981px; height: 476px; left: 202.51px; top: 169px; min-width: 1px; min-height: 1px;">
+<img src="https://media3.giphy.com/media/vNdHTvHo3gCis/giphy.gif" width="480" height="238" style="position: absolute; max-width: 100%;width: 298.165px; height: 147.84px; left: 501.835px; top: 0px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 645px;; position: absolute">models/todos.js</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026"><span class="slide-indicator">Slide 26 of 36</span><h1 style="width: 806px; left: -86px; top: 244px; height: auto;; position: absolute">Mongoose</h1>
+<div class="sl-block" data-block-type="shape" data-name="shape-95e198" style="width: 151.25px; height: 545px; left: 645px; top: 95.5px;" data-block-id="df2331171f1d6a507c15f2c707c42eb0"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 151 545"><rect width="151.25" height="545" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-2ec632" style="width: 128px; height: 236px; left: 656.625px; top: 126px;" data-block-id="603684866c3ae42ee97577dea27c6451"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 128px; height: 236px; left: 656.625px; top: 397.25px;" data-name="shape-a2ec2d" data-block-id="2e5f28c58f0af032f4392156b52ac62e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 257.25px;" data-name="shape-a4d02f" data-block-id="1ec4591a1e43a28d3584158b9747bfc6"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 415.5px;" data-name="shape-33b608" data-block-id="b3865c1e7a142e86ddcc29c96951160f"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 532.5px;" data-name="shape-351738" data-block-id="b7aa741573078602e1d1667faf1d3268"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<p style="height: auto; width: 600px; left: 425px; top: 87px;; position: absolute"><span style="font-size:0.7em"><span style="color:#000000">Collection</span></span></p>
+<p style="height: auto; width: 600px; left: 420.625px; top: 440.75px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<p style="height: auto; width: 600px; left: 420.625px; top: 557.75px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<div class="sl-block" data-block-type="shape" data-name="shape-5d22c5" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 147.75px;" data-block-id="ca883685f4263325f7248ee0c6c5eaa6"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<p style="height: auto; width: 600px; left: 420.625px; top: 167.25px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<p style="height: auto; width: 600px; left: 420px; top: 280px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<p style="height: auto; width: 600px; left: 16px; top: 396px;; position: absolute">Mongoose provides a straight-forward, schema-based solution to model your application data.</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027"><span class="slide-indicator">Slide 27 of 36</span><h1 style="width: 806px; left: -81px; top: 70px; height: auto;; position: absolute">Mongoose</h1>
+<div class="sl-block" data-block-type="shape" data-name="shape-95e198" style="width: 151.25px; height: 545px; left: 645px; top: 95.5px;" data-block-id="a13aa48a0ae70d95821f78b761b33f35"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 151 545"><rect width="151.25" height="545" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-2ec632" style="width: 128px; height: 236px; left: 656.625px; top: 126px;" data-block-id="e6d182135256961afaccd1c7d2f5e53e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 128px; height: 236px; left: 656.625px; top: 397.25px;" data-name="shape-a2ec2d" data-block-id="df941a021161b88decbff0e13101a677"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 257.25px;" data-name="shape-a4d02f" data-block-id="c7ff8b97b942da28da30ffbeea10a648"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 415.5px;" data-name="shape-33b608" data-block-id="80ef41cbe31be1878f6c1d9cf1d0a6ec"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 532.5px;" data-name="shape-351738" data-block-id="eadf59bc9e72dedf37759cdc8d163a54"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<p style="height: auto; width: 600px; left: 425px; top: 87px;; position: absolute"><span style="font-size:0.7em"><span style="color:#000000">Collection</span></span></p>
+<p style="height: auto; width: 600px; left: 420.625px; top: 440.75px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<p style="height: auto; width: 600px; left: 420.625px; top: 557.75px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<div class="sl-block" data-block-type="shape" data-name="shape-5d22c5" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 147.75px;" data-block-id="3d29af3b37c9396280ba79926f7aa76a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<p style="height: auto; width: 600px; left: 420.625px; top: 167.25px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<p style="height: auto; width: 600px; left: 420px; top: 280px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<p style="height: auto; width: 600px; left: 22px; top: 206.25px;; position: absolute">Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.</p>
+<pre class="javascript" style="font-size: 23px; line-height: 28px;;width: 595px; height: 316px; left: 27px; top: 346.75px;; position: absolute"><code>const UserSchema = new mongoose.Schema({
+  userName: { type: String, unique: true },
+  email: { type: String, unique: true },
+  password: String
+})</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028"><span class="slide-indicator">Slide 28 of 36</span><h1 style="width: 806px; left: -81px; top: 9.5px; height: auto;; position: absolute">Mongoose</h1>
+<div class="sl-block" data-block-type="shape" data-name="shape-95e198" style="width: 151.25px; height: 545px; left: 645px; top: 95.5px;" data-block-id="f21246ac47e4e414f5012583173fc4dc"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 151 545"><rect width="151.25" height="545" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-2ec632" style="width: 128px; height: 236px; left: 656.625px; top: 126px;" data-block-id="d264b3928103cf2b1c427939865f2df4"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 128px; height: 236px; left: 656.625px; top: 397.25px;" data-name="shape-a2ec2d" data-block-id="5b08c89a2ac9a6c612ec94b0bed35e50"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 257.25px;" data-name="shape-a4d02f" data-block-id="3cc28599512dae9023a97eb68f5f2141"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 415.5px;" data-name="shape-33b608" data-block-id="feb86db5d07f230973d1468209d14107"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 532.5px;" data-name="shape-351738" data-block-id="bbe28f30152ecb4085290ef2945944a8"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<p style="height: auto; width: 600px; left: 425px; top: 87px;; position: absolute"><span style="font-size:0.7em"><span style="color:#000000">Collection</span></span></p>
+<p style="height: auto; width: 600px; left: 420.625px; top: 440.75px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<p style="height: auto; width: 600px; left: 420.625px; top: 557.75px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<div class="sl-block" data-block-type="shape" data-name="shape-5d22c5" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 147.75px;" data-block-id="1b5ff9e12a747294f2eb4680a97cd265"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<p style="height: auto; width: 600px; left: 420.625px; top: 167.25px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<p style="height: auto; width: 600px; left: 420px; top: 280px;; position: absolute"><span style="font-size:0.5em"><span style="color:#000000">document</span></span></p>
+<div style="height: auto; width: 600px; left: 22px; top: 116px;; position: absolute;z-index: 23;">
+<p>Models are fancy constructors compiled from Schema definitions. An instance of a model is called a document.</p>
+
+<p>Models are responsible for creating and reading documents from the underlying MongoDB database.</p>
+</div>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 595px; height: 316px; left: 24.5px; top: 374.5px;; position: absolute"><code>module.exports = 
+  mongoose.model('User', UserSchema)</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029"><span class="slide-indicator">Slide 29 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">It Goes Down In The DB</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810942/Screen_Shot_2022-09-01_at_2.18.29_PM.png" width="1248" height="860" style="position: absolute; max-width: 100%;width: 763.995px; height: 526.471px; left: 98.0025px; top: 140px; min-width: 1px; min-height: 1px;">
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 195px; top: 509.746px;" data-name="line-f92004" data-block-id="9bd3be050b14372ebf83070fee7844a7"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="505" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 12;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="505" height="1" viewBox="0 0 505 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="505" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="505" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 195px; top: 183.746px;" data-block-id="2d9b413d00ea6701d2c915460af83d89" data-name="line-a7245d"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="505" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 13;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="505" height="1" viewBox="0 0 505 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="505" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="505" y2="0"></line></svg></div></div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030"><span class="slide-indicator">Slide 30 of 36</span><h2 style="width: 806px; left: 77px; top: 10px; height: auto;; position: absolute">Pass It To The Views</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810921/Screen_Shot_2022-09-01_at_2.05.07_PM.png" width="2224" height="1350" style="position: absolute; max-width: 100%;width: 884.51px; height: 536.91px; left: 45.644px; top: 93.09px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">controllers/todos.js</p>
+<div class="sl-block" data-block-type="line" data-name="line-e4fbc1" style="width: auto; height: auto; left: 326px; top: 395.746px;" data-block-id="be318a84abf3c1925fec814242837c81"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="373" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 13;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="373" height="1" viewBox="0 0 373 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="373" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="373" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 267px; top: 301.746px;" data-block-id="d960c08ce74e965ada5f8e79989bedac" data-name="line-930a33"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="582" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 14;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="582" height="1" viewBox="0 0 582 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="582" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="582" y2="0"></line></svg></div></div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031"><span class="slide-indicator">Slide 31 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">I was running through...</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810948/Screen_Shot_2022-09-01_at_2.14.54_PM.png" width="2500" height="1169" style="position: absolute; max-width: 100%;width: 840.453px; height: 392.996px; left: 59.7735px; top: 183px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 575.996px;; position: absolute">views/todos.ejs</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032"><span class="slide-indicator">Slide 32 of 36</span><h2 style="width: 806px; left: 77px; top: 10px; height: auto;; position: absolute">Render THAT</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9810921/Screen_Shot_2022-09-01_at_2.05.07_PM.png" width="2224" height="1350" style="position: absolute; max-width: 100%;width: 884.51px; height: 536.91px; left: 45.644px; top: 93.09px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">controllers/todos.js</p>
+<div class="sl-block" data-block-type="line" data-name="line-e4fbc1" style="width: auto; height: auto; left: 240px; top: 393.746px;" data-block-id="c49008f886e726a8d27c384fef9a7408"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="74" data-line-y2="0" data-line-color="#ffff00" data-line-start-type="none" data-line-end-type="none" style="z-index: 13;" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="74" height="1" viewBox="0 0 74 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="74" y2="0"></line><line class="line-element" stroke="#ffff00" stroke-width="10" x1="0" y1="0" x2="74" y2="0"></line></svg></div></div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033"><span class="slide-indicator">Slide 33 of 36</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">HAPPY USER</h2>
+<img src="https://media0.giphy.com/media/CyoQdbc7FHqqTpkSPI/giphy.gif" width="480" height="400" style="position: absolute; max-width: 100%;width: 571.2px; height: 476px; left: 194.4px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034"><span class="slide-indicator">Slide 34 of 36</span><img src="https://media0.giphy.com/media/GcSqyYa2aF8dy/giphy.gif" width="268" height="200" style="position: absolute; max-width: 100%;width: 637.84px; height: 476px; left: 160px; top: 125px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035"><span class="slide-indicator">Slide 35 of 36</span><h2 style="width: 806px; left: 77px; top: 0px; height: auto;; position: absolute">Team Projects!</h2>
+<img src="https://media4.giphy.com/media/100PgquHm9j3sQ/giphy.gif" width="400" height="260" style="position: absolute; max-width: 100%;width: 591.492px; height: 384.47px; left: 184.254px; top: 70px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 470.5px;; position: absolute"><a href="https://docs.google.com/spreadsheets/d/1-ei7jX7r2GdslTvBAGU1mLysmIheM5OmgIjRya6ZHTE/edit?usp=sharing" target="_blank">Group Pairings, Room, Floor, &amp; Table Info</a></p>
+<div style="height: auto; width: 600px; left: 180px; top: 517px;; position: absolute;z-index: 13;">
+<p><a href="https://live.remo.co/e/100devs-project-night-room-01" target="_blank">Remo Room 01</a></p>
+
+<p><a href="https://live.remo.co/e/100devs-project-night-room-02" target="_blank">Remo Room 02</a></p>
+</div>
+<p style="height: auto; width: 600px; left: 180px; top: 613.5px;; position: absolute"><a href="https://replit.com/@100devs/todo-mvc-auth-local?v=1" target="_blank">https://replit.com/@100devs/todo-mvc-auth-local?v=1</a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036"><span class="slide-indicator">Slide 36 of 36</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Homework</h1>
+<h1 style="height: auto; width: 802px; left: 80.3795px; top: 490px;; position: absolute">Do: Finish Project</h1>
+
+<img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%;width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px;"></section>
+    </main>
+  </body>
+  <script>
+const PROPS = ['width', 'height', 'top', 'left', 'right', 'bottom', 'font-size']
+
+function saveOriginalSizes(element) {
+	for (const prop of PROPS) {
+		const dataProp = 'data-original-' + prop;
+		if (element.style[prop]) {
+			if (!element.hasAttribute(dataProp)) {
+				element.setAttribute(dataProp, element.style[prop]);
+			}
+		}
+	}
+}
+
+function scaleSizes(element, scale) {
+	const props = PROPS.filter(prop => element.style[prop]);
+	for (const prop of props) {
+		const rawOrigValue = element.getAttribute('data-original-' + prop)
+		if (rawOrigValue.startsWith('auto')) continue;
+
+		const origValue = parseFloat(element.getAttribute('data-original-' + prop));
+
+		const unit = rawOrigValue.slice(-2);
+		element.style[prop] = (origValue * scale) + unit;
+	}
+}
+
+function fancyScaleSlides(){
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	for (const slide of slides){
+		saveOriginalSizes(slide);
+		scaleSizes(slide, scale);
+	}
+	/*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+	const sizedChildren = Array.from(document.querySelectorAll('.slide *')).filter(el => el.hasAttribute('style') && PROPS.some(prop => el.getAttribute('style')?.includes(prop + ':')));
+	for (const el of sizedChildren) {
+		saveOriginalSizes(el);
+		scaleSizes(el, scale);
+	}
+}
+
+function scaleSlides() {
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});
+}
+
+window.addEventListener('resize', scaleSlides);
+window.addEventListener('load', scaleSlides);
+document.addEventListener('DOMContentLoaded', scaleSlides);
+  </script>
+</html>

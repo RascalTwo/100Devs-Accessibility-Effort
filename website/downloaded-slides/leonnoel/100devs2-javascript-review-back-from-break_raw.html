@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Class 29 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord">
+
+    <title>#100Devs - Javascript Review - Back From Break</title>
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.3;
+	background-color: #444444;
+	color: #FFFFFF;
+}
+ul {
+	text-align: left;
+	list-style: bullet;
+}
+
+ol {
+	list-style: number;
+}
+
+.slide {
+	position: relative;
+	border: 1px solid white;
+	transform-origin: top left;
+}
+.slide-indicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - Javascript Review - Back From Break</h1>
+      <p>Class 29 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+	        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">This Week</a>
+        </li>
+        <li>
+          <a href="#slide-005">Next Week</a>
+        </li>
+        <li>
+          <a href="#slide-006">THEN BACKEND</a>
+        </li>
+        <li>
+          <a href="#slide-007">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-008">Catching up on Discord</a>
+        </li>
+        <li>
+          <a href="#slide-009">Gonna Get Funky</a>
+        </li>
+        <li>
+          <a href="#slide-010">No Networking Until May</a>
+        </li>
+        <li>
+          <a href="#slide-011">Client Deadline: May 5th</a>
+        </li>
+        <li>
+          <a href="#slide-012">Client Alternatives</a>
+        </li>
+        <li>
+          <a href="#slide-013">Grassroots Volunteer*</a>
+        </li>
+        <li>
+          <a href="#slide-014">Free Software / Open Source</a>
+        </li>
+        <li>
+          <a href="#slide-015">!youtube</a>
+        </li>
+        <li>
+          <a href="#slide-016">!newsletter</a>
+        </li>
+        <li>
+          <a href="#slide-017">Discord Update</a>
+        </li>
+        <li>
+          <a href="#slide-018">Live Crafting Your Story</a>
+        </li>
+        <li>
+          <a href="#slide-019">OFFICE HOURS</a>
+        </li>
+        <li>
+          <a href="#slide-020">Enough for a job?</a>
+        </li>
+        <li>
+          <a href="#slide-021">HUGE ANNOUNCEMENT NEXT WEEK</a>
+        </li>
+        <li>
+          <a href="#slide-022">Programming</a>
+        </li>
+        <li>
+          <a href="#slide-023">What is a program?</a>
+        </li>
+        <li>
+          <a href="#slide-024">What is a programming?</a>
+        </li>
+        <li>
+          <a href="#slide-025">JAVASCRIPT</a>
+        </li>
+        <li>
+          <a href="#slide-026">Variables</a>
+        </li>
+        <li>
+          <a href="#slide-027">Conditional Syntax</a>
+        </li>
+        <li>
+          <a href="#slide-028">Multiple Conditions</a>
+        </li>
+        <li>
+          <a href="#slide-029">Multiple Conditions</a>
+        </li>
+        <li>
+          <a href="#slide-030">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-031">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-032">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-033">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-034">Loops</a>
+        </li>
+        <li>
+          <a href="#slide-035">Loops</a>
+        </li>
+        <li>
+          <a href="#slide-036">Loops - For</a>
+        </li>
+        <li>
+          <a href="#slide-037">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-038">Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-039">Toasters</a>
+        </li>
+        <li>
+          <a href="#slide-040">Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-041">Declaring Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-042">Declaring Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-043">Array Indexing</a>
+        </li>
+        <li>
+          <a href="#slide-044">Array Indexing</a>
+        </li>
+        <li>
+          <a href="#slide-045">Array Indexing</a>
+        </li>
+        <li>
+          <a href="#slide-046">Array Length</a>
+        </li>
+        <li>
+          <a href="#slide-047">Array Iteration</a>
+        </li>
+        <li>
+          <a href="#slide-048">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-049">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-050">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-051">Think of a physical object</a>
+        </li>
+        <li>
+          <a href="#slide-052">How about a stopwatch</a>
+        </li>
+        <li>
+          <a href="#slide-053">Stopwatch Object</a>
+        </li>
+        <li>
+          <a href="#slide-054">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-055">Car Factory?</a>
+        </li>
+        <li>
+          <a href="#slide-056">Slide #056</a>
+        </li>
+        <li>
+          <a href="#slide-057">Slide #057</a>
+        </li>
+        <li>
+          <a href="#slide-058">Slide #058</a>
+        </li>
+        <li>
+          <a href="#slide-059">Slide #059</a>
+        </li>
+        <li>
+          <a href="#slide-060">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-061">APIs</a>
+        </li>
+        <li>
+          <a href="#slide-062">APIs</a>
+        </li>
+        <li>
+          <a href="#slide-063">APIs</a>
+        </li>
+        <li>
+          <a href="#slide-064">Slide #064</a>
+        </li>
+        <li>
+          <a href="#slide-065">Slide #065</a>
+        </li>
+        <li>
+          <a href="#slide-066">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-067">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001"><span class="slide-indicator">Slide 1 of 67</span><h1 style="width: 960px; left: 0px; top: 191px; height: auto;; position: absolute;z-index: 10;">
+<h2>&nbsp;</h2>
+
+<h2>Javascript - Back From Break</h2>
+</h1>
+<h2 style="height: auto; width: 600px; left: 180px; top: 486px;; position: absolute"><span style="color:#FFFFFF"><span style="font-size:1.0em">Leon Noel</span></span></h2>
+
+
+<h1 style="height: auto; width: 600px; left: 180px; top: 371.5px;; position: absolute">#100Devs</h1>
+<div style="height: auto; width: 878px; left: 41px; top: 536px;; position: absolute;z-index: 13;">
+<p>&nbsp;</p>
+
+<p>&nbsp;I be getting money 'til I fall out<br>
+You talking cash, dog, I goes all out<br>
+&nbsp;</p>
+</div>
+<img src="https://media1.giphy.com/media/GdAmjKhcXWJ6U/giphy.gif" width="400" height="225" style="position: absolute; max-width: 100%;width: 422.4px; height: 237.6px; left: 268.8px; top: 21.2px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002"><span class="slide-indicator">Slide 2 of 67</span><h1 style="width: 806px; left: 77px; top: 0px; height: auto;; position: absolute">Agenda</h1>
+<ul style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute">
+	<li>Questions?&nbsp;</li>
+	<li>Let's Talk -&nbsp; Coming Up?</li>
+	<li>Let's Talk -&nbsp; #100Devs</li>
+	<li>Review - The BIG FOUR</li>
+	<li>Review - Arrays</li>
+	<li>Review - Objects</li>
+	<li>Review - Basic APIs</li>
+	<li>Homework - OOP</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003"><span class="slide-indicator">Slide 3 of 67</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h2>Questions</h2>
+
+<h3>About last class or life</h3>
+</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%;width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004"><span class="slide-indicator">Slide 4 of 67</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">This Week</h1>
+<div style="width: 806px; left: 77px; top: 309px; height: auto;; position: absolute;z-index: 11;">
+<h2>Review&nbsp;</h2>
+
+<h2>OOP</h2>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005"><span class="slide-indicator">Slide 5 of 67</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Next Week</h1>
+<h2 style="width: 806px; left: 77px; top: 319px; height: auto;; position: absolute;z-index: 11;">
+<h2>OOP Practice</h2>
+
+<h2>Async / Await</h2>
+</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006"><span class="slide-indicator">Slide 6 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">THEN BACKEND</h2>
+<img src="https://media0.giphy.com/media/DqhwoR9RHm3EA/giphy.gif" width="480" height="345" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007"><span class="slide-indicator">Slide 7 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Checking In</h2>
+<img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%;width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 806px; left: 77px; top: 521px;; position: absolute;z-index: 12;">
+<h3>Like and Retweet the Tweet</h3>
+
+<h3>!checkin</h3>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008"><span class="slide-indicator">Slide 8 of 67</span><img src="https://media3.giphy.com/media/TBXlEhCiia69G/giphy.gif" width="160" height="160" style="position: absolute; max-width: 100%;width: 476px; height: 476px; left: 242px; top: 70px; min-width: 1px; min-height: 1px;">
+<h2 style="height: auto; width: 960px; left: 0px; top: 593px;; position: absolute">Catching up on Discord</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009"><span class="slide-indicator">Slide 9 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Gonna Get Funky</h2>
+<img src="https://media4.giphy.com/media/DEIW3lvLWJ5Cw/giphy.gif" width="300" height="200" style="position: absolute; max-width: 100%;width: 632.979px; height: 421.986px; left: 163.51px; top: 181.007px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010"><span class="slide-indicator">Slide 10 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">No Networking Until May</h2>
+<img src="https://media1.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif" width="498" height="230" style="position: absolute; max-width: 100%;width: 710px; height: 327.912px; left: 125px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011"><span class="slide-indicator">Slide 11 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Client Deadline: May 5th</h2>
+<img src="https://media2.giphy.com/media/1333xc9RhiyGaY/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012"><span class="slide-indicator">Slide 12 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Client Alternatives</h2>
+<img src="https://media3.giphy.com/media/3o751Yxe9UjX26BZbG/giphy.gif" width="480" height="358" style="position: absolute; max-width: 100%;width: 638.212px; height: 476px; left: 159.894px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013"><span class="slide-indicator">Slide 13 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Grassroots Volunteer*</h2>
+<img src="https://media4.giphy.com/media/106QCYtKPDeIjm/giphy.gif" width="250" height="172" style="position: absolute; max-width: 100%;width: 691.86px; height: 476px; left: 134.07px; top: 140px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014"><span class="slide-indicator">Slide 14 of 67</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">Free Software / Open Source</h2>
+<img src="https://media1.giphy.com/media/3og0ICG4WxdKSRzE3K/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 160.625px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 591px;; position: absolute"><a href="https://www.firsttimersonly.com/" target="_blank">https://www.firsttimersonly.com/</a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015"><span class="slide-indicator">Slide 15 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!youtube</h2>
+<img src="https://media0.giphy.com/media/gtakVlnStZUbe/giphy.gif" width="320" height="240" style="position: absolute; max-width: 100%;width: 634.667px; height: 476px; left: 162.666px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016"><span class="slide-indicator">Slide 16 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!newsletter</h2>
+<img src="https://media4.giphy.com/media/YypqAhlDKiFJknPbnt/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017"><span class="slide-indicator">Slide 17 of 67</span><h2 style="width: 806px; left: 77px; top: 14px; height: auto;; position: absolute">Discord Update</h2>
+<img src="https://media2.giphy.com/media/l2JhKXJnHjq0UvixO/giphy.gif" width="480" height="266" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 104px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 151px; top: 610.5px;; position: absolute">Private LGBTQ+ channel</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018"><span class="slide-indicator">Slide 18 of 67</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">Live Crafting Your Story</h2>
+<img src="https://media2.giphy.com/media/25KEhzwCBBFPb79puo/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 522.059px; height: 293.658px; left: 217.971px; top: 184.171px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 800px; left: 80px; top: 506px;; position: absolute">FRIDAY <br>
+6:30pm EST</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019"><span class="slide-indicator">Slide 19 of 67</span><h1 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">OFFICE HOURS</h1>
+<img src="https://media3.giphy.com/media/5wWf7GW1AzV6pF3MaVW/giphy.gif" width="432" height="250" style="position: absolute; max-width: 100%;width: 507.441px; height: 293.658px; left: 225.28px; top: 184.171px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 800px; left: 80px; top: 506px;; position: absolute">SUNDAY<br>
+1:00pm EST</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020"><span class="slide-indicator">Slide 20 of 67</span><h2 style="width: 806px; left: 74px; top: 18px; height: auto;; position: absolute">Enough for a job?</h2>
+<h1 style="height: auto; width: 600px; left: 180px; top: 603px;; position: absolute">Yes</h1>
+<img src="https://media3.giphy.com/media/l0HlvtIPzPdt2usKs/giphy.gif" width="220" height="132" style="position: absolute; max-width: 100%;width: 806.4px; height: 483.84px; left: 73.6px; top: 108.08px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021"><span class="slide-indicator">Slide 21 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">HUGE ANNOUNCEMENT NEXT WEEK</h2>
+<img src="https://media1.giphy.com/media/l46Cqe3sKq1eCTO0g/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 190px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022"><span class="slide-indicator">Slide 22 of 67</span><h1 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Programming</h1>
+<img src="https://media3.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300" height="300" style="position: absolute; max-width: 100%;width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023"><span class="slide-indicator">Slide 23 of 67</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">What is a program?</h1>
+<h3 style="width: 806px; left: 77px; top: 349px; height: auto;; position: absolute">A <span style="color:#FFD700"><strong>program</strong></span> is a set of instructions that you write to tell a computer what to do</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024"><span class="slide-indicator">Slide 24 of 67</span><h1 style="width: 883px; left: 38.5px; top: 113px; height: auto;; position: absolute">What is a programming?</h1>
+<h3 style="width: 806px; left: 77px; top: 349px; height: auto;; position: absolute">
+<span style="color:#FFD700">Programming</span> is the task of writing those instructions in a language that the computer can understand.</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025"><span class="slide-indicator">Slide 25 of 67</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">JAVASCRIPT</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7684153/js.png" width="512" height="512" style="position: absolute; max-width: 100%;width: 518px; height: 518px; left: 221px; top: 153px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026"><span class="slide-indicator">Slide 26 of 67</span><h1 style="width: 806px; left: 80px; top: 0px; height: auto;; position: absolute">Variables</h1>
+<div style="width: 806px; left: 77px; top: 152px; height: auto;; position: absolute;z-index: 11;">
+<h2>
+<span style="color:#FFD700">Declaration</span>: let age</h2>
+
+<h2>&nbsp;</h2>
+
+<h2>
+<span style="color:#FFD700">Assignment</span>: age = 25</h2>
+
+<h2>&nbsp;</h2>
+
+<h2>Both at the same time:</h2>
+
+<h2>let age = 25</h2>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027"><span class="slide-indicator">Slide 27 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Conditional Syntax</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 560px; height: 280px; left: 200px; top: 280px;; position: absolute"><code>if(condition is true) {
+  //Do this cool stuff
+}else if(condition is true){
+  //Do this other cool stuff
+}else{
+  //Default cool stuff
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028"><span class="slide-indicator">Slide 28 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Multiple Conditions</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 853px; height: 127.5px; left: 53.5px; top: 280px;; position: absolute"><code>if (name === "Leon" &amp;&amp; status === "Ballin"){
+ //Wink at camera
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029"><span class="slide-indicator">Slide 29 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Multiple Conditions</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 854px; height: 127.5px; left: 46px; top: 280px;; position: absolute"><code>if (day === "Saturday" || day === "Sunday"){
+  //It is the weekend
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030"><span class="slide-indicator">Slide 30 of 67</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Functions</h1>
+<h2 style="width: 806px; left: 77px; top: 350px; height: auto;; position: absolute">What are functions?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031"><span class="slide-indicator">Slide 31 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Functions</h1>
+<ul style="width: 960px; left: 0px; top: 249.5px; height: auto;; position: absolute">
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Functions are simple sets of </span><span style="color:#FFD700"><span style="font-size:25pt">instructions</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">!</span>
+</li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Functions are </span><span style="color:#FFD700"><span style="font-size:25pt">reusable</span></span>
+</li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Functions </span><span style="color:#FFD700"><span style="font-size:25pt">perform one action</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt"> as a best practice</span>
+</li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">They form the basic "</span><span style="color:#FFD700"><span style="font-size:25pt">building blocks</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">" of a program </span>
+</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032"><span class="slide-indicator">Slide 32 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Functions</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 672px; height: 320.5px; left: 144px; top: 259.75px;; position: absolute"><code>function name(parameters){
+  //body
+}
+
+//call
+name(arguments)</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033"><span class="slide-indicator">Slide 33 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Functions</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 672px; height: 320.5px; left: 145px; top: 259.75px;; position: absolute"><code>function yell(word){
+  alert(word)
+}
+
+
+yell("HELLO")</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034"><span class="slide-indicator">Slide 34 of 67</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Loops</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">What are loops?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035"><span class="slide-indicator">Slide 35 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Loops</h1>
+<ul style="width: 960px; left: 0px; top: 249.5px; height: auto;; position: absolute">
+	<li>
+<span style="color:#FFD700"><span style="font-size:25pt">Repeat an action</span></span><span style="font-size:25pt"> some number of times!</span>
+</li>
+	<li>
+<span style="font-size:33.3333px">Three main types</span><font color="#eeeeee"><span style="font-size:33.3333px"> of loops in Javascript</span></font>
+</li>
+	<li><span style="color:#FFD700"><span style="font-size:33.3333px">For, while, and do while loops</span></span></li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Each type offers a different way to</span><span style="color:#FFD700"><span style="font-size:25pt"> determine the start and end points</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt"> of a loop</span>
+</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036"><span class="slide-indicator">Slide 36 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Loops - For</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 739px; height: 172.5px; left: 110.5px; top: 253.75px;; position: absolute"><code>for (let i = 1; i &lt; 5; i++) {
+  console.log(i)
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037"><span class="slide-indicator">Slide 37 of 67</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 600px; left: 180px; top: 581.5px;; position: absolute">Boulder Badge</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038"><span class="slide-indicator">Slide 38 of 67</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Arrays</h1>
+<h2 style="width: 806px; left: 77px; top: 350px; height: auto;; position: absolute">What are arrays?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039"><span class="slide-indicator">Slide 39 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Toasters</h2>
+<img src="https://images.unsplash.com/photo-1583729250536-d5fb10401671?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1920&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjIwNzA2fQ" width="1920" height="1280" style="position: absolute; max-width: 100%;width: 710px; height: 473.333px; left: 125px; top: 155.333px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-040"><span class="slide-indicator">Slide 40 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Arrays</h1>
+<ul style="width: 960px; left: 0px; top: 249.5px; height: auto;; position: absolute">
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">A data structure to store </span><span style="color:#FFD700"><span style="font-size:25pt">ordered collections</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">!</span>
+</li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Array elements are numbered </span><span style="color:#FFD700"><span style="font-size:25pt">starting with zero</span></span>
+</li>
+	<li>
+<font color="#eeeeee"><span style="font-size:33.3333px">Arrays have many </span></font><span style="color:#FFD700"><span style="font-size:33.3333px">methods</span></span><font color="#eeeeee"><span style="font-size:33.3333px"> to </span></font><span style="color:#FFD700"><span style="font-size:33.3333px">manage the order</span></span><font color="#eeeeee"><span style="font-size:33.3333px"> of elements</span></font>
+</li>
+	<li>
+<font color="#eeeeee"><span style="font-size:33.3333px">Can be </span></font><span style="color:#FFD700"><span style="font-size:33.3333px">created by a constructor </span></span><span style="font-size:33.3333px">or</span><span style="color:#FFD700"><span style="font-size:33.3333px">&nbsp;literal notation</span></span>
+</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-041"><span class="slide-indicator">Slide 41 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Declaring Arrays</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 420px; height: 66.5px; left: 270px; top: 246.75px;; position: absolute"><code>let newArr = []</code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 330.5px;; position: absolute">Literal Notation</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-042"><span class="slide-indicator">Slide 42 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Declaring Arrays</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 686px; height: 66.5px; left: 136px; top: 246.75px;; position: absolute"><code>newArr = ['Zebra',true,21]
+</code></pre>
+<div style="height: auto; width: 803px; left: 80px; top: 350px;; position: absolute;z-index: 12;">
+<h3>Arrays are populated with elements</h3>
+
+<h3>Elements can be of any type</h3>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-043"><span class="slide-indicator">Slide 43 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Array Indexing</h1>
+
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7760220/indexing.png" width="864" height="382" style="position: absolute; max-width: 100%;width: 537.247px; height: 237.533px; left: 211.377px; top: 231.233px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-044"><span class="slide-indicator">Slide 44 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Array Indexing</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 948px; height: 319.5px; left: 6px; top: 210px;; position: absolute"><code>newArr = ['Zebra',,true,21]
+
+console.log( newArr[0] )  //Zebra
+console.log( newArr[1] )  //undefined
+console.log( newArr[2] )  //true
+console.log( newArr[3] )  //21</code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 560px;; position: absolute">Elements can be accessed by their index numbers</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-045"><span class="slide-indicator">Slide 45 of 67</span><h1 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute">Array Indexing</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 710px; height: 371.5px; left: 126px; top: 167px;; position: absolute"><code>newArr = ['Zebra',,true,21]
+
+newArr[1] = 'Bob'
+
+console.log( newArr )  
+
+// ['Zebra','Bob',true,21]
+</code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 538.5px;; position: absolute">Elements can be updated by using the index at that position</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-046"><span class="slide-indicator">Slide 46 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Array Length</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 822px; height: 75.5px; left: 69px; top: 274.5px;; position: absolute"><code>console.log( newArr.length ) //4</code></pre>
+<h3 style="height: auto; width: 800px; left: 77px; top: 420px;; position: absolute">How do you determine how many elements are in your array?</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-047"><span class="slide-indicator">Slide 47 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Array Iteration</h1>
+<pre class="javascript" style="font-size: 30px; line-height: 36px;;width: 948px; height: 140px; left: 6px; top: 280px;; position: absolute"><code>let bestColors = ['green','blue','yellow','black']
+
+bestColors.forEach((x,i)=&gt; console.log(x))</code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 490px;; position: absolute">Iterates through an array passing in the value and index of each element&nbsp;</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-048"><span class="slide-indicator">Slide 48 of 67</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h2 style="height: auto; width: 960px; left: -1px; top: 605px;; position: absolute">Cascade Badge</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-049"><span class="slide-indicator">Slide 49 of 67</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Objects</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">What are objects?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-050"><span class="slide-indicator">Slide 50 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Objects</h1>
+<ul style="width: 960px; left: 0px; top: 210px; height: auto;; position: absolute">
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Objects are a </span><span style="color:#FFD700"><span style="font-size:25pt">collection of variables and functions</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">!</span>
+</li>
+	<li><span style="font-size:33.3333px">Objects <span style="color:#FFD700">represent the attributes and behavior</span> of something used in a program</span></li>
+	<li><span style="font-size:33.3333px">Object variables are called <span style="color:#FFD700">properties</span> and object functions are called <span style="color:#FFD700">methods</span></span></li>
+	<li><span style="font-size:33.3333px">Objects store <span style="color:#FFD700">"keyed"</span> collections </span></li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-051"><span class="slide-indicator">Slide 51 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Think of a physical object</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7782996/pepesilvia.jpg" width="1024" height="768" style="position: absolute; max-width: 100%;width: 494.667px; height: 371px; left: 225.333px; top: 164.5px; min-width: 1px; min-height: 1px;">
+<h3 style="height: auto; width: 960px; left: 0.0005px; top: 560px;; position: absolute">What are it's attributes and behaviors?&nbsp;</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-052"><span class="slide-indicator">Slide 52 of 67</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">How about a stopwatch</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7783007/stopwatch.jpg" width="1200" height="800" style="position: absolute; max-width: 100%;width: 494.667px; height: 329.778px; left: 225.333px; top: 185.111px; min-width: 1px; min-height: 1px;">
+<h3 style="height: auto; width: 960px; left: 0.0005px; top: 560px;; position: absolute">What are its attributes (properties) and behaviors (methods)?&nbsp;</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-053"><span class="slide-indicator">Slide 53 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Stopwatch Object</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 908px; height: 360.5px; left: 26px; top: 210px;; position: absolute"><code>let stopwatch = {}
+
+stopwatch.currentTime = 12
+
+stopwatch.tellTime = function(time){
+  console.log(`The current time is ${time}.`)
+}
+
+stopwatch.tellTime(stopwatch.currentTime)</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-054"><span class="slide-indicator">Slide 54 of 67</span><h1 style="width: 806px; left: 77px; top: 113px; height: auto;; position: absolute">Objects</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute;z-index: 11;">
+<h2>What if we want to make</h2>
+
+<h2>
+<span style="color:#FFD700">a lot</span> of objects?</h2>
+</h2>
+<p style="height: auto; width: 960px; left: 0px; top: 651.5px;; position: absolute"><span style="font-size:0.5em">How much money you got? How many problems you got? How many people done doubted you? Left you out to rot?</span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-055"><span class="slide-indicator">Slide 55 of 67</span><h2 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute">Car Factory?</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7783525/car-factory.jpg" width="1280" height="720" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px;">
+<h3 style="height: auto; width: 600px; left: 179px; top: 610.5px;; position: absolute">Constructors then Classes</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-056"><span class="slide-indicator">Slide 56 of 67</span><h1 style="width: 806px; left: 77px; top: 7.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>Constructor</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 495.5px; left: 34.5px; top: 172.25px;; position: absolute"><code>function MakeCar(carMake,carModel,carColor,numOfDoors){
+  this.make = carMake
+  this.model = carModel
+  this.color = carColor
+  this.doors = numOfDoors
+  this.honk = function(){
+    alert('BEEP BEEP FUCKER')
+  }
+  this.lock = function(){
+    alert(`Locked ${this.doors} doors!`)
+  }
+}
+
+let hondaCivic = new MakeCar('Honda','Civic','Silver', 4)
+
+let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)</code></pre>
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-057"><span class="slide-indicator">Slide 57 of 67</span><h1 style="width: 806px; left: 77px; top: 7.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>We forgot enable bluetooth!&nbsp;</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 231.5px; left: 34.5px; top: 210px;; position: absolute"><code>let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)
+
+console.log( teslaRoadster.bluetooth )  //undefined
+
+MakeCar.prototype.bluetooth = true
+
+console.log( teslaRoadster.bluetooth ) //true </code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 490px;; position: absolute">A prototype is another object that is used as a fallback source of properties</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-058"><span class="slide-indicator">Slide 58 of 67</span><h1 style="width: 806px; left: 77px; top: 7.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>Why does .toString() work?!?</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 140px; left: 34.5px; top: 258px;; position: absolute"><code>let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)
+
+console.log( teslaRoadster.doors.toString() )  // "2" not 2
+</code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 490px;; position: absolute">A prototype is another object that is used as a fallback source of properties</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-059"><span class="slide-indicator">Slide 59 of 67</span><h1 style="width: 806px; left: 77px; top: -9px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>Look Ma! New syntax!</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 495.5px; left: 41.5px; top: 149px;; position: absolute"><code>class MakeCar{
+  constructor(carMake,carModel,carColor,numOfDoors){
+    this.make = carMake
+    this.model = carModel
+    this.color = carColor
+    this.doors = numOfDoors
+  }
+  honk(){
+    alert('BEEP BEEP FUCKER')
+  }
+  lock(){
+    alert(`Locked ${this.doors} doors!`)
+  }
+}
+
+let hondaCivic = new MakeCar('Honda','Civic','Silver', 4)
+
+let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)</code></pre>
+<p style="height: auto; width: 600px; left: 180px; top: 650.5px;; position: absolute">Classes are like templates for objects!</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-060"><span class="slide-indicator">Slide 60 of 67</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h2 style="height: auto; width: 960px; left: 0px; top: 593px;; position: absolute">Thunder Badge</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-061"><span class="slide-indicator">Slide 61 of 67</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">APIs</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">What are APIs?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-062"><span class="slide-indicator">Slide 62 of 67</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">APIs</h1>
+<ul style="width: 960px; left: 0px; top: 249.5px; height: auto;; position: absolute">
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">A </span><span style="color:#FFD700"><span style="font-size:25pt">simple interface</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt"> for some complex action!</span>
+</li>
+	<li>
+<span style="font-size:25pt">Think of a </span><span style="font-size:33.3333px">restaurant</span><span style="font-size:25pt">&nbsp;menu! Remember those...</span>
+</li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Lets one thing </span><span style="color:#FFD700"><span style="font-size:25pt">communicate with another thing</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt"> without having to know how things are implemented.</span>
+</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-063"><span class="slide-indicator">Slide 63 of 67</span><h2 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute">APIs</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7783759/api.png" width="625" height="195" style="position: absolute; max-width: 100%;width: 710px; height: 221.52px; left: 125px; top: 249.24px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-064"><span class="slide-indicator">Slide 64 of 67</span><h1 style="width: 806px; left: 77px; top: 7.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>APIs</h1>
+
+<h3>Fetch Fido, Fetch!</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 792px; height: 248.5px; left: 84px; top: 201px;; position: absolute"><code>fetch("https://dog.ceo/api/breeds/image/random")
+    .then(res =&gt; res.json()) // parse response as JSON
+    .then(data =&gt; {
+      console.log(data)
+    })
+    .catch(err =&gt; {
+        console.log(`error ${err}`)
+    });
+</code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 490px;; position: absolute">API returns a JSON object that we can use within our apps</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-065"><span class="slide-indicator">Slide 65 of 67</span><h1 style="width: 806px; left: 77px; top: 7.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>APIs</h1>
+
+<h3>Stop trying to make Fetch happen!</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 829px; height: 248.5px; left: 65.5px; top: 280px;; position: absolute"><code>fetch(url)
+    .then(res =&gt; res.json()) // parse response as JSON
+    .then(data =&gt; {
+      console.log(data)
+    })
+    .catch(err =&gt; {
+        console.log(`error ${err}`)
+    });
+</code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 541px;; position: absolute">Some APIs need Query Parameters to return the correct data</h3>
+<p style="height: auto; width: 960px; left: 0px; top: 210px;; position: absolute"><strong><span style="font-size:0.7em">const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'</span></strong></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-066"><span class="slide-indicator">Slide 66 of 67</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 600px; left: 180px; top: 581.5px;; position: absolute">Rainbow Badge</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-067"><span class="slide-indicator">Slide 67 of 67</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Homework</h1>
+<div style="height: auto; width: 802px; left: 80.3795px; top: 420px;; position: absolute;z-index: 11;">
+<p>&nbsp;</p>
+
+<p>Do: Something With The Pokemon API (Thursday)</p>
+
+<p><span style="font-size:1.0em">Watch / Do: </span><a href="https://youtu.be/PFmuCDHHpwk" target="_blank">https://youtu.be/PFmuCDHHpwk</a></p>
+
+<p>Read / Do: <a href="https://github.com/thejsway/thejsway/blob/master/manuscript/chapter09.md" target="_blank">JS Way Ch. 09</a></p>
+
+<p>Push? Read / Do: <a href="https://eloquentjavascript.net/06_object.html" target="_blank">Eloquent JS Ch. 06</a></p>
+
+<p><span style="font-size:1.0em">Do: 7 Codewars </span></p>
+</div>
+
+<img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%;width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px;"></section>
+    </main>
+  </body>
+  <script>
+const PROPS = ['width', 'height', 'top', 'left', 'right', 'bottom', 'font-size']
+
+function saveOriginalSizes(element) {
+	for (const prop of PROPS) {
+		const dataProp = 'data-original-' + prop;
+		if (element.style[prop]) {
+			if (!element.hasAttribute(dataProp)) {
+				element.setAttribute(dataProp, element.style[prop]);
+			}
+		}
+	}
+}
+
+function scaleSizes(element, scale) {
+	const props = PROPS.filter(prop => element.style[prop]);
+	for (const prop of props) {
+		const rawOrigValue = element.getAttribute('data-original-' + prop)
+		if (rawOrigValue.startsWith('auto')) continue;
+
+		const origValue = parseFloat(element.getAttribute('data-original-' + prop));
+
+		const unit = rawOrigValue.slice(-2);
+		element.style[prop] = (origValue * scale) + unit;
+	}
+}
+
+function fancyScaleSlides(){
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	for (const slide of slides){
+		saveOriginalSizes(slide);
+		scaleSizes(slide, scale);
+	}
+	/*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+	const sizedChildren = Array.from(document.querySelectorAll('.slide *')).filter(el => el.hasAttribute('style') && PROPS.some(prop => el.getAttribute('style')?.includes(prop + ':')));
+	for (const el of sizedChildren) {
+		saveOriginalSizes(el);
+		scaleSizes(el, scale);
+	}
+}
+
+function scaleSlides() {
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});
+}
+
+window.addEventListener('resize', scaleSlides);
+window.addEventListener('load', scaleSlides);
+document.addEventListener('DOMContentLoaded', scaleSlides);
+  </script>
+</html>

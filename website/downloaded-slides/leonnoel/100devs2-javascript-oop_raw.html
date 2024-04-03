@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Class 30 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord">
+
+    <title>#100Devs - Javascript OOP (cohort 2)</title>
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.3;
+	background-color: #444444;
+	color: #FFFFFF;
+}
+ul {
+	text-align: left;
+	list-style: bullet;
+}
+
+ol {
+	list-style: number;
+}
+
+.slide {
+	position: relative;
+	border: 1px solid white;
+	transform-origin: top left;
+}
+.slide-indicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - Javascript OOP (cohort 2)</h1>
+      <p>Class 30 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+	        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">Trough Of Sorrow</a>
+        </li>
+        <li>
+          <a href="#slide-006">No Networking Until May</a>
+        </li>
+        <li>
+          <a href="#slide-007">Client Deadline: March 5th</a>
+        </li>
+        <li>
+          <a href="#slide-008">Client Alternatives</a>
+        </li>
+        <li>
+          <a href="#slide-009">Grassroots Volunteer*</a>
+        </li>
+        <li>
+          <a href="#slide-010">Free Software / Open Source</a>
+        </li>
+        <li>
+          <a href="#slide-011">Live Crafting Your Story</a>
+        </li>
+        <li>
+          <a href="#slide-012">OFFICE HOURS</a>
+        </li>
+        <li>
+          <a href="#slide-013">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-014">USE</a>
+        </li>
+        <li>
+          <a href="#slide-015">Finna Make Sum Nerds Angry</a>
+        </li>
+        <li>
+          <a href="#slide-016">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-017">Think of a physical object</a>
+        </li>
+        <li>
+          <a href="#slide-018">How about a stopwatch</a>
+        </li>
+        <li>
+          <a href="#slide-019">Stopwatch Object</a>
+        </li>
+        <li>
+          <a href="#slide-020">Stopwatch Object</a>
+        </li>
+        <li>
+          <a href="#slide-021">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-022">Car Factory?</a>
+        </li>
+        <li>
+          <a href="#slide-023">Slide #023</a>
+        </li>
+        <li>
+          <a href="#slide-024">Slide #024</a>
+        </li>
+        <li>
+          <a href="#slide-025">Slide #025</a>
+        </li>
+        <li>
+          <a href="#slide-026">Slide #026</a>
+        </li>
+        <li>
+          <a href="#slide-027">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-028">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-029">As our codebase gets larger and more folx join the team, can we keep our code organized?</a>
+        </li>
+        <li>
+          <a href="#slide-030">Is it easy to add new features and functionality?</a>
+        </li>
+        <li>
+          <a href="#slide-031">Can another developer look at my code and understand what is happening?</a>
+        </li>
+        <li>
+          <a href="#slide-032">Can I make changes without losing sleep at night?&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-033">Slide #033</a>
+        </li>
+        <li>
+          <a href="#slide-034">OOP BABY</a>
+        </li>
+        <li>
+          <a href="#slide-035">OBJECT ORIENTED PROGRAMING&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-036">Let&apos;s See Some Code</a>
+        </li>
+        <li>
+          <a href="#slide-037">Is it easy to add new features and functionality?</a>
+        </li>
+        <li>
+          <a href="#slide-038">Slide #038</a>
+        </li>
+        <li>
+          <a href="#slide-039">Can another developer look at my code and understand what is happening?</a>
+        </li>
+        <li>
+          <a href="#slide-040">Slide #040</a>
+        </li>
+        <li>
+          <a href="#slide-041">Slide #041</a>
+        </li>
+        <li>
+          <a href="#slide-042">Can I make changes without losing sleep at night?&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-043">Slide #043</a>
+        </li>
+        <li>
+          <a href="#slide-044">DATA &amp; FUNCTIONALITY</a>
+        </li>
+        <li>
+          <a href="#slide-045">DATA</a>
+        </li>
+        <li>
+          <a href="#slide-046">Functionality</a>
+        </li>
+        <li>
+          <a href="#slide-047">Slide #047</a>
+        </li>
+        <li>
+          <a href="#slide-048">Slide #048</a>
+        </li>
+        <li>
+          <a href="#slide-049">Is it easy to add new features and functionality?</a>
+        </li>
+        <li>
+          <a href="#slide-050">Slide #050</a>
+        </li>
+        <li>
+          <a href="#slide-051">Can another developer look at my code and understand what is happening?</a>
+        </li>
+        <li>
+          <a href="#slide-052">Can I make changes without losing sleep at night?&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-053">This fusion of data and functionality into one object</a>
+        </li>
+        <li>
+          <a href="#slide-054">Encapsulation Baby</a>
+        </li>
+        <li>
+          <a href="#slide-055">Slide #055</a>
+        </li>
+        <li>
+          <a href="#slide-056">Encapsulation</a>
+        </li>
+        <li>
+          <a href="#slide-057">Is it easy to add new features and functionality?</a>
+        </li>
+        <li>
+          <a href="#slide-058">Slide #058</a>
+        </li>
+        <li>
+          <a href="#slide-059">Heats water for espresso and steam for your milk</a>
+        </li>
+        <li>
+          <a href="#slide-060">Slide #060</a>
+        </li>
+        <li>
+          <a href="#slide-061">Slide #061</a>
+        </li>
+        <li>
+          <a href="#slide-062">At first, do they even need to think about the water boiler?</a>
+        </li>
+        <li>
+          <a href="#slide-063">So the water boiling is abstracted?</a>
+        </li>
+        <li>
+          <a href="#slide-064">Let&apos;s look at some code</a>
+        </li>
+        <li>
+          <a href="#slide-065">Ut Oh...</a>
+        </li>
+        <li>
+          <a href="#slide-066">Better...</a>
+        </li>
+        <li>
+          <a href="#slide-067">So now my client can still get their invoice, but not see my hourly rate</a>
+        </li>
+        <li>
+          <a href="#slide-068">Water boiling was hidden from the steam wand</a>
+        </li>
+        <li>
+          <a href="#slide-069">Complex or unnecessary details are hidden</a>
+        </li>
+        <li>
+          <a href="#slide-070">This enables you to implement things without understanding or even thinking about all the hidden complexity</a>
+        </li>
+        <li>
+          <a href="#slide-071">Smaller more manageable pieces of code</a>
+        </li>
+        <li>
+          <a href="#slide-072">Do stuff once</a>
+        </li>
+        <li>
+          <a href="#slide-073">Abstraction Baby</a>
+        </li>
+        <li>
+          <a href="#slide-074">Slide #074</a>
+        </li>
+        <li>
+          <a href="#slide-075">Abstraction</a>
+        </li>
+        <li>
+          <a href="#slide-076">The Four Pillars</a>
+        </li>
+        <li>
+          <a href="#slide-077">Encapsulation</a>
+        </li>
+        <li>
+          <a href="#slide-078">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-079">Made it easier to add new stuff</a>
+        </li>
+        <li>
+          <a href="#slide-080">Abstraction</a>
+        </li>
+        <li>
+          <a href="#slide-081">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-082">Smaller more manageable pieces of code</a>
+        </li>
+        <li>
+          <a href="#slide-083">Inheritance</a>
+        </li>
+        <li>
+          <a href="#slide-084">Group Work</a>
+        </li>
+        <li>
+          <a href="#slide-085">Right Of Passage</a>
+        </li>
+        <li>
+          <a href="#slide-086">Slide #086</a>
+        </li>
+        <li>
+          <a href="#slide-087">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001"><span class="slide-indicator">Slide 1 of 87</span><h1 style="width: 960px; left: 0px; top: 179px; height: auto;; position: absolute;z-index: 10;">
+<h2>&nbsp;</h2>
+
+<h2>Javascript - OOP</h2>
+</h1>
+<h2 style="height: auto; width: 600px; left: 180px; top: 468.5px;; position: absolute"><span style="color:#FFFFFF"><span style="font-size:1.0em">Leon Noel</span></span></h2>
+
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 600px; left: 180px; top: 371.5px;; position: absolute">#100Devs</h1>
+<p style="height: auto; width: 960px; left: 0px; top: 542.5px;; position: absolute">And I was thinking 'bout starting up my own school<br>
+A Montessori<br>
+And the hallway looking like a monastery, oh yes<br>
+I'm way up, I feel blessed</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002"><span class="slide-indicator">Slide 2 of 87</span><h1 style="width: 806px; left: 77px; top: 0px; height: auto;; position: absolute">Agenda</h1>
+<ul style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute">
+	<li>Questions?&nbsp;</li>
+	<li>Let's Talk -&nbsp; #100Devs</li>
+	<li>Learn - Objects</li>
+	<li>Learn - Basic OOP Principles</li>
+	<li>Do - Work In Teams: Tic-tac-toe</li>
+	<li>Homework - Object City Yall</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003"><span class="slide-indicator">Slide 3 of 87</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h2>Questions</h2>
+
+<h3>About last class or life</h3>
+</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%;width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004"><span class="slide-indicator">Slide 4 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Checking In</h2>
+<img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%;width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 806px; left: 77px; top: 521px;; position: absolute;z-index: 12;">
+<h3>Like and Retweet the Tweet</h3>
+
+<h3>!checkin</h3>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005"><span class="slide-indicator">Slide 5 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Trough Of Sorrow</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7694391/trough-of-sorrow.png" width="734" height="472" style="position: absolute; max-width: 100%;width: 710px; height: 456.567px; left: 125px; top: 163.716px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006"><span class="slide-indicator">Slide 6 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">No Networking Until May</h2>
+<img src="https://media1.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif" width="498" height="230" style="position: absolute; max-width: 100%;width: 710px; height: 327.912px; left: 125px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007"><span class="slide-indicator">Slide 7 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Client Deadline: March 5th</h2>
+<img src="https://media2.giphy.com/media/1333xc9RhiyGaY/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008"><span class="slide-indicator">Slide 8 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Client Alternatives</h2>
+<img src="https://media3.giphy.com/media/3o751Yxe9UjX26BZbG/giphy.gif" width="480" height="358" style="position: absolute; max-width: 100%;width: 638.212px; height: 476px; left: 159.894px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009"><span class="slide-indicator">Slide 9 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Grassroots Volunteer*</h2>
+<img src="https://media4.giphy.com/media/106QCYtKPDeIjm/giphy.gif" width="250" height="172" style="position: absolute; max-width: 100%;width: 691.86px; height: 476px; left: 134.07px; top: 140px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010"><span class="slide-indicator">Slide 10 of 87</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">Free Software / Open Source</h2>
+<img src="https://media1.giphy.com/media/3og0ICG4WxdKSRzE3K/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 160.625px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 591px;; position: absolute"><a href="https://www.firsttimersonly.com/" target="_blank">https://www.firsttimersonly.com/</a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011"><span class="slide-indicator">Slide 11 of 87</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">Live Crafting Your Story</h2>
+<img src="https://media2.giphy.com/media/25KEhzwCBBFPb79puo/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 522.059px; height: 293.658px; left: 217.971px; top: 184.171px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 800px; left: 80px; top: 506px;; position: absolute">FRIDAY <br>
+6:30pm EST</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012"><span class="slide-indicator">Slide 12 of 87</span><h1 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">OFFICE HOURS</h1>
+<img src="https://media3.giphy.com/media/5wWf7GW1AzV6pF3MaVW/giphy.gif" width="432" height="250" style="position: absolute; max-width: 100%;width: 507.441px; height: 293.658px; left: 225.28px; top: 184.171px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 800px; left: 80px; top: 506px;; position: absolute">SUNDAY<br>
+1:00pm EST</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013"><span class="slide-indicator">Slide 13 of 87</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Objects</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">What are objects?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014"><span class="slide-indicator">Slide 14 of 87</span><h1 style="width: 806px; left: 74px; top: 199px; height: auto;; position: absolute">USE<br>
+UNDERSTAND<br>
+BUILD</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015"><span class="slide-indicator">Slide 15 of 87</span><h1 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Finna Make Sum Nerds Angry</h1>
+<img src="https://media0.giphy.com/media/Xbh3RSUbOpH1u/giphy.gif" width="500" height="281" style="position: absolute; max-width: 100%;width: 674.728px; height: 379.197px; left: 181.472px; top: 280px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016"><span class="slide-indicator">Slide 16 of 87</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Objects</h1>
+<ul style="width: 960px; left: 0px; top: 210px; height: auto;; position: absolute">
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Objects are a </span><span style="color:#FFD700"><span style="font-size:25pt">collection of variables and functions</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">!</span>
+</li>
+	<li><span style="font-size:33.3333px">Objects <span style="color:#FFD700">represent the attributes and behavior</span> of something used in a program</span></li>
+	<li><span style="font-size:33.3333px">Object variables are called <span style="color:#FFD700">properties</span> and object functions are called <span style="color:#FFD700">methods</span></span></li>
+	<li><span style="font-size:33.3333px">Objects store <span style="color:#FFD700">"keyed"</span> collections </span></li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017"><span class="slide-indicator">Slide 17 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Think of a physical object</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7782996/pepesilvia.jpg" width="1024" height="768" style="position: absolute; max-width: 100%;width: 494.667px; height: 371px; left: 225.333px; top: 164.5px; min-width: 1px; min-height: 1px;">
+<h3 style="height: auto; width: 960px; left: 0.0005px; top: 560px;; position: absolute">What are it's attributes and behaviors?&nbsp;</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018"><span class="slide-indicator">Slide 18 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">How about a stopwatch</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7783007/stopwatch.jpg" width="1200" height="800" style="position: absolute; max-width: 100%;width: 494.667px; height: 329.778px; left: 225.333px; top: 185.111px; min-width: 1px; min-height: 1px;">
+<h3 style="height: auto; width: 960px; left: 0.0005px; top: 560px;; position: absolute">What are its attributes and behaviors?&nbsp;</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019"><span class="slide-indicator">Slide 19 of 87</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">Stopwatch Object</h1>
+<h2 style="width: 806px; left: 77px; top: 198.5px; height: auto;; position: absolute;z-index: 11;">
+<ul>
+	<li>Properties (attributes):<br>
+	Might contain a variable to represent hours, another to represent minutes, and another to represent seconds.&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</h2>
+<ul style="height: auto; width: 800px; left: 80px; top: 455px;; position: absolute">
+	<li>Methods (behaviors):<br>
+	Might also contain functions that manipulate those values, such as "start ()" and "stop ()".</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020"><span class="slide-indicator">Slide 20 of 87</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Stopwatch Object</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 908px; height: 360.5px; left: 26px; top: 210px;; position: absolute"><code>let stopwatch = {}
+
+stopwatch.currentTime = 12
+
+stopwatch.tellTime = function(time){
+  console.log(`The current time is ${time}.`)
+}
+
+stopwatch.tellTime(stopwatch.currentTime)</code></pre>
+<p style="height: auto; width: 600px; left: 180px; top: 610.5px;; position: absolute">Notation?</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021"><span class="slide-indicator">Slide 21 of 87</span><h1 style="width: 806px; left: 77px; top: 113px; height: auto;; position: absolute">Objects</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute;z-index: 11;">
+<h2>What if we want to make</h2>
+
+<h2>
+<span style="color:#FFD700">a lot</span> of objects?</h2>
+</h2>
+<p style="height: auto; width: 960px; left: 0px; top: 651.5px;; position: absolute"><span style="font-size:0.5em">How much money you got? How many problems you got? How many people done doubted you? Left you out to rot?</span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022"><span class="slide-indicator">Slide 22 of 87</span><h2 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute">Car Factory?</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7783525/car-factory.jpg" width="1280" height="720" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px;">
+<h3 style="height: auto; width: 600px; left: 179px; top: 610.5px;; position: absolute">Constructors then Classes</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023"><span class="slide-indicator">Slide 23 of 87</span><h1 style="width: 806px; left: 77px; top: 7.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>Constructor</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 495.5px; left: 34.5px; top: 172.25px;; position: absolute"><code>function MakeCar(carMake,carModel,carColor,numOfDoors){
+  this.make = carMake
+  this.model = carModel
+  this.color = carColor
+  this.doors = numOfDoors
+  this.honk = function(){
+    alert('BEEP BEEP FUCKER')
+  }
+  this.lock = function(){
+    alert(`Locked ${this.doors} doors!`)
+  }
+}
+
+let hondaCivic = new MakeCar('Honda','Civic','Silver', 4)
+
+let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)</code></pre>
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024"><span class="slide-indicator">Slide 24 of 87</span><h1 style="width: 806px; left: 77px; top: 7.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>We forgot enable bluetooth!&nbsp;</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 231.5px; left: 34.5px; top: 210px;; position: absolute"><code>let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)
+
+console.log( teslaRoadster.bluetooth )  //undefined
+
+MakeCar.prototype.bluetooth = true
+
+console.log( teslaRoadster.bluetooth ) //true </code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 490px;; position: absolute">A prototype is another object that is used as a fallback source of properties</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025"><span class="slide-indicator">Slide 25 of 87</span><h1 style="width: 806px; left: 77px; top: 7.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>Why does .toString() work?!?</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 140px; left: 34.5px; top: 258px;; position: absolute"><code>let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)
+
+console.log( teslaRoadster.doors.toString() )  // "2" not 2
+</code></pre>
+<h3 style="height: auto; width: 600px; left: 180px; top: 490px;; position: absolute">A prototype is another object that is used as a fallback source of properties</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026"><span class="slide-indicator">Slide 26 of 87</span><h1 style="width: 806px; left: 77px; top: -9px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>Look Ma! New syntax!</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 495.5px; left: 41.5px; top: 149px;; position: absolute"><code>class MakeCar{
+  constructor(carMake,carModel,carColor,numOfDoors){
+    this.make = carMake
+    this.model = carModel
+    this.color = carColor
+    this.doors = numOfDoors
+  }
+  honk(){
+    alert('BEEP BEEP FUCKER')
+  }
+  lock(){
+    alert(`Locked ${this.doors} doors!`)
+  }
+}
+
+let hondaCivic = new MakeCar('Honda','Civic','Silver', 4)
+
+let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)</code></pre>
+<p style="height: auto; width: 600px; left: 180px; top: 650.5px;; position: absolute">Classes are like templates for objects!</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027"><span class="slide-indicator">Slide 27 of 87</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h2 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Objects - Espresso Machine</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028"><span class="slide-indicator">Slide 28 of 87</span><h2 style="width: 806px; left: 77px; top: 12px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 86px; min-width: 1px; min-height: 1px;">
+<h2 style="height: auto; width: 960px; left: 0px; top: 552px;; position: absolute">Why Use Objects?<br>
+Why Would We Need A Factory?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029"><span class="slide-indicator">Slide 29 of 87</span><h2 style="width: 806px; left: 77px; top: 202px; height: auto;; position: absolute">As our codebase gets larger and more folx join the team, can we keep our code organized?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030"><span class="slide-indicator">Slide 30 of 87</span><h2 style="width: 806px; left: 77px; top: 276px; height: auto;; position: absolute">Is it easy to add new features and functionality?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031"><span class="slide-indicator">Slide 31 of 87</span><h2 style="width: 806px; left: 77px; top: 239px; height: auto;; position: absolute">Can another developer look at my code and understand what is happening?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032"><span class="slide-indicator">Slide 32 of 87</span><h2 style="width: 806px; left: 77px; top: 239px; height: auto;; position: absolute">Can I make changes without losing sleep at night?&nbsp;</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033"><span class="slide-indicator">Slide 33 of 87</span><h2 style="width: 806px; left: 65px; top: 70px; height: auto;; position: absolute;z-index: 10;">
+<h2>What if there was a system, a paradigm, a set of rules, an agreed upon way to structure our code that:</h2>
+
+<p>&nbsp;</p>
+
+<p>Made it easier to add new stuff</p>
+
+<p>Made it easier to read through what was already coded</p>
+
+<p>And made it so you were not afraid to make changes</p>
+
+<p>&nbsp;</p>
+</h2>
+<p style="height: auto; width: 600px; left: 180px; top: 654.5px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034"><span class="slide-indicator">Slide 34 of 87</span><h1 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">OOP BABY</h1>
+<img src="https://media1.giphy.com/media/3o7qDEq2bMbcbPRQ2c/giphy.gif" width="504" height="350" style="position: absolute; max-width: 100%;width: 685.44px; height: 476px; left: 137.28px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035"><span class="slide-indicator">Slide 35 of 87</span><h2 style="width: 806px; left: 77px; top: 40px; height: auto;; position: absolute">OBJECT ORIENTED PROGRAMING&nbsp;</h2>
+<img src="https://media4.giphy.com/media/fe3Rwmc2bBulG/giphy.gif" width="400" height="225" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 248.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036"><span class="slide-indicator">Slide 36 of 87</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Let's See Some Code</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037"><span class="slide-indicator">Slide 37 of 87</span><pre class="javascript" style="font-size: 28px; line-height: 34px;;width: 952px; height: 449px; left: 4px; top: 226.5px;; position: absolute"><code>let hourlyRate = 250
+let hours = 160
+let taxRate = .35
+
+function calculateProfit(rate, numOfHours, taxes){
+  return rate * numOfHours * (1 - taxes)
+}
+
+let profit = calculateProfit(hourlyRate, hours, taxRate)
+
+console.log(profit)</code></pre>
+<h2 style="height: auto; width: 776px; left: 92px; top: 37.5px;; position: absolute;color:rgb(255, 255, 255)">Is it easy to add new features and functionality?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038"><span class="slide-indicator">Slide 38 of 87</span><pre class="javascript" style="font-size: 28px; line-height: 34px;;width: 952px; height: 658px; left: 8px; top: 21px;; position: absolute"><code>let hourlyRate = 250
+let hours = 160
+let taxRate = .35
+
+function calculateProfit(rate, numOfHours, taxes){
+  return rate * numOfHours * (1 - taxes)
+}
+
+function holdForTaxes(profitMade){
+  return hourlyRate * hours - profitMade
+}
+
+let profit = calculateProfit(hourlyRate, hours, taxRate)
+
+let taxesHeld = holdForTaxes(profit)
+
+console.log(profit)
+
+console.log(taxesHeld)</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039"><span class="slide-indicator">Slide 39 of 87</span><h2 style="height: auto; width: 956px; left: 2px; top: 239px;; position: absolute;color:rgb(255, 255, 255)">Can another developer look at my code and understand what is happening?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-040"><span class="slide-indicator">Slide 40 of 87</span><pre class="javascript" style="font-size: 28px; line-height: 34px;;width: 952px; height: 658px; left: 8px; top: 21px;; position: absolute"><code>let hourlyRate = 250
+let hours = 160
+let taxRate = .35
+
+function calculateProfit(rate, numOfHours, taxes){
+  return rate * numOfHours * (1 - taxes)
+}
+
+function holdForTaxes(profitMade){
+  return hourlyRate * hours - profitMade
+}
+
+let profit = calculateProfit(hourlyRate, hours, taxRate)
+
+let taxesHeld = holdForTaxes(profit)
+
+console.log(profit)
+
+console.log(taxesHeld)</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-041"><span class="slide-indicator">Slide 41 of 87</span><img src="https://media3.giphy.com/media/ne3xrYlWtQFtC/giphy.gif" width="540" height="231" style="position: absolute; max-width: 100%;width: 709.999px; height: 303.722px; left: 125px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-042"><span class="slide-indicator">Slide 42 of 87</span><pre class="javascript" style="font-size: 28px; line-height: 34px;;width: 952px; height: 449px; left: 6px; top: 210px;; position: absolute"><code>let hourlyRate = 250
+let hours = 160
+let taxRate = .35
+
+function calculateProfit(rate, numOfHours, taxes){
+  return rate * numOfHours * (1 - taxes)
+}
+
+let profit = calculateProfit(hourlyRate, hours, taxRate)
+
+console.log(profit)</code></pre>
+<h2 style="height: auto; width: 956px; left: 4px; top: 4.5px;; position: absolute;color:rgb(255, 255, 255)">Can I make changes without losing sleep at night?&nbsp;</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-043"><span class="slide-indicator">Slide 43 of 87</span><pre class="javascript" style="font-size: 28px; line-height: 34px;;width: 952px; height: 658px; left: 8px; top: 21px;; position: absolute"><code>let hourlyRate = 250
+let hours = 160
+let taxRate = .35
+
+function calculateProfit(rate, numOfHours, taxes){
+  return rate * numOfHours * (1 - taxes)
+}
+
+function holdForTaxes(profitMade){
+  return hourlyRate * hours - profitMade
+}
+
+let profit = calculateProfit(hourlyRate, hours, taxRate)
+
+let taxesHeld = holdForTaxes(profit)
+
+console.log(profit)
+
+console.log(taxesHeld)</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-044"><span class="slide-indicator">Slide 44 of 87</span><h2 style="width: 806px; left: 77px; top: 66px; height: auto;; position: absolute">DATA &amp; FUNCTIONALITY</h2>
+<img src="https://media1.giphy.com/media/ljssLLBmv6xrO/giphy.gif" width="320" height="171" style="position: absolute; max-width: 100%;width: 710px; height: 379.406px; left: 125px; top: 202.297px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-045"><span class="slide-indicator">Slide 45 of 87</span><pre class="javascript" style="font-size: 28px; line-height: 34px;;width: 357px; height: 140px; left: 291px; top: 228px;; position: absolute"><code>let hourlyRate = 250
+let hours = 160
+let taxRate = .35
+</code></pre>
+<h1 style="height: auto; width: 956px; left: -8.5px; top: 91.5px;; position: absolute">DATA</h1>
+<img src="https://media4.giphy.com/media/lPwZcFRMGOFPO/giphy.gif" width="318" height="231" style="position: absolute; max-width: 100%;width: 367.045px; height: 266.627px; left: 285.977px; top: 420px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-046"><span class="slide-indicator">Slide 46 of 87</span><h1 style="height: auto; width: 956px; left: -8.5px; top: 91.5px;; position: absolute">Functionality</h1>
+<pre class="javascript" style="font-size: 28px; line-height: 34px;;width: 846px; height: 140px; left: 46.4995px; top: 225px;; position: absolute"><code>function calculateProfit(rate, numOfHours, taxes){
+  return rate * numOfHours * (1 - taxes)
+}</code></pre>
+<img src="https://media1.giphy.com/media/qXJelahXxRLFe/giphy.gif" width="480" height="288" style="position: absolute; max-width: 100%;width: 439.733px; height: 263.84px; left: 249.633px; top: 420px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-047"><span class="slide-indicator">Slide 47 of 87</span><img src="https://media4.giphy.com/media/P4TqKx6NHyLnO/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 112px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-048"><span class="slide-indicator">Slide 48 of 87</span><pre class="javascript" style="font-size: 26px; line-height: 31px;;width: 960px; height: 331px; left: 1px; top: 184.5px;; position: absolute"><code>
+let seriousBusinessPerson = {
+  hourlyRate: 250,
+  hours: 160,
+  taxRate: .35,
+  calculateProfit: function() {
+    return this.hourlyRate * this.hours * (1 - this.taxRate)
+  }
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-049"><span class="slide-indicator">Slide 49 of 87</span><h2 style="height: auto; width: 800px; left: 80px; top: 66px;; position: absolute;color:rgb(255, 255, 255)">Is it easy to add new features and functionality?</h2>
+<pre class="javascript" style="font-size: 26px; line-height: 31px;;width: 960px; height: 331px; left: 0px; top: 324.5px;; position: absolute"><code>
+let seriousBusinessPerson = {
+  hourlyRate: 250,
+  hours: 160,
+  taxRate: .35,
+  calculateProfit: function() {
+    return this.hourlyRate * this.hours * (1 - this.taxRate)
+  }
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-050"><span class="slide-indicator">Slide 50 of 87</span><pre class="javascript" style="font-size: 25px; line-height: 30px;;width: 960px; height: 525px; left: 0px; top: 87.5px;; position: absolute"><code>
+let seriousBusinessPerson = {
+  hourlyRate: 250,
+  hours: 160,
+  taxRate: .35,
+  calculateProfit: function() {
+    return this.hourlyRate * this.hours * (1 - this.taxRate)
+  }
+  calculateTaxesHeld: function(){
+    return this.hourlyRate * this.hours - this.calculateProfit()
+  }
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-051"><span class="slide-indicator">Slide 51 of 87</span><h2 style="height: auto; width: 960px; left: 0px; top: 58px;; position: absolute;color:rgb(255, 255, 255)">Can another developer look at my code and understand what is happening?</h2>
+<pre class="javascript" style="font-size: 26px; line-height: 31px;;width: 960px; height: 331px; left: 0px; top: 305px;; position: absolute"><code>
+let seriousBusinessPerson = {
+  hourlyRate: 250,
+  hours: 160,
+  taxRate: .35,
+  calculateProfit: function() {
+    return this.hourlyRate * this.hours * (1 - this.taxRate)
+  }
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-052"><span class="slide-indicator">Slide 52 of 87</span><h2 style="height: auto; width: 960px; left: 0px; top: 70px;; position: absolute;color:rgb(255, 255, 255)">Can I make changes without losing sleep at night?&nbsp;</h2>
+<pre class="javascript" style="font-size: 26px; line-height: 31px;;width: 960px; height: 331px; left: 0px; top: 280px;; position: absolute"><code>
+let seriousBusinessPerson = {
+  hourlyRate: 250,
+  hours: 160,
+  taxRate: .40, //changed
+  calculateProfit: function() {
+    return this.hourlyRate * this.hours * (1 - this.taxRate)
+  }
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-053"><span class="slide-indicator">Slide 53 of 87</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">This fusion of data and functionality into one object</h2>
+<img src="https://media4.giphy.com/media/P4TqKx6NHyLnO/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 626.471px; height: 420px; left: 166.764px; top: 210px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 661px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-054"><span class="slide-indicator">Slide 54 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Encapsulation Baby</h2>
+<img src="https://media1.giphy.com/media/d0NnEG1WnnXqg/giphy.gif" width="480" height="320" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 126px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-055"><span class="slide-indicator">Slide 55 of 87</span><img src="https://media2.giphy.com/media/GdAmjKhcXWJ6U/giphy.gif" width="400" height="225" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 192.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-056"><span class="slide-indicator">Slide 56 of 87</span><h1 style="width: 806px; left: 80px; top: 91.5px; height: auto;; position: absolute">Encapsulation</h1>
+<h2 style="width: 806px; left: 74px; top: 210px; height: auto;; position: absolute">The process of storing functions (methods) with their associated data (properties) - in one thing (object)*</h2>
+<p style="height: auto; width: 600px; left: 560px; top: 661px;; position: absolute"><span style="font-size:0.5em">*Nerds shaking violently</span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-057"><span class="slide-indicator">Slide 57 of 87</span><h2 style="height: auto; width: 776px; left: 92px; top: 276px;; position: absolute;color:rgb(255, 255, 255)">Is it easy to add new features and functionality?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-058"><span class="slide-indicator">Slide 58 of 87</span>
+<img src="https://media2.giphy.com/media/HhZH4m2aNc9WMMb33e/giphy.gif" width="480" height="480" style="position: absolute; max-width: 100%;width: 518px; height: 518px; left: 220px; top: 91px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-059"><span class="slide-indicator">Slide 59 of 87</span><h1 style="width: 806px; left: 74px; top: 204.5px; height: auto;; position: absolute">Heats water for espresso and steam for your milk</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-060"><span class="slide-indicator">Slide 60 of 87</span><h1 style="width: 806px; left: 77px; top: 188px; height: auto;; position: absolute;z-index: 10;">
+<h1>Steam wand sucks...</h1>
+
+<h1>What should the engineers do?</h1>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-061"><span class="slide-indicator">Slide 61 of 87</span><h1 style="width: 806px; left: 77px; top: 246px; height: auto;; position: absolute;z-index: 10;">
+<h1>Do they get rid of the water boiler?</h1>
+
+<p>probably not...</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-062"><span class="slide-indicator">Slide 62 of 87</span><h1 style="width: 806px; left: 77px; top: 210px; height: auto;; position: absolute">At first, do they even need to think about the water boiler?</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-063"><span class="slide-indicator">Slide 63 of 87</span><h1 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute">So the water boiling is abstracted?</h1>
+<img src="https://media4.giphy.com/media/wrBURfbZmqqXu/giphy.gif" width="498" height="331" style="position: absolute; max-width: 100%;width: 621.372px; height: 413px; left: 169.314px; top: 280px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-064"><span class="slide-indicator">Slide 64 of 87</span><h1 style="width: 960px; left: 0px; top: 266px; height: auto;; position: absolute">Let's look at some code</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-065"><span class="slide-indicator">Slide 65 of 87</span><pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 960px; height: 515.5px; left: 0px; top: 119.5px;; position: absolute"><code>
+function AgencyContractor(hourlyRate, hours, taxRate){
+  this.hourlyRate = hourlyRate
+  this.hours = hours
+  this.taxRate = taxRate
+  this.calculateProfit = function() {
+    return this.hourlyRate * this.hours * (1 - this.taxRate)
+  }
+  this.invoiceClient = function(){
+    return `Your invoice total is ${this.hourlyRate * this.hours}`
+  }
+}
+
+let leon = new AgencyContractor(250,160,.35)
+console.log( leon.invoiceClient() ) //40000
+console.log( leon.hourlyRate ) //250
+console.log( leon.calculateProfit() ) //26000</code></pre>
+<h1 style="height: auto; width: 600px; left: 180px; top: 21.5px;; position: absolute">Ut Oh...</h1>
+<p style="height: auto; width: 960px; left: 0px; top: 647.5px;; position: absolute">I PUT THIS CALCULATOR ON OUR AGENCY WEBSITE...</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-066"><span class="slide-indicator">Slide 66 of 87</span><pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 960px; height: 515.5px; left: 0px; top: 140px;; position: absolute"><code>function AgencyContractor(hourlyRate, hours, taxRate){
+  this.hours = hours
+  this.taxRate = taxRate
+  let rate = hourlyRate
+  let calculateProfit = function() {
+    return rate * this.hours * (1 - this.taxRate)
+  }
+  this.invoiceClient = function(){
+    return `Your invoice total is ${rate * this.hours}`
+  }
+}
+
+let leon = new AgencyContractor(250,160,.35)
+console.log( leon.invoiceClient() ) //40000
+console.log( leon.hourlyRate ) //undefined
+console.log( leon.calculateProfit() ) 
+//Uncaught TypeError: leon.calculateProfit is not a function</code></pre>
+<h1 style="height: auto; width: 600px; left: 180px; top: 21.5px;; position: absolute">Better...</h1>
+<p style="height: auto; width: 600px; left: 571px; top: 655.5px;; position: absolute"><span style="font-size:0.5em"><span style="color:rgb(255, 255, 255)">*Nerds shaking violently</span></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-067"><span class="slide-indicator">Slide 67 of 87</span><h1 style="width: 806px; left: 77px; top: 156px; height: auto;; position: absolute">So now my client can still get their invoice, but not see my hourly rate</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-068"><span class="slide-indicator">Slide 68 of 87</span><h1 style="width: 806px; left: 80px; top: 59px; height: auto;; position: absolute">Water boiling was hidden from the steam wand</h1>
+<h1 style="width: 806px; left: 74px; top: 386px; height: auto;; position: absolute">Hourly rate was hidden from the client</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-069"><span class="slide-indicator">Slide 69 of 87</span><h1 style="width: 806px; left: 77px; top: 210px; height: auto;; position: absolute">Complex or unnecessary details are hidden</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-070"><span class="slide-indicator">Slide 70 of 87</span><h2 style="width: 806px; left: 77px; top: 165px; height: auto;; position: absolute">This enables you to implement things without understanding or even thinking about all the hidden complexity</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-071"><span class="slide-indicator">Slide 71 of 87</span><h1 style="width: 806px; left: 76px; top: 210px; height: auto;; position: absolute">Smaller more manageable pieces of code</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-072"><span class="slide-indicator">Slide 72 of 87</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Do stuff once</h1>
+<p style="height: auto; width: 600px; left: 180px; top: 661px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-073"><span class="slide-indicator">Slide 73 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Abstraction Baby</h2>
+<img src="https://media0.giphy.com/media/mks5DcSGjhQ1a/giphy.gif" width="245" height="179" style="position: absolute; max-width: 100%;width: 651.508px; height: 476px; left: 154.246px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-074"><span class="slide-indicator">Slide 74 of 87</span><img src="https://media2.giphy.com/media/GdAmjKhcXWJ6U/giphy.gif" width="400" height="225" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 192.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-075"><span class="slide-indicator">Slide 75 of 87</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Abstraction</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute;z-index: 11;">
+<h2>Hide details</h2>
+
+<h2>and show essentials</h2>
+</h2>
+<p style="height: auto; width: 600px; left: 180px; top: 521px;; position: absolute">SIMPLE, PREDICTABLE, MANAGEABLE</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-076"><span class="slide-indicator">Slide 76 of 87</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">The Four Pillars</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">What if they actually made any sense...</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-077"><span class="slide-indicator">Slide 77 of 87</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Encapsulation</h1>
+<h2 style="width: 806px; left: 78px; top: 286px; height: auto;; position: absolute">The process of storing functions (methods) with their associated data (properties) in one thing (object)</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-078"><span class="slide-indicator">Slide 78 of 87</span><h2 style="width: 806px; left: 77px; top: 84.5px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-079"><span class="slide-indicator">Slide 79 of 87</span><div style="height: auto; width: 952px; left: 4px; top: 107px;; position: absolute;z-index: 10;">
+<h2 style="color:rgb(255, 255, 255)">Made it easier to add new stuff</h2>
+
+<p>&nbsp;</p>
+
+<h2 style="color:rgb(255, 255, 255)">Made it easier to read through what was already coded</h2>
+
+<p>&nbsp;</p>
+
+<h2 style="color:rgb(255, 255, 255)">And made it so you were not afraid to make changes</h2>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-080"><span class="slide-indicator">Slide 80 of 87</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Abstraction</h1>
+<h2 style="width: 806px; left: 77px; top: 308px; height: auto;; position: absolute;z-index: 11;">
+<h2>Hide details</h2>
+
+<h2>and show essentials</h2>
+</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-081"><span class="slide-indicator">Slide 81 of 87</span><h2 style="width: 806px; left: 77px; top: 84.5px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-082"><span class="slide-indicator">Slide 82 of 87</span><div style="height: auto; width: 600px; left: 180px; top: 140px;; position: absolute;z-index: 10;">
+<h1 style="color:rgb(255, 255, 255)">Smaller more manageable pieces of code</h1>
+
+<p><span style="color:#FFFF00"><span style="font-size:21.328px; text-align:start">Helps you to split the complexity your software project into manageable parts</span></span></p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-083"><span class="slide-indicator">Slide 83 of 87</span><h1 style="width: 806px; left: 77px; top: 183px; height: auto;; position: absolute">Inheritance</h1>
+<h1 style="height: auto; width: 600px; left: 180px; top: 280px;; position: absolute;color:rgb(255, 255, 255)">Polymophism</h1>
+<p style="height: auto; width: 600px; left: 180px; top: 400.5px;; position: absolute">Next Class</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-084"><span class="slide-indicator">Slide 84 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Group Work</h2>
+<img src="https://media4.giphy.com/media/RJW92h4vWo8GeQZyE6/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 150.312px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 800px; left: 80px; top: 591px;; position: absolute"><a href="https://live.remo.co/e/100devs-objects-project" target="_blank">https://live.remo.co/e/100devs-objects-project</a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-085"><span class="slide-indicator">Slide 85 of 87</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Right Of Passage</h2>
+<img src="https://media3.giphy.com/media/26grMgCg1xZh28AF2/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%;width: 634.667px; height: 476px; left: 161.666px; top: 154px; min-width: 1px; min-height: 1px;">
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-086"><span class="slide-indicator">Slide 86 of 87</span><h1 style="width: 806px; left: 77px; top: 117.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>Get It To Work&nbsp;</h1>
+
+<p>&nbsp;</p>
+
+<p>Then:<br>
+&nbsp;</p>
+
+<p style="color:rgb(255, 255, 255)">Make it easier to add new stuff</p>
+
+<p style="color:rgb(255, 255, 255)">&nbsp;</p>
+
+<p style="color:rgb(255, 255, 255)">Make it easier to read through what was already coded</p>
+
+<p style="color:rgb(255, 255, 255)">&nbsp;</p>
+
+<p style="color:rgb(255, 255, 255)">And make it so you are not afraid to make changes</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-087"><span class="slide-indicator">Slide 87 of 87</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Homework</h1>
+<div style="height: auto; width: 802px; left: 80.3795px; top: 420px;; position: absolute;z-index: 11;">
+<p>&nbsp;</p>
+
+<p><span style="font-size:1.0em">Watch / Do: </span><a href="https://youtu.be/PFmuCDHHpwk" target="_blank">https://youtu.be/PFmuCDHHpwk</a></p>
+
+<p>Read / Do: <a href="https://github.com/thejsway/thejsway/blob/master/manuscript/chapter09.md" target="_blank">JS Way Ch. 09</a></p>
+
+<p>Push? Read / Do: <a href="https://eloquentjavascript.net/06_object.html" target="_blank">Eloquent JS Ch. 06</a></p>
+
+<p><span style="font-size:1.0em">Do: 7 Codewars </span></p>
+</div>
+
+<img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%;width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px;"></section>
+    </main>
+  </body>
+  <script>
+const PROPS = ['width', 'height', 'top', 'left', 'right', 'bottom', 'font-size']
+
+function saveOriginalSizes(element) {
+	for (const prop of PROPS) {
+		const dataProp = 'data-original-' + prop;
+		if (element.style[prop]) {
+			if (!element.hasAttribute(dataProp)) {
+				element.setAttribute(dataProp, element.style[prop]);
+			}
+		}
+	}
+}
+
+function scaleSizes(element, scale) {
+	const props = PROPS.filter(prop => element.style[prop]);
+	for (const prop of props) {
+		const rawOrigValue = element.getAttribute('data-original-' + prop)
+		if (rawOrigValue.startsWith('auto')) continue;
+
+		const origValue = parseFloat(element.getAttribute('data-original-' + prop));
+
+		const unit = rawOrigValue.slice(-2);
+		element.style[prop] = (origValue * scale) + unit;
+	}
+}
+
+function fancyScaleSlides(){
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	for (const slide of slides){
+		saveOriginalSizes(slide);
+		scaleSizes(slide, scale);
+	}
+	/*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+	const sizedChildren = Array.from(document.querySelectorAll('.slide *')).filter(el => el.hasAttribute('style') && PROPS.some(prop => el.getAttribute('style')?.includes(prop + ':')));
+	for (const el of sizedChildren) {
+		saveOriginalSizes(el);
+		scaleSizes(el, scale);
+	}
+}
+
+function scaleSlides() {
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});
+}
+
+window.addEventListener('resize', scaleSlides);
+window.addEventListener('load', scaleSlides);
+document.addEventListener('DOMContentLoaded', scaleSlides);
+  </script>
+</html>

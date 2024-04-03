@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is class 16 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord">
+
+    <title>#100Devs - JS Review & Loops (cohort 2)</title>
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.3;
+	background-color: #444444;
+	color: #FFFFFF;
+}
+ul {
+	text-align: left;
+	list-style: bullet;
+}
+
+ol {
+	list-style: number;
+}
+
+.slide {
+	position: relative;
+	border: 1px solid white;
+	transform-origin: top left;
+}
+.slide-indicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - JS Review & Loops (cohort 2)</h1>
+      <p>This is class 16 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+	        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">Submitting Work</a>
+        </li>
+        <li>
+          <a href="#slide-006">Slide #006</a>
+        </li>
+        <li>
+          <a href="#slide-007">Javascript Should NOT Make Sense YET</a>
+        </li>
+        <li>
+          <a href="#slide-008">You Should Still Struggle With CSS</a>
+        </li>
+        <li>
+          <a href="#slide-009">You Should Still Stumble Choosing HTML Tags</a>
+        </li>
+        <li>
+          <a href="#slide-010">THIS IS ALL NORMAL</a>
+        </li>
+        <li>
+          <a href="#slide-011">But What About Freelancing?</a>
+        </li>
+        <li>
+          <a href="#slide-012">Slide #012</a>
+        </li>
+        <li>
+          <a href="#slide-013">There Are No Other 100Devs Classes or Teachers&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-014">Stream Team Assemble</a>
+        </li>
+        <li>
+          <a href="#slide-015">Please Be Kind</a>
+        </li>
+        <li>
+          <a href="#slide-016">Want to be fancy?</a>
+        </li>
+        <li>
+          <a href="#slide-017">The Winner Is:&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-018">What&apos;s Next?</a>
+        </li>
+        <li>
+          <a href="#slide-019">The Golden Rule</a>
+        </li>
+        <li>
+          <a href="#slide-020">IDs &amp; Classes</a>
+        </li>
+        <li>
+          <a href="#slide-021">IDs</a>
+        </li>
+        <li>
+          <a href="#slide-022">Classes</a>
+        </li>
+        <li>
+          <a href="#slide-023">Programming</a>
+        </li>
+        <li>
+          <a href="#slide-024">A computer will do what you tell it to do.</a>
+        </li>
+        <li>
+          <a href="#slide-025">What is a program?</a>
+        </li>
+        <li>
+          <a href="#slide-026">What is a programming?</a>
+        </li>
+        <li>
+          <a href="#slide-027">True Story</a>
+        </li>
+        <li>
+          <a href="#slide-028">JAVASCRIPT</a>
+        </li>
+        <li>
+          <a href="#slide-029">Has a specific &apos;Syntax&apos;</a>
+        </li>
+        <li>
+          <a href="#slide-030">Variables</a>
+        </li>
+        <li>
+          <a href="#slide-031">Variables</a>
+        </li>
+        <li>
+          <a href="#slide-032">Variables</a>
+        </li>
+        <li>
+          <a href="#slide-033">Variable Conventions</a>
+        </li>
+        <li>
+          <a href="#slide-034">Slide #034</a>
+        </li>
+        <li>
+          <a href="#slide-035">Strings</a>
+        </li>
+        <li>
+          <a href="#slide-036">Strings</a>
+        </li>
+        <li>
+          <a href="#slide-037">Numbers</a>
+        </li>
+        <li>
+          <a href="#slide-038">Numbers</a>
+        </li>
+        <li>
+          <a href="#slide-039">Arithmetic In Javascript</a>
+        </li>
+        <li>
+          <a href="#slide-040">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-041">Slide #041</a>
+        </li>
+        <li>
+          <a href="#slide-042">Slide #042</a>
+        </li>
+        <li>
+          <a href="#slide-043">Logical Operators</a>
+        </li>
+        <li>
+          <a href="#slide-044">Conditional Syntax</a>
+        </li>
+        <li>
+          <a href="#slide-045">Conditional Syntax</a>
+        </li>
+        <li>
+          <a href="#slide-046">Conditional Syntax</a>
+        </li>
+        <li>
+          <a href="#slide-047">&#128680; DANGER &#128680;</a>
+        </li>
+        <li>
+          <a href="#slide-048">Multiple Conditions</a>
+        </li>
+        <li>
+          <a href="#slide-049">Multiple Conditions</a>
+        </li>
+        <li>
+          <a href="#slide-050">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-051">Slide #051</a>
+        </li>
+        <li>
+          <a href="#slide-052">Slide #052</a>
+        </li>
+        <li>
+          <a href="#slide-053">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-054">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-055">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-056">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-057">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-058">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-059">Loops</a>
+        </li>
+        <li>
+          <a href="#slide-060">Loops</a>
+        </li>
+        <li>
+          <a href="#slide-061">Loops - For</a>
+        </li>
+        <li>
+          <a href="#slide-062">Loops - For</a>
+        </li>
+        <li>
+          <a href="#slide-063">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-064">Loops - While</a>
+        </li>
+        <li>
+          <a href="#slide-065">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-066">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-067">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-068">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001"><span class="slide-indicator">Slide 1 of 68</span><h1 style="width: 960px; left: 0px; top: 348.5px; height: auto;; position: absolute;z-index: 10;">
+<h2>&nbsp;</h2>
+
+<h2>Javascript - Review &amp; Loops</h2>
+</h1>
+<h2 style="height: auto; width: 600px; left: 180px; top: 523px;; position: absolute"><span style="color:#FFFFFF"><span style="font-size:1.0em">Leon Noel</span></span></h2>
+<p style="height: auto; width: 960px; left: 0px; top: 610.5px;; position: absolute">"I ain't know nothin' 'bout no Visa, I was in the park with the gang"</p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 600px; left: 180px; top: 330.5px;; position: absolute">#100Devs</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002"><span class="slide-indicator">Slide 2 of 68</span><h1 style="width: 806px; left: 77px; top: 0px; height: auto;; position: absolute">Agenda</h1>
+<ul style="width: 806px; left: 77px; top: 113px; height: auto;; position: absolute">
+	<li>Questions?&nbsp;</li>
+	<li>Let's Talk -&nbsp; Next Week</li>
+	<li>Review - Pseudo Code</li>
+	<li>Review - Variables</li>
+	<li>Review - Conditionals</li>
+	<li>Review - Functions</li>
+	<li>Learn - Loops</li>
+	<li>Homework - Work During Break&nbsp;</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003"><span class="slide-indicator">Slide 3 of 68</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h2>Questions</h2>
+
+<h3>About last class or life</h3>
+</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%;width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004"><span class="slide-indicator">Slide 4 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Checking In</h2>
+<img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%;width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 806px; left: 77px; top: 521px;; position: absolute;z-index: 12;">
+<h3>Like and Retweet the Tweet</h3>
+
+<h3>!checkin</h3>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005"><span class="slide-indicator">Slide 5 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Submitting Work</h2>
+<img src="https://media3.giphy.com/media/26uf7rl7j6RVibDz2/giphy.gif" width="480" height="248" style="position: absolute; max-width: 100%;width: 709.999px; height: 366.833px; left: 125px; top: 166.583px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 960px; left: 0px; top: 574.5px;; position: absolute;z-index: 12;">
+<h3>&nbsp;Share What JS You Added in <a href="https://codepen.io" target="_blank">codepen.io</a>
+</h3>
+
+<p>Submit URLs here: <a href="https://forms.gle/G7LhHnyTA7zYq7UV6" target="_blank">https://forms.gle/G7LhHnyTA7zYq7UV6</a></p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006"><span class="slide-indicator">Slide 6 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">
+<a href="https://allpoetry.com/poem/8624439-Thinking-by-Walter-D-Wintle" target="_blank">Thinking </a>by Walter D Wintle</h2>
+<img src="https://media2.giphy.com/media/WoWm8YzFQJg5i/giphy.gif" width="499" height="365" style="position: absolute; max-width: 100%;width: 650.751px; height: 476px; left: 154.625px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007"><span class="slide-indicator">Slide 7 of 68</span><h2 style="width: 800px; left: 80px; top: 17px; height: auto;; position: absolute">Javascript Should <span style="color:#FFD700">NOT</span> Make Sense YET</h2>
+<img src="https://media4.giphy.com/media/9IY2w9oodUi8sJSbvL/giphy.gif" width="388" height="218" style="position: absolute; max-width: 100%;width: 806.399px; height: 453.08px; left: 80px; top: 193.46px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008"><span class="slide-indicator">Slide 8 of 68</span><h2 style="width: 800px; left: 80px; top: 17px; height: auto;; position: absolute">You Should Still <span style="color:#FFD700">Struggle</span> With CSS</h2>
+<img src="https://media4.giphy.com/media/9IY2w9oodUi8sJSbvL/giphy.gif" width="388" height="218" style="position: absolute; max-width: 100%;width: 806.399px; height: 453.08px; left: 80px; top: 193.46px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009"><span class="slide-indicator">Slide 9 of 68</span><h2 style="width: 880px; left: 44.1995px; top: 15px; height: auto;; position: absolute">You Should Still <span style="color:#FFD700">Stumble</span> Choosing HTML Tags</h2>
+<img src="https://media4.giphy.com/media/9IY2w9oodUi8sJSbvL/giphy.gif" width="388" height="218" style="position: absolute; max-width: 100%;width: 806.399px; height: 453.08px; left: 80px; top: 193.46px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010"><span class="slide-indicator">Slide 10 of 68</span><img src="https://media0.giphy.com/media/l0HU6Orl4E2QhkJws/giphy.gif" width="480" height="281" style="position: absolute; max-width: 100%;width: 710px; height: 415.646px; left: 125px; top: 247.177px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 960px; left: 0px; top: 50.5px;; position: absolute;z-index: 11;">
+<h2>THIS IS ALL <span style="color:#FFD700">NORMAL</span>
+</h2>
+
+<h2>YOU <span style="color:#FFD700">CAN </span>AND<span style="color:#FFD700"> WILL</span> DO THIS</h2>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011"><span class="slide-indicator">Slide 11 of 68</span><h2 style="width: 967px; left: -3.5px; top: 103px; height: auto;; position: absolute">But What About <span style="color:#FFD700">Freelancing</span>?</h2>
+<img src="https://media4.giphy.com/media/ZoAa7lsmym6UE/giphy.gif" width="435" height="202" style="position: absolute; max-width: 100%;width: 710px; height: 329.701px; left: 125px; top: 269.149px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012"><span class="slide-indicator">Slide 12 of 68</span><h2 style="width: 960px; left: 0px; top: 9px; height: auto;; position: absolute;z-index: 10;">
+<h2>I'm NOT GOING TO</h2>
+
+<h3>TEXT YOU, CALL YOU, EMAIL YOU OUTSIDE OF THE NEWSLETTER, DM YOU ON TWITTER OR DISCORD, Or EVER ASK YOU FOR MONEY!</h3>
+</h2>
+<img src="https://media3.giphy.com/media/M9fuzxT2WJbcGNIZIQ/giphy.gif" width="440" height="248" style="position: absolute; max-width: 100%;width: 806.399px; height: 454.516px; left: 80px; top: 245.484px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013"><span class="slide-indicator">Slide 13 of 68</span><h1 style="width: 960px; left: 0px; top: 0px; height: auto;; position: absolute">There Are No Other 100Devs Classes or Teachers&nbsp;</h1>
+<div style="height: auto; width: 600px; left: 180px; top: 330.5px;; position: absolute;z-index: 11;">
+<p>But We Have An Amazing <a href="https://www.twitch.tv/team/100devs" target="_blank">Stream Team</a><br>
+<a href="https://www.twitch.tv/thedabolical" target="_blank">https://www.twitch.tv/thedabolical</a></p>
+
+<p><a href="https://www.twitch.tv/oldcoderchick" target="_blank">https://www.twitch.tv/oldcoderchick</a></p>
+
+<p>&nbsp;</p>
+
+<p>And Amazing Folx on Discord</p>
+
+<p>Shout Out @Mayanwolfe</p>
+
+<p>30+ Alumni Mentors!</p>
+</div>
+<p style="height: auto; width: 600px; left: 376px; top: 241px;; position: absolute">(yet)</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014"><span class="slide-indicator">Slide 14 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Stream Team Assemble</h2>
+<img src="https://media1.giphy.com/media/100PgquHm9j3sQ/giphy.gif" width="400" height="260" style="position: absolute; max-width: 100%;width: 710px; height: 461.5px; left: 125px; top: 140px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute"><a href="https://forms.gle/LcnfRn6NMJqbto6q6" target="_blank">https://forms.gle/LcnfRn6NMJqbto6q6</a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015"><span class="slide-indicator">Slide 15 of 68</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Please Be Kind</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016"><span class="slide-indicator">Slide 16 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Want to be fancy?</h2>
+<img src="https://media3.giphy.com/media/13LE0091PFj66s/giphy.gif" width="500" height="450" style="position: absolute; max-width: 100%;width: 440.463px; height: 396.417px; left: 259.769px; top: 151.792px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 591px;; position: absolute">Best Clip Get's Special Color On Discord!</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017"><span class="slide-indicator">Slide 17 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">The Winner Is:&nbsp;</h2>
+<img src="https://media0.giphy.com/media/l44Q6Etd5kdSGttXa/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 140px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 577.5px;; position: absolute"><a href="https://clips.twitch.tv/PhilanthropicFineCurryGingerPower-skaxA9MSCde-XOrU" target="_blank"><span class="headerTagUsernameBase-XYisdh headerTagUsernameNoNickname-1TjuLc username-3JLfHz" style="color:var(--interactive-active); text-align:start">Nikolaus</span><span class="discrimBase-1VOoau headerTagDiscriminatorNoNickname-dfcvHa" style="color:var(--header-secondary); text-align:start">#1985</span></a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018"><span class="slide-indicator">Slide 18 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">What's Next?</h2>
+<img src="https://media1.giphy.com/media/3o84srlFElFgKejXFu/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%;width: 690.667px; height: 518px; left: 134.666px; top: 140px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019"><span class="slide-indicator">Slide 19 of 68</span><h1 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute">The Golden Rule</h1>
+<h2 style="width: 872px; left: 44px; top: 167px; height: auto;; position: absolute">SEPERATION OF CONCERNS</h2>
+<ul style="height: auto; width: 600px; left: 180px; top: 330.5px;; position: absolute">
+	<li>HTML = Content / Structure</li>
+	<li>CSS = Style</li>
+	<li>JS = Behavior / Interaction</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020"><span class="slide-indicator">Slide 20 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">IDs &amp; Classes</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7647416/specific.gif" width="508" height="284" style="position: absolute; max-width: 100%;width: 710px; height: 396.929px; left: 124px; top: 193.536px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021"><span class="slide-indicator">Slide 21 of 68</span><h2 style="width: 806px; left: 77px; top: 33px; height: auto;; position: absolute">IDs</h2>
+<pre class="css" style="font-size: 42px; line-height: 50px;;width: 366px; height: 159.25px; left: 298px; top: 530.375px;; position: absolute"><code>#zebra {
+  color: red;
+}</code></pre>
+<div style="height: auto; width: 800px; left: 80px; top: 140px;; position: absolute;z-index: 12;">
+<h3><span style="color:rgb(93.333340%, 93.333340%, 93.333340%); font-size:25.000000pt">IDs are used for selecting distinct elements</span></h3>
+
+<p><strong><span style="color:#FFD700"><span style="font-size:25pt">Only one id with the same value per document</span></span></strong></p>
+
+<h3><span style="color:rgb(93.333340%, 93.333340%, 93.333340%); font-size:25.000000pt">#idName</span></h3>
+</div>
+<pre class="xml" style="font-size: 32px; line-height: 38px;;width: 687px; height: 169px; left: 138.5px; top: 335.5px;; position: absolute"><code>&lt;section&gt;
+  &lt;p&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;p id="zebra"&gt;Hello, Youtube!&lt;/p&gt;
+&lt;/section&gt;</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022"><span class="slide-indicator">Slide 22 of 68</span><h2 style="width: 806px; left: 77px; top: 33px; height: auto;; position: absolute">Classes</h2>
+<pre class="css" style="font-size: 42px; line-height: 50px;;width: 366px; height: 159.25px; left: 298px; top: 530.375px;; position: absolute"><code>.bob {
+  color: red;
+}</code></pre>
+<div style="height: auto; width: 888px; left: 36px; top: 147px;; position: absolute;z-index: 12;">
+<h3><span style="color:rgb(93.333340%, 93.333340%, 93.333340%); font-size:25.000000pt">Classes are for selecting multiple elements</span></h3>
+
+<p><strong><span style="color:#FFD700"><span style="font-size:25pt">Multiple with same value allowed per document</span></span></strong></p>
+
+<h3><span style="color:rgb(93.333340%, 93.333340%, 93.333340%); font-size:25.000000pt">.className</span></h3>
+</div>
+<pre class="xml" style="font-size: 32px; line-height: 38px;;width: 910px; height: 202.875px; left: 27px; top: 318.562px;; position: absolute"><code>&lt;section&gt;
+  &lt;p class="robot"&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;p id="zebra" class="bob"&gt;Hello, Youtube!&lt;/p&gt;
+  &lt;p class="bob"&gt;Goodbye, Mixer!&lt;/p&gt;
+&lt;/section&gt;</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023"><span class="slide-indicator">Slide 23 of 68</span><h1 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Programming</h1>
+<img src="https://media3.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300" height="300" style="position: absolute; max-width: 100%;width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024"><span class="slide-indicator">Slide 24 of 68</span><h1 style="width: 806px; left: 102px; top: 253px; height: auto;; position: absolute">A computer will do what you tell it to do.</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025"><span class="slide-indicator">Slide 25 of 68</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">What is a program?</h1>
+<h3 style="width: 806px; left: 77px; top: 349px; height: auto;; position: absolute">A <span style="color:#FFD700"><strong>program</strong></span> is a set of instructions that you write to tell a computer what to do</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026"><span class="slide-indicator">Slide 26 of 68</span><h1 style="width: 883px; left: 38.5px; top: 113px; height: auto;; position: absolute">What is a programming?</h1>
+<h3 style="width: 806px; left: 77px; top: 349px; height: auto;; position: absolute">
+<span style="color:#FFD700">Programming</span> is the task of writing those instructions in a language that the computer can understand.</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027"><span class="slide-indicator">Slide 27 of 68</span><h2 style="width: 806px; left: 80.9545px; top: 96px; height: auto;; position: absolute">True Story</h2>
+<img src="https://media3.giphy.com/media/3ohc142474TUT6Tazm/giphy.gif" width="500" height="281" style="position: absolute; max-width: 100%;width: 632.091px; height: 355.235px; left: 167.909px; top: 196.765px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028"><span class="slide-indicator">Slide 28 of 68</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">JAVASCRIPT</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7684153/js.png" width="512" height="512" style="position: absolute; max-width: 100%;width: 518px; height: 518px; left: 221px; top: 153px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029"><span class="slide-indicator">Slide 29 of 68</span><h2 style="width: 806px; left: 91px; top: 140px; height: auto;; position: absolute">Has a specific 'Syntax'</h2>
+<p style="width: 806px; left: 74px; top: 280px; height: auto;; position: absolute"><strong>Syntax: "</strong><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Spelling and grammar" rules of a programming language. </span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030"><span class="slide-indicator">Slide 30 of 68</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Variables</h1>
+<h2 style="width: 806px; left: 77px; top: 350px; height: auto;; position: absolute">What are variables?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031"><span class="slide-indicator">Slide 31 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Variables</h1>
+<ul style="width: 806px; left: 77px; top: 263px; height: auto;; position: absolute">
+<li>We can tell our program to remember values for us to use later on </li>
+<p>​</p>
+<li>The entity we use to store the value is called a variable </li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032"><span class="slide-indicator">Slide 32 of 68</span><h1 style="width: 806px; left: 80px; top: 0px; height: auto;; position: absolute">Variables</h1>
+<div style="width: 806px; left: 77px; top: 152px; height: auto;; position: absolute;z-index: 11;">
+<h2>
+<span style="color:#FFD700">Declaration</span>: let age</h2>
+
+<h2>&nbsp;</h2>
+
+<h2>
+<span style="color:#FFD700">Assignment</span>: age = 25</h2>
+
+<h2>&nbsp;</h2>
+
+<h2>Both at the same time:</h2>
+
+<h2>let age = 25</h2>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033"><span class="slide-indicator">Slide 33 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Variable Conventions</h1>
+<div style="width: 806px; left: 77px; top: 263px; height: auto;; position: absolute;z-index: 11;">
+<h2>
+<font color="#ffd700">camelCase</font>:</h2>
+
+<h2>let numberOfApples = 9</h2>
+
+<h2>&nbsp;</h2>
+
+<p>&nbsp;</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034"><span class="slide-indicator">Slide 34 of 68</span><h1 style="width: 897px; left: 31.5px; top: 70px; height: auto;; position: absolute;z-index: 10;">
+<h1>Variables</h1>
+
+<h1>&amp; Data Types</h1>
+</h1>
+<h3 style="width: 806px; left: 77px; top: 349px; height: auto;; position: absolute">What can you store in variables?</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035"><span class="slide-indicator">Slide 35 of 68</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">Strings</h1>
+<ul style="width: 806px; left: 80px; top: 210px; height: auto;; position: absolute">
+	<li>Stores text</li>
+	<li>String is surrounded by quotes</li>
+</ul>
+<div style="height: auto; width: 884px; left: 38px; top: 406px;; position: absolute;z-index: 12;">
+<h2>"How is the weather today?"</h2>
+
+<h2>'Warm'</h2>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036"><span class="slide-indicator">Slide 36 of 68</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">Strings</h1>
+<h3 style="width: 806px; left: 80px; top: 210px; height: auto;; position: absolute">Double vs Single Quoted Strings:</h3>
+<h1 style="height: auto; width: 884px; left: 38px; top: 350px;; position: absolute">'They "purchased" it'<br>
+"It's a beautiful day"</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037"><span class="slide-indicator">Slide 37 of 68</span><h1 style="width: 806px; left: 77px; top: 114px; height: auto;; position: absolute">Numbers</h1>
+<h2 style="width: 806px; left: 77px; top: 211px; height: auto;; position: absolute;z-index: 11;">
+<h2>Represent Numerical Data</h2>
+
+<h1>int: 29</h1>
+
+<h1>float: 5.14876</h1>
+</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038"><span class="slide-indicator">Slide 38 of 68</span><h1 style="width: 806px; left: 77px; top: 114px; height: auto;; position: absolute">Numbers</h1>
+<h2 style="width: 806px; left: 77px; top: 211px; height: auto;; position: absolute;z-index: 11;">
+<h2>Signed</h2>
+
+<h1>int: +4</h1>
+
+<h1>float: -10.375</h1>
+</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039"><span class="slide-indicator">Slide 39 of 68</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Arithmetic In Javascript</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7687178/arithmetic.png" width="726" height="584" style="position: absolute; max-width: 100%;width: 591.74px; height: 476px; left: 184.13px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-040"><span class="slide-indicator">Slide 40 of 68</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Variable Fun Time</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-041"><span class="slide-indicator">Slide 41 of 68</span><h1 style="width: 888px; left: 40px; top: 10px; height: auto;; position: absolute;z-index: 10;">
+<h1>Making Decisions</h1>
+
+<p>&nbsp;</p>
+
+<h3>It's either TRUE or FALSE&nbsp;</h3>
+
+<h3>If you are greater than 18 you are an adult</h3>
+</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 819px; height: 140px; left: 70.5px; top: 316px;; position: absolute"><code>if (age &gt; 18){
+  console.log("You are an adult")
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-042"><span class="slide-indicator">Slide 42 of 68</span><h1 style="width: 888px; left: 40px; top: 10px; height: auto;; position: absolute;z-index: 10;">
+<h1>Comparisons:</h1>
+
+<h1>Equality</h1>
+
+<p>&nbsp;</p>
+
+<h3>Are two things equal?</h3>
+</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 516px; height: 140px; left: 222px; top: 382px;; position: absolute"><code>9 === 9 //true
+7 === 3 //false
+"Hello" === "Hello" //true</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-043"><span class="slide-indicator">Slide 43 of 68</span><h1 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Logical Operators</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7687190/ops.png" width="1498" height="1290" style="position: absolute; max-width: 100%;width: 634.037px; height: 546px; left: 160px; top: 139px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-044"><span class="slide-indicator">Slide 44 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Conditional Syntax</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 462px; height: 127.5px; left: 240px; top: 280px;; position: absolute"><code>if(condition is true) {
+  //Do cool stuff
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-045"><span class="slide-indicator">Slide 45 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Conditional Syntax</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 560px; height: 280px; left: 200px; top: 280px;; position: absolute"><code>if(condition is true) {
+  //Do this cool stuff
+}else if(condition is true){
+  //Do this other cool stuff
+}else{
+  //Default cool stuff
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-046"><span class="slide-indicator">Slide 46 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Conditional Syntax</h1>
+<pre class="javascript" style="font-size: 26px; line-height: 31px;;width: 885px; height: 301px; left: 37.5px; top: 269.5px;; position: absolute"><code>const pizza = "Dominos"
+
+if (pizza === "Papa Johns") {
+  console.log("Scram!")
+} else if(pizza === "Dominos") {
+  console.log("All aboard the train to flavor town")
+} else {
+  console.log("What are you even doing with your life?")
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-047"><span class="slide-indicator">Slide 47 of 68</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">🚨 DANGER 🚨</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">Assignment vs. Comparison</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-048"><span class="slide-indicator">Slide 48 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Multiple Conditions</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 853px; height: 127.5px; left: 53.5px; top: 280px;; position: absolute"><code>if (name === "Leon" &amp;&amp; status === "Ballin"){
+ //Wink at camera
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-049"><span class="slide-indicator">Slide 49 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Multiple Conditions</h1>
+<pre class="javascript" style="font-size: 32px; line-height: 38px;;width: 854px; height: 127.5px; left: 46px; top: 280px;; position: absolute"><code>if (day === "Saturday" || day === "Sunday"){
+  //It is the weekend
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-050"><span class="slide-indicator">Slide 50 of 68</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h2 style="height: auto; width: 960px; left: 0px; top: 593px;; position: absolute">Age Checker</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-051"><span class="slide-indicator">Slide 51 of 68</span><h1 style="width: 806px; left: 77px; top: 129px; height: auto;; position: absolute;z-index: 10;">
+<h1>In Chat:</h1>
+
+<h1>What is the best TV show of all time?</h1>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-052"><span class="slide-indicator">Slide 52 of 68</span><h1 style="width: 806px; left: 77px; top: 177.5px; height: auto;; position: absolute;z-index: 10;">
+<h1>Answer:</h1>
+
+<h1>The Bachelor</h1>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-053"><span class="slide-indicator">Slide 53 of 68</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Functions</h1>
+<h2 style="width: 806px; left: 77px; top: 350px; height: auto;; position: absolute">What are functions?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-054"><span class="slide-indicator">Slide 54 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Functions</h1>
+<ul style="width: 960px; left: 0px; top: 249.5px; height: auto;; position: absolute">
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Functions are simple sets of </span><span style="color:#FFD700"><span style="font-size:25pt">instructions</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">!</span>
+</li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Functions are </span><span style="color:#FFD700"><span style="font-size:25pt">reusable</span></span>
+</li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Functions </span><span style="color:#FFD700"><span style="font-size:25pt">perform one action</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt"> as a best practice</span>
+</li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">They form the basic "</span><span style="color:#FFD700"><span style="font-size:25pt">building blocks</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">" of a program </span>
+</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-055"><span class="slide-indicator">Slide 55 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Functions</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 672px; height: 320.5px; left: 144px; top: 259.75px;; position: absolute"><code>function name(parameters){
+  //body
+}
+
+//call
+name(arguments)</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-056"><span class="slide-indicator">Slide 56 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Functions</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 672px; height: 320.5px; left: 145px; top: 259.75px;; position: absolute"><code>function yell(word){
+  alert(word)
+}
+
+
+yell("HELLO")</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-057"><span class="slide-indicator">Slide 57 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Functions</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 787px; height: 370.25px; left: 86.5px; top: 234.875px;; position: absolute"><code>function yell(word, otherWord){
+  alert(word)
+  alert(otherWord)
+}
+
+
+yell("HELLO","GOODBYE")</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-058"><span class="slide-indicator">Slide 58 of 68</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Simple Functions</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-059"><span class="slide-indicator">Slide 59 of 68</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Loops</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">What are loops?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-060"><span class="slide-indicator">Slide 60 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Loops</h1>
+<ul style="width: 960px; left: 0px; top: 249.5px; height: auto;; position: absolute">
+	<li>
+<span style="color:#FFD700"><span style="font-size:25pt">Repeat an action</span></span><span style="font-size:25pt"> some number of times!</span>
+</li>
+	<li>
+<span style="font-size:33.3333px">Three main types</span><font color="#eeeeee"><span style="font-size:33.3333px"> of loops in Javascript</span></font>
+</li>
+	<li><span style="color:#FFD700"><span style="font-size:33.3333px">For, while, and do while loops</span></span></li>
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Each type offers a different way to</span><span style="color:#FFD700"><span style="font-size:25pt"> determine the start and end points</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt"> of a loop</span>
+</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-061"><span class="slide-indicator">Slide 61 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Loops - For</h1>
+<pre class="javascript" style="font-size: 22px; line-height: 26px;;width: 959px; height: 145.5px; left: 1px; top: 280px;; position: absolute"><code>for ([initialExpression]; [conditionExpression]; [incrementExpression]){
+  
+  //do stuff 
+  
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-062"><span class="slide-indicator">Slide 62 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Loops - For</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 739px; height: 172.5px; left: 110.5px; top: 253.75px;; position: absolute"><code>for (let i = 1; i &lt; 5; i++) {
+  console.log(i)
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-063"><span class="slide-indicator">Slide 63 of 68</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 600px; left: 180px; top: 581.5px;; position: absolute">21 Savage Loop</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-064"><span class="slide-indicator">Slide 64 of 68</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Loops - While</h1>
+<pre class="javascript" style="font-size: 42px; line-height: 50px;;width: 739px; height: 326.5px; left: 109.5px; top: 253.75px;; position: absolute"><code>let count = 0 
+
+while(count &lt; 5){
+  console.log(count)
+  count++
+}</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-065"><span class="slide-indicator">Slide 65 of 68</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Stop Night Snacking</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-066"><span class="slide-indicator">Slide 66 of 68</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 600px; left: 180px; top: 581.5px;; position: absolute">Bring It On!</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-067"><span class="slide-indicator">Slide 67 of 68</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Bring It On Again!</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-068"><span class="slide-indicator">Slide 68 of 68</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Homework</h1>
+<p style="height: auto; width: 720.891px; left: 108.109px; top: 457.5px;; position: absolute">Text</p>
+
+<img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%;width: 638.891px; height: 370.557px; left: 161.109px; top: 140px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 600px; left: 180.554px; top: 560px;; position: absolute;z-index: 13;">
+<p>On Discord, you have more than a week!</p>
+
+<p>Office Hours - Sunday 1pm ET</p>
+</div></section>
+    </main>
+  </body>
+  <script>
+const PROPS = ['width', 'height', 'top', 'left', 'right', 'bottom', 'font-size']
+
+function saveOriginalSizes(element) {
+	for (const prop of PROPS) {
+		const dataProp = 'data-original-' + prop;
+		if (element.style[prop]) {
+			if (!element.hasAttribute(dataProp)) {
+				element.setAttribute(dataProp, element.style[prop]);
+			}
+		}
+	}
+}
+
+function scaleSizes(element, scale) {
+	const props = PROPS.filter(prop => element.style[prop]);
+	for (const prop of props) {
+		const rawOrigValue = element.getAttribute('data-original-' + prop)
+		if (rawOrigValue.startsWith('auto')) continue;
+
+		const origValue = parseFloat(element.getAttribute('data-original-' + prop));
+
+		const unit = rawOrigValue.slice(-2);
+		element.style[prop] = (origValue * scale) + unit;
+	}
+}
+
+function fancyScaleSlides(){
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	for (const slide of slides){
+		saveOriginalSizes(slide);
+		scaleSizes(slide, scale);
+	}
+	/*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+	const sizedChildren = Array.from(document.querySelectorAll('.slide *')).filter(el => el.hasAttribute('style') && PROPS.some(prop => el.getAttribute('style')?.includes(prop + ':')));
+	for (const el of sizedChildren) {
+		saveOriginalSizes(el);
+		scaleSizes(el, scale);
+	}
+}
+
+function scaleSlides() {
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});
+}
+
+window.addEventListener('resize', scaleSlides);
+window.addEventListener('load', scaleSlides);
+document.addEventListener('DOMContentLoaded', scaleSlides);
+  </script>
+</html>

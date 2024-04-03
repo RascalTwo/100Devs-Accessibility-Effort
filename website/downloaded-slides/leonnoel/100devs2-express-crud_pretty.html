@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Class 40 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord" />
+
+    <title>#100Devs - Express & CRUD (cohort 2)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.3;
+        background-color: #444444;
+        color: #ffffff;
+      }
+      ul {
+        text-align: left;
+        list-style: bullet;
+      }
+
+      ol {
+        list-style: number;
+      }
+
+      .slide {
+        position: relative;
+        border: 1px solid white;
+        transform-origin: top left;
+      }
+      .slide-indicator {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - Express & CRUD (cohort 2)</h1>
+      <p>Class 40 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here: leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">Submitting Work</a>
+        </li>
+        <li>
+          <a href="#slide-006">Slide #006</a>
+        </li>
+        <li>
+          <a href="#slide-007">Slide #007</a>
+        </li>
+        <li>
+          <a href="#slide-008">Summer Break</a>
+        </li>
+        <li>
+          <a href="#slide-009">Backend!</a>
+        </li>
+        <li>
+          <a href="#slide-010">NODE.js BABY</a>
+        </li>
+        <li>
+          <a href="#slide-011">Node.js is a JavaScript runtime built on Chrome&apos;s V8 JavaScript engine.</a>
+        </li>
+        <li>
+          <a href="#slide-012">Engine Vs. Compiler</a>
+        </li>
+        <li>
+          <a href="#slide-013">And just like the browser&apos;s Web APIs Node come with a bunch of stuff</a>
+        </li>
+        <li>
+          <a href="#slide-014">Slide #014</a>
+        </li>
+        <li>
+          <a href="#slide-015">Slide #015</a>
+        </li>
+        <li>
+          <a href="#slide-016">Not Web APIs, but C/C++ APIs</a>
+        </li>
+        <li>
+          <a href="#slide-017">Slide #017</a>
+        </li>
+        <li>
+          <a href="#slide-018">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-019">Slide #019</a>
+        </li>
+        <li>
+          <a href="#slide-020">How could we clean this up?</a>
+        </li>
+        <li>
+          <a href="#slide-021">Express</a>
+        </li>
+        <li>
+          <a href="#slide-022">Slide #022</a>
+        </li>
+        <li>
+          <a href="#slide-023">But First</a>
+        </li>
+        <li>
+          <a href="#slide-024">Slide #024</a>
+        </li>
+        <li>
+          <a href="#slide-025">How Does The Internet Work</a>
+        </li>
+        <li>
+          <a href="#slide-026">&quot;It is a set of rules that allow programs to talk to each other. The developer creates the API on the server and allows the client to talk to it.&quot;</a>
+        </li>
+        <li>
+          <a href="#slide-027">CRUD</a>
+        </li>
+        <li>
+          <a href="#slide-028">Mongo DB</a>
+        </li>
+        <li>
+          <a href="#slide-029">Slide #029</a>
+        </li>
+        <li>
+          <a href="#slide-030">Slide #030</a>
+        </li>
+        <li>
+          <a href="#slide-031">Rap Names</a>
+        </li>
+        <li>
+          <a href="#slide-032">Slide #032</a>
+        </li>
+        <li>
+          <a href="#slide-033">Rap Names</a>
+        </li>
+        <li>
+          <a href="#slide-034">Slide #034</a>
+        </li>
+        <li>
+          <a href="#slide-035">Rap Names</a>
+        </li>
+        <li>
+          <a href="#slide-036">Slide #036</a>
+        </li>
+        <li>
+          <a href="#slide-037">Rap Names</a>
+        </li>
+        <li>
+          <a href="#slide-038">Slide #038</a>
+        </li>
+        <li>
+          <a href="#slide-039">Slide #039</a>
+        </li>
+        <li>
+          <a href="#slide-040">Let&apos;s Build An App with Express</a>
+        </li>
+        <li>
+          <a href="#slide-041">Key Steps</a>
+        </li>
+        <li>
+          <a href="#slide-042">Setting Up The Project</a>
+        </li>
+        <li>
+          <a href="#slide-043">Connect To DB</a>
+        </li>
+        <li>
+          <a href="#slide-044">Setup Server</a>
+        </li>
+        <li>
+          <a href="#slide-045">API - GET</a>
+        </li>
+        <li>
+          <a href="#slide-046">API - POST</a>
+        </li>
+        <li>
+          <a href="#slide-047">Create EJS File</a>
+        </li>
+        <li>
+          <a href="#slide-048">Create Public Folder/Files</a>
+        </li>
+        <li>
+          <a href="#slide-049">API - DELETE</a>
+        </li>
+        <li>
+          <a href="#slide-050">Push To Heroku</a>
+        </li>
+        <li>
+          <a href="#slide-051">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-052">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main>
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001">
+        <span class="slide-indicator">Slide 1 of 52</span>
+        <h1 style="width: 960px; left: 0px; top: 210px; height: auto; position: absolute; z-index: 10">
+          <h2>&nbsp;</h2>
+
+          <h2>Express &amp; CRUD</h2>
+
+          <p>&nbsp;</p>
+        </h1>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 482px; position: absolute">
+          <span style="color: #ffffff"><span style="font-size: 1em">Leon Noel</span></span>
+        </h2>
+
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px" />
+        <h1 style="height: auto; width: 600px; left: 180px; top: 385px; position: absolute">#100Devs</h1>
+        <p style="height: auto; width: 800px; left: 80px; top: 591px; position: absolute">
+          We come from poverty, man, we ain't have a thing<br />
+          It's a lot of animosity, but they won't say my name
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002">
+        <span class="slide-indicator">Slide 2 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 0px; height: auto; position: absolute">Agenda</h1>
+        <ul style="width: 806px; left: 77px; top: 140px; height: auto; position: absolute">
+          <li>Questions?&nbsp;</li>
+          <li>Let's Talk -&nbsp; #100Devs</li>
+          <li>Review - CRUD&nbsp;</li>
+          <li>Review - Express</li>
+          <li>Learn - Post &amp; Delete</li>
+          <li>Learn - Build your APP</li>
+          <li>Homework - Build your own APP</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003">
+        <span class="slide-indicator">Slide 3 of 52</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute; z-index: 10">
+          <h2>Questions</h2>
+
+          <h3>About last class or life</h3>
+        </h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%; width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004">
+        <span class="slide-indicator">Slide 4 of 52</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Checking In</h2>
+        <img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%; width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px" />
+        <div style="height: auto; width: 806px; left: 77px; top: 521px; position: absolute; z-index: 12">
+          <h3>Like and Retweet the Tweet</h3>
+
+          <h3>!checkin</h3>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005">
+        <span class="slide-indicator">Slide 5 of 52</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Submitting Work</h2>
+        <img src="https://media3.giphy.com/media/26uf7rl7j6RVibDz2/giphy.gif" width="480" height="248" style="position: absolute; max-width: 100%; width: 709.999px; height: 366.833px; left: 125px; top: 166.583px; min-width: 1px; min-height: 1px" />
+        <div style="height: auto; width: 960px; left: 0px; top: 575.5px; position: absolute; z-index: 12">
+          <h3><a href="https://forms.gle/zia8G1FSugXCsVLk9" target="_blank">API Homework</a></h3>
+
+          <p>&nbsp;</p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006">
+        <span class="slide-indicator">Slide 6 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h1>Homework</h1>
+
+          <h1>(should be done)</h1>
+        </h1>
+        <h2 style="width: 806px; left: 74px; top: 358px; height: auto; position: absolute; z-index: 11">
+          <h2><a href="https://youtu.be/8aGhZQkoFbQ" target="_blank">Philip Roberts</a></h2>
+
+          <h2><a href="https://zellwk.com/blog/crud-express-mongodb" target="_blank">Zell Liew</a></h2>
+        </h2>
+        <div style="height: auto; width: 600px; left: 180px; top: 280px; position: absolute; z-index: 12">
+          <h2><a href="https://www.youtube.com/watch?v=cCOL7MC4Pl0" target="_blank">Jake Archibald</a></h2>
+
+          <p>&nbsp;</p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007">
+        <span class="slide-indicator">Slide 7 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute; z-index: 10">
+          <h1>Thank You</h1>
+
+          <h1>&nbsp;</h1>
+        </h1>
+        <h2 style="width: 806px; left: 77px; top: 350px; height: auto; position: absolute"><a href="https://zellwk.com/blog/crud-express-mongodb" target="_blank">Zell Liew</a></h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008">
+        <span class="slide-indicator">Slide 8 of 52</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Summer <span style="color: #ffff00">Break</span></h2>
+        <img src="https://media4.giphy.com/media/6IOlC78q5MHhC/giphy.gif" width="384" height="216" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 125px; top: 160.625px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 591px; position: absolute">Break, Catch Up, Professional Stuff, 100Hours Project, and Hitlist</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009">
+        <span class="slide-indicator">Slide 9 of 52</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Backend!</h2>
+        <img src="https://media0.giphy.com/media/DqhwoR9RHm3EA/giphy.gif" width="480" height="345" style="position: absolute; max-width: 100%; width: 662.261px; height: 476px; left: 148.87px; top: 116px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010">
+        <span class="slide-indicator">Slide 10 of 52</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">NODE.js BABY</h2>
+        <img src="https://media2.giphy.com/media/ZdFxoPhIS4glG/giphy.gif" width="256" height="169" style="position: absolute; max-width: 100%; width: 710px; height: 468.711px; left: 125px; top: 157.644px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011">
+        <span class="slide-indicator">Slide 11 of 52</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8352427/node.png" width="1200" height="734" style="position: absolute; max-width: 100%; width: 709.999px; height: 434.283px; left: 112px; top: 264px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012">
+        <span class="slide-indicator">Slide 12 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Engine Vs. Compiler</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013">
+        <span class="slide-indicator">Slide 13 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 156px; height: auto; position: absolute">And just like the browser's Web APIs Node come with a bunch of stuff</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014">
+        <span class="slide-indicator">Slide 14 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 163px; height: auto; position: absolute; z-index: 10">
+          <h1>Built in Modules</h1>
+
+          <h3>(libraries or collections of functions)</h3>
+
+          <p>&nbsp;</p>
+
+          <h2>HTTP (network access)</h2>
+
+          <h2>FS (file system access)</h2>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015">
+        <span class="slide-indicator">Slide 15 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 228px; height: auto; position: absolute; z-index: 10">
+          <h1>Access to millions of packages via <a href="https://www.npmjs.com/" target="_blank">NPM</a></h1>
+
+          <p>(groupings of one or more custom modules)</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016">
+        <span class="slide-indicator">Slide 16 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Not Web APIs, but C/C++ APIs</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017">
+        <span class="slide-indicator">Slide 17 of 52</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8352469/Screen_Shot_2021-03-16_at_1.19.39_PM.png" width="1928" height="1214" style="position: absolute; max-width: 100%; width: 905.399px; height: 570.101px; left: 27.3005px; top: 64.9495px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 511px; top: 623px; position: absolute"><span style="font-size: 0.5em">sorry, don't remember the source</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018">
+        <span class="slide-indicator">Slide 18 of 52</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 960px; left: 0px; top: 581.5px; position: absolute">Simple Node Server</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019">
+        <span class="slide-indicator">Slide 19 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 7.5px; height: auto; position: absolute; z-index: 10">
+          <h1>Just</h1>
+
+          <h1>HTTP &amp; FS</h1>
+        </h1>
+        <pre class="javascript" style="font-size: 22px; line-height: 26px; width: 960px; height: 248.5px; left: 0px; top: 261.5px; position: absolute"><code>const http = require('http')
+const fs = require('fs')
+http.createServer((req, res) =&gt; {
+  fs.readFile('demofile.html', (err, data) =&gt; {
+    res.writeHead(200, {'Content-Type': 'text/html'})
+    res.write(data)
+    res.end()
+  })
+}).listen(8000)</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020">
+        <span class="slide-indicator">Slide 20 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">How could we clean this up?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021">
+        <span class="slide-indicator">Slide 21 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Express</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022">
+        <span class="slide-indicator">Slide 22 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 140px; height: auto; position: absolute; z-index: 10">
+          <h1>Express</h1>
+
+          <p>Fast, unopinionated, minimalist web framework for Node.js</p>
+
+          <p>&nbsp;</p>
+
+          <p>With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023">
+        <span class="slide-indicator">Slide 23 of 52</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">But First</h2>
+        <img src="https://media4.giphy.com/media/0DYipdNqJ5n4GYATKL/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%; width: 634.667px; height: 476px; left: 161.666px; top: 131.5px; min-width: 1px; min-height: 1px" />
+        <h2 style="height: auto; width: 800px; left: 80px; top: 630px; position: absolute">Blast To The Past</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024">
+        <span class="slide-indicator">Slide 24 of 52</span>
+        <img src="https://media0.giphy.com/media/DqhwoR9RHm3EA/giphy.gif" width="480" height="345" style="position: absolute; max-width: 100%; width: 662.261px; height: 476px; left: 148.87px; top: 116px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025">
+        <span class="slide-indicator">Slide 25 of 52</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute">How Does The Internet Work</h2>
+        <img src="https://media0.giphy.com/media/17DxVYqrlsbSDWiPeA/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 125px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026">
+        <span class="slide-indicator">Slide 26 of 52</span>
+        <h2 style="width: 960px; left: 0px; top: 140px; height: auto; position: absolute"><a href="https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/" target="_blank">"It is a set of rules that allow programs to talk to each other. The developer creates the API on the server and allows the client to talk to it."</a></h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027">
+        <span class="slide-indicator">Slide 27 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">CRUD</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute; z-index: 11">
+          <p>Create (post) - Make something</p>
+
+          <p>Read (get) - Get Something</p>
+
+          <p>Update (put) - Change something</p>
+
+          <p>Delete (delete) - Remove something</p>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028">
+        <span class="slide-indicator">Slide 28 of 52</span>
+        <h2 style="width: 806px; left: -73px; top: 313px; height: auto; position: absolute">Mongo DB</h2>
+        <div class="sl-block" data-block-type="shape" data-name="shape-95e198" style="width: 151.25px; height: 545px; left: 645px; top: 95.5px" data-block-id="9aa85ba0e399189750428b814675ad61">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 151 545"><rect width="151.25" height="545" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-2ec632" style="width: 128px; height: 236px; left: 656.625px; top: 126px" data-block-id="2bc8db145d3eb5a63324ea6bc9bdf9dd">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 12">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 128px; height: 236px; left: 656.625px; top: 397.25px" data-name="shape-a2ec2d" data-block-id="6c04dd297cb5986c1adbf53af7554117">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 13">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 257.25px" data-name="shape-a4d02f" data-block-id="aeb16ce62c006368e07f32777d06a409">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 14">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 415.5px" data-name="shape-33b608" data-block-id="64359f750b0d46c403d419d80b373964">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 532.5px" data-name="shape-351738" data-block-id="330a96a12e8b07af1493afb1ca533114">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 16">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 425px; top: 87px; position: absolute">
+          <span style="font-size: 0.7em"><span style="color: #000000">Collection</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 420.625px; top: 440.75px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 420.625px; top: 557.75px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-5d22c5" style="width: 90.5px; height: 89.5px; left: 675.375px; top: 147.75px" data-block-id="78c8b9351963d0f95ecee5a12262ab76">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 20">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 420.625px; top: 167.25px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 420px; top: 280px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029">
+        <span class="slide-indicator">Slide 29 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 10px; height: auto; position: absolute; z-index: 10">
+          <h1>EJS</h1>
+
+          <p>(Embedded Javascript Templates)</p>
+        </h1>
+        <pre class="javascript" style="font-size: 30px; line-height: 36px; width: 926px; height: 498px; left: 17px; top: 180px; position: absolute"><code>    &lt;h1&gt;Current Rappers&lt;/h1&gt;
+    &lt;ul class="rappers"&gt;
+    &lt;% for(let i=0; i &lt; info.length; i++) {%&gt;
+        &lt;li class="rapper"&gt;
+            &lt;span&gt;&lt;%= info[i].stageName %&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;%= info[i].birthName %&gt;&lt;/span&gt;
+            &lt;span class='del'&gt;delete&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;% } %&gt;
+    &lt;/ul&gt;
+
+    &lt;h2&gt;Add A Rapper:&lt;/h2&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030">
+        <span class="slide-indicator">Slide 30 of 52</span>
+        <div class="sl-block" data-block-type="shape" data-name="shape-a8a42a" data-block-id="0183fac0356925ec117a3ac516a9ade7" style="width: 200px; height: 300px; left: 20px; top: 190px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 10">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 200 300"><rect width="200" height="300" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-ce8ed7" data-block-id="1b08f3b587a70f65ddd116a7d59be0f2" style="width: 137px; height: 238px; left: 51px; top: 245px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 11">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 137 238"><rect width="137" height="238" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-e1e7cf" data-block-id="2f1d2c1927bd35d87232fc1fafabfc74" style="width: 81px; height: 69px; left: 79px; top: 280px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 81 69"><rect width="81" height="69" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-fa5528" data-block-id="fa4fc9a4520a1075c10be070a70dbef8" style="width: 480px; height: 437px; left: 297px; top: 73.5px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 13">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 480 437"><rect width="480" height="437" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-58f378" data-block-id="04c5f4c87f04e5ae47ddb61c048ff533" style="width: 458px; height: 368px; left: 308px; top: 115px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 14">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 458 368"><rect width="458" height="368" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-95e198" data-block-id="673924dc4a4abb20236fcc89f6b2e2c4" style="width: 151.25px; height: 545px; left: 799px; top: 73.5px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 151 545"><rect width="151.25" height="545" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: -180px; top: 151px; position: absolute">Client (Laptop)</p>
+        <p style="height: auto; width: 600px; left: -180.5px; top: 206px; position: absolute"><span style="color: #000000">Browser</span></p>
+        <p style="height: auto; width: 600px; left: -180.5px; top: 292px; position: absolute"><span style="color: #000000">URL</span></p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-2ec632" data-block-id="f163eb6aa292d1d0b798f91f27eeec52" style="width: 128px; height: 236px; left: 810.625px; top: 104px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 19">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 128px; height: 236px; left: 810.625px; top: 375.25px" data-block-id="b52b9657e356bb5820f1c9411408e0d0" data-name="shape-a2ec2d">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 20">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-5d22c5" data-block-id="78893e99effed85c3b215e8b87e3b642" style="width: 90.5px; height: 89.5px; left: 829.375px; top: 125.75px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 21">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 829.375px; top: 235.25px" data-block-id="115989e86bd331ebc5b3b8dae36e5f24" data-name="shape-a4d02f">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 22">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 829.375px; top: 393.5px" data-block-id="8bd1d6fe715da8d46f82c2cc5b61b6d1" data-name="shape-33b608">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 23">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 829.375px; top: 510.5px" data-block-id="393a11482074a1399ded64aca1180b04" data-name="shape-351738">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 24">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 240px; top: 31px; position: absolute">Server</p>
+        <p style="height: auto; width: 600px; left: 240px; top: 76px; position: absolute"><span style="color: #000000">Disk</span></p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-f3323a" data-block-id="1a9e1d23912d1cab457ec42bd4d1a679" style="width: 293px; height: 300px; left: 319.5px; top: 161.5px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 27">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 293 300"><rect width="293" height="300" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 166px; top: 125.75px; position: absolute">API Code</p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-3bef66" data-block-id="050c52471598d9f8a5262c32ceee4a7c" style="width: 141px; height: 300px; left: 619px; top: 161.5px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 29">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 141 300"><rect width="141" height="300" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 388.5px; top: 125.75px; position: absolute">Files</p>
+        <div style="height: auto; width: 600px; left: 575.625px; top: -10px; position: absolute; z-index: 31">
+          <p>Mongo</p>
+
+          <p>Database</p>
+        </div>
+        <p style="height: auto; width: 600px; left: 579px; top: 65px; position: absolute">
+          <span style="font-size: 0.7em"><span style="color: #000000">Collection</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 580px; top: 336.25px; position: absolute">
+          <span style="font-size: 0.7em"><span style="color: #000000">Collection</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 574.625px; top: 145.25px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 575.625px; top: 260.5px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 574.625px; top: 418.75px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 574.625px; top: 535.75px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 100px; top: 183px; position: absolute"><span style="color: #000000">app.get('/')</span></p>
+        <p style="height: auto; width: 600px; left: 142px; top: 245px; position: absolute"><span style="color: #000000">app.post('/form')</span></p>
+        <p style="height: auto; width: 600px; left: 127px; top: 311.5px; position: absolute"><span style="color: #000000">app.put('/info')</span></p>
+        <p style="height: auto; width: 600px; left: 142px; top: 381px; position: absolute"><span style="color: #000000">app.delete('/info')</span></p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-8c631d" data-block-id="15b74cadea617131252015f5ec8d0b21" style="width: 130px; height: 146.25px; left: 624.5px; top: 311.5px">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 42">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 130 146"><rect width="130" height="146.25" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 130px; height: 74.5px; left: 624.5px; top: 190px" data-block-id="523cd4d6c01a43105e7f62035f483ad3" data-name="shape-b4f726">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 43">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 130 75"><rect width="130" height="74.5" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 388.5px; top: 151px; position: absolute">
+          <font color="#000000"><span style="font-size: 15px">/views</span></font>
+        </p>
+        <p style="height: auto; width: 600px; left: 388.5px; top: 264.5px; position: absolute">
+          <span style="color: #000000"><span style="font-size: 15px">/public</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 388.5px; top: 196.25px; position: absolute"><span style="font-size: 15px">index.ejs</span></p>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 311.5px; position: absolute"><span style="font-size: 15px">main.js</span></p>
+        <p style="height: auto; width: 600px; left: 388.5px; top: 342px; position: absolute"><span style="font-size: 15px">style.css</span></p>
+        <p style="height: auto; width: 600px; left: 388.5px; top: 375.25px; position: absolute"><span style="font-size: 15px">Fonts</span></p>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 408.25px; position: absolute"><span style="font-size: 15px">Images</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031">
+        <span class="slide-indicator">Slide 31 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Rap Names</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">What are some Read (get) requests?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032"><span class="slide-indicator">Slide 32 of 52</span></section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033">
+        <span class="slide-indicator">Slide 33 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Rap Names</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">What are some Create (post) requests?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034"><span class="slide-indicator">Slide 34 of 52</span></section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035">
+        <span class="slide-indicator">Slide 35 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Rap Names</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">What are some Delete (delete) requests?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036"><span class="slide-indicator">Slide 36 of 52</span></section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037">
+        <span class="slide-indicator">Slide 37 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Rap Names</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">What are some Update (put) requests?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038"><span class="slide-indicator">Slide 38 of 52</span></section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039">
+        <span class="slide-indicator">Slide 39 of 52</span>
+        <div class="sl-block" data-block-type="shape" data-name="shape-a8a42a" style="width: 200px; height: 300px; left: 20px; top: 190px" data-block-id="1c3da76c4f723d4628519efb7e9562f3">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 10">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 200 300"><rect width="200" height="300" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-ce8ed7" style="width: 137px; height: 238px; left: 51px; top: 245px" data-block-id="778cc02dac8705cb07fb52664728bf1d">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 11">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 137 238"><rect width="137" height="238" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-e1e7cf" style="width: 81px; height: 69px; left: 79px; top: 280px" data-block-id="de8cea8b27f5eb2e65105ac3df7b5ca6">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 81 69"><rect width="81" height="69" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-fa5528" style="width: 480px; height: 437px; left: 297px; top: 73.5px" data-block-id="a24073fab2d8b58ac628ee2650b70b30">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 13">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 480 437"><rect width="480" height="437" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-58f378" style="width: 458px; height: 368px; left: 308px; top: 115px" data-block-id="39b9ccc003a4f515549e3b75ec1eee0c">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 14">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 458 368"><rect width="458" height="368" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-95e198" style="width: 151.25px; height: 545px; left: 800px; top: 73.5px" data-block-id="b8e184deb5925bce31887cf096407da3">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 151 545"><rect width="151.25" height="545" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: -180px; top: 151px; position: absolute">Client (Laptop)</p>
+        <p style="height: auto; width: 600px; left: -180.5px; top: 206px; position: absolute"><span style="color: #000000">Browser</span></p>
+        <p style="height: auto; width: 600px; left: -180.5px; top: 292px; position: absolute"><span style="color: #000000">URL</span></p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-2ec632" style="width: 128px; height: 236px; left: 811.625px; top: 104px" data-block-id="5b7a69c849021e97610565886e9add5e">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 19">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 128px; height: 236px; left: 811.625px; top: 375.25px" data-name="shape-a2ec2d" data-block-id="7049f9a5a1e6d06a917d76394fe794f5">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 20">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 128 236"><rect width="128" height="236" rx="0" ry="0" class="shape-element" fill="rgb(0, 0, 0)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" data-name="shape-5d22c5" style="width: 90.5px; height: 89.5px; left: 830.375px; top: 125.75px" data-block-id="b8a3e20f261a563b1cc73302fcfce3e6">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 21">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 830.375px; top: 235.25px" data-name="shape-a4d02f" data-block-id="54280e24e0727204c03f15b03edd478f">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 22">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 830.375px; top: 393.5px" data-name="shape-33b608" data-block-id="6df76467c29afc52f8741c535647a0f1">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 23">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 90.5px; height: 89.5px; left: 830.375px; top: 510.5px" data-name="shape-351738" data-block-id="c5fa01d355be79211aef67167fc004ea">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 24">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 91 90"><rect width="90.5" height="89.5" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 240px; top: 31px; position: absolute">Server</p>
+        <p style="height: auto; width: 600px; left: 240px; top: 76px; position: absolute"><span style="color: #000000">Disk</span></p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-f3323a" style="width: 293px; height: 300px; left: 319.5px; top: 161.5px" data-block-id="301c861f9e705c3d86e7c401289f218f">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 27">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 293 300"><rect width="293" height="300" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 166px; top: 125.75px; position: absolute">API Code</p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-3bef66" style="width: 141px; height: 300px; left: 619px; top: 161.5px" data-block-id="50c15426a390afd434c401fa9441d629">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 29">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 141 300"><rect width="141" height="300" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 125.75px; position: absolute">Files</p>
+        <div style="height: auto; width: 600px; left: 575.625px; top: -10px; position: absolute; z-index: 31">
+          <p>Mongo</p>
+
+          <p>Database</p>
+        </div>
+        <p style="height: auto; width: 600px; left: 580px; top: 65px; position: absolute">
+          <span style="font-size: 0.7em"><span style="color: #000000">Collection</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 580px; top: 336.25px; position: absolute">
+          <span style="font-size: 0.7em"><span style="color: #000000">Collection</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 575.625px; top: 145.25px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 575.625px; top: 260.5px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 575.625px; top: 418.75px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 575.625px; top: 535.75px; position: absolute">
+          <span style="font-size: 0.5em"><span style="color: #000000">document</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 100px; top: 183px; position: absolute"><span style="color: #000000">app.get('/')</span></p>
+        <p style="height: auto; width: 600px; left: 142px; top: 245px; position: absolute"><span style="color: #000000">app.post('/form')</span></p>
+        <p style="height: auto; width: 600px; left: 127px; top: 311.5px; position: absolute"><span style="color: #000000">app.put('/info')</span></p>
+        <p style="height: auto; width: 600px; left: 142px; top: 381px; position: absolute"><span style="color: #000000">app.delete('/info')</span></p>
+        <div class="sl-block" data-block-type="shape" data-name="shape-8c631d" style="width: 130px; height: 146.25px; left: 624.5px; top: 311.5px" data-block-id="d0a61c310c3b0a379574bf761c51f065">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 42">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 130 146"><rect width="130" height="146.25" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 130px; height: 74.5px; left: 624.5px; top: 190px" data-name="shape-b4f726" data-block-id="6732cc9baea44c32283c2698824fa991">
+          <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 43">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 130 75"><rect width="130" height="74.5" rx="0" ry="0" class="shape-element" fill="#000000"></rect></svg>
+          </div>
+        </div>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 151px; position: absolute">
+          <font color="#000000"><span style="font-size: 15px">/views</span></font>
+        </p>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 264.5px; position: absolute">
+          <span style="color: #000000"><span style="font-size: 15px">/public</span></span>
+        </p>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 196.25px; position: absolute"><span style="font-size: 15px">index.ejs</span></p>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 311.5px; position: absolute"><span style="font-size: 15px">main.js</span></p>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 342px; position: absolute"><span style="font-size: 15px">style.css</span></p>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 375.25px; position: absolute"><span style="font-size: 15px">Fonts</span></p>
+        <p style="height: auto; width: 600px; left: 389.5px; top: 408.25px; position: absolute"><span style="font-size: 15px">Images</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-040">
+        <span class="slide-indicator">Slide 40 of 52</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Let's Build An App with Express</h2>
+        <img src="https://media4.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif" width="498" height="230" style="position: absolute; max-width: 100%; width: 710px; height: 327.912px; left: 124px; top: 284.044px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-041">
+        <span class="slide-indicator">Slide 41 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Key Steps</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-042">
+        <span class="slide-indicator">Slide 42 of 52</span>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 542px; height: 242px; left: 209px; top: 267.5px; position: absolute"><code>mkdir api-project
+cd api-project
+npm init 
+npm install express --save
+npm install mongodb --save
+npm install ejs --save</code></pre>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 70px; position: absolute">Setting Up The Project</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-043">
+        <span class="slide-indicator">Slide 43 of 52</span>
+        <pre class="javascript" style="font-size: 24px; line-height: 29px; width: 953px; height: 442.5px; left: 3.5px; top: 187.5px; position: absolute"><code>let db,
+    dbConnectionStr = 'mongodb+srv://demo:demo@cluster0
+    .2wapm.mongodb.net/rap?retryWrites=true&amp;w=majority',
+    dbName = 'rap'
+
+MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+    .then(client =&gt; {
+        console.log(`Connected to ${dbName} Database`)
+        db = client.db(dbName)
+    })</code></pre>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 70px; position: absolute">Connect To DB</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-044">
+        <span class="slide-indicator">Slide 44 of 52</span>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 953px; height: 420px; left: 7px; top: 210px; position: absolute"><code>app.set('view engine', 'ejs')
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+
+
+app.listen(process.env.PORT || PORT, ()=&gt;{
+    console.log(`Server running on port ${PORT}`)
+})</code></pre>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 70px; position: absolute">Setup Server</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-045">
+        <span class="slide-indicator">Slide 45 of 52</span>
+        <pre class="javascript" style="font-size: 30px; line-height: 36px; width: 944px; height: 279px; left: 16px; top: 211px; position: absolute"><code>app.get('/',(request, response)=&gt;{
+    db.collection('rappers').find().toArray()
+    .then(data =&gt; {
+        response.render('index.ejs', { info: data })
+    })
+    .catch(error =&gt; console.error(error))
+})</code></pre>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 103px; position: absolute">API - GET</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-046">
+        <span class="slide-indicator">Slide 46 of 52</span>
+        <pre class="javascript" style="font-size: 30px; line-height: 36px; width: 944px; height: 301px; left: 8px; top: 210px; position: absolute"><code>app.post('/addRapper', (request, response) =&gt; {
+    db.collection('rappers').insertOne(request.body)
+    .then(result =&gt; {
+        console.log('Rapper Added')
+        response.redirect('/')
+    })
+    .catch(error =&gt; console.error(error))
+})</code></pre>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 103px; position: absolute">API - POST</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-047">
+        <span class="slide-indicator">Slide 47 of 52</span>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 70px; position: absolute">Create EJS File</h2>
+        <pre class="javascript" style="font-size: 30px; line-height: 36px; width: 926px; height: 498px; left: 16px; top: 180px; position: absolute"><code>    &lt;h1&gt;Current Rappers&lt;/h1&gt;
+    &lt;ul class="rappers"&gt;
+    &lt;% for(let i=0; i &lt; info.length; i++) {%&gt;
+        &lt;li class="rapper"&gt;
+            &lt;span&gt;&lt;%= info[i].stageName %&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;%= info[i].birthName %&gt;&lt;/span&gt;
+            &lt;span class='del'&gt;delete&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;% } %&gt;
+    &lt;/ul&gt;
+
+    &lt;h2&gt;Add A Rapper:&lt;/h2&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-048">
+        <span class="slide-indicator">Slide 48 of 52</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Create Public Folder/Files</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-049">
+        <span class="slide-indicator">Slide 49 of 52</span>
+        <pre class="javascript" style="font-size: 20px; line-height: 24px; width: 944px; height: 301px; left: 8px; top: 236px; position: absolute"><code>app.delete('/deleteRapper', (request, response) =&gt; {
+    db.collection('rappers').deleteOne({stageName: request.body.stageNameS})
+    .then(result =&gt; {
+        console.log('Rapper Deleted')
+        response.json('Rapper Deleted')
+    })
+    .catch(error =&gt; console.error(error))
+
+})</code></pre>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 103px; position: absolute">API - DELETE</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-050">
+        <span class="slide-indicator">Slide 50 of 52</span>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 719px; height: 241px; left: 120.5px; top: 249px; position: absolute"><code>heroku login -i
+heroku create simple-rap-api
+echo "web: node server.js" &gt; Procfile
+git add . 
+git commit -m "changes"
+git push heroku main</code></pre>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 136px; position: absolute">Push To Heroku</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-051">
+        <span class="slide-indicator">Slide 51 of 52</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 960px; left: 0px; top: 581.5px; position: absolute">Rap Names App</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-052">
+        <span class="slide-indicator">Slide 52 of 52</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Homework</h1>
+        <div style="height: auto; width: 802px; left: 80.3795px; top: 420px; position: absolute; z-index: 11">
+          <p>&nbsp;</p>
+
+          <p>Do: Start prepping THE BANK</p>
+
+          <p>Do: Complete Your <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1jhBZKVJNxH8Ehf-qodzTzpYuloBmPan-CqaoMwL8xYkM8w/viewform" target="_blank">Professional Links</a></p>
+
+          <p><span style="color: rgb(255, 255, 255)">Create: Heroku, Mongo Atlas, and Postman Accounts</span></p>
+
+          <p>Read: <a href="https://zellwk.com/blog/crud-express-mongodb" target="_blank">https://zellwk.com/blog/crud-express-mongodb</a></p>
+
+          <p>Do: Make Your Own APP and Push To Heroku</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+        </div>
+
+        <img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%; width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px" />
+      </section>
+    </main>
+  </body>
+  <script>
+    const PROPS = ["width", "height", "top", "left", "right", "bottom", "font-size"];
+
+    function saveOriginalSizes(element) {
+      for (const prop of PROPS) {
+        const dataProp = "data-original-" + prop;
+        if (element.style[prop]) {
+          if (!element.hasAttribute(dataProp)) {
+            element.setAttribute(dataProp, element.style[prop]);
+          }
+        }
+      }
+    }
+
+    function scaleSizes(element, scale) {
+      const props = PROPS.filter((prop) => element.style[prop]);
+      for (const prop of props) {
+        const rawOrigValue = element.getAttribute("data-original-" + prop);
+        if (rawOrigValue.startsWith("auto")) continue;
+
+        const origValue = parseFloat(element.getAttribute("data-original-" + prop));
+
+        const unit = rawOrigValue.slice(-2);
+        element.style[prop] = origValue * scale + unit;
+      }
+    }
+
+    function fancyScaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      for (const slide of slides) {
+        saveOriginalSizes(slide);
+        scaleSizes(slide, scale);
+      }
+      /*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+      const sizedChildren = Array.from(document.querySelectorAll(".slide *")).filter((el) => el.hasAttribute("style") && PROPS.some((prop) => el.getAttribute("style")?.includes(prop + ":")));
+      for (const el of sizedChildren) {
+        saveOriginalSizes(el);
+        scaleSizes(el, scale);
+      }
+    }
+
+    function scaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      slides.forEach((slide) => {
+        slide.style.transform = "scale(" + scale + ")";
+      });
+    }
+
+    window.addEventListener("resize", scaleSlides);
+    window.addEventListener("load", scaleSlides);
+    document.addEventListener("DOMContentLoaded", scaleSlides);
+  </script>
+</html>

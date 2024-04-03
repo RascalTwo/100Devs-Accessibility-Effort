@@ -1,0 +1,774 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Class 24 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord">
+
+    <title>#100Devs - Intro to Git And Github (cohort 2)</title>
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.3;
+	background-color: #444444;
+	color: #FFFFFF;
+}
+ul {
+	text-align: left;
+	list-style: bullet;
+}
+
+ol {
+	list-style: number;
+}
+
+.slide {
+	position: relative;
+	border: 1px solid white;
+	transform-origin: top left;
+}
+.slide-indicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - Intro to Git And Github (cohort 2)</h1>
+      <p>Class 24 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+	        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">Friday With Friends</a>
+        </li>
+        <li>
+          <a href="#slide-006">Who is this for?</a>
+        </li>
+        <li>
+          <a href="#slide-007">Slide #007</a>
+        </li>
+        <li>
+          <a href="#slide-008">Career?&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-009">Trough Of Sorrow</a>
+        </li>
+        <li>
+          <a href="#slide-010">Slide #010</a>
+        </li>
+        <li>
+          <a href="#slide-011">Don&apos;t let your dreams be dreams</a>
+        </li>
+        <li>
+          <a href="#slide-012">Learning How To Learn</a>
+        </li>
+        <li>
+          <a href="#slide-013">Active Recall</a>
+        </li>
+        <li>
+          <a href="#slide-014">Forgetting Curve*</a>
+        </li>
+        <li>
+          <a href="#slide-015">Resetting Forgetting Curve</a>
+        </li>
+        <li>
+          <a href="#slide-016">Spaced Repetition</a>
+        </li>
+        <li>
+          <a href="#slide-017">You Are Not Alone!</a>
+        </li>
+        <li>
+          <a href="#slide-018">THANK YOU</a>
+        </li>
+        <li>
+          <a href="#slide-019">Let&apos;s GIT IT ON</a>
+        </li>
+        <li>
+          <a href="#slide-020">First, The Terminal</a>
+        </li>
+        <li>
+          <a href="#slide-021">Terminal, Bash, Git Bash, Unix, Shell, CLI, cmd&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-022">Slide #022</a>
+        </li>
+        <li>
+          <a href="#slide-023">A place where you can type commands that cause actions</a>
+        </li>
+        <li>
+          <a href="#slide-024">APPLE II</a>
+        </li>
+        <li>
+          <a href="#slide-025">Slide #025</a>
+        </li>
+        <li>
+          <a href="#slide-026">Let&apos;s Look</a>
+        </li>
+        <li>
+          <a href="#slide-027">Common Commands</a>
+        </li>
+        <li>
+          <a href="#slide-028">pwd</a>
+        </li>
+        <li>
+          <a href="#slide-029">mkdir</a>
+        </li>
+        <li>
+          <a href="#slide-030">cd</a>
+        </li>
+        <li>
+          <a href="#slide-031">cd ..</a>
+        </li>
+        <li>
+          <a href="#slide-032">cd ~</a>
+        </li>
+        <li>
+          <a href="#slide-033">touch</a>
+        </li>
+        <li>
+          <a href="#slide-034">ls</a>
+        </li>
+        <li>
+          <a href="#slide-035">ls -l</a>
+        </li>
+        <li>
+          <a href="#slide-036">ls -la</a>
+        </li>
+        <li>
+          <a href="#slide-037">rm</a>
+        </li>
+        <li>
+          <a href="#slide-038">rm -r &lt;folder&gt;</a>
+        </li>
+        <li>
+          <a href="#slide-039">rm -rf &lt;folder&gt;</a>
+        </li>
+        <li>
+          <a href="#slide-040">clear</a>
+        </li>
+        <li>
+          <a href="#slide-041">code filename</a>
+        </li>
+        <li>
+          <a href="#slide-042">Access The Terminal?</a>
+        </li>
+        <li>
+          <a href="#slide-043">Slide #043</a>
+        </li>
+        <li>
+          <a href="#slide-044">Slide #044</a>
+        </li>
+        <li>
+          <a href="#slide-045">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-046">!raffle</a>
+        </li>
+        <li>
+          <a href="#slide-047">WHAT IS GIT?</a>
+        </li>
+        <li>
+          <a href="#slide-048">While working on a really important Word Doc what did you do?</a>
+        </li>
+        <li>
+          <a href="#slide-049">What if you wanted to work with someone else?</a>
+        </li>
+        <li>
+          <a href="#slide-050">Slide #050</a>
+        </li>
+        <li>
+          <a href="#slide-051">Slide #051</a>
+        </li>
+        <li>
+          <a href="#slide-052">Slide #052</a>
+        </li>
+        <li>
+          <a href="#slide-053">Slide #053</a>
+        </li>
+        <li>
+          <a href="#slide-054">Slide #054</a>
+        </li>
+        <li>
+          <a href="#slide-055">!raffle</a>
+        </li>
+        <li>
+          <a href="#slide-056">Install Git</a>
+        </li>
+        <li>
+          <a href="#slide-057">Slide #057</a>
+        </li>
+        <li>
+          <a href="#slide-058">MacOS</a>
+        </li>
+        <li>
+          <a href="#slide-059">Slide #059</a>
+        </li>
+        <li>
+          <a href="#slide-060">Slide #060</a>
+        </li>
+        <li>
+          <a href="#slide-061">Let&apos;s Install</a>
+        </li>
+        <li>
+          <a href="#slide-062">!raffle</a>
+        </li>
+        <li>
+          <a href="#slide-063">Slide #063</a>
+        </li>
+        <li>
+          <a href="#slide-064">Slide #064</a>
+        </li>
+        <li>
+          <a href="#slide-065">Slide #065</a>
+        </li>
+        <li>
+          <a href="#slide-066">Slide #066</a>
+        </li>
+        <li>
+          <a href="#slide-067">Slide #067</a>
+        </li>
+        <li>
+          <a href="#slide-068">Slide #068</a>
+        </li>
+        <li>
+          <a href="#slide-069">Slide #069</a>
+        </li>
+        <li>
+          <a href="#slide-070">Slide #070</a>
+        </li>
+        <li>
+          <a href="#slide-071">Slide #071</a>
+        </li>
+        <li>
+          <a href="#slide-072">Slide #072</a>
+        </li>
+        <li>
+          <a href="#slide-073">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-074">!raffle</a>
+        </li>
+        <li>
+          <a href="#slide-075">Want to try something without borking all your code</a>
+        </li>
+        <li>
+          <a href="#slide-076">BRANCHES</a>
+        </li>
+        <li>
+          <a href="#slide-077">Slide #077</a>
+        </li>
+        <li>
+          <a href="#slide-078">Slide #078</a>
+        </li>
+        <li>
+          <a href="#slide-079">Slide #079</a>
+        </li>
+        <li>
+          <a href="#slide-080">Slide #080</a>
+        </li>
+        <li>
+          <a href="#slide-081">Slide #081</a>
+        </li>
+        <li>
+          <a href="#slide-082">Slide #082</a>
+        </li>
+        <li>
+          <a href="#slide-083">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-084">!raffle</a>
+        </li>
+        <li>
+          <a href="#slide-085">What is Github?</a>
+        </li>
+        <li>
+          <a href="#slide-086">Local Vs. Remote</a>
+        </li>
+        <li>
+          <a href="#slide-087">Slide #087</a>
+        </li>
+        <li>
+          <a href="#slide-088">Let&apos;s Make</a>
+        </li>
+        <li>
+          <a href="#slide-089">!raffle</a>
+        </li>
+        <li>
+          <a href="#slide-090">PUSH IT</a>
+        </li>
+        <li>
+          <a href="#slide-091">Create A Github Repo</a>
+        </li>
+        <li>
+          <a href="#slide-092">Instructions with each new repo</a>
+        </li>
+        <li>
+          <a href="#slide-093">Let&apos;s Push</a>
+        </li>
+        <li>
+          <a href="#slide-094">!raffle</a>
+        </li>
+        <li>
+          <a href="#slide-095">Slide #095</a>
+        </li>
+        <li>
+          <a href="#slide-096">Let&apos;s Host</a>
+        </li>
+        <li>
+          <a href="#slide-097">Homework</a>
+        </li>
+        <li>
+          <a href="#slide-098">Slide #098</a>
+        </li>
+        <li>
+          <a href="#slide-099">!raffle</a>
+        </li>
+      </ol>
+    </nav>
+    <main><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001"><span class="slide-indicator">Slide 1 of 99</span><h1 style="width: 960px; left: 0px; top: 191px; height: auto;; position: absolute;z-index: 10;">
+<h2>&nbsp;</h2>
+
+<h2>Intro to Git &amp; Github</h2>
+</h1>
+<h2 style="height: auto; width: 600px; left: 180px; top: 448px;; position: absolute"><span style="color:#FFFFFF"><span style="font-size:1.0em">Leon Noel</span></span></h2>
+
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 600px; left: 180px; top: 351px;; position: absolute">#100Devs</h1>
+<h1 style="height: auto; width: 878px; left: 41px; top: 522px;; position: absolute">Sponsored by <span style="color:#FFFF00">Microsoft Azure! &nbsp;</span>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002"><span class="slide-indicator">Slide 2 of 99</span><h1 style="width: 806px; left: 77px; top: 0px; height: auto;; position: absolute">Agenda</h1>
+<ul style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute">
+	<li>Questions?&nbsp;</li>
+	<li>Let's Talk -&nbsp; #100Devs &amp; Thank You Microsoft Azure</li>
+	<li>Review - How to learn?&nbsp;</li>
+	<li>Learn - What is this terminal thing?</li>
+	<li>Learn - What is GIT</li>
+	<li>Learn - GIT Basic Commands</li>
+	<li>Learn - What is Github</li>
+	<li>Homework - <a href="https://aka.ms/ads/Github" target="_blank">Intro. to Git &amp; Github</a>
+</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003"><span class="slide-indicator">Slide 3 of 99</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h2>Questions</h2>
+
+<h3>About last class or life</h3>
+</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%;width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004"><span class="slide-indicator">Slide 4 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Checking In</h2>
+<img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%;width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 806px; left: 77px; top: 521px;; position: absolute;z-index: 12;">
+<h3>Like and Retweet the Tweet</h3>
+
+<h3>!checkin</h3>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005"><span class="slide-indicator">Slide 5 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Friday With Friends</h2>
+<img src="https://media4.giphy.com/media/lSPmYUAKLBoe22rZnC/giphy.gif" width="480" height="392" style="position: absolute; max-width: 100%;width: 582.857px; height: 476px; left: 188.572px; top: 133px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">Tomorrow (Apr. 1st) 6pm ET on Discord!</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006"><span class="slide-indicator">Slide 6 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Who is this for?</h2>
+<img src="https://media2.giphy.com/media/1zKdxGDrWBhgJAQ3rk/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%;width: 634.667px; height: 476px; left: 162.666px; top: 154px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 803px; left: 77px; top: 641.5px;; position: absolute">*Never used the terminal, and thought I was saying get</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007"><span class="slide-indicator">Slide 7 of 99</span><h1 style="width: 806px; left: 80px; top: 201px; height: auto;; position: absolute;z-index: 10;">
+<h1>Community Rules</h1>
+
+<h2>Github Code of Conduct<br>
+<a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2Fmicrosoft%2Fvirtual-events&amp;data=04%7C01%7Cv-alcord%40microsoft.com%7Ca7e11a1349164242728908d8bdcb7fc3%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637468029009008514%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=7QDlOx43Wtwj%2B%2BmZvQxxIeh4pphzoBOuYQ78OABYzoE%3D&amp;reserved=0" target="_blank"><span class="m_5024451765679657758gmail-m-4955630482857696517normaltextrun"><span style="font-size:10.5pt">https://github.com/microsoft/virtual-events</span></span></a>
+</h2>
+
+<p>&nbsp;</p>
+
+<h1>!githubcoc</h1>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008"><span class="slide-indicator">Slide 8 of 99</span><h2 style="width: 413px; left: 29px; top: 9px; height: auto;; position: absolute">Career?&nbsp;</h2>
+<div style="width: 413px; left: 29px; top: 83px; height: auto;; position: absolute;z-index: 12; text-align: left;">
+<p>Learning to code is the current gold rush.</p>
+
+<p>High Pay:</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626245/ticketmaster-slide.jpg" width="1000" height="667" style="position: absolute; max-width: 100%;width: 451px; height: 300.817px; left: 480px; top: 295.669px; min-width: 1px; min-height: 1px;">
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626252/Screen_Shot_2020-08-10_at_11.36.36_AM.png" width="647" height="288" style="position: absolute; max-width: 100%;width: 417.751px; height: 185.954px; left: 29px; top: 209.023px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: -158px; top: 400.5px;; position: absolute">Happiest Career:</p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626259/Screen_Shot_2020-08-10_at_11.38.54_AM.png" width="664" height="330" style="position: absolute; max-width: 100%;width: 424.945px; height: 211.193px; left: 23.0275px; top: 446.078px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 600px; left: 420px; top: 107.5px;; position: absolute;z-index: 16;">
+<h3>No degree</h3>
+
+<h3>Can learn for free</h3>
+
+<h3>Maybe slide in office?</h3>
+</div>
+<p style="height: auto; width: 600px; left: 420px; top: 591px;; position: absolute"><span style="font-size:0.5em">Ticketmaster Office</span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009"><span class="slide-indicator">Slide 9 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Trough Of Sorrow</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7694391/trough-of-sorrow.png" width="734" height="472" style="position: absolute; max-width: 100%;width: 710px; height: 456.567px; left: 125px; top: 163.716px; min-width: 1px; min-height: 1px;">
+<div class="sl-block" data-block-type="shape" data-name="shape-70de16" data-block-id="d9c6f5373422ea42de57dc476405a5f3" style="width: 144px; height: 42px; left: 160px; top: 329px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 144 42"><rect width="144" height="42" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<p style="height: auto; width: 600px; left: -53px; top: 329px;; position: absolute"><strong><span style="font-size:0.5em">Tutorial Hill</span></strong></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010"><span class="slide-indicator">Slide 10 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute;z-index: 10;">
+<h2>Manage Frustration</h2>
+
+<h2>Consistency&nbsp;</h2>
+
+<h2>Taking Care Of Yourself</h2>
+
+<p>&nbsp;</p>
+</h1>
+<img src="https://media1.giphy.com/media/1gdtvpQWIGyZH3EzNI/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 573.511px; height: 322.6px; left: 195.245px; top: 350px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011"><span class="slide-indicator">Slide 11 of 99</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">Don't let your dreams be dreams</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626304/just-do-it.gif" width="605" height="340" style="position: absolute; max-width: 100%;width: 710px; height: 399.008px; left: 125px; top: 192.496px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012"><span class="slide-indicator">Slide 12 of 99</span><h1 style="width: 960px; left: 0px; top: 189px; height: auto;; position: absolute">Learning How To Learn</h1>
+<h2 style="width: 806px; left: 77px; top: 350px; height: auto;; position: absolute">ACTIVE RECALL<br>
+SPACED REPETITION</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013"><span class="slide-indicator">Slide 13 of 99</span><h2 style="width: 806px; left: 77px; top: 19px; height: auto;; position: absolute">Active Recall</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870866/active-recall.png" width="1174" height="836" style="position: absolute; max-width: 100%;width: 668.45px; height: 476px; left: 145.775px; top: 106px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 610.5px;; position: absolute">Ali Abdaal: https://youtu.be/ukLnPbIffxE</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014"><span class="slide-indicator">Slide 14 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Forgetting Curve*</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870867/ebbinghaus.jpg" width="1275" height="750" style="position: absolute; max-width: 100%;width: 710px; height: 417.647px; left: 125px; top: 183.177px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 235px; top: 591px;; position: absolute"><span style="font-size:0.5em">https://intelalearning.wordpress.com</span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015"><span class="slide-indicator">Slide 15 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Resetting Forgetting Curve</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870865/Ebbinghaus-forgetting-curve-and-review-cycle.png" width="709" height="445" style="position: absolute; max-width: 100%;width: 710px; height: 445.628px; left: 125px; top: 169.186px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 602.814px;; position: absolute"><span style="font-size:0.5em">https://www.pearsoned.com/three-simple-research-based-ways-to-ace-a-test</span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016"><span class="slide-indicator">Slide 16 of 99</span><h2 style="width: 806px; left: 77px; top: 17px; height: auto;; position: absolute">Spaced Repetition</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870868/spaced.png" width="610" height="433" style="position: absolute; max-width: 100%;width: 670.577px; height: 476px; left: 144.712px; top: 112px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 806px; left: 77px; top: 610.5px;; position: absolute">Ali Abdaal: https://youtu.be/Z-zNHHpXoMM</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017"><span class="slide-indicator">Slide 17 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">You Are Not Alone!</h2>
+<img src="https://media1.giphy.com/media/7nFmRxSw6AmyI/giphy.gif" width="160" height="160" style="position: absolute; max-width: 100%;width: 412px; height: 412px; left: 274px; top: 140px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">!100Devs</p>
+<h2 style="height: auto; width: 700px; left: 130px; top: 556px;; position: absolute">leonnoel.com/100devs</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018"><span class="slide-indicator">Slide 18 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">THANK YOU</h2>
+<img src="https://media4.giphy.com/media/i21tixUQEE7TEqwmYa/giphy.gif" width="480" height="400" style="position: absolute; max-width: 100%;width: 479.25px; height: 399.375px; left: 240.375px; top: 192.312px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">Microsoft Azure you a real one</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019"><span class="slide-indicator">Slide 19 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Let's GIT IT ON</h2>
+<img src="https://media1.giphy.com/media/3aGZA6WLI9Jde/giphy.gif" width="280" height="196" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 134px; min-width: 1px; min-height: 1px;">
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020"><span class="slide-indicator">Slide 20 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">First, The Terminal</h2>
+<img src="https://media4.giphy.com/media/C3DJ5zE2l2VUc/giphy.gif" width="250" height="250" style="position: absolute; max-width: 100%;width: 476px; height: 476px; left: 241px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021"><span class="slide-indicator">Slide 21 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Terminal, Bash, Git Bash, Unix, Shell, CLI, cmd&nbsp;</h2>
+<img src="https://media2.giphy.com/media/l0IylOPCNkiqOgMyA/giphy.gif" width="480" height="304" style="position: absolute; max-width: 100%;width: 710px; height: 449.667px; left: 125px; top: 223.167px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022"><span class="slide-indicator">Slide 22 of 99</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8192704/which-are-pokemon.jpeg" width="1200" height="1173" style="position: absolute; max-width: 100%;width: 663.939px; height: 649px; left: 148.03px; top: 25.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023"><span class="slide-indicator">Slide 23 of 99</span><h1 style="width: 806px; left: 77px; top: 204.5px; height: auto;; position: absolute">A place where you can type commands that cause actions</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024"><span class="slide-indicator">Slide 24 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">APPLE II</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8192730/appleii.jpg" width="550" height="374" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 140px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 160px; top: 630px;; position: absolute"><a href="https://www.scullinsteel.com/apple2/" target="_blank">Emulator</a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025"><span class="slide-indicator">Slide 25 of 99</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute;z-index: 10;">
+<h1>CLI &gt; GUI</h1>
+
+<p>Command Line Interface vs. Graphical User Interface</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026"><span class="slide-indicator">Slide 26 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Look</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">The Terminal</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027"><span class="slide-indicator">Slide 27 of 99</span><h1 style="width: 806px; left: 77px; top: 43px; height: auto;; position: absolute">Common Commands</h1>
+<img src="https://media3.giphy.com/media/3ohzAi9NpbJPjTtDNu/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%;width: 566.667px; height: 425px; left: 196.666px; top: 251px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028"><span class="slide-indicator">Slide 28 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">pwd</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute">(print working director) shows where you are</p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195533/Screen_Shot_2021-02-02_at_9.32.13_AM.png" width="1148" height="508" style="position: absolute; max-width: 100%;width: 802px; height: 355.258px; left: 80px; top: 242.283px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029"><span class="slide-indicator">Slide 29 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">mkdir</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">(make directory) create a folder</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195511/Screen_Shot_2021-02-02_at_8.21.54_AM.png" width="1146" height="504" style="position: absolute; max-width: 100%;width: 806.4px; height: 354.647px; left: 80px; top: 242.677px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030"><span class="slide-indicator">Slide 30 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">cd</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">(change directory) move to a different folder</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195523/Screen_Shot_2021-02-02_at_9.27.54_AM.png" width="1150" height="512" style="position: absolute; max-width: 100%;width: 806.399px; height: 359.023px; left: 79.8005px; top: 240.489px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031"><span class="slide-indicator">Slide 31 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">cd ..</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">goes up a folder</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195524/Screen_Shot_2021-02-02_at_9.28.18_AM.png" width="1142" height="518" style="position: absolute; max-width: 100%;width: 806.4px; height: 365.775px; left: 80px; top: 237.113px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032"><span class="slide-indicator">Slide 32 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">cd ~</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">go back to home folder</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195525/Screen_Shot_2021-02-02_at_9.28.44_AM.png" width="1146" height="510" style="position: absolute; max-width: 100%;width: 806.4px; height: 358.869px; left: 79.6px; top: 240.566px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033"><span class="slide-indicator">Slide 33 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">touch</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">create a file</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195764/Screen_Shot_2021-02-02_at_11.06.15_AM.png" width="1148" height="512" style="position: absolute; max-width: 100%;width: 806.4px; height: 359.649px; left: 80px; top: 240.175px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034"><span class="slide-indicator">Slide 34 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">ls</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">shows you all the files in a folder</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195765/Screen_Shot_2021-02-02_at_11.06.55_AM.png" width="1144" height="510" style="position: absolute; max-width: 100%;width: 806.4px; height: 359.497px; left: 76.8px; top: 240.251px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035"><span class="slide-indicator">Slide 35 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">ls -l</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">shows you all the files in a folder with more info</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195766/Screen_Shot_2021-02-02_at_11.07.23_AM.png" width="1152" height="512" style="position: absolute; max-width: 100%;width: 806.4px; height: 358.4px; left: 76.8px; top: 240.8px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036"><span class="slide-indicator">Slide 36 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">ls -la</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">shows you all the files in a folder including hidden</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195767/Screen_Shot_2021-02-02_at_11.08.11_AM.png" width="1150" height="518" style="position: absolute; max-width: 100%;width: 806.4px; height: 363.231px; left: 80px; top: 238.385px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037"><span class="slide-indicator">Slide 37 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">rm</h1>
+<p style="width: 806px; left: 79px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">removes a file</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8196258/Screen_Shot_2021-02-02_at_1.58.35_PM.png" width="1916" height="938" style="position: absolute; max-width: 100%;width: 806.399px; height: 394.782px; left: 80px; top: 222.609px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038"><span class="slide-indicator">Slide 38 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">rm -r &lt;folder&gt;</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">removes a folder</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8196257/Screen_Shot_2021-02-02_at_1.59.32_PM.png" width="1918" height="934" style="position: absolute; max-width: 100%;width: 745.907px; height: 363.231px; left: 110.246px; top: 238.385px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039"><span class="slide-indicator">Slide 39 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">rm -rf &lt;folder&gt;</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">removes everything even protected files - be careful!</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8196260/Screen_Shot_2021-02-02_at_2.00.00_PM.png" width="1922" height="938" style="position: absolute; max-width: 100%;width: 806.4px; height: 393.55px; left: 80px; top: 236.45px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-040"><span class="slide-indicator">Slide 40 of 99</span><h1 style="width: 806px; left: 80px; top: 0px; height: auto;; position: absolute">clear</h1>
+<p style="width: 806px; left: 80px; top: 97px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">clears what is currently being displayed</span></p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195768/Screen_Shot_2021-02-02_at_11.08.54_AM.png" width="1144" height="518" style="position: absolute; max-width: 100%;width: 806px; height: 343.957px; left: 76.8px; top: 167.432px; min-width: 1px; min-height: 1px;">
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195769/Screen_Shot_2021-02-02_at_11.09.08_AM.png" width="1148" height="516" style="position: absolute; max-width: 100%;width: 751.985px; height: 121px; left: 103.808px; top: 550px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-041"><span class="slide-indicator">Slide 41 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">code filename</h1>
+<p style="width: 806px; left: 80px; top: 171px; height: auto;; position: absolute"><span style="color:rgb(255, 255, 255); text-align:left">Opens file in VS Code</span></p>
+<div style="height: auto; width: 800px; left: 80px; top: 280px;; position: absolute;z-index: 12;">
+<p>In VS Code:</p>
+
+<p>view -&gt; Command Palette -&gt;</p>
+
+<p>Shell Command: Install 'code' command in PATH</p>
+</div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8195770/Screen_Shot_2021-02-02_at_11.09.54_AM.png" width="1152" height="514" style="position: absolute; max-width: 100%;width: 806px; height: 188.801px; left: 80px; top: 458.1px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-042"><span class="slide-indicator">Slide 42 of 99</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Access The Terminal?</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-043"><span class="slide-indicator">Slide 43 of 99</span><h1 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute;z-index: 10;">
+<h1>Windows</h1>
+
+<h2>Git Bash</h2>
+</h1>
+<h2 style="width: 806px; left: 80px; top: 280px; height: auto;; position: absolute;z-index: 11;">
+<h2><a href="https://gitforwindows.org/" target="_blank">https://gitforwindows.org</a></h2>
+
+<p>(for today)</p>
+</h2>
+<div style="height: auto; width: 800px; left: 80px; top: 486px;; position: absolute;z-index: 12;">
+<h2><a href="https://ubuntu.com/wsl" target="_blank">WSL</a></h2>
+
+<p>(rest of program - will walk through during office hours)</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-044"><span class="slide-indicator">Slide 44 of 99</span><h1 style="width: 806px; left: 77px; top: 259px; height: auto;; position: absolute;z-index: 10;">
+<h1>Mac &amp; GNU/Linux</h1>
+
+<h2>Applications -&gt; Terminal</h2>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-045"><span class="slide-indicator">Slide 45 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h2 style="height: auto; width: 960px; left: -1px; top: 605px;; position: absolute">Normal Folder Setup</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-046"><span class="slide-indicator">Slide 46 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!raffle</h2>
+<img src="https://media4.giphy.com/media/ZHvEU59xzvr1DK4iOg/giphy.gif" width="288" height="360" style="position: absolute; max-width: 100%;width: 380.8px; height: 476px; left: 289.6px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-047"><span class="slide-indicator">Slide 47 of 99</span><h1 style="height: auto; width: 600px; left: 180px; top: 280px;; position: absolute">WHAT IS GIT?</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-048"><span class="slide-indicator">Slide 48 of 99</span><h1 style="width: 806px; left: 77px; top: 156px; height: auto;; position: absolute">While working on a really important Word Doc what did you do?</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-049"><span class="slide-indicator">Slide 49 of 99</span><h1 style="width: 806px; left: 77px; top: 204.5px; height: auto;; position: absolute">What if you wanted to work with someone else?</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-050"><span class="slide-indicator">Slide 50 of 99</span><h1 style="width: 806px; left: 77px; top: 210px; height: auto;; position: absolute;z-index: 10;">
+<h1>Git solves this problem when working with code</h1>
+
+<p>(save points)</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-051"><span class="slide-indicator">Slide 51 of 99</span><h1 style="width: 806px; left: 77px; top: 199px; height: auto;; position: absolute;z-index: 10;">
+<h1>Git is a version control system</h1>
+
+<p>&nbsp;</p>
+
+<p>A really fancy way of tracking changes</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-052"><span class="slide-indicator">Slide 52 of 99</span><h1 style="width: 806px; left: 77px; top: 199px; height: auto;; position: absolute;z-index: 10;">
+<h1>Git enables you to take "snapshots"</h1>
+
+<p>&nbsp;</p>
+
+<p>This has a deeper meaning, but similar to save points</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-053"><span class="slide-indicator">Slide 53 of 99</span><h1 style="width: 806px; left: 77px; top: 199px; height: auto;; position: absolute;z-index: 10;">
+<h1>Git enables you to take "snapshots" by making a commit</h1>
+
+<p>&nbsp;</p>
+
+<p>Just the term for creating that save point</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-054"><span class="slide-indicator">Slide 54 of 99</span><h1 style="width: 806px; left: 77px; top: 145px; height: auto;; position: absolute;z-index: 10;">
+<h1>Git enables you to roll back to previous "snapshots" (commits)</h1>
+
+<p>&nbsp;</p>
+
+<p>No more file -&gt; save as -&gt; folder132</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-055"><span class="slide-indicator">Slide 55 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!raffle</h2>
+<img src="https://media3.giphy.com/media/URuEc5hnbNIGs/giphy.gif" width="500" height="375" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-056"><span class="slide-indicator">Slide 56 of 99</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Install Git</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-057"><span class="slide-indicator">Slide 57 of 99</span><h1 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute;z-index: 11;">
+<h1>Windows</h1>
+
+<h2>Git Bash</h2>
+</h1>
+<h2 style="width: 806px; left: 80px; top: 280px; height: auto;; position: absolute;z-index: 12;">
+<h2><a href="https://gitforwindows.org/" target="_blank">https://gitforwindows.org</a></h2>
+
+<p>(for today)</p>
+</h2>
+<div style="height: auto; width: 800px; left: 80px; top: 486px;; position: absolute;z-index: 13;">
+<h2><a href="https://ubuntu.com/wsl" target="_blank">WSL</a></h2>
+
+<p>(rest of program - will walk through during office hours)</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-058"><span class="slide-indicator">Slide 58 of 99</span><h1 style="width: 806px; left: 80px; top: 70px; height: auto;; position: absolute">MacOS</h1>
+<p style="height: auto; width: 600px; left: 183px; top: 241px;; position: absolute">Install <a href="https://brew.sh" target="_blank">Homebrew</a>:</p>
+<pre style="font-size: 16px; line-height: 19px;;width: 943px; height: 37px; left: 11.5px; top: 301.5px;; position: absolute"><code>$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+<pre style="font-size: 26px; line-height: 31px;;width: 291px; height: 43.5px; left: 334.5px; top: 376.5px;; position: absolute"><code>$ brew install git</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-059"><span class="slide-indicator">Slide 59 of 99</span><h1 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute;z-index: 10;">
+<h1>GNU / Linux</h1>
+
+<p>Debian / Ubuntu</p>
+
+<p>&nbsp;</p>
+</h1>
+<pre style="font-size: 36px; line-height: 43px;;width: 500px; height: 179px; left: 230px; top: 280px;; position: absolute"><code>$ sudo apt-get update 
+
+$ sudo apt-get install git</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-060"><span class="slide-indicator">Slide 60 of 99</span><h2 style="width: 806px; left: 77px; top: 148px; height: auto;; position: absolute;z-index: 10;">
+<h2>Once Installed&nbsp;</h2>
+
+<p>Setup User Name and Email</p>
+</h2>
+<pre style="font-size: 30px; line-height: 36px;;width: 944px; height: 105px; left: 8px; top: 350px;; position: absolute"><code>$ git config --global user.name "Leon Noel" 
+$ git config --global user.email "leon@leonnoel.com"</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-061"><span class="slide-indicator">Slide 61 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Install</h1>
+<div style="height: auto; width: 960px; left: 0px; top: 568px;; position: absolute;z-index: 11;">
+<h2>Try Installing Git</h2>
+
+<p>*If you get stuck, office hours! (Saturday - 12pm EST)</p>
+</div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 118.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-062"><span class="slide-indicator">Slide 62 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!raffle</h2>
+<img src="https://media1.giphy.com/media/d4blihcFNkwE3fEI/giphy.gif" width="480" height="417" style="position: absolute; max-width: 100%;width: 547.914px; height: 476px; left: 206.043px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-063"><span class="slide-indicator">Slide 63 of 99</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute;z-index: 10;">
+<h1>Basic Git Commands</h1>
+
+<p>&nbsp;</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-064"><span class="slide-indicator">Slide 64 of 99</span><h2 style="width: 905px; left: 29px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1>git init</h1>
+
+<p>Creates a special folder to hold all of your snapshots (commits)</p>
+</h2>
+<img src="https://media1.giphy.com/media/5wWf7HfQJzA8cze6CWc/giphy.gif" width="500" height="500" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-065"><span class="slide-indicator">Slide 65 of 99</span><h2 style="width: 905px; left: 29px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1>git add &lt;file&gt;</h1>
+
+<p>Adds file to staging area (not yet in that special folder)</p>
+</h2>
+<img src="https://images.unsplash.com/photo-1560527341-725efe8887d9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MXwyMDcwNnwwfDF8c2VhcmNofDZ8fHN0YWdlfGVufDB8fHw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1920" width="1920" height="2880" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-066"><span class="slide-indicator">Slide 66 of 99</span><h2 style="width: 905px; left: 29px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1>git add *.html</h1>
+
+<p>Adds all html files to staging area (not yet in that special folder)</p>
+</h2>
+<img src="https://images.unsplash.com/photo-1560527341-725efe8887d9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MXwyMDcwNnwwfDF8c2VhcmNofDZ8fHN0YWdlfGVufDB8fHw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1920" width="1920" height="2880" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-067"><span class="slide-indicator">Slide 67 of 99</span><h2 style="width: 905px; left: 29px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1>git add .</h1>
+
+<p>Adds everything to staging area (not yet in that special folder)</p>
+</h2>
+<img src="https://images.unsplash.com/photo-1560527341-725efe8887d9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MXwyMDcwNnwwfDF8c2VhcmNofDZ8fHN0YWdlfGVufDB8fHw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1920" width="1920" height="2880" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-068"><span class="slide-indicator">Slide 68 of 99</span><h2 style="width: 905px; left: 29px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1>git status</h1>
+
+<p>Shows everything in staging area (not yet in that special folder)</p>
+</h2>
+<img src="https://images.unsplash.com/photo-1560527341-725efe8887d9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MXwyMDcwNnwwfDF8c2VhcmNofDZ8fHN0YWdlfGVufDB8fHw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1920" width="1920" height="2880" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-069"><span class="slide-indicator">Slide 69 of 99</span><h2 style="width: 969px; left: 0px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1><span style="font-size:0.9em">git rm --cached index.html</span></h1>
+
+<p>Removes index.html from staging area&nbsp;</p>
+</h2>
+<img src="https://images.unsplash.com/photo-1560527341-725efe8887d9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MXwyMDcwNnwwfDF8c2VhcmNofDZ8fHN0YWdlfGVufDB8fHw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1920" width="1920" height="2880" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-070"><span class="slide-indicator">Slide 70 of 99</span><h2 style="width: 905px; left: 29px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1>git commit</h1>
+
+<p>&nbsp;Adds everything in staging to the special folder as a snapshot</p>
+</h2>
+<img src="https://media2.giphy.com/media/XUYHZ75syiwKz1Jad8/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 960px; left: 1.5px; top: 614px;; position: absolute;z-index: 13;">
+<p>If you get stuck in vim:</p>
+
+<p>i -&gt; then type your message -&gt; escape -&gt; type :wq -&gt; enter</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-071"><span class="slide-indicator">Slide 71 of 99</span><h2 style="width: 905px; left: 29px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1>git commit -m "text"</h1>
+
+<p>&nbsp;Adds everything in staging to the special folder as a snapshot</p>
+</h2>
+<img src="https://media2.giphy.com/media/XUYHZ75syiwKz1Jad8/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-072"><span class="slide-indicator">Slide 72 of 99</span><h2 style="width: 905px; left: 29px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h1>git branch -M main</h1>
+
+<p>Changes name of staging area to main&nbsp;</p>
+</h2>
+<img src="https://images.unsplash.com/photo-1560527341-725efe8887d9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MXwyMDcwNnwwfDF8c2VhcmNofDZ8fHN0YWdlfGVufDB8fHw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1920" width="1920" height="2880" style="position: absolute; max-width: 100%;width: 575.756px; height: 386px; left: 192.122px; top: 210px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-073"><span class="slide-indicator">Slide 73 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Make A Commit</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-074"><span class="slide-indicator">Slide 74 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!raffle</h2>
+<img src="https://media1.giphy.com/media/RGwD8uhF7LqJkGKd09/giphy.gif" width="478" height="346" style="position: absolute; max-width: 100%;width: 657.595px; height: 476px; left: 151.202px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-075"><span class="slide-indicator">Slide 75 of 99</span><h1 style="width: 806px; left: 77px; top: 183px; height: auto;; position: absolute">Want to try something without borking all your code</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-076"><span class="slide-indicator">Slide 76 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">BRANCHES</h2>
+<img src="https://media3.giphy.com/media/ZcpOj06SAiFSMZRVsS/giphy.gif" width="728" height="728" style="position: absolute; max-width: 100%;width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-077"><span class="slide-indicator">Slide 77 of 99</span><h1 style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute;z-index: 10;">
+<h1>git status</h1>
+
+<p>Find out if you are on main first</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-078"><span class="slide-indicator">Slide 78 of 99</span><h1 style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute;z-index: 10;">
+<h1>git branch &lt;name&gt;</h1>
+
+<p>Creates a new branch for you to make changes on without affecting the rest of your code!</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-079"><span class="slide-indicator">Slide 79 of 99</span><h1 style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute;z-index: 10;">
+<h1>git checkout &lt;name&gt;</h1>
+
+<p>Moves you to new branch where you can make changes without affecting the rest of your code!</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-080"><span class="slide-indicator">Slide 80 of 99</span><h1 style="width: 960px; left: 0px; top: 54.5px; height: auto;; position: absolute;z-index: 10;">
+<h2>Make Your Changes</h2>
+
+<p>&nbsp;</p>
+
+<h2>Add your changes to staging</h2>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2>Commit Your Changes</h2>
+</h1>
+<pre style="font-size: 36px; line-height: 43px;;width: 230px; height: 59px; left: 365px; top: 291px;; position: absolute"><code>git add .
+</code></pre>
+<pre style="font-size: 36px; line-height: 43px;;width: 619px; height: 61px; left: 170.5px; top: 529.5px;; position: absolute"><code>git commit -m "changes made"</code></pre></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-081"><span class="slide-indicator">Slide 81 of 99</span><h1 style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute;z-index: 10;">
+<h1>git checkout main</h1>
+
+<p>Moves you back to main branch</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-082"><span class="slide-indicator">Slide 82 of 99</span><h1 style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute;z-index: 10;">
+<h1>git merge &lt;branch&gt;</h1>
+
+<p>Adds changes from other branch to main</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-083"><span class="slide-indicator">Slide 83 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Use A Branch</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-084"><span class="slide-indicator">Slide 84 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!raffle</h2>
+<img src="https://media4.giphy.com/media/kfRlTZDvhLCPvOEey8/giphy.gif" width="480" height="480" style="position: absolute; max-width: 100%;width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-085"><span class="slide-indicator">Slide 85 of 99</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">What is Github?</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-086"><span class="slide-indicator">Slide 86 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Local Vs. Remote</h2>
+<img src="https://media0.giphy.com/media/KH80okpPhWJnIqgYNX/giphy.gif" width="480" height="246" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-087"><span class="slide-indicator">Slide 87 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h2>Not only backups,</h2>
+
+<h2>but a whole suite of tools to work with other developers</h2>
+</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8196023/Screen_Shot_2021-02-02_at_12.25.04_PM.png" width="2441" height="1350" style="position: absolute; max-width: 100%;width: 710px; height: 392.667px; left: 125px; top: 280px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-088"><span class="slide-indicator">Slide 88 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Make</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">A Github Account</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-089"><span class="slide-indicator">Slide 89 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!raffle</h2>
+<img src="https://media0.giphy.com/media/YG7kWyoHjsWd2/giphy.gif" width="210" height="158" style="position: absolute; max-width: 100%;width: 632.658px; height: 476px; left: 162.671px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-090"><span class="slide-indicator">Slide 90 of 99</span><h2 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute">PUSH IT</h2>
+<img src="https://media2.giphy.com/media/xPIirzBs0Rq48/giphy.gif" width="400" height="222" style="position: absolute; max-width: 100%;width: 710px; height: 394.05px; left: 125px; top: 194.975px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-091"><span class="slide-indicator">Slide 91 of 99</span><h1 style="height: auto; width: 960px; left: -0.3925px; top: 21.5px;; position: absolute">Create A Github Repo</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8196145/Screen_Shot_2021-02-02_at_1.09.45_PM.png" width="1633" height="1350" style="position: absolute; max-width: 100%;width: 626.588px; height: 518px; left: 166.706px; top: 140px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-092"><span class="slide-indicator">Slide 92 of 99</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8196039/Screen_Shot_2021-02-02_at_12.30.47_PM.png" width="2402" height="1350" style="position: absolute; max-width: 100%;width: 806.399px; height: 453.222px; left: 73.601px; top: 210px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 960px; left: -3.1995px; top: 16px;; position: absolute">Instructions with each new repo</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-093"><span class="slide-indicator">Slide 93 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Push</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Our First Repo</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-094"><span class="slide-indicator">Slide 94 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!raffle</h2>
+<img src="https://media3.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif" width="498" height="230" style="position: absolute; max-width: 100%;width: 806.4px; height: 372.434px; left: 75.8px; top: 163.783px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-095"><span class="slide-indicator">Slide 95 of 99</span><h1 style="width: 806px; left: 77px; top: 210px; height: auto;; position: absolute;z-index: 10;">
+<h1>What are</h1>
+
+<h1>Github Pages?</h1>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-096"><span class="slide-indicator">Slide 96 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Host</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Host On Github Pages</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-097"><span class="slide-indicator">Slide 97 of 99</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Homework</h1>
+<div style="height: auto; width: 802px; left: 80.3795px; top: 490px;; position: absolute;z-index: 11;">
+<h3>Due (Tues. 4/5):</h3>
+
+<h3>Do: Intro to Github</h3>
+
+<h3>&nbsp;<a href="https://aka.ms/learnwithleon" target="_blank">https://aka.ms/learnwithleon</a>​&nbsp;</h3>
+</div>
+
+<img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%;width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-098"><span class="slide-indicator">Slide 98 of 99</span><h1 style="width: 806px; left: 77px; top: 264px; height: auto;; position: absolute">
+<a href="https://aka.ms/learnwithleon" target="_blank">https://aka.ms/learnwithleon</a>&nbsp;</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-099"><span class="slide-indicator">Slide 99 of 99</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">!raffle</h2>
+<img src="https://media3.giphy.com/media/6EUxr85g9rv6o/giphy.gif" width="245" height="180" style="position: absolute; max-width: 100%;width: 647.889px; height: 476px; left: 157.055px; top: 154px; min-width: 1px; min-height: 1px;"></section>
+    </main>
+  </body>
+  <script>
+const PROPS = ['width', 'height', 'top', 'left', 'right', 'bottom', 'font-size']
+
+function saveOriginalSizes(element) {
+	for (const prop of PROPS) {
+		const dataProp = 'data-original-' + prop;
+		if (element.style[prop]) {
+			if (!element.hasAttribute(dataProp)) {
+				element.setAttribute(dataProp, element.style[prop]);
+			}
+		}
+	}
+}
+
+function scaleSizes(element, scale) {
+	const props = PROPS.filter(prop => element.style[prop]);
+	for (const prop of props) {
+		const rawOrigValue = element.getAttribute('data-original-' + prop)
+		if (rawOrigValue.startsWith('auto')) continue;
+
+		const origValue = parseFloat(element.getAttribute('data-original-' + prop));
+
+		const unit = rawOrigValue.slice(-2);
+		element.style[prop] = (origValue * scale) + unit;
+	}
+}
+
+function fancyScaleSlides(){
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	for (const slide of slides){
+		saveOriginalSizes(slide);
+		scaleSizes(slide, scale);
+	}
+	/*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+	const sizedChildren = Array.from(document.querySelectorAll('.slide *')).filter(el => el.hasAttribute('style') && PROPS.some(prop => el.getAttribute('style')?.includes(prop + ':')));
+	for (const el of sizedChildren) {
+		saveOriginalSizes(el);
+		scaleSizes(el, scale);
+	}
+}
+
+function scaleSlides() {
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});
+}
+
+window.addEventListener('resize', scaleSlides);
+window.addEventListener('load', scaleSlides);
+document.addEventListener('DOMContentLoaded', scaleSlides);
+  </script>
+</html>

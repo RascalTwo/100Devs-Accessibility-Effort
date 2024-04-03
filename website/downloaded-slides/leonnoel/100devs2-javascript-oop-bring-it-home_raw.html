@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Class 32 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord">
+
+    <title>#100Devs - Javascript OOP Bring It Home (cohort 2)</title>
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.3;
+	background-color: #444444;
+	color: #FFFFFF;
+}
+ul {
+	text-align: left;
+	list-style: bullet;
+}
+
+ol {
+	list-style: number;
+}
+
+.slide {
+	position: relative;
+	border: 1px solid white;
+	transform-origin: top left;
+}
+.slide-indicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - Javascript OOP Bring It Home (cohort 2)</h1>
+      <p>Class 32 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+	        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">!newsletter</a>
+        </li>
+        <li>
+          <a href="#slide-006">GIT BOWL</a>
+        </li>
+        <li>
+          <a href="#slide-007">Networking - Next Week</a>
+        </li>
+        <li>
+          <a href="#slide-008">Client Deadline: May 17th</a>
+        </li>
+        <li>
+          <a href="#slide-009">Client Alternatives</a>
+        </li>
+        <li>
+          <a href="#slide-010">Grassroots Volunteer*</a>
+        </li>
+        <li>
+          <a href="#slide-011">Free Software / Open Source</a>
+        </li>
+        <li>
+          <a href="#slide-012">SO CLOSE</a>
+        </li>
+        <li>
+          <a href="#slide-013">Fresh Start</a>
+        </li>
+        <li>
+          <a href="#slide-014">Slide #014</a>
+        </li>
+        <li>
+          <a href="#slide-015">Project &amp; !pokemon</a>
+        </li>
+        <li>
+          <a href="#slide-016">Big News</a>
+        </li>
+        <li>
+          <a href="#slide-017">#100Devs Agency</a>
+        </li>
+        <li>
+          <a href="#slide-018">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-019">Slide #019</a>
+        </li>
+        <li>
+          <a href="#slide-020">OPEN CORE</a>
+        </li>
+        <li>
+          <a href="#slide-021">LINK</a>
+        </li>
+        <li>
+          <a href="#slide-022">Never Miss The Stream Team</a>
+        </li>
+        <li>
+          <a href="#slide-023">Welcome, verolafox</a>
+        </li>
+        <li>
+          <a href="#slide-024">Finna Make Sum Nerds Angry</a>
+        </li>
+        <li>
+          <a href="#slide-025">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-026">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-027">Think of a physical object</a>
+        </li>
+        <li>
+          <a href="#slide-028">Slide #028</a>
+        </li>
+        <li>
+          <a href="#slide-029">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-030">Slide #030</a>
+        </li>
+        <li>
+          <a href="#slide-031">OOP BABY</a>
+        </li>
+        <li>
+          <a href="#slide-032">OBJECT ORIENTED PROGRAMING&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-033">Let&apos;s Talk About It</a>
+        </li>
+        <li>
+          <a href="#slide-034">This fusion of data and functionality into one object</a>
+        </li>
+        <li>
+          <a href="#slide-035">Encapsulation Baby</a>
+        </li>
+        <li>
+          <a href="#slide-036">Encapsulation</a>
+        </li>
+        <li>
+          <a href="#slide-037">Complex or unnecessary details are hidden</a>
+        </li>
+        <li>
+          <a href="#slide-038">This enables you to implement things without understanding or even thinking about all the hidden complexity</a>
+        </li>
+        <li>
+          <a href="#slide-039">Smaller more manageable pieces of code</a>
+        </li>
+        <li>
+          <a href="#slide-040">Do stuff once</a>
+        </li>
+        <li>
+          <a href="#slide-041">Abstraction Baby</a>
+        </li>
+        <li>
+          <a href="#slide-042">Abstraction</a>
+        </li>
+        <li>
+          <a href="#slide-043">Create New Objects Based On Old Ones</a>
+        </li>
+        <li>
+          <a href="#slide-044">We just eliminated a bunch of redundant code</a>
+        </li>
+        <li>
+          <a href="#slide-045">Inheritance BABY</a>
+        </li>
+        <li>
+          <a href="#slide-046">Inheritance</a>
+        </li>
+        <li>
+          <a href="#slide-047">Slide #047</a>
+        </li>
+        <li>
+          <a href="#slide-048">Instead of conditionals and switch cases</a>
+        </li>
+        <li>
+          <a href="#slide-049">POLYMORPHISM BABY</a>
+        </li>
+        <li>
+          <a href="#slide-050">The Four Pillars</a>
+        </li>
+        <li>
+          <a href="#slide-051">Encapsulation</a>
+        </li>
+        <li>
+          <a href="#slide-052">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-053">Made it easier to add new stuff</a>
+        </li>
+        <li>
+          <a href="#slide-054">Abstraction</a>
+        </li>
+        <li>
+          <a href="#slide-055">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-056">Smaller more manageable pieces of code</a>
+        </li>
+        <li>
+          <a href="#slide-057">Make code changes and still sleep at night</a>
+        </li>
+        <li>
+          <a href="#slide-058">Inheritance</a>
+        </li>
+        <li>
+          <a href="#slide-059">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-060">Helps you eliminate redundant code</a>
+        </li>
+        <li>
+          <a href="#slide-061">Polymorphism</a>
+        </li>
+        <li>
+          <a href="#slide-062">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-063">Helps you avoid if/else and switch cases</a>
+        </li>
+        <li>
+          <a href="#slide-064">Slide #064</a>
+        </li>
+        <li>
+          <a href="#slide-065">Slide #065</a>
+        </li>
+        <li>
+          <a href="#slide-066">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-067">Group Work</a>
+        </li>
+        <li>
+          <a href="#slide-068">Talk Through OOP</a>
+        </li>
+        <li>
+          <a href="#slide-069">Right Of Passage</a>
+        </li>
+        <li>
+          <a href="#slide-070">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001"><span class="slide-indicator">Slide 1 of 70</span><h1 style="width: 960px; left: 0px; top: 230px; height: auto;; position: absolute;z-index: 10;">
+<h2>&nbsp;</h2>
+
+<h2>Javascript - OOP BRING IT HOME</h2>
+</h1>
+<h2 style="height: auto; width: 600px; left: 180px; top: 486px;; position: absolute"><span style="color:#FFFFFF"><span style="font-size:1.0em">Leon Noel</span></span></h2>
+
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 600px; left: 180px; top: 389px;; position: absolute">#100Devs</h1>
+<p style="height: auto; width: 960px; left: 0px; top: 571.5px;; position: absolute">I attended Harlem picnics where you risked your life<br>
+Uncle used to skim work, sellin' nicks at night<br>
+I was only 8 years old, watching Nick at Nite</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002"><span class="slide-indicator">Slide 2 of 70</span><h1 style="width: 806px; left: 77px; top: 0px; height: auto;; position: absolute">Agenda</h1>
+<ul style="width: 806px; left: 77px; top: 140px; height: auto;; position: absolute">
+	<li>Questions?&nbsp;</li>
+	<li>Let's Talk -&nbsp; #100Devs</li>
+	<li>Learn - Objects</li>
+	<li>Learn - Basic OOP Principles</li>
+	<li>Do - Work In Teams: The Four Pillars</li>
+	<li>Do - Work In Teams: Tic-tac-toe</li>
+	<li>Homework - Object City Yall</li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003"><span class="slide-indicator">Slide 3 of 70</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute;z-index: 10;">
+<h2>Questions</h2>
+
+<h3>About last class or life</h3>
+</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%;width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004"><span class="slide-indicator">Slide 4 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Checking In</h2>
+<img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%;width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 806px; left: 77px; top: 521px;; position: absolute;z-index: 12;">
+<h3>Like and Retweet the Tweet</h3>
+
+<h3>!checkin</h3>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005"><span class="slide-indicator">Slide 5 of 70</span><h2 style="width: 807px; left: 77px; top: 42px; height: auto;; position: absolute">!newsletter</h2>
+<img src="https://media3.giphy.com/media/YypqAhlDKiFJknPbnt/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 711px; height: 399.938px; left: 125px; top: 192.031px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006"><span class="slide-indicator">Slide 6 of 70</span><h1 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">GIT BOWL</h1>
+<img src="https://media3.giphy.com/media/5wWf7GW1AzV6pF3MaVW/giphy.gif" width="432" height="250" style="position: absolute; max-width: 100%;width: 507.441px; height: 293.658px; left: 225.28px; top: 184.171px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 800px; left: 80px; top: 506px;; position: absolute">MONDAY<br>
+6:30pm EST</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007"><span class="slide-indicator">Slide 7 of 70</span><h2 style="width: 806px; left: 77px; top: 66px; height: auto;; position: absolute">Networking - Next Week</h2>
+<img src="https://media1.giphy.com/media/3aGZA6WLI9Jde/giphy.gif" width="280" height="196" style="position: absolute; max-width: 100%;width: 468.446px; height: 327.912px; left: 245.777px; top: 210px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 600px; left: 180px; top: 575.5px;; position: absolute">Alternatives?</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008"><span class="slide-indicator">Slide 8 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Client Deadline: May 17th</h2>
+<img src="https://media2.giphy.com/media/1333xc9RhiyGaY/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009"><span class="slide-indicator">Slide 9 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Client Alternatives</h2>
+<img src="https://media3.giphy.com/media/3o751Yxe9UjX26BZbG/giphy.gif" width="480" height="358" style="position: absolute; max-width: 100%;width: 638.212px; height: 476px; left: 159.894px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010"><span class="slide-indicator">Slide 10 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Grassroots Volunteer*</h2>
+<img src="https://media4.giphy.com/media/106QCYtKPDeIjm/giphy.gif" width="250" height="172" style="position: absolute; max-width: 100%;width: 691.86px; height: 476px; left: 134.07px; top: 140px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011"><span class="slide-indicator">Slide 11 of 70</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">Free Software / Open Source</h2>
+<img src="https://media1.giphy.com/media/3og0ICG4WxdKSRzE3K/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 160.625px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 591px;; position: absolute"><a href="https://www.firsttimersonly.com/" target="_blank">https://www.firsttimersonly.com/</a></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012"><span class="slide-indicator">Slide 12 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">SO CLOSE</h2>
+<img src="https://media3.giphy.com/media/R2m2NzVxQ3pbG/giphy.gif" width="480" height="205" style="position: absolute; max-width: 100%;width: 710px; height: 303.229px; left: 125px; top: 240.386px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013"><span class="slide-indicator">Slide 13 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Fresh Start</h2>
+<img src="https://media3.giphy.com/media/3ohzgQ0g3ugoQsNhVS/giphy.gif" width="480" height="267" style="position: absolute; max-width: 100%;width: 710px; height: 394.938px; left: 125px; top: 194.531px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014"><span class="slide-indicator">Slide 14 of 70</span><h2 style="width: 806px; left: 77px; top: 12px; height: auto;; position: absolute;z-index: 10;">
+<h2>Discord Gold &amp; VIP</h2>
+
+<h1>!clan</h1>
+</h2>
+
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9540073/Screen_Shot_2022-05-05_at_12.11.32_PM.png" width="2170" height="908" style="position: absolute; max-width: 100%;width: 806.4px; height: 337.425px; left: 76.8px; top: 222.575px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015"><span class="slide-indicator">Slide 15 of 70</span><h1 style="width: 806px; left: 77px; top: 21.5px; height: auto;; position: absolute">Project &amp; !pokemon</h1>
+<img src="https://media3.giphy.com/media/vsyKKf1t22nmw/giphy.gif" width="480" height="480" style="position: absolute; max-width: 100%;width: 476px; height: 476px; left: 242px; top: 140px; min-width: 1px; min-height: 1px;">
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016"><span class="slide-indicator">Slide 16 of 70</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute"><span style="font-size:1.4em">Big News</span></h1>
+<p style="height: auto; width: 600px; left: 180px; top: 661px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017"><span class="slide-indicator">Slide 17 of 70</span><h2 style="width: 806px; left: 76.9995px; top: 70px; height: auto;; position: absolute">#100Devs Agency</h2>
+<img src="https://media0.giphy.com/media/13SbGD4j7TlqZG/giphy.gif" width="360" height="200" style="position: absolute; max-width: 100%;width: 709.999px; height: 394.444px; left: 125px; top: 194.778px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018"><span class="slide-indicator">Slide 18 of 70</span><h2 style="width: 806px; left: 77px; top: 84.5px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019"><span class="slide-indicator">Slide 19 of 70</span><h1 style="width: 960px; left: 0px; top: 122px; height: auto;; position: absolute;z-index: 10;">
+<h2>Education Should Be Free</h2>
+
+<h2>Education Should Provide A &nbsp;Stipend</h2>
+
+<h1>Education Should Be Practical</h1>
+
+<h1>&nbsp;</h1>
+</h1>
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020"><span class="slide-indicator">Slide 20 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">OPEN CORE</h2>
+<img src="https://media0.giphy.com/media/yx400dIdkwWdsCgWYp/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 580.231px; height: 389px; left: 189.885px; top: 140px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 600px; left: 180px; top: 560px;; position: absolute;z-index: 12;">
+<p>#100Devs Stream Team</p>
+<p>#100Devs Blog</p>
+<p><br></p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021"><span class="slide-indicator">Slide 21 of 70</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9534315/Screen_Shot_2022-05-03_at_11.58.03_AM.png" width="1143" height="1350" style="position: absolute; max-width: 100%;width: 521.547px; height: 616px; left: 219.226px; top: 0px; min-width: 1px; min-height: 1px;">
+<h1 style="height: auto; width: 600px; left: 180px; top: 608px;; position: absolute"><a href="https://discord.com/channels/735923219315425401/970098839786758165/970098843435823195" target="_blank">LINK</a></h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022"><span class="slide-indicator">Slide 22 of 70</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">Never Miss The Stream Team</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9534329/Screen_Shot_2022-05-03_at_12.10.28_PM.png" width="1074" height="596" style="position: absolute; max-width: 100%;width: 711px; height: 394.559px; left: 125px; top: 194.72px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023"><span class="slide-indicator">Slide 23 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Welcome, <a href="https://www.twitch.tv/verolafox" target="_blank">verolafox</a>
+</h2>
+<img src="https://media3.giphy.com/media/100PgquHm9j3sQ/giphy.gif" width="400" height="260" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 125px; top: 140px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 630px;; position: absolute">Friday @ 11:00am ET!&nbsp;</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024"><span class="slide-indicator">Slide 24 of 70</span><h1 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Finna Make Sum Nerds Angry</h1>
+<img src="https://media0.giphy.com/media/Xbh3RSUbOpH1u/giphy.gif" width="500" height="281" style="position: absolute; max-width: 100%;width: 674.728px; height: 379.197px; left: 181.472px; top: 280px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025"><span class="slide-indicator">Slide 25 of 70</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Objects</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">What are objects?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026"><span class="slide-indicator">Slide 26 of 70</span><h1 style="width: 806px; left: 77px; top: 91.5px; height: auto;; position: absolute">Objects</h1>
+<ul style="width: 960px; left: 0px; top: 210px; height: auto;; position: absolute">
+	<li>
+<span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">Objects are a </span><span style="color:#FFD700"><span style="font-size:25pt">collection of variables and functions</span></span><span style="color:rgb(93.300000%, 93.300000%, 93.300000%); font-size:25.000000pt">!</span>
+</li>
+	<li><span style="font-size:33.3333px">Objects <span style="color:#FFD700">represent the attributes and behavior</span> of something used in a program</span></li>
+	<li><span style="font-size:33.3333px">Object variables are called <span style="color:#FFD700">properties</span> and object functions are called <span style="color:#FFD700">methods</span></span></li>
+	<li><span style="font-size:33.3333px">Objects store <span style="color:#FFD700">"keyed"</span> collections </span></li>
+</ul></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027"><span class="slide-indicator">Slide 27 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Think of a physical object</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7782996/pepesilvia.jpg" width="1024" height="768" style="position: absolute; max-width: 100%;width: 494.667px; height: 371px; left: 225.333px; top: 164.5px; min-width: 1px; min-height: 1px;">
+<h3 style="height: auto; width: 960px; left: 0.0005px; top: 560px;; position: absolute">What are it's attributes and behaviors?&nbsp;</h3></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028"><span class="slide-indicator">Slide 28 of 70</span><h1 style="width: 806px; left: 77px; top: -9px; height: auto;; position: absolute;z-index: 10;">
+<h1>Car Factory</h1>
+
+<h3>Look Ma! New syntax!</h3>
+</h1>
+<pre class="javascript" style="font-size: 24px; line-height: 29px;;width: 891px; height: 495.5px; left: 34.5px; top: 149px;; position: absolute"><code>class MakeCar{
+  constructor(carMake,carModel,carColor,numOfDoors){
+    this.make = carMake
+    this.model = carModel
+    this.color = carColor
+    this.doors = numOfDoors
+  }
+  honk(){
+    alert('BEEP BEEP FUCKER')
+  }
+  lock(){
+    alert(`Locked ${this.doors} doors!`)
+  }
+}
+
+let hondaCivic = new MakeCar('Honda','Civic','Silver', 4)
+
+let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)</code></pre>
+<p style="height: auto; width: 600px; left: 180px; top: 650.5px;; position: absolute">Classes are like templates for objects!</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029"><span class="slide-indicator">Slide 29 of 70</span><h2 style="width: 806px; left: 77px; top: 12px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 86px; min-width: 1px; min-height: 1px;">
+<h2 style="height: auto; width: 960px; left: 0px; top: 552px;; position: absolute">Why Use Objects?<br>
+Why Would We Need A Factory?</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030"><span class="slide-indicator">Slide 30 of 70</span><h2 style="width: 806px; left: 65px; top: 70px; height: auto;; position: absolute;z-index: 10;">
+<h2>What if there was a system, a paradigm, a set of rules, an agreed upon way to structure our code that:</h2>
+
+<p>&nbsp;</p>
+
+<p>Made it easier to add new stuff</p>
+
+<p>Made it easier to read through what was already coded</p>
+
+<p>And made it so you were not afraid to make changes</p>
+
+<p>&nbsp;</p>
+</h2>
+<p style="height: auto; width: 600px; left: 180px; top: 654.5px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031"><span class="slide-indicator">Slide 31 of 70</span><h1 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">OOP BABY</h1>
+<img src="https://media1.giphy.com/media/3o7qDEq2bMbcbPRQ2c/giphy.gif" width="504" height="350" style="position: absolute; max-width: 100%;width: 685.44px; height: 476px; left: 137.28px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032"><span class="slide-indicator">Slide 32 of 70</span><h2 style="width: 806px; left: 77px; top: 40px; height: auto;; position: absolute">OBJECT ORIENTED PROGRAMING&nbsp;</h2>
+<img src="https://media4.giphy.com/media/fe3Rwmc2bBulG/giphy.gif" width="400" height="225" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 248.312px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033"><span class="slide-indicator">Slide 33 of 70</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Let's Talk About It</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034"><span class="slide-indicator">Slide 34 of 70</span><h2 style="width: 960px; left: 0px; top: 42px; height: auto;; position: absolute">This fusion of data and functionality into one object</h2>
+<img src="https://media4.giphy.com/media/P4TqKx6NHyLnO/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 626.471px; height: 420px; left: 166.764px; top: 210px; min-width: 1px; min-height: 1px;">
+<p style="height: auto; width: 600px; left: 180px; top: 661px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035"><span class="slide-indicator">Slide 35 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Encapsulation Baby</h2>
+<img src="https://media1.giphy.com/media/d0NnEG1WnnXqg/giphy.gif" width="480" height="320" style="position: absolute; max-width: 100%;width: 710px; height: 476px; left: 126px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036"><span class="slide-indicator">Slide 36 of 70</span><h1 style="width: 806px; left: 80px; top: 91.5px; height: auto;; position: absolute">Encapsulation</h1>
+<h2 style="width: 806px; left: 74px; top: 210px; height: auto;; position: absolute">The process of storing functions (methods) with their associated data (properties) - in one thing (object)*</h2>
+<p style="height: auto; width: 600px; left: -212px; top: 661px;; position: absolute"><span style="font-size:0.5em">*Nerds shaking violently</span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037"><span class="slide-indicator">Slide 37 of 70</span><h1 style="width: 806px; left: 77px; top: 210px; height: auto;; position: absolute">Complex or unnecessary details are hidden</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038"><span class="slide-indicator">Slide 38 of 70</span><h2 style="width: 806px; left: 77px; top: 165px; height: auto;; position: absolute">This enables you to implement things without understanding or even thinking about all the hidden complexity</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039"><span class="slide-indicator">Slide 39 of 70</span><h1 style="width: 806px; left: 76px; top: 210px; height: auto;; position: absolute">Smaller more manageable pieces of code</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-040"><span class="slide-indicator">Slide 40 of 70</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Do stuff once</h1>
+<p style="height: auto; width: 600px; left: 180px; top: 661px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-041"><span class="slide-indicator">Slide 41 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Abstraction Baby</h2>
+<img src="https://media0.giphy.com/media/mks5DcSGjhQ1a/giphy.gif" width="245" height="179" style="position: absolute; max-width: 100%;width: 651.508px; height: 476px; left: 154.246px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-042"><span class="slide-indicator">Slide 42 of 70</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Abstraction</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute;z-index: 11;">
+<h2>Hide details</h2>
+
+<h2>and show essentials</h2>
+</h2>
+<p style="height: auto; width: 600px; left: 180px; top: 521px;; position: absolute">SIMPLE, PREDICTABLE, MANAGEABLE</p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-043"><span class="slide-indicator">Slide 43 of 70</span><h1 style="width: 806px; left: 80px; top: 226px; height: auto;; position: absolute">Create New Objects Based On Old Ones</h1>
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-044"><span class="slide-indicator">Slide 44 of 70</span><h1 style="width: 806px; left: 76px; top: 210px; height: auto;; position: absolute">We just eliminated a bunch of redundant code</h1>
+<p style="height: auto; width: 600px; left: 180px; top: 120.5px;; position: absolute">AKA</p>
+<p style="height: auto; width: 600px; left: 180px; top: 661px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-045"><span class="slide-indicator">Slide 45 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Inheritance BABY</h2>
+<img src="https://media1.giphy.com/media/GcO6KBd1C16F2/giphy.gif" width="300" height="245" style="position: absolute; max-width: 100%;width: 582.857px; height: 476px; left: 187.572px; top: 154px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-046"><span class="slide-indicator">Slide 46 of 70</span><h1 style="width: 806px; left: 77px; top: 183px; height: auto;; position: absolute">Inheritance</h1>
+<h2 style="width: 806px; left: 77px; top: 315px; height: auto;; position: absolute">Make a class from another class to share a set of properties and methods</h2>
+</section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-047"><span class="slide-indicator">Slide 47 of 70</span><h1 style="width: 806px; left: 77px; top: 70px; height: auto;; position: absolute;z-index: 10;">
+<h1>A piece of code that automagically works with a bunch of different objects</h1>
+
+<p>&nbsp;</p>
+
+<p>polymorphism allows us to override a method in every child class so it will do what we want</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-048"><span class="slide-indicator">Slide 48 of 70</span><h1 style="width: 806px; left: 77px; top: 165.5px; height: auto;; position: absolute">Instead of conditionals and switch cases</h1>
+<p style="height: auto; width: 600px; left: 180px; top: 661px;; position: absolute"><span style="color:#FFFF00"><strong>Music &amp; Light Warning - Next Slide</strong></span></p></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-049"><span class="slide-indicator">Slide 49 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">POLYMORPHISM BABY</h2>
+<img src="https://media0.giphy.com/media/bbJzFFikFRNy1nCkQt/giphy.gif" width="300" height="169" style="position: absolute; max-width: 100%;width: 710px; height: 399.967px; left: 125px; top: 192.017px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-050"><span class="slide-indicator">Slide 50 of 70</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">The Four Pillars</h1>
+<h2 style="width: 806px; left: 77px; top: 286px; height: auto;; position: absolute">What if they actually made any sense...</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-051"><span class="slide-indicator">Slide 51 of 70</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Encapsulation</h1>
+<h2 style="width: 806px; left: 78px; top: 286px; height: auto;; position: absolute">The process of storing functions (methods) with their associated data (properties) in one thing (object)</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-052"><span class="slide-indicator">Slide 52 of 70</span><h2 style="width: 806px; left: 77px; top: 84.5px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-053"><span class="slide-indicator">Slide 53 of 70</span><div style="height: auto; width: 952px; left: 4px; top: 107px;; position: absolute;z-index: 10;">
+<h2 style="color:rgb(255, 255, 255)">Made it easier to add new stuff</h2>
+
+<p>&nbsp;</p>
+
+<h2 style="color:rgb(255, 255, 255)">Made it easier to read through what was already coded</h2>
+
+<p>&nbsp;</p>
+
+<h2 style="color:rgb(255, 255, 255)">And made it so you were not afraid to make changes</h2>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-054"><span class="slide-indicator">Slide 54 of 70</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Abstraction</h1>
+<h2 style="width: 806px; left: 77px; top: 308px; height: auto;; position: absolute;z-index: 11;">
+<h2>Hide details</h2>
+
+<h2>and show essentials</h2>
+</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-055"><span class="slide-indicator">Slide 55 of 70</span><h2 style="width: 806px; left: 77px; top: 84.5px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-056"><span class="slide-indicator">Slide 56 of 70</span><div style="height: auto; width: 600px; left: 180px; top: 140px;; position: absolute;z-index: 10;">
+<h1 style="color:rgb(255, 255, 255)">Smaller more manageable pieces of code</h1>
+
+<p><span style="color:#FFFF00"><span style="font-size:21.328px; text-align:start">Helps you to split the complexity your software project into manageable parts</span></span></p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-057"><span class="slide-indicator">Slide 57 of 70</span><h1 style="width: 806px; left: 77px; top: 204.5px; height: auto;; position: absolute">Make code changes and still sleep at night</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-058"><span class="slide-indicator">Slide 58 of 70</span><h1 style="width: 806px; left: 77px; top: 189px; height: auto;; position: absolute">Inheritance</h1>
+<h2 style="width: 806px; left: 77px; top: 308px; height: auto;; position: absolute">Make a class from another class to share a set of properties and methods</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-059"><span class="slide-indicator">Slide 59 of 70</span><h2 style="width: 806px; left: 77px; top: 84.5px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-060"><span class="slide-indicator">Slide 60 of 70</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Helps you eliminate redundant code</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-061"><span class="slide-indicator">Slide 61 of 70</span><h1 style="width: 806px; left: 74px; top: 201px; height: auto;; position: absolute">Polymorphism</h1>
+<h2 style="width: 806px; left: 74px; top: 338px; height: auto;; position: absolute;z-index: 11;">
+<h2>A piece of code that automagically works with a bunch of different objects</h2>
+
+<p>&nbsp;</p>
+
+<p><span style="color:rgb(255, 255, 255)">polymorphism allows us to override a method in every child class so it will do what we want</span></p>
+</h2></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-062"><span class="slide-indicator">Slide 62 of 70</span><h2 style="width: 806px; left: 77px; top: 84.5px; height: auto;; position: absolute">BUT WHY?</h2>
+<img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%;width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-063"><span class="slide-indicator">Slide 63 of 70</span><h1 style="width: 806px; left: 77px; top: 210px; height: auto;; position: absolute">Helps you avoid if/else and switch cases</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-064"><span class="slide-indicator">Slide 64 of 70</span><h1 style="width: 806px; left: 77px; top: 253px; height: auto;; position: absolute;z-index: 10;">
+<h1>Makes your code more reusable</h1>
+
+<p>&nbsp;</p>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-065"><span class="slide-indicator">Slide 65 of 70</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute;z-index: 10;">
+<h1>Supports The</h1>
+
+<h1>Other Pillars</h1>
+</h1></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-066"><span class="slide-indicator">Slide 66 of 70</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Let's Code</h1>
+<h1 style="height: auto; width: 960px; left: 0px; top: 581.5px;; position: absolute">Let's Build An Agency</h1>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%;width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px;"></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-067"><span class="slide-indicator">Slide 67 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Group Work</h2>
+<img src="https://media4.giphy.com/media/RJW92h4vWo8GeQZyE6/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%;width: 710px; height: 399.375px; left: 125px; top: 150.312px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 960px; left: 0px; top: 542px;; position: absolute;z-index: 12;">
+<p><a href="https://live.remo.co/e/100devs-networking-night-group-0" target="_blank">https://live.remo.co/e/100devs-networking-night-group-0</a><br>
+<a href="https://live.remo.co/e/100devs-networking-night-group-0-1" target="_blank">https://live.remo.co/e/100devs-networking-night-group-0-1</a><br>
+If Remo does not work for you, please jump into one of our</p>
+
+<p>Discord Voice Channels!</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-068"><span class="slide-indicator">Slide 68 of 70</span><h1 style="width: 806px; left: 77px; top: 266px; height: auto;; position: absolute">Talk Through OOP</h1>
+<div style="height: auto; width: 600px; left: 180px; top: 381px;; position: absolute;z-index: 11;">
+<p>Come up with with a parent class</p>
+
+<p>Extend that parent class into two children</p>
+
+<p>Use Encapsulation, Abstraction, Inheritance, and Polymorphism&nbsp;</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-069"><span class="slide-indicator">Slide 69 of 70</span><h2 style="width: 806px; left: 77px; top: 42px; height: auto;; position: absolute">Right Of Passage</h2>
+<img src="https://media3.giphy.com/media/26grMgCg1xZh28AF2/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%;width: 528px; height: 396px; left: 216px; top: 140px; min-width: 1px; min-height: 1px;">
+<div style="height: auto; width: 960px; left: 0px; top: 536px;; position: absolute;z-index: 12;">
+<p><a href="https://live.remo.co/e/100devs-networking-night-group-0" target="_blank">https://live.remo.co/e/100devs-networking-night-group-0</a><br>
+<a href="https://live.remo.co/e/100devs-networking-night-group-0-1" target="_blank">https://live.remo.co/e/100devs-networking-night-group-0-1</a><br>
+If Remo does not work for you, please jump into one of our</p>
+
+<p>Discord Voice Channels!</p>
+</div></section><hr/><section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-070"><span class="slide-indicator">Slide 70 of 70</span><h1 style="width: 806px; left: 76px; top: 21.5px; height: auto;; position: absolute">Homework</h1>
+<div style="height: auto; width: 960px; left: -1px; top: 399px;; position: absolute;z-index: 11;">
+<p>&nbsp;</p>
+
+<p><span style="font-size:0.7em">DO: Please review, play, and break the code we go over tonight<br>
+DO: Get a paid client, Volunteer, or Contribute To Free Software<br>
+DO: FINISH <a href="https://docs.google.com/document/d/1L2vTX3qvLhoGHeG5cVD2ljCfRGr1uJ_Gf-hNZj9KzTg" target="_blank">Professional Checklist</a>&nbsp;</span></p>
+
+<p><span style="font-size:0.7em">Want To Push (Due: Tues. May 10th)?<br>
+Do: Codewars String Ladder (search String problems) - 8kyu, 7kyu, 6kyu, 7kyu, 8kyu &nbsp;</span></p>
+</div>
+
+<img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%;width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px;"></section>
+    </main>
+  </body>
+  <script>
+const PROPS = ['width', 'height', 'top', 'left', 'right', 'bottom', 'font-size']
+
+function saveOriginalSizes(element) {
+	for (const prop of PROPS) {
+		const dataProp = 'data-original-' + prop;
+		if (element.style[prop]) {
+			if (!element.hasAttribute(dataProp)) {
+				element.setAttribute(dataProp, element.style[prop]);
+			}
+		}
+	}
+}
+
+function scaleSizes(element, scale) {
+	const props = PROPS.filter(prop => element.style[prop]);
+	for (const prop of props) {
+		const rawOrigValue = element.getAttribute('data-original-' + prop)
+		if (rawOrigValue.startsWith('auto')) continue;
+
+		const origValue = parseFloat(element.getAttribute('data-original-' + prop));
+
+		const unit = rawOrigValue.slice(-2);
+		element.style[prop] = (origValue * scale) + unit;
+	}
+}
+
+function fancyScaleSlides(){
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	for (const slide of slides){
+		saveOriginalSizes(slide);
+		scaleSizes(slide, scale);
+	}
+	/*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+	const sizedChildren = Array.from(document.querySelectorAll('.slide *')).filter(el => el.hasAttribute('style') && PROPS.some(prop => el.getAttribute('style')?.includes(prop + ':')));
+	for (const el of sizedChildren) {
+		saveOriginalSizes(el);
+		scaleSizes(el, scale);
+	}
+}
+
+function scaleSlides() {
+	const slides = document.querySelectorAll('.slide');
+	const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+	slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});
+}
+
+window.addEventListener('resize', scaleSlides);
+window.addEventListener('load', scaleSlides);
+document.addEventListener('DOMContentLoaded', scaleSlides);
+  </script>
+</html>

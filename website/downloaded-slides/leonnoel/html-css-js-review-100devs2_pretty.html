@@ -1,0 +1,3121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review Class four our our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord" />
+
+    <title>HTML, CSS, JS Review #100Devs (cohort 2)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.3;
+        background-color: #444444;
+        color: #ffffff;
+      }
+      ul {
+        text-align: left;
+        list-style: bullet;
+      }
+
+      ol {
+        list-style: number;
+      }
+
+      .slide {
+        position: relative;
+        border: 1px solid white;
+        transform-origin: top left;
+      }
+      .slide-indicator {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HTML, CSS, JS Review #100Devs (cohort 2)</h1>
+      <p>Review Class four our our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here: leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+        <li>
+          <a href="#slide-001">HTML, CSS, JS - Review</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Active Recall</a>
+        </li>
+        <li>
+          <a href="#slide-005">Forgetting Curve*</a>
+        </li>
+        <li>
+          <a href="#slide-006">Resetting Forgetting Curve</a>
+        </li>
+        <li>
+          <a href="#slide-007">Spaced Repetition</a>
+        </li>
+        <li>
+          <a href="#slide-008">Where are you? </a>
+        </li>
+        <li>
+          <a href="#slide-009">Baby Learns To Walk?</a>
+        </li>
+        <li>
+          <a href="#slide-010">Imposter Syndrome</a>
+        </li>
+        <li>
+          <a href="#slide-011">Trough Of Sorrow</a>
+        </li>
+        <li>
+          <a href="#slide-012">Slide #012</a>
+        </li>
+        <li>
+          <a href="#slide-013">Don&apos;t let your dreams be dreams</a>
+        </li>
+        <li>
+          <a href="#slide-014">YOU OWE YOU</a>
+        </li>
+        <li>
+          <a href="#slide-015">What is the internet?</a>
+        </li>
+        <li>
+          <a href="#slide-016">The Golden Rule</a>
+        </li>
+        <li>
+          <a href="#slide-017">Slide #017</a>
+        </li>
+        <li>
+          <a href="#slide-018">Slide #018</a>
+        </li>
+        <li>
+          <a href="#slide-019">Heading Elements (tags)</a>
+        </li>
+        <li>
+          <a href="#slide-020">Other Text Elements</a>
+        </li>
+        <li>
+          <a href="#slide-021">Nerd Fights</a>
+        </li>
+        <li>
+          <a href="#slide-022">Slide #022</a>
+        </li>
+        <li>
+          <a href="#slide-023">Ordered List</a>
+        </li>
+        <li>
+          <a href="#slide-024">Unordered List</a>
+        </li>
+        <li>
+          <a href="#slide-025">Containing Elements</a>
+        </li>
+        <li>
+          <a href="#slide-026">Let&apos;s Look At Some</a>
+        </li>
+        <li>
+          <a href="#slide-027">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-028">Let&apos;s Walk</a>
+        </li>
+        <li>
+          <a href="#slide-029">Slide #029</a>
+        </li>
+        <li>
+          <a href="#slide-030">CSS</a>
+        </li>
+        <li>
+          <a href="#slide-031">CSS BREAK DOWN</a>
+        </li>
+        <li>
+          <a href="#slide-032">CSS BREAK DOWN</a>
+        </li>
+        <li>
+          <a href="#slide-033">CSS is read top to bottom</a>
+        </li>
+        <li>
+          <a href="#slide-034">CSS BREAK DOWN</a>
+        </li>
+        <li>
+          <a href="#slide-035">Let&apos;s Review</a>
+        </li>
+        <li>
+          <a href="#slide-036">Color</a>
+        </li>
+        <li>
+          <a href="#slide-037">Font-family</a>
+        </li>
+        <li>
+          <a href="#slide-038">Font-weight</a>
+        </li>
+        <li>
+          <a href="#slide-039">Slide #039</a>
+        </li>
+        <li>
+          <a href="#slide-040">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-041">Selecting By Relationship</a>
+        </li>
+        <li>
+          <a href="#slide-042">Selecting By Relationship</a>
+        </li>
+        <li>
+          <a href="#slide-043">Selecting By Relationship</a>
+        </li>
+        <li>
+          <a href="#slide-044">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-045">IDs &amp; Classes</a>
+        </li>
+        <li>
+          <a href="#slide-046">IDs</a>
+        </li>
+        <li>
+          <a href="#slide-047">Classes</a>
+        </li>
+        <li>
+          <a href="#slide-048">Specificity</a>
+        </li>
+        <li>
+          <a href="#slide-049">Specificity</a>
+        </li>
+        <li>
+          <a href="#slide-050">Specificity</a>
+        </li>
+        <li>
+          <a href="#slide-051">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-052">The Box Model</a>
+        </li>
+        <li>
+          <a href="#slide-053">Let&apos;s Draw</a>
+        </li>
+        <li>
+          <a href="#slide-054">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-055">Let&apos;s Look</a>
+        </li>
+        <li>
+          <a href="#slide-056">Slide #056</a>
+        </li>
+        <li>
+          <a href="#slide-057">&#128680; Let&apos;s Talk About Floats &#128680;</a>
+        </li>
+        <li>
+          <a href="#slide-058">Floats</a>
+        </li>
+        <li>
+          <a href="#slide-059">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-060">Layout 1</a>
+        </li>
+        <li>
+          <a href="#slide-061">Layout 2</a>
+        </li>
+        <li>
+          <a href="#slide-062">Layout 3</a>
+        </li>
+        <li>
+          <a href="#slide-063">FLEXBOX</a>
+        </li>
+        <li>
+          <a href="#slide-064">Layout 1</a>
+        </li>
+        <li>
+          <a href="#slide-065">Layout 2</a>
+        </li>
+        <li>
+          <a href="#slide-066">Layout 3</a>
+        </li>
+        <li>
+          <a href="#slide-067">Responsive Websites</a>
+        </li>
+        <li>
+          <a href="#slide-068">Fixed Vs. Responsive</a>
+        </li>
+        <li>
+          <a href="#slide-069">Slide #069</a>
+        </li>
+        <li>
+          <a href="#slide-070">Slide #070</a>
+        </li>
+        <li>
+          <a href="#slide-071">Slide #071</a>
+        </li>
+        <li>
+          <a href="#slide-072">Content Decisions</a>
+        </li>
+        <li>
+          <a href="#slide-073">How do we make content decisions?</a>
+        </li>
+        <li>
+          <a href="#slide-074">Media Queries&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-075">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-076">How can we make this responsive?</a>
+        </li>
+        <li>
+          <a href="#slide-077">Programming</a>
+        </li>
+        <li>
+          <a href="#slide-078">A computer will do what you tell it to do.</a>
+        </li>
+        <li>
+          <a href="#slide-079">What is a program?</a>
+        </li>
+        <li>
+          <a href="#slide-080">What is a programming?</a>
+        </li>
+        <li>
+          <a href="#slide-081">Simple Circut</a>
+        </li>
+        <li>
+          <a href="#slide-082">True Story</a>
+        </li>
+        <li>
+          <a href="#slide-083">JAVASCRIPT</a>
+        </li>
+        <li>
+          <a href="#slide-084">Has a specific &apos;Syntax&apos;</a>
+        </li>
+        <li>
+          <a href="#slide-085">JS Syntax&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-086">Has a specific &apos;Syntax&apos;</a>
+        </li>
+        <li>
+          <a href="#slide-087">Variables</a>
+        </li>
+        <li>
+          <a href="#slide-088">Variables</a>
+        </li>
+        <li>
+          <a href="#slide-089">Variables</a>
+        </li>
+        <li>
+          <a href="#slide-090">Variable Conventions</a>
+        </li>
+        <li>
+          <a href="#slide-091">Slide #091</a>
+        </li>
+        <li>
+          <a href="#slide-092">Strings</a>
+        </li>
+        <li>
+          <a href="#slide-093">Strings</a>
+        </li>
+        <li>
+          <a href="#slide-094">Numbers</a>
+        </li>
+        <li>
+          <a href="#slide-095">Numbers</a>
+        </li>
+        <li>
+          <a href="#slide-096">Arithmetic In Javascript</a>
+        </li>
+        <li>
+          <a href="#slide-097">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-098">Slide #098</a>
+        </li>
+        <li>
+          <a href="#slide-099">Slide #099</a>
+        </li>
+        <li>
+          <a href="#slide-100">Logical Operators</a>
+        </li>
+        <li>
+          <a href="#slide-101">Conditional Syntax</a>
+        </li>
+        <li>
+          <a href="#slide-102">Conditional Syntax</a>
+        </li>
+        <li>
+          <a href="#slide-103">Conditional Syntax</a>
+        </li>
+        <li>
+          <a href="#slide-104">&#128680; DANGER &#128680;</a>
+        </li>
+        <li>
+          <a href="#slide-105">Multiple Conditions</a>
+        </li>
+        <li>
+          <a href="#slide-106">Multiple Conditions</a>
+        </li>
+        <li>
+          <a href="#slide-107">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-108">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-109">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-110">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-111">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-112">Functions</a>
+        </li>
+        <li>
+          <a href="#slide-113">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-114">Pseudo Code</a>
+        </li>
+        <li>
+          <a href="#slide-115">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-116">Slide #116</a>
+        </li>
+        <li>
+          <a href="#slide-117">Slide #117</a>
+        </li>
+        <li>
+          <a href="#slide-118">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-119">Loops</a>
+        </li>
+        <li>
+          <a href="#slide-120">Loops</a>
+        </li>
+        <li>
+          <a href="#slide-121">Loops - For</a>
+        </li>
+        <li>
+          <a href="#slide-122">Loops - For</a>
+        </li>
+        <li>
+          <a href="#slide-123">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-124">Loops - While</a>
+        </li>
+        <li>
+          <a href="#slide-125">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-126">Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-127">Toasters</a>
+        </li>
+        <li>
+          <a href="#slide-128">Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-129">Declaring Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-130">Declaring Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-131">Declaring Arrays</a>
+        </li>
+        <li>
+          <a href="#slide-132">Array Indexing</a>
+        </li>
+        <li>
+          <a href="#slide-133">Array Indexing</a>
+        </li>
+        <li>
+          <a href="#slide-134">Array Indexing</a>
+        </li>
+        <li>
+          <a href="#slide-135">Array Indexing</a>
+        </li>
+        <li>
+          <a href="#slide-136">Array Length</a>
+        </li>
+        <li>
+          <a href="#slide-137">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-138">Array Iteration</a>
+        </li>
+        <li>
+          <a href="#slide-139">Array Iteration</a>
+        </li>
+        <li>
+          <a href="#slide-140">Other Arrays Methods</a>
+        </li>
+        <li>
+          <a href="#slide-141">Other Arrays Methods</a>
+        </li>
+        <li>
+          <a href="#slide-142">Other Arrays Methods</a>
+        </li>
+        <li>
+          <a href="#slide-143">Other Arrays Methods</a>
+        </li>
+        <li>
+          <a href="#slide-144">Other Arrays Methods</a>
+        </li>
+        <li>
+          <a href="#slide-145">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-146">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-147">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-148">Think of a physical object</a>
+        </li>
+        <li>
+          <a href="#slide-149">How about a stopwatch</a>
+        </li>
+        <li>
+          <a href="#slide-150">Stopwatch Object</a>
+        </li>
+        <li>
+          <a href="#slide-151">Stopwatch Object</a>
+        </li>
+        <li>
+          <a href="#slide-152">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-153">Objects</a>
+        </li>
+        <li>
+          <a href="#slide-154">Car Factory?</a>
+        </li>
+        <li>
+          <a href="#slide-155">Slide #155</a>
+        </li>
+        <li>
+          <a href="#slide-156">Slide #156</a>
+        </li>
+        <li>
+          <a href="#slide-157">Slide #157</a>
+        </li>
+        <li>
+          <a href="#slide-158">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-159">Slide #159</a>
+        </li>
+        <li>
+          <a href="#slide-160">APIs</a>
+        </li>
+        <li>
+          <a href="#slide-161">APIs</a>
+        </li>
+        <li>
+          <a href="#slide-162">APIs</a>
+        </li>
+        <li>
+          <a href="#slide-163">Slide #163</a>
+        </li>
+        <li>
+          <a href="#slide-164">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-165">Slide #165</a>
+        </li>
+        <li>
+          <a href="#slide-166">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-167">Slide #167</a>
+        </li>
+        <li>
+          <a href="#slide-168">OOP BABY</a>
+        </li>
+        <li>
+          <a href="#slide-169">OBJECT ORIENTED PROGRAMING&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-170">Let&apos;s Talk About It</a>
+        </li>
+        <li>
+          <a href="#slide-171">This fusion of data and functionality into one object</a>
+        </li>
+        <li>
+          <a href="#slide-172">Encapsulation Baby</a>
+        </li>
+        <li>
+          <a href="#slide-173">Encapsulation</a>
+        </li>
+        <li>
+          <a href="#slide-174">Complex or unnecessary details are hidden</a>
+        </li>
+        <li>
+          <a href="#slide-175">This enables you to implement things without understanding or even thinking about all the hidden complexity</a>
+        </li>
+        <li>
+          <a href="#slide-176">Smaller more manageable pieces of code</a>
+        </li>
+        <li>
+          <a href="#slide-177">Do stuff once</a>
+        </li>
+        <li>
+          <a href="#slide-178">Abstraction Baby</a>
+        </li>
+        <li>
+          <a href="#slide-179">Abstraction</a>
+        </li>
+        <li>
+          <a href="#slide-180">Create New Objects Based On Old Ones</a>
+        </li>
+        <li>
+          <a href="#slide-181">We just eliminated a bunch of redundant code</a>
+        </li>
+        <li>
+          <a href="#slide-182">Inheritance BABY</a>
+        </li>
+        <li>
+          <a href="#slide-183">Inheritance</a>
+        </li>
+        <li>
+          <a href="#slide-184">Slide #184</a>
+        </li>
+        <li>
+          <a href="#slide-185">Instead of conditionals and switch cases</a>
+        </li>
+        <li>
+          <a href="#slide-186">POLYMORPHISM BABY</a>
+        </li>
+        <li>
+          <a href="#slide-187">The Four Pillars</a>
+        </li>
+        <li>
+          <a href="#slide-188">Encapsulation</a>
+        </li>
+        <li>
+          <a href="#slide-189">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-190">Made it easier to add new stuff</a>
+        </li>
+        <li>
+          <a href="#slide-191">Abstraction</a>
+        </li>
+        <li>
+          <a href="#slide-192">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-193">Smaller more manageable pieces of code</a>
+        </li>
+        <li>
+          <a href="#slide-194">Make code changes and still sleep at night</a>
+        </li>
+        <li>
+          <a href="#slide-195">Inheritance</a>
+        </li>
+        <li>
+          <a href="#slide-196">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-197">Helps you eliminate redundant code</a>
+        </li>
+        <li>
+          <a href="#slide-198">Polymorphism</a>
+        </li>
+        <li>
+          <a href="#slide-199">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-200">Helps you avoid if/else and switch cases</a>
+        </li>
+        <li>
+          <a href="#slide-201">Slide #201</a>
+        </li>
+        <li>
+          <a href="#slide-202">Slide #202</a>
+        </li>
+        <li>
+          <a href="#slide-203">Let&apos;s Code</a>
+        </li>
+        <li>
+          <a href="#slide-204">Grab The Checklist</a>
+        </li>
+        <li>
+          <a href="#slide-205">Passing The Sniff</a>
+        </li>
+        <li>
+          <a href="#slide-206">PUSH EVERY DAY</a>
+        </li>
+        <li>
+          <a href="#slide-207">HITLIST</a>
+        </li>
+        <li>
+          <a href="#slide-208">USE THE SHEET!</a>
+        </li>
+        <li>
+          <a href="#slide-209">Slide #209</a>
+        </li>
+        <li>
+          <a href="#slide-210">Find the hiring manager:</a>
+        </li>
+        <li>
+          <a href="#slide-211">IF YOU EVER JUST CLICK APPLY</a>
+        </li>
+        <li>
+          <a href="#slide-212">30 High Value Apps</a>
+        </li>
+        <li>
+          <a href="#slide-213">10 Premium Apps</a>
+        </li>
+        <li>
+          <a href="#slide-214">100Hours Project</a>
+        </li>
+        <li>
+          <a href="#slide-215">Slide #215</a>
+        </li>
+        <li>
+          <a href="#slide-216">Interviewing</a>
+        </li>
+        <li>
+          <a href="#slide-217">Process</a>
+        </li>
+        <li>
+          <a href="#slide-218">Once Recommended</a>
+        </li>
+        <li>
+          <a href="#slide-219">Once Recommended</a>
+        </li>
+        <li>
+          <a href="#slide-220">How to prepare?</a>
+        </li>
+        <li>
+          <a href="#slide-221">The Bank</a>
+        </li>
+        <li>
+          <a href="#slide-222">Behavioral</a>
+        </li>
+        <li>
+          <a href="#slide-223">C.A.R.</a>
+        </li>
+        <li>
+          <a href="#slide-224">CAUSE</a>
+        </li>
+        <li>
+          <a href="#slide-225">ACTION</a>
+        </li>
+        <li>
+          <a href="#slide-226">RESULT</a>
+        </li>
+        <li>
+          <a href="#slide-227">Technical Questions</a>
+        </li>
+        <li>
+          <a href="#slide-228">Explanation, Use, Example</a>
+        </li>
+        <li>
+          <a href="#slide-229">Technical Whiteboard</a>
+        </li>
+        <li>
+          <a href="#slide-230">P.R.E.P</a>
+        </li>
+        <li>
+          <a href="#slide-231">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main>
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001">
+        <span class="slide-indicator">Slide 1 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 365.5px; height: auto; position: absolute"><span style="font-size: 51.3px">HTML, CSS, JS - Review</span></h2>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 439.5px; position: absolute">
+          <span style="color: #ffffff"><span style="font-size: 1em">Leon Noel</span></span>
+        </h2>
+
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px" />
+        <h1 style="height: auto; width: 600px; left: 180px; top: 280px; position: absolute">#100Devs</h1>
+        <p style="height: auto; width: 960px; left: 0px; top: 544px; position: absolute">
+          Rap just make me anxious, and acid made me crazy<br />
+          Them squares just made me looser and that wax just made me lazy<br />
+          And I still make this song, and I'ma make another<br />
+          If you ever actually hit me, better watch out for my brother
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002">
+        <span class="slide-indicator">Slide 2 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 63.5px; height: auto; position: absolute">Agenda</h1>
+        <ul style="width: 806px; left: 77px; top: 175px; height: auto; position: absolute">
+          <li>Questions?</li>
+          <li>Review - HTML Fundamentals</li>
+          <li>Review - CSS Fundamentals</li>
+          <li>Review - JS Fundamentals</li>
+          <li>Homework - MORE REVIEW</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003">
+        <span class="slide-indicator">Slide 3 of 231</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute; z-index: 10">
+          <h2>Questions</h2>
+
+          <h3>About last class or life</h3>
+        </h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%; width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004">
+        <span class="slide-indicator">Slide 4 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 19px; height: auto; position: absolute">Active Recall</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870866/active-recall.png" width="1174" height="836" style="position: absolute; max-width: 100%; width: 668.45px; height: 476px; left: 145.775px; top: 106px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 610.5px; position: absolute">Ali Abdaal: https://youtu.be/ukLnPbIffxE</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005">
+        <span class="slide-indicator">Slide 5 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Forgetting Curve*</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870867/ebbinghaus.jpg" width="1275" height="750" style="position: absolute; max-width: 100%; width: 710px; height: 417.647px; left: 125px; top: 183.177px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 235px; top: 591px; position: absolute"><span style="font-size: 0.5em">https://intelalearning.wordpress.com</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006">
+        <span class="slide-indicator">Slide 6 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Resetting Forgetting Curve</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870865/Ebbinghaus-forgetting-curve-and-review-cycle.png" width="709" height="445" style="position: absolute; max-width: 100%; width: 710px; height: 445.628px; left: 125px; top: 169.186px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 602.814px; position: absolute"><span style="font-size: 0.5em">https://www.pearsoned.com/three-simple-research-based-ways-to-ace-a-test</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007">
+        <span class="slide-indicator">Slide 7 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 17px; height: auto; position: absolute">Spaced Repetition</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870868/spaced.png" width="610" height="433" style="position: absolute; max-width: 100%; width: 670.577px; height: 476px; left: 144.712px; top: 112px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 806px; left: 77px; top: 610.5px; position: absolute">Ali Abdaal: https://youtu.be/Z-zNHHpXoMM</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008">
+        <span class="slide-indicator">Slide 8 of 231</span>
+        <h2 style="width: 603px; left: 29px; top: 9px; height: auto; position: absolute">
+          Where are you? <br />
+          What do you want?
+        </h2>
+
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626245/ticketmaster-slide.jpg" width="1000" height="667" style="position: absolute; max-width: 100%; width: 451px; height: 300.817px; left: 480px; top: 295.669px; min-width: 1px; min-height: 1px" />
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626252/Screen_Shot_2020-08-10_at_11.36.36_AM.png" width="647" height="288" style="position: absolute; max-width: 100%; width: 417.751px; height: 185.954px; left: 29px; top: 209.023px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: -158px; top: 400.5px; position: absolute">Happiest Career:</p>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626259/Screen_Shot_2020-08-10_at_11.38.54_AM.png" width="664" height="330" style="position: absolute; max-width: 100%; width: 424.945px; height: 211.193px; left: 23.0275px; top: 446.078px; min-width: 1px; min-height: 1px" />
+
+        <p style="height: auto; width: 600px; left: 420px; top: 591px; position: absolute"><span style="font-size: 0.5em">Ticketmaster Office</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009">
+        <span class="slide-indicator">Slide 9 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Baby Learns To Walk?</h2>
+        <img src="https://media0.giphy.com/media/TmVHwsPAveJiM/giphy.gif" width="300" height="225" style="position: absolute; max-width: 100%; width: 624.47px; height: 401.567px; left: 167.765px; top: 140px; min-width: 1px; min-height: 1px" />
+        <h3 style="height: auto; width: 803px; left: 80px; top: 580px; position: absolute"><span style="font-size: 0.7em">Half Hard Work and Half Believing You Can Do It</span></h3>
+        <p style="height: auto; width: 600px; left: 554px; top: 661px; position: absolute">*thanks Vonds</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010">
+        <span class="slide-indicator">Slide 10 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Imposter Syndrome</h2>
+        <img src="https://media1.giphy.com/media/3oKHWmguFnb1q9HlwQ/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%; width: 585.333px; height: 439px; left: 187.334px; top: 166px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011">
+        <span class="slide-indicator">Slide 11 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Trough Of Sorrow</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7694391/trough-of-sorrow.png" width="734" height="472" style="position: absolute; max-width: 100%; width: 710px; height: 456.567px; left: 125px; top: 163.716px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012">
+        <span class="slide-indicator">Slide 12 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h2>Manage Frustration</h2>
+
+          <h2>Consistency&nbsp;</h2>
+
+          <h2>Taking Care Of Yourself</h2>
+
+          <p>&nbsp;</p>
+        </h1>
+        <img src="https://media1.giphy.com/media/1gdtvpQWIGyZH3EzNI/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 573.511px; height: 322.6px; left: 195.245px; top: 350px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013">
+        <span class="slide-indicator">Slide 13 of 231</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute">Don't let your dreams be dreams</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626304/just-do-it.gif" width="605" height="340" style="position: absolute; max-width: 100%; width: 710px; height: 399.008px; left: 125px; top: 192.496px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014">
+        <span class="slide-indicator">Slide 14 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 33px; height: auto; position: absolute">YOU OWE YOU</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7870865/Ebbinghaus-forgetting-curve-and-review-cycle.png" width="709" height="445" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 125px; top: 164px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 330.5px; position: absolute">Text</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015">
+        <span class="slide-indicator">Slide 15 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">What is the internet?</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626681/1200px-Client-server-model.svg.png" width="1200" height="720" style="position: absolute; max-width: 100%; width: 710px; height: 426px; left: 125px; top: 179px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016">
+        <span class="slide-indicator">Slide 16 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">The Golden Rule</h1>
+        <h2 style="width: 872px; left: 44px; top: 167px; height: auto; position: absolute">SEPERATION OF CONCERNS</h2>
+        <ul style="height: auto; width: 600px; left: 180px; top: 330.5px; position: absolute">
+          <li>HTML = Content / Structure</li>
+          <li>CSS = Style</li>
+          <li>JS = Behavior / Interaction</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017">
+        <span class="slide-indicator">Slide 17 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 111px; height: auto; position: absolute; z-index: 10">
+          <h3><span style="font-size: 1em">HTML SYNTAX </span></h3>
+
+          <h3><span style="font-size: 1em">(Spelling And Grammer Rules)</span></h3>
+        </h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7627062/html-element.png" width="609" height="181" style="position: absolute; max-width: 100%; width: 709.939px; height: 169px; left: 125.03px; top: 265.5px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 491.969px; top: 417px; position: absolute"><span style="font-size: 0.5em">source: mdn</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018">
+        <span class="slide-indicator">Slide 18 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h1>Time For Some</h1>
+
+          <h1>TAGS</h1>
+        </h1>
+        <p style="height: auto; width: 600px; left: 388px; top: 560px; position: absolute"><span style="font-size: 0.5em">not that kind...</span></p>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7627083/tag.gif" width="384" height="216" style="position: absolute; max-width: 100%; width: 514.844px; height: 289.6px; left: 222.578px; top: 280px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019">
+        <span class="slide-indicator">Slide 19 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Heading Elements (tags)</h2>
+        <pre style="font-size: 32px; line-height: 38px; width: 502px; height: 247px; left: 229px; top: 173px; position: absolute" class="xml"><code>&lt;h1&gt; MOST IMPORTANT &lt;/h1&gt;
+&lt;h2&gt; .............. &lt;/h2&gt;
+&lt;h3&gt; .............. &lt;/h3&gt;
+&lt;h4&gt; .............. &lt;/h4&gt;
+&lt;h5&gt; .............. &lt;/h5&gt;
+&lt;h6&gt; .............. &lt;/h6&gt;</code></pre>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 463px; position: absolute">SIZE DOES NOT MATTER</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020">
+        <span class="slide-indicator">Slide 20 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">Other Text Elements</h2>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 648px; height: 151.5px; left: 156px; top: 198.5px; position: absolute"><code>&lt;p&gt; Paragraph &lt;/p&gt;
+&lt;span&gt; Short text &lt;/span&gt;
+&lt;pre&gt; Preserves Whitespace &lt;/pre&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021">
+        <span class="slide-indicator">Slide 21 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 91.5px; height: auto; position: absolute">Nerd Fights</h1>
+        <pre class="xml" style="font-size: 42px; line-height: 50px; width: 137px; height: 114px; left: 423px; top: 243px; position: absolute"><code>&lt;br&gt;
+&lt;hr&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022">
+        <span class="slide-indicator">Slide 22 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h2><span style="font-size: 1em">Assisted Device</span></h2>
+
+          <h2><span style="font-size: 1em">Elements</span></h2>
+        </h1>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 701px; height: 108px; left: 132.5px; top: 280px; position: absolute"><code>&lt;em&gt; Stress Emphasis &lt;/em&gt;
+&lt;strong&gt; Strong Importance &lt;/strong&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023">
+        <span class="slide-indicator">Slide 23 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 62px; height: auto; position: absolute">Ordered List</h1>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 410px; height: 178px; left: 275px; top: 210px; position: absolute"><code>&lt;ol&gt;
+  &lt;li&gt; Item 1 &lt;/li&gt;
+  &lt;li&gt; Item 2 &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024">
+        <span class="slide-indicator">Slide 24 of 231</span>
+        <h1 style="width: 806px; left: 74px; top: 64px; height: auto; position: absolute">Unordered List</h1>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 391px; height: 166px; left: 284.5px; top: 210px; position: absolute"><code>&lt;ul&gt;
+  &lt;li&gt; Item 1 &lt;/li&gt;
+  &lt;li&gt; Item 2 &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025">
+        <span class="slide-indicator">Slide 25 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 43px; height: auto; position: absolute">Containing Elements</h1>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 410px; height: 241px; left: 278px; top: 210px; position: absolute"><code>&lt;div&gt; &lt;/div&gt;
+&lt;section&gt; &lt;/section&gt;
+&lt;article&gt; &lt;/article&gt;
+&lt;aside&gt; &lt;/aside&gt;
+&lt;header&gt; &lt;/header&gt;
+&lt;footer&gt; &lt;/footer&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026">
+        <span class="slide-indicator">Slide 26 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 21.5px; height: auto; position: absolute">Let's Look At Some</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 413.083px; height: 427px; left: 273.458px; top: 140px; min-width: 1px; min-height: 1px" />
+        <h1 style="height: auto; width: 600px; left: 183px; top: 581.5px; position: absolute">Websites</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027">
+        <span class="slide-indicator">Slide 27 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">Brownies&nbsp;</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028">
+        <span class="slide-indicator">Slide 28 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Walk</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">BBC&nbsp;</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029">
+        <span class="slide-indicator">Slide 29 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h1>CSS</h1>
+
+          <h2>Where does CSS go?</h2>
+        </h2>
+        <ul style="width: 806px; left: 77px; top: 295px; height: auto; position: absolute">
+          <li>Inline</li>
+          <li>In the head</li>
+          <li>In a separate file</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030">
+        <span class="slide-indicator">Slide 30 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">CSS</h1>
+        <h2 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute; z-index: 11">
+          <h2>Use a separate CSS file</h2>
+
+          <p>It is best practice to put CSS in it's own file and link to it from the &lt;head&gt; !</p>
+
+          <p>&nbsp;</p>
+        </h2>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 856.5px; height: 49px; left: 42.5px; top: 420px; position: absolute"><code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031">
+        <span class="slide-indicator">Slide 31 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">CSS BREAK DOWN</h2>
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 515px; height: 248.5px; left: 222.5px; top: 435.75px; position: absolute"><code>p{
+  color: red;
+  font-weight: bold;
+}</code></pre>
+        <div style="height: auto; width: 800px; left: 80px; top: 170.5px; position: absolute; z-index: 12">
+          <h3>
+            The whole thing is called a <span style="color: #ffd700"><strong>rule</strong></span
+            >.
+          </h3>
+
+          <h3>
+            The p is called a <span style="color: #ffd700"><strong>selector</strong></span
+            >.
+          </h3>
+
+          <h3>
+            It is followed by a set of <span style="color: #ffd700"><strong>declarations</strong></span> in a <span style="color: #ffd700"><strong>declaration block</strong></span>
+          </h3>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032">
+        <span class="slide-indicator">Slide 32 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">CSS BREAK DOWN</h2>
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 515px; height: 248.5px; left: 222.5px; top: 295.75px; position: absolute"><code>p{
+  color: red;
+  font-weight: bold;
+}</code></pre>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 173px; position: absolute">What is this?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033">
+        <span class="slide-indicator">Slide 33 of 231</span>
+        <pre class="css" style="font-size: 32px; line-height: 38px; width: 396px; height: 284.5px; left: 282px; top: 358.75px; position: absolute"><code>p{
+  color: red;
+  font-weight: bold;
+}
+p{
+  color: blue;
+}</code></pre>
+        <div style="height: auto; width: 800px; left: 80px; top: 39px; position: absolute; z-index: 12">
+          <h3>CSS is read top to bottom</h3>
+
+          <p>&nbsp;</p>
+
+          <p>What comes below, can override what came above</p>
+
+          <p>&nbsp;</p>
+
+          <h2>
+            This is called the <strong><span style="color: #ffd700">Cascade</span></strong>
+          </h2>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034">
+        <span class="slide-indicator">Slide 34 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">CSS BREAK DOWN</h2>
+
+        <h2 style="height: auto; width: 800px; left: 80px; top: 250px; position: absolute">Why might we want to link to a separate CSS file?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035">
+        <span class="slide-indicator">Slide 35 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Review</h1>
+        <h1 style="height: auto; width: 802px; left: 80px; top: 581.5px; position: absolute">Some Simple Styles</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036">
+        <span class="slide-indicator">Slide 36 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 43px; height: auto; position: absolute">Color</h1>
+        <pre class="css" style="font-size: 32px; line-height: 38px; width: 587px; height: 471.5px; left: 330.5px; top: 184.25px; position: absolute"><code>h1{
+  color: red;
+}
+h2{
+  color: #FF0000;
+}
+p{
+  color: rgba(255,0,0,1);
+}
+span{
+  color: hsla(0, 100%, 50%,1);
+}</code></pre>
+        <ul style="height: auto; width: 600px; left: -140px; top: 238.75px; position: absolute">
+          <li>Word</li>
+          <li>Hex</li>
+          <li>RGBa</li>
+          <li>HSLa</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037">
+        <span class="slide-indicator">Slide 37 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Font-family</h1>
+        <pre class="xml" style="font-size: 19px; line-height: 23px; width: 921px; height: 122px; left: 19.5px; top: 210px; position: absolute"><code>&lt;head&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;
+  400;700&amp;display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;</code></pre>
+        <pre class="css" style="font-size: 22px; line-height: 26px; width: 764px; height: 130px; left: 98px; top: 420px; position: absolute"><code>p{
+  font-family: 'Source Sans Pro', 'Helvetica' sans-serif;
+}</code></pre>
+        <div style="height: auto; width: 600px; left: -249px; top: 176.5px; position: absolute; z-index: 13">
+          <p>html</p>
+
+          <p>&nbsp;</p>
+        </div>
+        <p style="height: auto; width: 600px; left: -183px; top: 381px; position: absolute">css</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038">
+        <span class="slide-indicator">Slide 38 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Font-weight</h1>
+        <pre class="xml" style="font-size: 19px; line-height: 23px; width: 921px; height: 122px; left: 19.5px; top: 210px; position: absolute"><code>&lt;head&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;
+  400;700&amp;display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;</code></pre>
+        <pre class="css" style="font-size: 22px; line-height: 26px; width: 764px; height: 130px; left: 98px; top: 420px; position: absolute"><code>p{
+  font-family: 'Source Sans Pro', 'Helvetica' sans-serif;
+  font-weight: 700;
+}</code></pre>
+        <div style="height: auto; width: 600px; left: -249px; top: 176.5px; position: absolute; z-index: 13">
+          <p>html</p>
+
+          <p>&nbsp;</p>
+        </div>
+        <p style="height: auto; width: 600px; left: -183px; top: 381px; position: absolute">css</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039">
+        <span class="slide-indicator">Slide 39 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 37.5px; height: auto; position: absolute; z-index: 10">
+          <h1>🛑 Stop 🛑</h1>
+
+          <h1>How to research?</h1>
+        </h1>
+        <h2 style="width: 806px; left: 74px; top: 210px; height: auto; position: absolute; z-index: 11">
+          <h2>&nbsp;</h2>
+
+          <p>https://lmgtfy.com/?q=italicize+text+html+mdn&amp;s=d</p>
+
+          <p>&nbsp;</p>
+
+          <h1><strong>🚨 Use the MDN 🚨</strong></h1>
+
+          <p>&nbsp;</p>
+
+          <p>Use <a href="https://learn.shayhowe.com/html-css/" target="_blank">https://learn.shayhowe.com/html-css/</a></p>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-040">
+        <span class="slide-indicator">Slide 40 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 802px; left: 80px; top: 581.5px; position: absolute">Some Basic CSS</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-041">
+        <span class="slide-indicator">Slide 41 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">Selecting By Relationship</h2>
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 366px; height: 159.25px; left: 560px; top: 393.75px; position: absolute"><code>section &gt; p {
+  color: red;
+}</code></pre>
+        <div style="height: auto; width: 800px; left: 80px; top: 170.5px; position: absolute; z-index: 12">
+          <h3><span style="color: rgb(93.33334%, 93.33334%, 93.33334%); font-size: 25pt">To select an element that is the direct descendent of another element use </span></h3>
+
+          <h2>
+            <strong><span style="color: #ffd700">parent &gt; child</span></strong>
+          </h2>
+        </div>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 456px; height: 134px; left: 40px; top: 406.375px; position: absolute"><code>&lt;section&gt;
+  &lt;p&gt;Hello, Twitch!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-042">
+        <span class="slide-indicator">Slide 42 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">Selecting By Relationship</h2>
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 366px; height: 159.25px; left: 560px; top: 480.375px; position: absolute"><code>section p {
+  color: red;
+}</code></pre>
+        <div style="height: auto; width: 800px; left: 80px; top: 170.5px; position: absolute; z-index: 12">
+          <h3><span style="color: rgb(93.33334%, 93.33334%, 93.33334%); font-size: 25pt">To select an element that is inside of another element without being directly descended use parent element&nbsp; </span></h3>
+
+          <h2><span style="color: #ffd700">parent child</span></h2>
+        </div>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 494px; height: 202.625px; left: 35px; top: 458.688px; position: absolute"><code>&lt;section&gt;
+  &lt;article&gt;
+    &lt;p&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-043">
+        <span class="slide-indicator">Slide 43 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">Selecting By Relationship</h2>
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 366px; height: 159.25px; left: 560px; top: 406.375px; position: absolute"><code>p + p {
+  color: red;
+}</code></pre>
+        <div style="height: auto; width: 800px; left: 80px; top: 170.5px; position: absolute; z-index: 12">
+          <h3><span style="color: rgb(93.33334%, 93.33334%, 93.33334%); font-size: 25pt">To select an element that is the next sibling use </span></h3>
+
+          <p>&nbsp;</p>
+
+          <h3>
+            <span style="font-size: 1.2em"
+              ><strong><span style="color: #ffd700">previous sibling + next sibling</span></strong></span
+            >
+          </h3>
+        </div>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 474px; height: 166px; left: 40px; top: 406.375px; position: absolute"><code>&lt;section&gt;
+  &lt;p&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;p&gt;Hello, Youtube!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-044">
+        <span class="slide-indicator">Slide 44 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 802px; left: 80px; top: 581.5px; position: absolute">Some Relationships</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-045">
+        <span class="slide-indicator">Slide 45 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">IDs &amp; Classes</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7647416/specific.gif" width="508" height="284" style="position: absolute; max-width: 100%; width: 710px; height: 396.929px; left: 124px; top: 193.536px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-046">
+        <span class="slide-indicator">Slide 46 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 33px; height: auto; position: absolute">IDs</h2>
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 366px; height: 159.25px; left: 298px; top: 530.375px; position: absolute"><code>#zebra {
+  color: red;
+}</code></pre>
+        <div style="height: auto; width: 800px; left: 80px; top: 140px; position: absolute; z-index: 12">
+          <h3><span style="color: rgb(93.33334%, 93.33334%, 93.33334%); font-size: 25pt">IDs are used for selecting distinct elements</span></h3>
+
+          <p>
+            <strong
+              ><span style="color: #ffd700"><span style="font-size: 25pt">Only one id with the same value per document</span></span></strong
+            >
+          </p>
+
+          <h3><span style="color: rgb(93.33334%, 93.33334%, 93.33334%); font-size: 25pt">#idName</span></h3>
+        </div>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 687px; height: 169px; left: 138.5px; top: 335.5px; position: absolute"><code>&lt;section&gt;
+  &lt;p&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;p id="zebra"&gt;Hello, Youtube!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-047">
+        <span class="slide-indicator">Slide 47 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 33px; height: auto; position: absolute">Classes</h2>
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 366px; height: 159.25px; left: 298px; top: 530.375px; position: absolute"><code>.bob {
+  color: red;
+}</code></pre>
+        <div style="height: auto; width: 888px; left: 36px; top: 147px; position: absolute; z-index: 12">
+          <h3><span style="color: rgb(93.33334%, 93.33334%, 93.33334%); font-size: 25pt">Classes are for selecting multiple elements</span></h3>
+
+          <p>
+            <strong
+              ><span style="color: #ffd700"><span style="font-size: 25pt">Multiple with same value allowed per document</span></span></strong
+            >
+          </p>
+
+          <h3><span style="color: rgb(93.33334%, 93.33334%, 93.33334%); font-size: 25pt">.className</span></h3>
+        </div>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 910px; height: 202.875px; left: 27px; top: 318.562px; position: absolute"><code>&lt;section&gt;
+  &lt;p class="robot"&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;p id="zebra" class="bob"&gt;Hello, Youtube!&lt;/p&gt;
+  &lt;p class="bob"&gt;Goodbye, Mixer!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-048">
+        <span class="slide-indicator">Slide 48 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 0px; height: auto; position: absolute">Specificity</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7647512/specificity.png" width="606" height="223" style="position: absolute; max-width: 100%; width: 710px; height: 261.271px; left: 128px; top: 48.5px; min-width: 1px; min-height: 1px" />
+
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 764px; height: 159.25px; left: 141.5px; top: 531.437px; position: absolute"><code>#pizza .jumanjiOriginalMovie {
+  color: red;
+}</code></pre>
+        <pre class="xml" style="font-size: 30px; line-height: 36px; width: 945px; height: 202.875px; left: 7px; top: 318.562px; position: absolute"><code>&lt;section id="pizza"&gt;
+  &lt;p class="jumanjiOriginalMovie"&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;p id="car" class="hello"&gt;Hello, Youtube!&lt;/p&gt;
+  &lt;p class="goodbye"&gt;Goodbye, Mixer!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-049">
+        <span class="slide-indicator">Slide 49 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 0px; height: auto; position: absolute">Specificity</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7647512/specificity.png" width="606" height="223" style="position: absolute; max-width: 100%; width: 710px; height: 261.271px; left: 128px; top: 48.5px; min-width: 1px; min-height: 1px" />
+
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 769px; height: 159.25px; left: 152.5px; top: 528.375px; position: absolute"><code>#dietCoke p.dominosPizza.bob {
+  color: red;
+}</code></pre>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 910px; height: 202.875px; left: 26px; top: 318.562px; position: absolute"><code>&lt;section id="dietCoke"&gt;
+  &lt;p class="robot unicorn"&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;p id="zebra" class="bob dominosPizza"&gt;Hello, Youtube!&lt;/p&gt;
+  &lt;p class="bob"&gt;Goodbye, Mixer!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-050">
+        <span class="slide-indicator">Slide 50 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 0px; height: auto; position: absolute">Specificity</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7647512/specificity.png" width="606" height="223" style="position: absolute; max-width: 100%; width: 710px; height: 261.271px; left: 128px; top: 48.5px; min-width: 1px; min-height: 1px" />
+
+        <pre class="css" style="font-size: 42px; line-height: 50px; width: 615px; height: 159.25px; left: 173.5px; top: 530.375px; position: absolute"><code>#dietCoke #zebra {
+  color: red !important;
+}</code></pre>
+        <pre class="xml" style="font-size: 32px; line-height: 38px; width: 910px; height: 202.875px; left: 26px; top: 318.562px; position: absolute"><code>&lt;section id="dietCoke"&gt;
+  &lt;p class="robot unicorn"&gt;Hello, Twitch!&lt;/p&gt;
+  &lt;p id="zebra" class="bob dominosPizza"&gt;Hello, Youtube!&lt;/p&gt;
+  &lt;p class="bob"&gt;Goodbye, Mixer!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-051">
+        <span class="slide-indicator">Slide 51 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 800px; left: 80px; top: 581.5px; position: absolute">Specificity Practice</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-052">
+        <span class="slide-indicator">Slide 52 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">The Box Model</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653537/box-model.png" width="541" height="439" style="position: absolute; max-width: 100%; width: 586.597px; height: 476px; left: 187.702px; top: 154px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 387px; top: 623px; position: absolute">
+          <span style="font-size: 0.7em">By <a href="https://commons.wikimedia.org/wiki/User:G%C3%BCnther_M._Apsel" target="_blank">Matthias Apsel</a></span>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-053">
+        <span class="slide-indicator">Slide 53 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Draw</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">The Box Model</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-054">
+        <span class="slide-indicator">Slide 54 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">The Box Model</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-055">
+        <span class="slide-indicator">Slide 55 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Look</h1>
+        <h1 style="height: auto; width: 725px; left: 116px; top: 581.5px; position: absolute">Starter Template</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-056">
+        <span class="slide-indicator">Slide 56 of 231</span>
+        <h1 style="width: 806px; left: 74px; top: 5px; height: auto; position: absolute; z-index: 10">
+          <h1>Time For Some</h1>
+
+          <h1>Layouts</h1>
+        </h1>
+        <p style="height: auto; width: 600px; left: 388px; top: 560px; position: absolute"><span style="font-size: 0.5em">not that kind...</span></p>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653556/layouts.gif" width="480" height="366" style="position: absolute; max-width: 100%; width: 565.328px; height: 431.063px; left: 194.336px; top: 220.469px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-057">
+        <span class="slide-indicator">Slide 57 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">🚨 Let's Talk About Floats 🚨</h2>
+        <img src="https://media.giphy.com/media/r0iSs6QBcoeic/giphy.gif" width="220" height="124" style="position: absolute; max-width: 100%; width: 710px; height: 400.182px; left: 125px; top: 191.909px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-058">
+        <span class="slide-indicator">Slide 58 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Floats</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653569/float-layout.png" width="540" height="240" style="position: absolute; max-width: 100%; width: 710px; height: 315.556px; left: 125px; top: 210px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 474px; top: 514.556px; position: absolute">
+          <span style="font-size: 0.7em">By <a href="https://css-tricks.com/all-about-floats/" target="_blank">css-tricks</a></span>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-059">
+        <span class="slide-indicator">Slide 59 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">Simple Layouts</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-060">
+        <span class="slide-indicator">Slide 60 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Layout 1</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653887/layout1.png" width="902" height="552" style="position: absolute; max-width: 100%; width: 710px; height: 434.501px; left: 125px; top: 174.75px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-061">
+        <span class="slide-indicator">Slide 61 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Layout 2</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653888/layout2.png" width="902" height="552" style="position: absolute; max-width: 100%; width: 710px; height: 434.501px; left: 125px; top: 174.75px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-062">
+        <span class="slide-indicator">Slide 62 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Layout 3</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653889/layout3.png" width="902" height="552" style="position: absolute; max-width: 100%; width: 710px; height: 434.501px; left: 125px; top: 174.75px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-063">
+        <span class="slide-indicator">Slide 63 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">FLEXBOX</h2>
+        <img src="https://media3.giphy.com/media/xULW8noWqx7KJp9lRK/giphy.gif" width="352" height="266" style="position: absolute; max-width: 100%; width: 629.895px; height: 476px; left: 165.053px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-064">
+        <span class="slide-indicator">Slide 64 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Layout 1</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653887/layout1.png" width="902" height="552" style="position: absolute; max-width: 100%; width: 710px; height: 434.501px; left: 125px; top: 174.75px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-065">
+        <span class="slide-indicator">Slide 65 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Layout 2</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653888/layout2.png" width="902" height="552" style="position: absolute; max-width: 100%; width: 710px; height: 434.501px; left: 125px; top: 174.75px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-066">
+        <span class="slide-indicator">Slide 66 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Layout 3</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653889/layout3.png" width="902" height="552" style="position: absolute; max-width: 100%; width: 710px; height: 434.501px; left: 125px; top: 174.75px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-067">
+        <span class="slide-indicator">Slide 67 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Responsive Websites</h2>
+        <img src="https://media.giphy.com/media/xT0Gqn9yuw8hnPGn5K/source.gif" width="480" height="480" style="position: absolute; max-width: 100%; width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-068">
+        <span class="slide-indicator">Slide 68 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 33px; height: auto; position: absolute">Fixed Vs. Responsive</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7666469/Screen_Shot_2020-08-25_at_12.09.02_PM.png" width="1760" height="1024" style="position: absolute; max-width: 100%; width: 602.688px; height: 350.655px; left: 180px; top: 121.345px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 182.688px; top: 470.5px; position: absolute">
+          <a href="http://web.archive.org/web/20170429072712/https://www.ups.com/?cookie=us_en_home&amp;flash=false&amp;Site=Corporate&amp;setCookie=yes&amp;inputImgTag=" target="_blank"><span style="font-size: 0.7em">UPS.com </span></a><span style="font-size: 0.7em"><a href="http://web.archive.org/web/20170429072712/https://www.ups.com/?cookie=us_en_home&amp;flash=false&amp;Site=Corporate&amp;setCookie=yes&amp;inputImgTag=" target="_blank">Wayback Machine</a></span>
+        </p>
+        <h2 style="height: auto; width: 600px; left: 181.344px; top: 560px; position: absolute"><a href="https://www.boston.com/" target="_blank">Boston.com</a></h2>
+        <p style="height: auto; width: 600px; left: 181.344px; top: 521px; position: absolute">vs.</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-069">
+        <span class="slide-indicator">Slide 69 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 167px; height: auto; position: absolute; z-index: 10">
+          <h1>&nbsp;</h1>
+
+          <h1>Fluid</h1>
+
+          <h1>Elastic</h1>
+
+          <h1>Content Decisions</h1>
+        </h1>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 70px; position: absolute">What makes a site responsive?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-070">
+        <span class="slide-indicator">Slide 70 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 29px; height: auto; position: absolute; z-index: 10">
+          <h2>Fluid</h2>
+
+          <p>Everything as a percentage</p>
+        </h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653887/layout1.png" width="902" height="552" style="position: absolute; max-width: 100%; width: 710px; height: 434.501px; left: 125px; top: 174.75px; min-width: 1px; min-height: 1px" />
+        <div class="sl-block" data-block-type="shape" data-name="shape-6ecf26" style="width: 140px; height: 140px; left: 20px; top: 305px" data-block-id="851b0591f508f1393cdc3c4ba69ac914">
+          <div class="sl-block-content" data-shape-type="arrow-left" data-shape-fill-color="rgb(147, 196, 125)" data-shape-stretch="true" style="z-index: 12">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 140 140"><polygon points="140,42 70,42 70,0 0,70 70,140 70,98 140,98 140,42" class="shape-element" fill="rgb(147, 196, 125)"></polygon></svg>
+          </div>
+        </div>
+        <div class="sl-block" data-block-type="shape" style="width: 140px; height: 140px; left: 800px; top: 305px" data-name="shape-9fc219" data-block-id="e9c7f788076bc067496e70d8afab088e">
+          <div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(147, 196, 125)" data-shape-stretch="true" style="z-index: 13">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 140 140"><polygon points="0,42 70,42 70,0 140,70 70,140 70,98 0,98" class="shape-element" fill="rgb(147, 196, 125)"></polygon></svg>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-071">
+        <span class="slide-indicator">Slide 71 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 29px; height: auto; position: absolute; z-index: 10">
+          <h2>Elastic</h2>
+
+          <p>EMs &amp; REM</p>
+        </h2>
+        <pre class="css" style="font-size: 26px; line-height: 31px; width: 339px; height: 514px; left: 572px; top: 163px; position: absolute"><code>html{
+  font-size: 62.5%;
+}
+section{
+  font-size: 20px;
+}
+
+p{
+  font-size: 1em  
+}
+
+vs.
+
+p{
+  font-size: 1rem;
+}</code></pre>
+        <pre class="xml" style="font-size: 26px; line-height: 31px; width: 558.5px; height: 112px; left: 1.5px; top: 448px; position: absolute"><code>&lt;section&gt;
+  &lt;p&gt;Spam I can do this in chat&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        <p style="height: auto; width: 496px; left: 15.25px; top: 182.5px; position: absolute"><span style="text-align: left">Font size of the parent, in the case of typographical properties like </span>font-size<span style="text-align: left">, and font size of the element itself, in the case of other properties like </span>width<span style="text-align: left">.</span></p>
+        <p style="height: auto; width: 600px; left: 91px; top: 364.5px; position: absolute"><span style="font-size: 0.5em">- mdn</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-072">
+        <span class="slide-indicator">Slide 72 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Content Decisions</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7673640/Screen_Shot_2020-08-27_at_1.32.23_PM.png" width="840" height="588" style="position: absolute; max-width: 100%; width: 480px; height: 336px; left: 39px; top: 201px; min-width: 1px; min-height: 1px" />
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7673641/Screen_Shot_2020-08-27_at_1.32.47_PM.png" width="574" height="548" style="position: absolute; max-width: 100%; width: 384.412px; height: 367px; left: 540.877px; top: 185.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-073">
+        <span class="slide-indicator">Slide 73 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 253px; height: auto; position: absolute">How do we make content decisions?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-074">
+        <span class="slide-indicator">Slide 74 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">Media Queries&nbsp;</h2>
+        <pre class="css" style="font-size: 32px; line-height: 38px; width: 759px; height: 248.5px; left: 100.5px; top: 210px; position: absolute"><code>@media all and (max-width: 600px) {
+    h1 {
+        color: blue;
+    }
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-075">
+        <span class="slide-indicator">Slide 75 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">A Media Query</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-076">
+        <span class="slide-indicator">Slide 76 of 231</span>
+        <h3 style="width: 806px; left: 77px; top: 45px; height: auto; position: absolute">How can we make this responsive?</h3>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7653589/15minutes.png" width="602" height="402" style="position: absolute; max-width: 100%; width: 775.711px; height: 518px; left: 92.1445px; top: 120px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-077">
+        <span class="slide-indicator">Slide 77 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Programming</h1>
+        <img src="https://media3.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300" height="300" style="position: absolute; max-width: 100%; width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-078">
+        <span class="slide-indicator">Slide 78 of 231</span>
+        <h1 style="width: 806px; left: 102px; top: 253px; height: auto; position: absolute">A computer will do what you tell it to do.</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-079">
+        <span class="slide-indicator">Slide 79 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">What is a program?</h1>
+        <h3 style="width: 806px; left: 77px; top: 349px; height: auto; position: absolute">
+          A <span style="color: #ffd700"><strong>program</strong></span> is a set of instructions that you write to tell a computer what to do
+        </h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-080">
+        <span class="slide-indicator">Slide 80 of 231</span>
+        <h1 style="width: 883px; left: 38.5px; top: 113px; height: auto; position: absolute">What is a programming?</h1>
+        <h3 style="width: 806px; left: 77px; top: 349px; height: auto; position: absolute"><span style="color: #ffd700">Programming</span> is the task of writing those instructions in a language that the computer can understand.</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-081">
+        <span class="slide-indicator">Slide 81 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Simple Circut</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7684183/lightbulb.png" width="1350" height="1350" style="position: absolute; max-width: 100%; width: 169px; height: 169px; left: 400px; top: 140px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-082">
+        <span class="slide-indicator">Slide 82 of 231</span>
+        <h2 style="width: 806px; left: 80.9545px; top: 96px; height: auto; position: absolute">True Story</h2>
+        <img src="https://media3.giphy.com/media/3ohc142474TUT6Tazm/giphy.gif" width="500" height="281" style="position: absolute; max-width: 100%; width: 632.091px; height: 355.235px; left: 167.909px; top: 196.765px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-083">
+        <span class="slide-indicator">Slide 83 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 70px; height: auto; position: absolute">JAVASCRIPT</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7684153/js.png" width="512" height="512" style="position: absolute; max-width: 100%; width: 518px; height: 518px; left: 221px; top: 153px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-084">
+        <span class="slide-indicator">Slide 84 of 231</span>
+        <h2 style="width: 806px; left: 91px; top: 140px; height: auto; position: absolute">Has a specific 'Syntax'</h2>
+        <p style="width: 806px; left: 74px; top: 280px; height: auto; position: absolute"><strong>Syntax: "</strong><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Spelling and grammar" rules of a programming language. </span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-085">
+        <span class="slide-indicator">Slide 85 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">JS Syntax&nbsp;</h2>
+        <ul style="width: 806px; left: 77px; top: 263px; height: auto; position: absolute">
+          <li>Semicolon</li>
+          <li>Brackets</li>
+          <li>Parentheses</li>
+          <li>Quotation Marks</li>
+          <li>Other Unique characters?</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-086">
+        <span class="slide-indicator">Slide 86 of 231</span>
+        <h2 style="width: 806px; left: 91px; top: 140px; height: auto; position: absolute">Has a specific 'Syntax'</h2>
+        <p style="width: 806px; left: 74px; top: 280px; height: auto; position: absolute"><strong>Syntax: "</strong><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Spelling and grammar" rules of a programming language. </span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-087">
+        <span class="slide-indicator">Slide 87 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Variables</h1>
+        <h2 style="width: 806px; left: 77px; top: 350px; height: auto; position: absolute">What are variables?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-088">
+        <span class="slide-indicator">Slide 88 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Variables</h1>
+        <ul style="width: 806px; left: 77px; top: 263px; height: auto; position: absolute">
+          <li>We can tell our program to remember values for us to use later on</li>
+          <p>​</p>
+          <li>The entity we use to store the value is called a variable</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-089">
+        <span class="slide-indicator">Slide 89 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 0px; height: auto; position: absolute">Variables</h1>
+        <div style="width: 806px; left: 77px; top: 152px; height: auto; position: absolute; z-index: 11">
+          <h2><span style="color: #ffd700">Declaration</span>: let age</h2>
+
+          <h2>&nbsp;</h2>
+
+          <h2><span style="color: #ffd700">Assignment</span>: age = 25</h2>
+
+          <h2>&nbsp;</h2>
+
+          <h2>Both at the same time:</h2>
+
+          <h2>let age = 25</h2>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-090">
+        <span class="slide-indicator">Slide 90 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Variable Conventions</h1>
+        <div style="width: 806px; left: 77px; top: 263px; height: auto; position: absolute; z-index: 11">
+          <h2><font color="#ffd700">camelCase</font>:</h2>
+
+          <h2>let numberOfApples = 9</h2>
+
+          <h2>&nbsp;</h2>
+
+          <p>&nbsp;</p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-091">
+        <span class="slide-indicator">Slide 91 of 231</span>
+        <h1 style="width: 897px; left: 31.5px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h1>Variables</h1>
+
+          <h1>&amp; Data Types</h1>
+        </h1>
+        <h3 style="width: 806px; left: 77px; top: 349px; height: auto; position: absolute">What can you store in variables?</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-092">
+        <span class="slide-indicator">Slide 92 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 70px; height: auto; position: absolute">Strings</h1>
+        <ul style="width: 806px; left: 80px; top: 210px; height: auto; position: absolute">
+          <li>Stores text</li>
+          <li>String is surrounded by quotes</li>
+        </ul>
+        <div style="height: auto; width: 884px; left: 38px; top: 406px; position: absolute; z-index: 12">
+          <h2>"How is the weather today?"</h2>
+
+          <h2>'Warm'</h2>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-093">
+        <span class="slide-indicator">Slide 93 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 70px; height: auto; position: absolute">Strings</h1>
+        <h3 style="width: 806px; left: 80px; top: 210px; height: auto; position: absolute">Double vs Single Quoted Strings:</h3>
+        <h1 style="height: auto; width: 884px; left: 38px; top: 350px; position: absolute">
+          'They "purchased" it'<br />
+          "It's a beautiful day"
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-094">
+        <span class="slide-indicator">Slide 94 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 114px; height: auto; position: absolute">Numbers</h1>
+        <h2 style="width: 806px; left: 77px; top: 211px; height: auto; position: absolute; z-index: 11">
+          <h2>Represent Numerical Data</h2>
+
+          <h1>int: 29</h1>
+
+          <h1>float: 5.14876</h1>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-095">
+        <span class="slide-indicator">Slide 95 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 114px; height: auto; position: absolute">Numbers</h1>
+        <h2 style="width: 806px; left: 77px; top: 211px; height: auto; position: absolute; z-index: 11">
+          <h2>Signed</h2>
+
+          <h1>int: +4</h1>
+
+          <h1>float: -10.375</h1>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-096">
+        <span class="slide-indicator">Slide 96 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Arithmetic In Javascript</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7687178/arithmetic.png" width="726" height="584" style="position: absolute; max-width: 100%; width: 591.74px; height: 476px; left: 184.13px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-097">
+        <span class="slide-indicator">Slide 97 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 960px; left: 0px; top: 581.5px; position: absolute">Variable Fun Time</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-098">
+        <span class="slide-indicator">Slide 98 of 231</span>
+        <h1 style="width: 888px; left: 40px; top: 10px; height: auto; position: absolute; z-index: 10">
+          <h1>Making Decisions</h1>
+
+          <p>&nbsp;</p>
+
+          <h3>It's either TRUE or FALSE&nbsp;</h3>
+
+          <h3>If you are greater than 18 you are an adult</h3>
+        </h1>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 819px; height: 140px; left: 70.5px; top: 316px; position: absolute"><code>if (age &gt; 18){
+  console.log("You are an adult")
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-099">
+        <span class="slide-indicator">Slide 99 of 231</span>
+        <h1 style="width: 888px; left: 40px; top: 10px; height: auto; position: absolute; z-index: 10">
+          <h1>Comparisons:</h1>
+
+          <h1>Equality</h1>
+
+          <p>&nbsp;</p>
+
+          <h3>Are two things equal?</h3>
+        </h1>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 516px; height: 140px; left: 222px; top: 382px; position: absolute"><code>9 === 9 //true
+7 === 3 //false
+"Hello" === "Hello" //true</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-100">
+        <span class="slide-indicator">Slide 100 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Logical Operators</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7687190/ops.png" width="1498" height="1290" style="position: absolute; max-width: 100%; width: 634.037px; height: 546px; left: 160px; top: 139px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-101">
+        <span class="slide-indicator">Slide 101 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Conditional Syntax</h1>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 462px; height: 127.5px; left: 240px; top: 280px; position: absolute"><code>if(condition is true) {
+  //Do cool stuff
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-102">
+        <span class="slide-indicator">Slide 102 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Conditional Syntax</h1>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 560px; height: 280px; left: 200px; top: 280px; position: absolute"><code>if(condition is true) {
+  //Do this cool stuff
+}else if(condition is true){
+  //Do this other cool stuff
+}else{
+  //Default cool stuff
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-103">
+        <span class="slide-indicator">Slide 103 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Conditional Syntax</h1>
+        <pre class="javascript" style="font-size: 26px; line-height: 31px; width: 885px; height: 301px; left: 37.5px; top: 269.5px; position: absolute"><code>const pizza = "Dominos"
+
+if (pizza === "Papa Johns") {
+  console.log("Scram!")
+} else if(pizza === "Dominos") {
+  console.log("All aboard the train to flavor town")
+} else {
+  console.log("What are you even doing with your life?")
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-104">
+        <span class="slide-indicator">Slide 104 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">🚨 DANGER 🚨</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">Assignment vs. Comparison</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-105">
+        <span class="slide-indicator">Slide 105 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Multiple Conditions</h1>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 853px; height: 127.5px; left: 53.5px; top: 280px; position: absolute"><code>if (name === "Leon" &amp;&amp; status === "Ballin"){
+ //Wink at camera
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-106">
+        <span class="slide-indicator">Slide 106 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Multiple Conditions</h1>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 854px; height: 127.5px; left: 46px; top: 280px; position: absolute"><code>if (day === "Saturday" || day === "Sunday"){
+  //It is the weekend
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-107">
+        <span class="slide-indicator">Slide 107 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h2 style="height: auto; width: 960px; left: 0px; top: 593px; position: absolute">Age Checker</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-108">
+        <span class="slide-indicator">Slide 108 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Functions</h1>
+        <h2 style="width: 806px; left: 77px; top: 350px; height: auto; position: absolute">What are functions?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-109">
+        <span class="slide-indicator">Slide 109 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Functions</h1>
+        <ul style="width: 960px; left: 0px; top: 249.5px; height: auto; position: absolute">
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Functions are simple sets of </span><span style="color: #ffd700"><span style="font-size: 25pt">instructions</span></span
+            ><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">!</span>
+          </li>
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Functions are </span><span style="color: #ffd700"><span style="font-size: 25pt">reusable</span></span>
+          </li>
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Functions </span><span style="color: #ffd700"><span style="font-size: 25pt">perform one action</span></span
+            ><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt"> as a best practice</span>
+          </li>
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">They form the basic "</span><span style="color: #ffd700"><span style="font-size: 25pt">building blocks</span></span
+            ><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">" of a program </span>
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-110">
+        <span class="slide-indicator">Slide 110 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Functions</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 672px; height: 320.5px; left: 144px; top: 259.75px; position: absolute"><code>function name(parameters){
+  //body
+}
+
+//call
+name(arguments)</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-111">
+        <span class="slide-indicator">Slide 111 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Functions</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 672px; height: 320.5px; left: 145px; top: 259.75px; position: absolute"><code>function yell(word){
+  alert(word)
+}
+
+
+yell("HELLO")</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-112">
+        <span class="slide-indicator">Slide 112 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Functions</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 787px; height: 370.25px; left: 86.5px; top: 234.875px; position: absolute"><code>function yell(word, otherWord){
+  alert(word)
+  alert(otherWord)
+}
+
+
+yell("HELLO","GOODBYE")</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-113">
+        <span class="slide-indicator">Slide 113 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 960px; left: 0px; top: 581.5px; position: absolute">Simple Functions</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-114">
+        <span class="slide-indicator">Slide 114 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Pseudo Code</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-115">
+        <span class="slide-indicator">Slide 115 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h2 style="height: auto; width: 960px; left: 0px; top: 593px; position: absolute">A Temperature Converter</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-116">
+        <span class="slide-indicator">Slide 116 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 129px; height: auto; position: absolute; z-index: 10">
+          <h1>In Chat:</h1>
+
+          <h1>What is the best TV show of all time?</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-117">
+        <span class="slide-indicator">Slide 117 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 177.5px; height: auto; position: absolute; z-index: 10">
+          <h1>Answer:</h1>
+
+          <h1>The Bachelor</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-118">
+        <span class="slide-indicator">Slide 118 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">Bachelor Code</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-119">
+        <span class="slide-indicator">Slide 119 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Loops</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">What are loops?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-120">
+        <span class="slide-indicator">Slide 120 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Loops</h1>
+        <ul style="width: 960px; left: 0px; top: 249.5px; height: auto; position: absolute">
+          <li>
+            <span style="color: #ffd700"><span style="font-size: 25pt">Repeat an action</span></span
+            ><span style="font-size: 25pt"> some number of times!</span>
+          </li>
+          <li>
+            <span style="font-size: 33.3333px">Three main types</span><font color="#eeeeee"><span style="font-size: 33.3333px"> of loops in Javascript</span></font>
+          </li>
+          <li>
+            <span style="color: #ffd700"><span style="font-size: 33.3333px">For, while, and do while loops</span></span>
+          </li>
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Each type offers a different way to</span><span style="color: #ffd700"><span style="font-size: 25pt"> determine the start and end points</span></span
+            ><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt"> of a loop</span>
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-121">
+        <span class="slide-indicator">Slide 121 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Loops - For</h1>
+        <pre class="javascript" style="font-size: 22px; line-height: 26px; width: 959px; height: 145.5px; left: 1px; top: 280px; position: absolute"><code>for ([initialExpression]; [conditionExpression]; [incrementExpression]){
+  
+  //do stuff 
+  
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-122">
+        <span class="slide-indicator">Slide 122 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Loops - For</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 739px; height: 172.5px; left: 110.5px; top: 253.75px; position: absolute"><code>for (let i = 1; i &lt; 5; i++) {
+  console.log(i)
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-123">
+        <span class="slide-indicator">Slide 123 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">21 Savage Loop</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-124">
+        <span class="slide-indicator">Slide 124 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Loops - While</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 739px; height: 326.5px; left: 109.5px; top: 253.75px; position: absolute"><code>let count = 0 
+
+while(count &lt; 5){
+  console.log(count)
+  count++
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-125">
+        <span class="slide-indicator">Slide 125 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">Bring It On!</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-126">
+        <span class="slide-indicator">Slide 126 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Arrays</h1>
+        <h2 style="width: 806px; left: 77px; top: 350px; height: auto; position: absolute">What are arrays?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-127">
+        <span class="slide-indicator">Slide 127 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Toasters</h2>
+        <img src="https://images.unsplash.com/photo-1583729250536-d5fb10401671?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1920&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjIwNzA2fQ" width="1920" height="1280" style="position: absolute; max-width: 100%; width: 710px; height: 473.333px; left: 125px; top: 155.333px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-128">
+        <span class="slide-indicator">Slide 128 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Arrays</h1>
+        <ul style="width: 960px; left: 0px; top: 249.5px; height: auto; position: absolute">
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">A data structure to store </span><span style="color: #ffd700"><span style="font-size: 25pt">ordered collections</span></span
+            ><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">!</span>
+          </li>
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Array elements are numbered </span><span style="color: #ffd700"><span style="font-size: 25pt">starting with zero</span></span>
+          </li>
+          <li>
+            <font color="#eeeeee"><span style="font-size: 33.3333px">Arrays have many </span></font><span style="color: #ffd700"><span style="font-size: 33.3333px">methods</span></span
+            ><font color="#eeeeee"><span style="font-size: 33.3333px"> to </span></font><span style="color: #ffd700"><span style="font-size: 33.3333px">manage the order</span></span
+            ><font color="#eeeeee"><span style="font-size: 33.3333px"> of elements</span></font>
+          </li>
+          <li>
+            <font color="#eeeeee"><span style="font-size: 33.3333px">Can be </span></font><span style="color: #ffd700"><span style="font-size: 33.3333px">created by a constructor </span></span><span style="font-size: 33.3333px">or</span><span style="color: #ffd700"><span style="font-size: 33.3333px">&nbsp;literal notation</span></span>
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-129">
+        <span class="slide-indicator">Slide 129 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Declaring Arrays</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 626px; height: 66.5px; left: 167px; top: 246.75px; position: absolute"><code>let newArr = new Array()
+</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 330.5px; position: absolute">Array Constructor</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-130">
+        <span class="slide-indicator">Slide 130 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Declaring Arrays</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 420px; height: 66.5px; left: 270px; top: 246.75px; position: absolute"><code>let newArr = []</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 330.5px; position: absolute">Literal Notation</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-131">
+        <span class="slide-indicator">Slide 131 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Declaring Arrays</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 686px; height: 66.5px; left: 136px; top: 246.75px; position: absolute"><code>newArr = ['Zebra',true,21]
+</code></pre>
+        <div style="height: auto; width: 803px; left: 80px; top: 350px; position: absolute; z-index: 12">
+          <h3>Arrays are populated with elements</h3>
+
+          <h3>Elements can be of any type</h3>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-132">
+        <span class="slide-indicator">Slide 132 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Array Indexing</h1>
+
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7760220/indexing.png" width="864" height="382" style="position: absolute; max-width: 100%; width: 537.247px; height: 237.533px; left: 211.377px; top: 231.233px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-133">
+        <span class="slide-indicator">Slide 133 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Array Indexing</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 948px; height: 319.5px; left: 6px; top: 210px; position: absolute"><code>newArr = ['Zebra',,true,21]
+
+console.log( newArr[0] )  //Zebra
+console.log( newArr[1] )  //undefined
+console.log( newArr[2] )  //true
+console.log( newArr[3] )  //21</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 560px; position: absolute">Elements can be accessed by their index numbers</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-134">
+        <span class="slide-indicator">Slide 134 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">Array Indexing</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 710px; height: 371.5px; left: 126px; top: 167px; position: absolute"><code>newArr = ['Zebra',,true,21]
+
+newArr[1] = 'Bob'
+
+console.log( newArr )  
+
+// ['Zebra','Bob',true,21]
+</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 538.5px; position: absolute">Elements can be updated by using the index at that position</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-135">
+        <span class="slide-indicator">Slide 135 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Array Indexing</h1>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 909px; height: 168.5px; left: 25.5px; top: 210px; position: absolute"><code>let cars = ['Honda', 'Toyota', 'Ford', 'Tesla']
+let nums = [1,2,3]
+cars = nums
+console.log( cars ) //[1,2,3]</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 440px; position: absolute">You can overwrite whole arrays by assigning an array to a different array</h3>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7760929/xzibit.jpeg" width="224" height="224" style="position: absolute; max-width: 100%; width: 102.2px; height: 102.2px; left: 677.8px; top: 552.8px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-136">
+        <span class="slide-indicator">Slide 136 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Array Length</h1>
+        <pre class="javascript" style="font-size: 42px; line-height: 50px; width: 822px; height: 75.5px; left: 69px; top: 274.5px; position: absolute"><code>console.log( newArr.length ) //4</code></pre>
+        <h3 style="height: auto; width: 800px; left: 77px; top: 420px; position: absolute">How do you determine how many elements are in your array?</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-137">
+        <span class="slide-indicator">Slide 137 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h2 style="height: auto; width: 960px; left: -1px; top: 593px; position: absolute">In Paradise: After Paradise</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-138">
+        <span class="slide-indicator">Slide 138 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Array Iteration</h1>
+        <pre class="javascript" style="font-size: 30px; line-height: 36px; width: 913px; height: 197px; left: 23.5px; top: 251.5px; position: absolute"><code>let bestColors = ['green','blue','yellow','black']
+
+for(let i = 0; i &lt; bestColors.length;i++){
+  console.log( bestColors[i] )
+}</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 490px; position: absolute">Iterates through an array passing in the value and index of each element&nbsp;</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-139">
+        <span class="slide-indicator">Slide 139 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Array Iteration</h1>
+        <pre class="javascript" style="font-size: 30px; line-height: 36px; width: 948px; height: 140px; left: 6px; top: 280px; position: absolute"><code>let bestColors = ['green','blue','yellow','black']
+
+bestColors.forEach((x,i)=&gt; console.log(x))</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 490px; position: absolute">Iterates through an array passing in the value and index of each element&nbsp;</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-140">
+        <span class="slide-indicator">Slide 140 of 231</span>
+        <h1 style="width: 960px; left: 0px; top: 91.5px; height: auto; position: absolute">Other Arrays Methods</h1>
+        <pre class="javascript" style="font-size: 26px; line-height: 31px; width: 868px; height: 210.5px; left: 46px; top: 235px; position: absolute"><code>let bestRappers2020 = ['6ix9ine','Polo G','6ix9ine']
+
+let removed = bestRappers2020.shift()
+
+console.log( bestRappers2020 ) // ['Polo G', '6ix9ine']
+</code></pre>
+        <h2 style="height: auto; width: 800px; left: 80px; top: 470.5px; position: absolute">Remove item from the beginning of an Array</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-141">
+        <span class="slide-indicator">Slide 141 of 231</span>
+        <h1 style="width: 960px; left: 0px; top: 91.5px; height: auto; position: absolute">Other Arrays Methods</h1>
+        <pre class="javascript" style="font-size: 26px; line-height: 31px; width: 868px; height: 210.5px; left: 46px; top: 235px; position: absolute"><code>let bestRappers2020 = ['Polo G','6ix9ine']
+
+let removedAgain = bestRappers2020.pop()
+
+console.log( bestRappers2020 ) // ['Polo G']
+</code></pre>
+        <h2 style="height: auto; width: 800px; left: 80px; top: 470.5px; position: absolute">Remove item from the end of an Array</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-142">
+        <span class="slide-indicator">Slide 142 of 231</span>
+        <h1 style="width: 960px; left: 0px; top: 91.5px; height: auto; position: absolute">Other Arrays Methods</h1>
+        <pre class="javascript" style="font-size: 26px; line-height: 31px; width: 868px; height: 210.5px; left: 46px; top: 235px; position: absolute"><code>let bestRappers2020 = ['Polo G']
+
+let removed = bestRappers2020.unshift('Dylan')
+
+console.log( bestRappers2020 ) // ['Dylan','Polo G']
+</code></pre>
+        <h2 style="height: auto; width: 800px; left: 80px; top: 470.5px; position: absolute">Add item to the beginning of an Array</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-143">
+        <span class="slide-indicator">Slide 143 of 231</span>
+        <h1 style="width: 960px; left: 0px; top: 91.5px; height: auto; position: absolute">Other Arrays Methods</h1>
+        <pre class="javascript" style="font-size: 26px; line-height: 31px; width: 948px; height: 210px; left: 6px; top: 245px; position: absolute"><code>let bestRappers2020 = ['Dylan','Polo G']
+
+let removed = bestRappers2020.push('Dylan')
+
+console.log( bestRappers2020 ) // ['Dylan','Polo G','Dylan']
+</code></pre>
+        <h2 style="height: auto; width: 640px; left: 160px; top: 468.5px; position: absolute">Add item to the end of an Array</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-144">
+        <span class="slide-indicator">Slide 144 of 231</span>
+        <h1 style="width: 960px; left: 0px; top: 43px; height: auto; position: absolute">Other Arrays Methods</h1>
+        <pre class="javascript" style="font-size: 26px; line-height: 31px; width: 914px; height: 363.5px; left: 23px; top: 168.25px; position: absolute"><code>let bestRappers2020 = ['Dylan','Polo G','Dylan']
+
+let bestRappersAllTime = bestRappers2020.map(x =&gt; 'Dylan')
+
+bestRappersAllTime.unshift('Dylan')
+  
+bestRappersAllTime.push('Dylan')
+
+console.log( bestRappersAllTime ) 
+
+// ['Dylan','Dylan','Dylan', 'Dylan', 'Dylan']
+</code></pre>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7761184/dylan.jpeg" width="300" height="168" style="position: absolute; max-width: 100%; width: 209.971px; height: 117.584px; left: 375.014px; top: 560px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-145">
+        <span class="slide-indicator">Slide 145 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h2 style="height: auto; width: 960px; left: -1px; top: 605px; position: absolute">Winter Games</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-146">
+        <span class="slide-indicator">Slide 146 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Objects</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">What are objects?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-147">
+        <span class="slide-indicator">Slide 147 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Objects</h1>
+        <ul style="width: 960px; left: 0px; top: 210px; height: auto; position: absolute">
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Objects are a </span><span style="color: #ffd700"><span style="font-size: 25pt">collection of variables and functions</span></span
+            ><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">!</span>
+          </li>
+          <li>
+            <span style="font-size: 33.3333px">Objects <span style="color: #ffd700">represent the attributes and behavior</span> of something used in a program</span>
+          </li>
+          <li>
+            <span style="font-size: 33.3333px">Object variables are called <span style="color: #ffd700">properties</span> and object functions are called <span style="color: #ffd700">methods</span></span>
+          </li>
+          <li>
+            <span style="font-size: 33.3333px">Objects store <span style="color: #ffd700">"keyed"</span> collections </span>
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-148">
+        <span class="slide-indicator">Slide 148 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Think of a physical object</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7782996/pepesilvia.jpg" width="1024" height="768" style="position: absolute; max-width: 100%; width: 494.667px; height: 371px; left: 225.333px; top: 164.5px; min-width: 1px; min-height: 1px" />
+        <h3 style="height: auto; width: 960px; left: 0.0005px; top: 560px; position: absolute">What are it's attributes and behaviors?&nbsp;</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-149">
+        <span class="slide-indicator">Slide 149 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">How about a stopwatch</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7783007/stopwatch.jpg" width="1200" height="800" style="position: absolute; max-width: 100%; width: 494.667px; height: 329.778px; left: 225.333px; top: 185.111px; min-width: 1px; min-height: 1px" />
+        <h3 style="height: auto; width: 960px; left: 0.0005px; top: 560px; position: absolute">What are its attributes and behaviors?&nbsp;</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-150">
+        <span class="slide-indicator">Slide 150 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 70px; height: auto; position: absolute">Stopwatch Object</h1>
+        <h2 style="width: 806px; left: 77px; top: 198.5px; height: auto; position: absolute; z-index: 11">
+          <ul>
+            <li>
+              Properties (attributes):<br />
+              Might contain a variable to represent hours, another to represent minutes, and another to represent seconds.&nbsp;
+            </li>
+          </ul>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+        </h2>
+        <ul style="height: auto; width: 800px; left: 80px; top: 455px; position: absolute">
+          <li>
+            Methods (behaviors):<br />
+            Might also contain functions that manipulate those values, such as "start ()" and "stop ()".
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-151">
+        <span class="slide-indicator">Slide 151 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Stopwatch Object</h1>
+        <pre class="javascript" style="font-size: 32px; line-height: 38px; width: 908px; height: 360.5px; left: 26px; top: 210px; position: absolute"><code>let stopwatch = {}
+
+stopwatch.currentTime = 12
+
+stopwatch.tellTime = function(time){
+  console.log(`The current time is ${time}.`)
+}
+
+stopwatch.tellTime(stopwatch.currentTime)</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-152">
+        <span class="slide-indicator">Slide 152 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h2 style="height: auto; width: 960px; left: 0px; top: 581.5px; position: absolute">Objects - Listen To Your Heart</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-153">
+        <span class="slide-indicator">Slide 153 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 113px; height: auto; position: absolute">Objects</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute; z-index: 11">
+          <h2>What if we want to make</h2>
+
+          <h2><span style="color: #ffd700">a lot</span> of objects?</h2>
+        </h2>
+        <p style="height: auto; width: 960px; left: 0px; top: 651.5px; position: absolute"><span style="font-size: 0.5em">How much money you got? How many problems you got? How many people done doubted you? Left you out to rot?</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-154">
+        <span class="slide-indicator">Slide 154 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">Car Factory?</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7783525/car-factory.jpg" width="1280" height="720" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px" />
+        <h3 style="height: auto; width: 600px; left: 179px; top: 610.5px; position: absolute">Constructors then Classes</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-155">
+        <span class="slide-indicator">Slide 155 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 7.5px; height: auto; position: absolute; z-index: 10">
+          <h1>Car Factory</h1>
+
+          <h3>Constructor</h3>
+        </h1>
+        <pre class="javascript" style="font-size: 24px; line-height: 29px; width: 891px; height: 495.5px; left: 34.5px; top: 172.25px; position: absolute"><code>function MakeCar(carMake,carModel,carColor,numOfDoors){
+  this.make = carMake
+  this.model = carModel
+  this.color = carColor
+  this.doors = numOfDoors
+  this.honk = function(){
+    alert('BEEP BEEP FUCKER')
+  }
+  this.lock = function(){
+    alert(`Locked ${this.doors} doors!`)
+  }
+}
+
+let hondaCivic = new MakeCar('Honda','Civic','Silver', 4)
+
+let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-156">
+        <span class="slide-indicator">Slide 156 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 7.5px; height: auto; position: absolute; z-index: 10">
+          <h1>Car Factory</h1>
+
+          <h3>We forgot enable bluetooth!&nbsp;</h3>
+        </h1>
+        <pre class="javascript" style="font-size: 24px; line-height: 29px; width: 891px; height: 231.5px; left: 34.5px; top: 210px; position: absolute"><code>let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)
+
+console.log( teslaRoadster.bluetooth )  //undefined
+
+MakeCar.prototype.bluetooth = true
+
+console.log( teslaRoadster.bluetooth ) //true </code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 490px; position: absolute">A prototype is another object that is used as a fallback source of properties</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-157">
+        <span class="slide-indicator">Slide 157 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 7.5px; height: auto; position: absolute; z-index: 10">
+          <h1>Car Factory</h1>
+
+          <h3>Why does .toString() work?!?</h3>
+        </h1>
+        <pre class="javascript" style="font-size: 24px; line-height: 29px; width: 891px; height: 140px; left: 34.5px; top: 258px; position: absolute"><code>let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)
+
+console.log( teslaRoadster.doors.toString() )  // "2" not 2
+</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 490px; position: absolute">A prototype is another object that is used as a fallback source of properties</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-158">
+        <span class="slide-indicator">Slide 158 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h2 style="height: auto; width: 960px; left: 0px; top: 593px; position: absolute">Objects - Street Fighter</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-159">
+        <span class="slide-indicator">Slide 159 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: -9px; height: auto; position: absolute; z-index: 10">
+          <h1>Car Factory</h1>
+
+          <h3>Look Ma! New syntax!</h3>
+        </h1>
+        <pre class="javascript" style="font-size: 24px; line-height: 29px; width: 891px; height: 495.5px; left: 41.5px; top: 149px; position: absolute"><code>class MakeCar{
+  constructor(carMake,carModel,carColor,numOfDoors){
+    this.make = carMake
+    this.model = carModel
+    this.color = carColor
+    this.doors = numOfDoors
+  }
+  honk(){
+    alert('BEEP BEEP FUCKER')
+  }
+  lock(){
+    alert(`Locked ${this.doors} doors!`)
+  }
+}
+
+let hondaCivic = new MakeCar('Honda','Civic','Silver', 4)
+
+let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)</code></pre>
+        <p style="height: auto; width: 600px; left: 180px; top: 650.5px; position: absolute">Classes are like templates for objects!</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-160">
+        <span class="slide-indicator">Slide 160 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">APIs</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">What are APIs?</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-161">
+        <span class="slide-indicator">Slide 161 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">APIs</h1>
+        <ul style="width: 960px; left: 0px; top: 249.5px; height: auto; position: absolute">
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">A </span><span style="color: #ffd700"><span style="font-size: 25pt">simple interface</span></span
+            ><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt"> for some complex action!</span>
+          </li>
+          <li><span style="font-size: 25pt">Think of a </span><span style="font-size: 33.3333px">restaurant</span><span style="font-size: 25pt">&nbsp;menu! Remember those...</span></li>
+          <li>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">Lets one thing </span><span style="color: #ffd700"><span style="font-size: 25pt">communicate with another thing</span></span
+            ><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt"> without having to know how things are implemented.</span>
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-162">
+        <span class="slide-indicator">Slide 162 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute">APIs</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7783759/api.png" width="625" height="195" style="position: absolute; max-width: 100%; width: 710px; height: 221.52px; left: 125px; top: 249.24px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-163">
+        <span class="slide-indicator">Slide 163 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 7.5px; height: auto; position: absolute; z-index: 10">
+          <h1>APIs</h1>
+
+          <h3>Fetch Fido, Fetch!</h3>
+        </h1>
+        <pre class="javascript" style="font-size: 24px; line-height: 29px; width: 792px; height: 248.5px; left: 84px; top: 201px; position: absolute"><code>fetch("https://dog.ceo/api/breeds/image/random")
+    .then(res =&gt; res.json()) // parse response as JSON
+    .then(data =&gt; {
+      console.log(data)
+    })
+    .catch(err =&gt; {
+        console.log(`error ${err}`)
+    });
+</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 490px; position: absolute">API returns a JSON object that we can use within our apps</h3>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-164">
+        <span class="slide-indicator">Slide 164 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 581.5px; position: absolute">DOG PHOTOS!</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-165">
+        <span class="slide-indicator">Slide 165 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 7.5px; height: auto; position: absolute; z-index: 10">
+          <h1>APIs</h1>
+
+          <h3>Stop trying to make Fetch happen!</h3>
+        </h1>
+        <pre class="javascript" style="font-size: 24px; line-height: 29px; width: 829px; height: 248.5px; left: 65.5px; top: 280px; position: absolute"><code>fetch(url)
+    .then(res =&gt; res.json()) // parse response as JSON
+    .then(data =&gt; {
+      console.log(data)
+    })
+    .catch(err =&gt; {
+        console.log(`error ${err}`)
+    });
+</code></pre>
+        <h3 style="height: auto; width: 600px; left: 180px; top: 541px; position: absolute">Some APIs need Query Parameters to return the correct data</h3>
+        <p style="height: auto; width: 960px; left: 0px; top: 210px; position: absolute">
+          <strong><span style="font-size: 0.7em">const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'</span></strong>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-166">
+        <span class="slide-indicator">Slide 166 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 12px; height: auto; position: absolute">BUT WHY?</h2>
+        <img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%; width: 365.6px; height: 457px; left: 297.2px; top: 86px; min-width: 1px; min-height: 1px" />
+        <h2 style="height: auto; width: 960px; left: 0px; top: 552px; position: absolute">
+          Why Use Objects?<br />
+          Why Would We Need A Factory?
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-167">
+        <span class="slide-indicator">Slide 167 of 231</span>
+        <h2 style="width: 806px; left: 65px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h2>What if there was a system, a paradigm, a set of rules, an agreed upon way to structure our code that:</h2>
+
+          <p>&nbsp;</p>
+
+          <p>Made it easier to add new stuff</p>
+
+          <p>Made it easier to read through what was already coded</p>
+
+          <p>And made it so you were not afraid to make changes</p>
+
+          <p>&nbsp;</p>
+        </h2>
+        <p style="height: auto; width: 600px; left: 180px; top: 654.5px; position: absolute">
+          <span style="color: #ffff00"><strong>Music &amp; Light Warning - Next Slide</strong></span>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-168">
+        <span class="slide-indicator">Slide 168 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">OOP BABY</h1>
+        <img src="https://media1.giphy.com/media/3o7qDEq2bMbcbPRQ2c/giphy.gif" width="504" height="350" style="position: absolute; max-width: 100%; width: 685.44px; height: 476px; left: 137.28px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-169">
+        <span class="slide-indicator">Slide 169 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 40px; height: auto; position: absolute">OBJECT ORIENTED PROGRAMING&nbsp;</h2>
+        <img src="https://media4.giphy.com/media/fe3Rwmc2bBulG/giphy.gif" width="400" height="225" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 125px; top: 248.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-170">
+        <span class="slide-indicator">Slide 170 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Let's Talk About It</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-171">
+        <span class="slide-indicator">Slide 171 of 231</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute">This fusion of data and functionality into one object</h2>
+        <img src="https://media4.giphy.com/media/P4TqKx6NHyLnO/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 626.471px; height: 420px; left: 166.764px; top: 210px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 661px; position: absolute">
+          <span style="color: #ffff00"><strong>Music &amp; Light Warning - Next Slide</strong></span>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-172">
+        <span class="slide-indicator">Slide 172 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Encapsulation Baby</h2>
+        <img src="https://media1.giphy.com/media/d0NnEG1WnnXqg/giphy.gif" width="480" height="320" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 126px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-173">
+        <span class="slide-indicator">Slide 173 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 91.5px; height: auto; position: absolute">Encapsulation</h1>
+        <h2 style="width: 806px; left: 74px; top: 210px; height: auto; position: absolute">The process of storing functions (methods) with their associated data (properties) - in one thing (object)*</h2>
+        <p style="height: auto; width: 600px; left: -212px; top: 661px; position: absolute"><span style="font-size: 0.5em">*Nerds shaking violently</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-174">
+        <span class="slide-indicator">Slide 174 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute">Complex or unnecessary details are hidden</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-175">
+        <span class="slide-indicator">Slide 175 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 165px; height: auto; position: absolute">This enables you to implement things without understanding or even thinking about all the hidden complexity</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-176">
+        <span class="slide-indicator">Slide 176 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 210px; height: auto; position: absolute">Smaller more manageable pieces of code</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-177">
+        <span class="slide-indicator">Slide 177 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Do stuff once</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 661px; position: absolute">
+          <span style="color: #ffff00"><strong>Music &amp; Light Warning - Next Slide</strong></span>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-178">
+        <span class="slide-indicator">Slide 178 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Abstraction Baby</h2>
+        <img src="https://media0.giphy.com/media/mks5DcSGjhQ1a/giphy.gif" width="245" height="179" style="position: absolute; max-width: 100%; width: 651.508px; height: 476px; left: 154.246px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-179">
+        <span class="slide-indicator">Slide 179 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Abstraction</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute; z-index: 11">
+          <h2>Hide details</h2>
+
+          <h2>and show essentials</h2>
+        </h2>
+        <p style="height: auto; width: 600px; left: 180px; top: 521px; position: absolute">SIMPLE, PREDICTABLE, MANAGEABLE</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-180">
+        <span class="slide-indicator">Slide 180 of 231</span>
+        <h1 style="width: 806px; left: 80px; top: 226px; height: auto; position: absolute">Create New Objects Based On Old Ones</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-181">
+        <span class="slide-indicator">Slide 181 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 210px; height: auto; position: absolute">We just eliminated a bunch of redundant code</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 120.5px; position: absolute">AKA</p>
+        <p style="height: auto; width: 600px; left: 180px; top: 661px; position: absolute">
+          <span style="color: #ffff00"><strong>Music &amp; Light Warning - Next Slide</strong></span>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-182">
+        <span class="slide-indicator">Slide 182 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Inheritance BABY</h2>
+        <img src="https://media1.giphy.com/media/GcO6KBd1C16F2/giphy.gif" width="300" height="245" style="position: absolute; max-width: 100%; width: 582.857px; height: 476px; left: 187.572px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-183">
+        <span class="slide-indicator">Slide 183 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 183px; height: auto; position: absolute">Inheritance</h1>
+        <h2 style="width: 806px; left: 77px; top: 315px; height: auto; position: absolute">Make a class from another class to share a set of properties and methods</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-184">
+        <span class="slide-indicator">Slide 184 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h1>A piece of code that automagically works with a bunch of different objects</h1>
+
+          <p>&nbsp;</p>
+
+          <p>polymorphism allows us to override a method in every child class so it will do what we want</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-185">
+        <span class="slide-indicator">Slide 185 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 165.5px; height: auto; position: absolute">Instead of conditionals and switch cases</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 661px; position: absolute">
+          <span style="color: #ffff00"><strong>Music &amp; Light Warning - Next Slide</strong></span>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-186">
+        <span class="slide-indicator">Slide 186 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">POLYMORPHISM BABY</h2>
+        <img src="https://media0.giphy.com/media/bbJzFFikFRNy1nCkQt/giphy.gif" width="300" height="169" style="position: absolute; max-width: 100%; width: 710px; height: 399.967px; left: 125px; top: 192.017px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-187">
+        <span class="slide-indicator">Slide 187 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">The Four Pillars</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">What if they actually made any sense...</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-188">
+        <span class="slide-indicator">Slide 188 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Encapsulation</h1>
+        <h2 style="width: 806px; left: 78px; top: 286px; height: auto; position: absolute">The process of storing functions (methods) with their associated data (properties) in one thing (object)</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-189">
+        <span class="slide-indicator">Slide 189 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 84.5px; height: auto; position: absolute">BUT WHY?</h2>
+        <img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%; width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-190">
+        <span class="slide-indicator">Slide 190 of 231</span>
+        <div style="height: auto; width: 952px; left: 4px; top: 107px; position: absolute; z-index: 10">
+          <h2 style="color: rgb(255, 255, 255)">Made it easier to add new stuff</h2>
+
+          <p>&nbsp;</p>
+
+          <h2 style="color: rgb(255, 255, 255)">Made it easier to read through what was already coded</h2>
+
+          <p>&nbsp;</p>
+
+          <h2 style="color: rgb(255, 255, 255)">And made it so you were not afraid to make changes</h2>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-191">
+        <span class="slide-indicator">Slide 191 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Abstraction</h1>
+        <h2 style="width: 806px; left: 77px; top: 308px; height: auto; position: absolute; z-index: 11">
+          <h2>Hide details</h2>
+
+          <h2>and show essentials</h2>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-192">
+        <span class="slide-indicator">Slide 192 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 84.5px; height: auto; position: absolute">BUT WHY?</h2>
+        <img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%; width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-193">
+        <span class="slide-indicator">Slide 193 of 231</span>
+        <div style="height: auto; width: 600px; left: 180px; top: 140px; position: absolute; z-index: 10">
+          <h1 style="color: rgb(255, 255, 255)">Smaller more manageable pieces of code</h1>
+
+          <p>
+            <span style="color: #ffff00"><span style="font-size: 21.328px; text-align: start">Helps you to split the complexity your software project into manageable parts</span></span>
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-194">
+        <span class="slide-indicator">Slide 194 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 204.5px; height: auto; position: absolute">Make code changes and still sleep at night</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-195">
+        <span class="slide-indicator">Slide 195 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Inheritance</h1>
+        <h2 style="width: 806px; left: 77px; top: 308px; height: auto; position: absolute">Make a class from another class to share a set of properties and methods</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-196">
+        <span class="slide-indicator">Slide 196 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 84.5px; height: auto; position: absolute">BUT WHY?</h2>
+        <img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%; width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-197">
+        <span class="slide-indicator">Slide 197 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Helps you eliminate redundant code</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-198">
+        <span class="slide-indicator">Slide 198 of 231</span>
+        <h1 style="width: 806px; left: 74px; top: 201px; height: auto; position: absolute">Polymorphism</h1>
+        <h2 style="width: 806px; left: 74px; top: 338px; height: auto; position: absolute; z-index: 11">
+          <h2>A piece of code that automagically works with a bunch of different objects</h2>
+
+          <p>&nbsp;</p>
+
+          <p><span style="color: rgb(255, 255, 255)">polymorphism allows us to override a method in every child class so it will do what we want</span></p>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-199">
+        <span class="slide-indicator">Slide 199 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 84.5px; height: auto; position: absolute">BUT WHY?</h2>
+        <img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%; width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-200">
+        <span class="slide-indicator">Slide 200 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute">Helps you avoid if/else and switch cases</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-201">
+        <span class="slide-indicator">Slide 201 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 253px; height: auto; position: absolute; z-index: 10">
+          <h1>Makes your code more reusable</h1>
+
+          <p>&nbsp;</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-202">
+        <span class="slide-indicator">Slide 202 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute; z-index: 10">
+          <h1>Supports The</h1>
+
+          <h1>Other Pillars</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-203">
+        <span class="slide-indicator">Slide 203 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Let's Code</h1>
+        <h1 style="height: auto; width: 960px; left: 0px; top: 581.5px; position: absolute">Let's Build An Agency</h1>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 435.333px; height: 450px; left: 262.333px; top: 131.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-204">
+        <span class="slide-indicator">Slide 204 of 231</span>
+        <h1 style="width: 806px; left: 74px; top: 280px; height: auto; position: absolute">Grab The <a href="https://docs.google.com/document/d/1L2vTX3qvLhoGHeG5cVD2ljCfRGr1uJ_Gf-hNZj9KzTg" target="_blank">Checklist</a></h1>
+
+        <p style="height: auto; width: 600px; left: 180px; top: 420px; position: absolute">!checklist</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-205">
+        <span class="slide-indicator">Slide 205 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Passing The Sniff</h2>
+        <img src="https://media1.giphy.com/media/L0MqamdTvoz3ifLVjM/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 125px; top: 192.312px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 591.687px; position: absolute">Bootcamper!</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-206">
+        <span class="slide-indicator">Slide 206 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">PUSH EVERY DAY</h2>
+        <img src="https://media4.giphy.com/media/tJeGZumxDB01q/giphy.gif" width="320" height="240" style="position: absolute; max-width: 100%; width: 634.667px; height: 476px; left: 162.666px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-207">
+        <span class="slide-indicator">Slide 207 of 231</span>
+        <h1 style="width: 806px; left: 74px; top: 280px; height: auto; position: absolute">HITLIST</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 381px; position: absolute">One of the most important things you will ever do for your career</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-208">
+        <span class="slide-indicator">Slide 208 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">USE THE SHEET!</h2>
+        <img src="https://media1.giphy.com/media/in6mnJNYjGKpq/giphy.gif" width="300" height="200" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 125px; top: 140px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 630px; position: absolute">NOW WITH TWO TABS!:<a href="https://docs.google.com/spreadsheets/d/1Be-6gYvrfi8l-M0RnObzdysRIG7N7Yyu6rIF0OHw0Q4/edit?usp=sharing" target="_blank">&nbsp;Google Sheet</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-209">
+        <span class="slide-indicator">Slide 209 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute; z-index: 10">
+          <h1>60 Networked</h1>
+
+          <h1>RECOMMENDED</h1>
+
+          <h1>Applications</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-210">
+        <span class="slide-indicator">Slide 210 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">Find the hiring manager:</h2>
+        <ul style="width: 806px; left: 77px; top: 263px; height: auto; position: absolute">
+          <li>Add them to the hitlist</li>
+          <li>Follow them on Twitter</li>
+          <li>hunter.io</li>
+          <li>Ask for a coffee chat&nbsp;</li>
+          <li>Send a thank you</li>
+          <li>Get the recommendation</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-211">
+        <span class="slide-indicator">Slide 211 of 231</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute">IF YOU EVER JUST CLICK APPLY</h2>
+        <img src="https://media4.giphy.com/media/U8etfyR9ebL55jZovu/giphy.gif" width="480" height="350" style="position: absolute; max-width: 100%; width: 652.8px; height: 476px; left: 153.6px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-212">
+        <span class="slide-indicator">Slide 212 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">30 High Value Apps</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 381px; position: absolute">Custom Resume, Cover Letter, and Story</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-213">
+        <span class="slide-indicator">Slide 213 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">10 Premium Apps</h1>
+        <p style="height: auto; width: 960px; left: 0px; top: 381px; position: absolute">Custom everything plus, tweets, blog, and project</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-214">
+        <span class="slide-indicator">Slide 214 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">100Hours Project</h2>
+        <img src="https://media4.giphy.com/media/pT4pmRFs15Yg8/giphy.gif" width="320" height="192" style="position: absolute; max-width: 100%; width: 710px; height: 426px; left: 125px; top: 179px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 960px; left: 0px; top: 630px; position: absolute">Tie your past to your present and show you can code</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-215">
+        <span class="slide-indicator">Slide 215 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute; z-index: 10">
+          <h1>100 Hours Project</h1>
+
+          <p>Description (one paragraph)</p>
+
+          <p>Wireframe (wireframe.cc, figma, balsamiq)</p>
+
+          <p>&nbsp;</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-216">
+        <span class="slide-indicator">Slide 216 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Interviewing</h2>
+        <img src="https://media3.giphy.com/media/RBDXLadJCxs6A/giphy.gif" width="200" height="150" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 125px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-217">
+        <span class="slide-indicator">Slide 217 of 231</span>
+        <h1 style="width: 806px; left: 74px; top: 70px; height: auto; position: absolute">Process</h1>
+        <ul style="width: 806px; left: 77px; top: 209px; height: auto; position: absolute">
+          <li><span style="color: #ffff00">Recommended</span></li>
+          <li>Phone Screen</li>
+          <li>Behavioral&nbsp;</li>
+          <li>Technical Questions</li>
+          <li>Take Home</li>
+          <li>Whiteboard</li>
+          <li>In-person</li>
+          <li>Wine and Dine Interview</li>
+          <li>Offer</li>
+        </ul>
+        <p style="height: auto; width: 600px; left: 180px; top: 661px; position: absolute">*Every Company Is Wildly Different</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-218">
+        <span class="slide-indicator">Slide 218 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Once Recommended</h2>
+        <img src="https://media3.giphy.com/media/tKwAHuwjcHkV0eLzcO/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 687.096px; height: 386.492px; left: 136.452px; top: 140px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 528.5px; position: absolute">WHAT ARE THE STEPS IN THIS PROCESS?</p>
+        <h2 style="height: auto; width: 960px; left: 0px; top: 567.5px; position: absolute"><span style="color: rgb(255, 255, 255)">WHAT ARE THE STEPS IN THIS PROCESS?</span></h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-219">
+        <span class="slide-indicator">Slide 219 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 0px; height: auto; position: absolute">Once Recommended</h2>
+        <img src="https://media1.giphy.com/media/9RWeDFAf07oxT1hgLB/giphy.gif" width="498" height="345" style="position: absolute; max-width: 100%; width: 552.852px; height: 383px; left: 203.574px; top: 88.5px; min-width: 1px; min-height: 1px" />
+        <div style="height: auto; width: 600px; left: 180px; top: 504px; position: absolute; z-index: 12">
+          <p>
+            Find <strong><span style="color: #ffff00">EVERYTHING</span></strong> about their process!<br />
+            Glassdoor<br />
+            Github
+          </p>
+
+          <p>Blind</p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-220">
+        <span class="slide-indicator">Slide 220 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">How to prepare?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-221">
+        <span class="slide-indicator">Slide 221 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">The Bank</h2>
+        <img src="https://media1.giphy.com/media/cklPOHnHepdwBLRnQp/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%; width: 634.667px; height: 476px; left: 162.666px; top: 140px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 186px; top: 630px; position: absolute"><a href="https://docs.google.com/document/d/1p7DhCsLOMMybYfePWLlD1-_8KU20zkBoArH4pnW1o3c/edit?usp=sharing" target="_blank">Link</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-222">
+        <span class="slide-indicator">Slide 222 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Behavioral</h2>
+        <img src="https://media0.giphy.com/media/3ov9jUE3G0NhimfV2U/giphy.gif" width="476" height="264" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 125px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-223">
+        <span class="slide-indicator">Slide 223 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 231.5px; height: auto; position: absolute">C.A.R.</h1>
+        <h2 style="width: 806px; left: 80px; top: 350px; height: auto; position: absolute">Cause Action Result</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-224">
+        <span class="slide-indicator">Slide 224 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">CAUSE</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute; z-index: 11">
+          <h2>
+            At my last company...<br />
+            At my last opportunity...
+          </h2>
+
+          <p>&nbsp;</p>
+
+          <p>LET THEM DIG!</p>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-225">
+        <span class="slide-indicator">Slide 225 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">ACTION</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute; z-index: 11">
+          <h2>Steps you took</h2>
+
+          <h2>MUST BE POSITIVE</h2>
+
+          <p>&nbsp;</p>
+
+          <h2><span style="font-size: 1em">NO TIME TO BE HUMBLE DURING THE HUNT</span></h2>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-226">
+        <span class="slide-indicator">Slide 226 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">RESULT</h1>
+        <h2 style="width: 960px; left: 0px; top: 286px; height: auto; position: absolute; z-index: 11">
+          <h2>How are you better because of it</h2>
+
+          <h2>How are you the best thing since sliced bread because of it</h2>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-227">
+        <span class="slide-indicator">Slide 227 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Technical Questions</h2>
+        <img src="https://media2.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300" height="300" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 124px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-228">
+        <span class="slide-indicator">Slide 228 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Explanation, Use, Example</h2>
+        <img src="https://media4.giphy.com/media/OlzUJ3mbUar0I6QxUY/giphy.gif" width="480" height="480" style="position: absolute; max-width: 100%; width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-229">
+        <span class="slide-indicator">Slide 229 of 231</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Technical Whiteboard</h2>
+        <img src="https://media1.giphy.com/media/WZ4M8M2VbauEo/giphy.gif" width="300" height="171" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 124px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-230">
+        <span class="slide-indicator">Slide 230 of 231</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">P.R.E.P</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">Parameters, Returns, Examples, Pseudo Code</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-231">
+        <span class="slide-indicator">Slide 231 of 231</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Homework</h1>
+        <div style="height: auto; width: 802px; left: 80.3795px; top: 420px; position: absolute; z-index: 11">
+          <p>&nbsp;</p>
+
+          <p>Do: Start prepping THE BANK</p>
+
+          <p>Do: Complete Your <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1jhBZKVJNxH8Ehf-qodzTzpYuloBmPan-CqaoMwL8xYkM8w/viewform" target="_blank">Professional Links</a></p>
+
+          <p>READ: <a href="https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70" target="_blank">Modern Javascript For Dinosaurs</a>&nbsp;</p>
+
+          <p>WATCH: <a href="https://youtu.be/fBNz5xF-Kx4" target="_blank">Node.js Crash Course</a>&nbsp;(just get through it)</p>
+        </div>
+
+        <img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%; width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px" />
+      </section>
+    </main>
+  </body>
+  <script>
+    const PROPS = ["width", "height", "top", "left", "right", "bottom", "font-size"];
+
+    function saveOriginalSizes(element) {
+      for (const prop of PROPS) {
+        const dataProp = "data-original-" + prop;
+        if (element.style[prop]) {
+          if (!element.hasAttribute(dataProp)) {
+            element.setAttribute(dataProp, element.style[prop]);
+          }
+        }
+      }
+    }
+
+    function scaleSizes(element, scale) {
+      const props = PROPS.filter((prop) => element.style[prop]);
+      for (const prop of props) {
+        const rawOrigValue = element.getAttribute("data-original-" + prop);
+        if (rawOrigValue.startsWith("auto")) continue;
+
+        const origValue = parseFloat(element.getAttribute("data-original-" + prop));
+
+        const unit = rawOrigValue.slice(-2);
+        element.style[prop] = origValue * scale + unit;
+      }
+    }
+
+    function fancyScaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      for (const slide of slides) {
+        saveOriginalSizes(slide);
+        scaleSizes(slide, scale);
+      }
+      /*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+      const sizedChildren = Array.from(document.querySelectorAll(".slide *")).filter((el) => el.hasAttribute("style") && PROPS.some((prop) => el.getAttribute("style")?.includes(prop + ":")));
+      for (const el of sizedChildren) {
+        saveOriginalSizes(el);
+        scaleSizes(el, scale);
+      }
+    }
+
+    function scaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      slides.forEach((slide) => {
+        slide.style.transform = "scale(" + scale + ")";
+      });
+    }
+
+    window.addEventListener("resize", scaleSlides);
+    window.addEventListener("load", scaleSlides);
+    document.addEventListener("DOMContentLoaded", scaleSlides);
+  </script>
+</html>

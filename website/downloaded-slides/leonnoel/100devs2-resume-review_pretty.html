@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Class 25 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord" />
+
+    <title>#100Devs - Javascript Objects Fun Time</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.3;
+        background-color: #444444;
+        color: #ffffff;
+      }
+      ul {
+        text-align: left;
+        list-style: bullet;
+      }
+
+      ol {
+        list-style: number;
+      }
+
+      .slide {
+        position: relative;
+        border: 1px solid white;
+        transform-origin: top left;
+      }
+      .slide-indicator {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - Javascript Objects Fun Time</h1>
+      <p>Class 25 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here: leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">Health First</a>
+        </li>
+        <li>
+          <a href="#slide-006">No Networking Until May</a>
+        </li>
+        <li>
+          <a href="#slide-007">Client Deadline: May 3rd</a>
+        </li>
+        <li>
+          <a href="#slide-008">Client Alternatives</a>
+        </li>
+        <li>
+          <a href="#slide-009">Grassroots Volunteer*</a>
+        </li>
+        <li>
+          <a href="#slide-010">Free Software / Open Source</a>
+        </li>
+        <li>
+          <a href="#slide-011">!newsletter</a>
+        </li>
+        <li>
+          <a href="#slide-012">/r/place</a>
+        </li>
+        <li>
+          <a href="#slide-013">Slide #013</a>
+        </li>
+        <li>
+          <a href="#slide-014">Welcome, Mayanwolfe</a>
+        </li>
+        <li>
+          <a href="#slide-015">BEST WEEK EVER END?</a>
+        </li>
+        <li>
+          <a href="#slide-016">!Merch</a>
+        </li>
+        <li>
+          <a href="#slide-017">Friday With Friends</a>
+        </li>
+        <li>
+          <a href="#slide-018">Office Hours</a>
+        </li>
+        <li>
+          <a href="#slide-019">Slide #019</a>
+        </li>
+        <li>
+          <a href="#slide-020">THANK YOU</a>
+        </li>
+        <li>
+          <a href="#slide-021">RESUME REVIEW</a>
+        </li>
+        <li>
+          <a href="#slide-022">Slide #022</a>
+        </li>
+        <li>
+          <a href="#slide-023">Let&apos;s See Some Resumes</a>
+        </li>
+        <li>
+          <a href="#slide-024">LAPTOP</a>
+        </li>
+        <li>
+          <a href="#slide-025">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main>
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001">
+        <span class="slide-indicator">Slide 1 of 25</span>
+        <h1 style="width: 960px; left: 20px; top: 200px; height: auto; position: absolute; z-index: 10">
+          <h2>&nbsp;</h2>
+
+          <h2>Resume Review</h2>
+        </h1>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 458px; position: absolute">
+          <span style="color: #ffffff"><span style="font-size: 1em">Leon Noel</span></span>
+        </h2>
+
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px" />
+        <h1 style="height: auto; width: 600px; left: 180px; top: 360px; position: absolute">#100Devs</h1>
+        <div style="height: auto; width: 878px; left: 41px; top: 560px; position: absolute; z-index: 15">
+          <p>"I put the jelly in the jar and I twist it</p>
+
+          <p>I take the ball, I bounce it, I shoot, I miss it</p>
+
+          <p>Sikeee I SWISHED IT"</p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002">
+        <span class="slide-indicator">Slide 2 of 25</span>
+        <h1 style="width: 806px; left: 77px; top: 0px; height: auto; position: absolute">Agenda</h1>
+        <ul style="width: 806px; left: 77px; top: 140px; height: auto; position: absolute">
+          <li>Questions?&nbsp;</li>
+          <li>Let's Talk -&nbsp; #100Devs</li>
+          <li>Review - Resumes</li>
+          <li>Do - Your Resume</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003">
+        <span class="slide-indicator">Slide 3 of 25</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute; z-index: 10">
+          <h2>Questions</h2>
+
+          <h3>About last class or life</h3>
+        </h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%; width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004">
+        <span class="slide-indicator">Slide 4 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Checking In</h2>
+        <img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%; width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px" />
+        <div style="height: auto; width: 960px; left: 0px; top: 490px; position: absolute; z-index: 12">
+          <h3>NO !checkin</h3>
+
+          <p>If you haven't already for Microsoft:</p>
+
+          <p><a href="https://twitter.com/leonnoel/status/1509644411528835084" target="_blank">https://twitter.com/leonnoel/status/1509644411528835084</a></p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005">
+        <span class="slide-indicator">Slide 5 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Health First</h2>
+        <img src="https://media3.giphy.com/media/14hmBhqTX0kSTm/giphy.gif" width="500" height="200" style="position: absolute; max-width: 100%; width: 806.4px; height: 322.56px; left: 76.8px; top: 188.72px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006">
+        <span class="slide-indicator">Slide 6 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">No Networking Until May</h2>
+        <img src="https://media1.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif" width="498" height="230" style="position: absolute; max-width: 100%; width: 710px; height: 327.912px; left: 125px; top: 210px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007">
+        <span class="slide-indicator">Slide 7 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Client Deadline: May 3rd</h2>
+        <img src="https://media2.giphy.com/media/1333xc9RhiyGaY/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008">
+        <span class="slide-indicator">Slide 8 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Client Alternatives</h2>
+        <img src="https://media3.giphy.com/media/3o751Yxe9UjX26BZbG/giphy.gif" width="480" height="358" style="position: absolute; max-width: 100%; width: 638.212px; height: 476px; left: 159.894px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009">
+        <span class="slide-indicator">Slide 9 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Grassroots Volunteer*</h2>
+        <img src="https://media4.giphy.com/media/106QCYtKPDeIjm/giphy.gif" width="250" height="172" style="position: absolute; max-width: 100%; width: 691.86px; height: 476px; left: 134.07px; top: 140px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010">
+        <span class="slide-indicator">Slide 10 of 25</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute">Free Software / Open Source</h2>
+        <img src="https://media1.giphy.com/media/3og0ICG4WxdKSRzE3K/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 125px; top: 160.625px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 591px; position: absolute"><a href="https://www.firsttimersonly.com/" target="_blank">https://www.firsttimersonly.com/</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011">
+        <span class="slide-indicator">Slide 11 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">!newsletter</h2>
+        <img src="https://media4.giphy.com/media/YypqAhlDKiFJknPbnt/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012">
+        <span class="slide-indicator">Slide 12 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">/r/place</h2>
+        <img src="https://media1.giphy.com/media/VspTn3CPKAHoA/giphy.gif" width="350" height="263" style="position: absolute; max-width: 100%; width: 633.46px; height: 476px; left: 163.27px; top: 140px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 630px; position: absolute">Saturday All Day</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013">
+        <span class="slide-indicator">Slide 13 of 25</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9467013/Screen_Shot_2022-04-03_at_11.29.33_AM.png" width="282" height="273" style="position: absolute; max-width: 100%; width: 535.077px; height: 518px; left: 344.923px; top: 82.567px; min-width: 1px; min-height: 1px" />
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9467020/little.png" width="67" height="117" style="position: absolute; max-width: 100%; width: 61.2729px; height: 106.999px; left: 169.684px; top: 86.5005px; min-width: 1px; min-height: 1px" />
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9467023/goomba.png" width="88" height="139" style="position: absolute; max-width: 100%; width: 70.316px; height: 111.067px; left: 165.162px; top: 230.5px; min-width: 1px; min-height: 1px" />
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/9467024/bob.png" width="778" height="1052" style="position: absolute; max-width: 100%; width: 105.625px; height: 142.825px; left: 147.507px; top: 400.175px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014">
+        <span class="slide-indicator">Slide 14 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Welcome, <a href="https://www.twitch.tv/mayanwolfe" target="_blank">Mayanwolfe</a></h2>
+        <img src="https://media3.giphy.com/media/100PgquHm9j3sQ/giphy.gif" width="400" height="260" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 125px; top: 140px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 630px; position: absolute">Tomorrow @ 6:30pm ET!&nbsp;</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015">
+        <span class="slide-indicator">Slide 15 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">BEST WEEK EVER END?</h2>
+        <img src="https://media2.giphy.com/media/tsWWeMqsdXsApWNMVc/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 634.667px; height: 357px; left: 165.333px; top: 199.5px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 182.667px; top: 630px; position: absolute">Thursday 6:30pm ET</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016">
+        <span class="slide-indicator">Slide 16 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">!Merch</h2>
+        <img src="https://media1.giphy.com/media/xUOxeSXjqTCTzkq40w/giphy.gif" width="400" height="400" style="position: absolute; max-width: 100%; width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017">
+        <span class="slide-indicator">Slide 17 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Friday With Friends</h2>
+        <img src="https://media3.giphy.com/media/YTDZakyAorkLDYqN0q/giphy.gif" width="480" height="400" style="position: absolute; max-width: 100%; width: 571.2px; height: 476px; left: 194.4px; top: 140px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 630px; position: absolute">Friday 6pm ET on Discord!</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018">
+        <span class="slide-indicator">Slide 18 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Office Hours</h2>
+        <img src="https://media2.giphy.com/media/LoCDk7fecj2dwCtSB3/giphy.gif" width="500" height="500" style="position: absolute; max-width: 100%; width: 476px; height: 476px; left: 242px; top: 140px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 630px; position: absolute">Sunday - 1pm ET</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019">
+        <span class="slide-indicator">Slide 19 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 140px; height: auto; position: absolute; z-index: 10">
+          <h2>Mentor Monday</h2>
+
+          <p>&nbsp;</p>
+        </h2>
+        <img src="https://media0.giphy.com/media/L5wOS2OajUQaWshcTH/giphy.gif" width="480" height="206" style="position: absolute; max-width: 100%; width: 475.999px; height: 204.283px; left: 242px; top: 289.858px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020">
+        <span class="slide-indicator">Slide 20 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">THANK YOU</h2>
+        <img src="https://media4.giphy.com/media/i21tixUQEE7TEqwmYa/giphy.gif" width="480" height="400" style="position: absolute; max-width: 100%; width: 479.25px; height: 399.375px; left: 240.375px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021">
+        <span class="slide-indicator">Slide 21 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">RESUME REVIEW</h2>
+        <img src="https://media4.giphy.com/media/vtFD7SOw5XdzDR0PB0/giphy.gif" width="480" height="480" style="position: absolute; max-width: 100%; width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022">
+        <span class="slide-indicator">Slide 22 of 25</span>
+        <h1 style="width: 806px; left: 74px; top: 276.5px; height: auto; position: absolute; z-index: 10">
+          <h1>Resume</h1>
+          <p>Template: <a href="https://bit.ly/3d908uc">Bob Boberson</a></p>
+        </h1>
+        <p style="height: auto; width: 960px; left: 0px; top: 661px; position: absolute">Once we have our hitlist, we'll make multiple versions</p>
+        <div style="height: auto; width: 967px; left: 0px; top: 447.5px; position: absolute; z-index: 12">
+          <p><a href="https://cvcompiler.com/" target="_blank">https://cvcompiler.com/</a><span style="color: rgb(209, 210, 211); text-align: left">&nbsp;</span></p>
+
+          <p><span style="color: rgb(209, 210, 211); text-align: left">(Run your resume through to see what recruiters see </span><strong>don't pay</strong><span style="color: rgb(209, 210, 211); text-align: left">)</span></p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023">
+        <span class="slide-indicator">Slide 23 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Let's See Some Resumes</h2>
+        <img src="https://media2.giphy.com/media/MZq4dIAU2b9h0WkSHm/giphy.gif" width="480" height="480" style="position: absolute; max-width: 100%; width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024">
+        <span class="slide-indicator">Slide 24 of 25</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">LAPTOP</h2>
+        <img src="https://media4.giphy.com/media/HCK7W8Qb52ifS/giphy.gif" width="320" height="240" style="position: absolute; max-width: 100%; width: 690.667px; height: 518px; left: 134.666px; top: 140px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025">
+        <span class="slide-indicator">Slide 25 of 25</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Homework</h1>
+        <div style="height: auto; width: 802px; left: 78px; top: 461px; position: absolute; z-index: 11">
+          <h3>Due (Thurs. 4/7):</h3>
+
+          <h3>Do: Your Resume</h3>
+
+          <h3>Do: Intro to Github</h3>
+
+          <h3>&nbsp;<a href="https://aka.ms/learnwithleon" target="_blank">https://aka.ms/learnwithleon</a>​&nbsp;</h3>
+        </div>
+
+        <img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%; width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px" />
+      </section>
+    </main>
+  </body>
+  <script>
+    const PROPS = ["width", "height", "top", "left", "right", "bottom", "font-size"];
+
+    function saveOriginalSizes(element) {
+      for (const prop of PROPS) {
+        const dataProp = "data-original-" + prop;
+        if (element.style[prop]) {
+          if (!element.hasAttribute(dataProp)) {
+            element.setAttribute(dataProp, element.style[prop]);
+          }
+        }
+      }
+    }
+
+    function scaleSizes(element, scale) {
+      const props = PROPS.filter((prop) => element.style[prop]);
+      for (const prop of props) {
+        const rawOrigValue = element.getAttribute("data-original-" + prop);
+        if (rawOrigValue.startsWith("auto")) continue;
+
+        const origValue = parseFloat(element.getAttribute("data-original-" + prop));
+
+        const unit = rawOrigValue.slice(-2);
+        element.style[prop] = origValue * scale + unit;
+      }
+    }
+
+    function fancyScaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      for (const slide of slides) {
+        saveOriginalSizes(slide);
+        scaleSizes(slide, scale);
+      }
+      /*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+      const sizedChildren = Array.from(document.querySelectorAll(".slide *")).filter((el) => el.hasAttribute("style") && PROPS.some((prop) => el.getAttribute("style")?.includes(prop + ":")));
+      for (const el of sizedChildren) {
+        saveOriginalSizes(el);
+        scaleSizes(el, scale);
+      }
+    }
+
+    function scaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      slides.forEach((slide) => {
+        slide.style.transform = "scale(" + scale + ")";
+      });
+    }
+
+    window.addEventListener("resize", scaleSlides);
+    window.addEventListener("load", scaleSlides);
+    document.addEventListener("DOMContentLoaded", scaleSlides);
+  </script>
+</html>

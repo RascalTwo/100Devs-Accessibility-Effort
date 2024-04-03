@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Class 58 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord" />
+
+    <title>#100Devs - Why Use React? (cohort 2)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.3;
+        background-color: #444444;
+        color: #ffffff;
+      }
+      ul {
+        text-align: left;
+        list-style: bullet;
+      }
+
+      ol {
+        list-style: number;
+      }
+
+      .slide {
+        position: relative;
+        border: 1px solid white;
+        transform-origin: top left;
+      }
+      .slide-indicator {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100Devs - Why Use React? (cohort 2)</h1>
+      <p>Class 58 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here: leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+        <li>
+          <a href="#slide-001">Slide #001</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">BACKEND SUPER REVIEW&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-006">This &amp; Next Week - React!</a>
+        </li>
+        <li>
+          <a href="#slide-007">Slide #007</a>
+        </li>
+        <li>
+          <a href="#slide-008">Slide #008</a>
+        </li>
+        <li>
+          <a href="#slide-009">Homework</a>
+        </li>
+        <li>
+          <a href="#slide-010">Networking</a>
+        </li>
+        <li>
+          <a href="#slide-011">PUSH EVERY DAY</a>
+        </li>
+        <li>
+          <a href="#slide-012">This Week</a>
+        </li>
+        <li>
+          <a href="#slide-013">Slide #013</a>
+        </li>
+        <li>
+          <a href="#slide-014">Slide #014</a>
+        </li>
+        <li>
+          <a href="#slide-015">Thank You</a>
+        </li>
+        <li>
+          <a href="#slide-016">!newsletter</a>
+        </li>
+        <li>
+          <a href="#slide-017">React</a>
+        </li>
+        <li>
+          <a href="#slide-018">Read The Docs</a>
+        </li>
+        <li>
+          <a href="#slide-019">ES6+</a>
+        </li>
+        <li>
+          <a href="#slide-020">Classes</a>
+        </li>
+        <li>
+          <a href="#slide-021">Array Spread</a>
+        </li>
+        <li>
+          <a href="#slide-022">Object Spread</a>
+        </li>
+        <li>
+          <a href="#slide-023">Array Destructuring</a>
+        </li>
+        <li>
+          <a href="#slide-024">Object Destructuring</a>
+        </li>
+        <li>
+          <a href="#slide-025">&#128680; WARNING &#128680;</a>
+        </li>
+        <li>
+          <a href="#slide-026">React</a>
+        </li>
+        <li>
+          <a href="#slide-027">Slide #027</a>
+        </li>
+        <li>
+          <a href="#slide-028">&#128680; WARNING &#128680;</a>
+        </li>
+        <li>
+          <a href="#slide-029">React APIs</a>
+        </li>
+        <li>
+          <a href="#slide-030">JSX</a>
+        </li>
+        <li>
+          <a href="#slide-031">Component API</a>
+        </li>
+        <li>
+          <a href="#slide-032">Component API</a>
+        </li>
+        <li>
+          <a href="#slide-033">Virtual DOM</a>
+        </li>
+        <li>
+          <a href="#slide-034">&#128680; WARNING &#128680;</a>
+        </li>
+        <li>
+          <a href="#slide-035">Example 1</a>
+        </li>
+        <li>
+          <a href="#slide-036">Example 2</a>
+        </li>
+        <li>
+          <a href="#slide-037">Example 3</a>
+        </li>
+        <li>
+          <a href="#slide-038">Mental Health Action Day</a>
+        </li>
+        <li>
+          <a href="#slide-039">Homework</a>
+        </li>
+      </ol>
+    </nav>
+    <main>
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001">
+        <span class="slide-indicator">Slide 1 of 39</span>
+        <h1 style="width: 960px; left: 0px; top: 168px; height: auto; position: absolute; z-index: 10">
+          <h2>&nbsp;</h2>
+
+          <h1>Why React?</h1>
+        </h1>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 435px; position: absolute">
+          <span style="color: #ffffff"><span style="font-size: 1em">Leon Noel</span></span>
+        </h2>
+
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px" />
+        <h1 style="height: auto; width: 600px; left: 180px; top: 350px; position: absolute">#100Devs</h1>
+        <p style="height: auto; width: 960px; left: 0px; top: 591px; position: absolute">
+          "Tell me why are we so blind to see<br />
+          That the ones we hurt are you and me?"
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002">
+        <span class="slide-indicator">Slide 2 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 0px; height: auto; position: absolute">Agenda</h1>
+        <ul style="width: 806px; left: 77px; top: 140px; height: auto; position: absolute">
+          <li>Questions?&nbsp;</li>
+          <li>Let's Talk -&nbsp; #100Devs</li>
+          <li>Learn - What is react?</li>
+          <li>Learn - What are components</li>
+          <li>Learn - What are props and state</li>
+          <li>Do - Learn React</li>
+          <li>Homework - React / Interview Prep</li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003">
+        <span class="slide-indicator">Slide 3 of 39</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute; z-index: 10">
+          <h2>Questions</h2>
+
+          <h3>About last class or life</h3>
+        </h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%; width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004">
+        <span class="slide-indicator">Slide 4 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Checking In</h2>
+        <img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%; width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px" />
+        <div style="height: auto; width: 806px; left: 77px; top: 521px; position: absolute; z-index: 12">
+          <h3>Like and Retweet the Tweet</h3>
+
+          <h3>!checkin</h3>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005">
+        <span class="slide-indicator">Slide 5 of 39</span>
+        <h1 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute">BACKEND SUPER REVIEW&nbsp;</h1>
+        <img src="https://media3.giphy.com/media/5wWf7GW1AzV6pF3MaVW/giphy.gif" width="432" height="250" style="position: absolute; max-width: 100%; width: 414.425px; height: 239.829px; left: 272.788px; top: 244px; min-width: 1px; min-height: 1px" />
+        <h1 style="height: auto; width: 800px; left: 80px; top: 506px; position: absolute">
+          SUNDAY<br />
+          1:00pm EST
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006">
+        <span class="slide-indicator">Slide 6 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">This &amp; Next Week - React!</h2>
+
+        <img src="https://media0.giphy.com/media/TElE7TWcZZDx1uea3Y/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 806.4px; height: 453.6px; left: 80px; top: 140px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 960px; left: 0px; top: 605px; position: absolute">
+          Watch&nbsp; - <a href="https://www.youtube.com/watch?v=w7ejDZ8SWv8" target="_blank">https://www.youtube.com/watch?v=w7ejDZ8SWv8</a><br />
+          Do - <a href="https://egghead.io/courses/the-beginner-s-guide-to-react" target="_blank">https://egghead.io/courses/the-beginner-s-guide-to-react</a>
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007">
+        <span class="slide-indicator">Slide 7 of 39</span>
+        <h1 style="width: 806px; left: 80px; top: 0px; height: auto; position: absolute; z-index: 10">
+          <h1><span style="color: #ffff00">HUNTOBER</span></h1>
+
+          <h1>IS UPON US</h1>
+        </h1>
+        <img src="https://media0.giphy.com/media/hgd3B0ayqPGJG/giphy.gif" width="400" height="264" style="position: absolute; max-width: 100%; width: 651.515px; height: 430px; left: 160px; top: 210px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 652.5px; position: absolute">(almost...)</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008">
+        <span class="slide-indicator">Slide 8 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute; z-index: 10">
+          <h1>!checkin</h1>
+
+          <p>every class</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009">
+        <span class="slide-indicator">Slide 9 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 140px; height: auto; position: absolute">Homework</h1>
+        <h1 style="height: auto; width: 960px; left: 0px; top: 280px; position: absolute">
+          <span style="font-size: 1em"><span style="color: #ffff00">DUE TUESDAY</span></span>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010">
+        <span class="slide-indicator">Slide 10 of 39</span>
+        <h2 style="width: 806px; left: 74px; top: 66px; height: auto; position: absolute">Networking</h2>
+        <img src="https://media1.giphy.com/media/3aGZA6WLI9Jde/giphy.gif" width="280" height="196" style="position: absolute; max-width: 100%; width: 468.446px; height: 327.912px; left: 245.777px; top: 210px; min-width: 1px; min-height: 1px" />
+        <div style="height: auto; width: 600px; left: 180px; top: 575.5px; position: absolute; z-index: 12">
+          <h3>Alternatives?</h3>
+
+          <p><span style="color: #ffff00">Keep !sheet Updated Weekly</span></p>
+        </div>
+        <p style="height: auto; width: 600px; left: 180px; top: 140px; position: absolute">1 coffee chat / 3 connections every week</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011">
+        <span class="slide-indicator">Slide 11 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">PUSH EVERY DAY</h2>
+        <img src="https://media4.giphy.com/media/tJeGZumxDB01q/giphy.gif" width="320" height="240" style="position: absolute; max-width: 100%; width: 634.667px; height: 476px; left: 162.666px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012">
+        <span class="slide-indicator">Slide 12 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 21.5px; height: auto; position: absolute">This Week</h1>
+        <h2 style="width: 967px; left: -7px; top: 77px; height: auto; position: absolute; z-index: 11">
+          <h2>&nbsp;</h2>
+
+          <p>Please research the following string methods:</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>
+            <br />
+            Give a short description of what the method does, how it works, it's time complexity (if appropriate), and give three examples of it in action!
+          </p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+        </h2>
+        <p style="height: auto; width: 600px; left: 61px; top: 221px; position: absolute">
+          charAt<br />
+          charCodeAt<br />
+          concat<br />
+          includes<br />
+          indexOf<br />
+          match<br />
+          repeat<br />
+          <span style="color: rgb(255, 255, 255)">replace</span>
+        </p>
+        <p style="height: auto; width: 600px; left: 283px; top: 194px; position: absolute">
+          <br />
+          search<br />
+          slice<br />
+          split<br />
+          substr<br />
+          toLowerCase<br />
+          toUpperCase<br />
+          trim
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013">
+        <span class="slide-indicator">Slide 13 of 39</span>
+        <h1 style="width: 960px; left: 0px; top: 144.5px; height: auto; position: absolute; z-index: 10">
+          <h1>
+            &nbsp;Client Signature<br />
+            Approved PR
+          </h1>
+
+          <h1>&nbsp;Due <span style="color: #ffff00">Tuesday</span></h1>
+
+          <h1>&nbsp;</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014">
+        <span class="slide-indicator">Slide 14 of 39</span>
+        <h1 style="width: 960px; left: 0px; top: 144.5px; height: auto; position: absolute; z-index: 10">
+          <h1>
+            &nbsp;100 Hours Project<br />
+            <span style="color: #ffff00">Beautiful MVP</span>
+          </h1>
+
+          <h1>&nbsp;Due Tuesday</h1>
+
+          <h1>&nbsp;</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015">
+        <span class="slide-indicator">Slide 15 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 21.5px; height: auto; position: absolute">Thank You</h1>
+        <img src="https://media1.giphy.com/media/l3q2wJsC23ikJg9xe/giphy.gif" width="480" height="358" style="position: absolute; max-width: 100%; width: 626.145px; height: 467px; left: 166.928px; top: 140px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016">
+        <span class="slide-indicator">Slide 16 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">!newsletter</h2>
+        <img src="https://media4.giphy.com/media/YypqAhlDKiFJknPbnt/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017">
+        <span class="slide-indicator">Slide 17 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute"><span style="font-size: 1.4em">React</span></h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018">
+        <span class="slide-indicator">Slide 18 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Read The Docs</h2>
+        <img src="https://media3.giphy.com/media/WoWm8YzFQJg5i/giphy.gif" width="499" height="365" style="position: absolute; max-width: 100%; width: 572.825px; height: 419px; left: 193.587px; top: 141px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 800px; left: 80px; top: 610.5px; position: absolute"><a href="https://reactjs.org/docs/getting-started.html" target="_blank">https://reactjs.org/docs/getting-started.html</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019">
+        <span class="slide-indicator">Slide 19 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">ES6+</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">Review</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020">
+        <span class="slide-indicator">Slide 20 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: -9px; height: auto; position: absolute">Classes</h1>
+        <pre class="javascript" style="font-size: 24px; line-height: 29px; width: 891px; height: 495.5px; left: 34.5px; top: 88px; position: absolute"><code>class MakeCar{
+  constructor(carMake,carModel,carColor,numOfDoors){
+    this.make = carMake
+    this.model = carModel
+    this.color = carColor
+    this.doors = numOfDoors
+  }
+  honk(){
+    alert('BEEP BEEP FUCKER')
+  }
+  lock(){
+    alert(`Locked ${this.doors} doors!`)
+  }
+}
+
+let hondaCivic = new MakeCar('Honda','Civic','Silver', 4)
+
+let teslaRoadster = new MakeCar('Tesla','Roadster', 'Red', 2)</code></pre>
+        <p style="height: auto; width: 600px; left: 180px; top: 650.5px; position: absolute">Classes are like templates for objects!</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021">
+        <span class="slide-indicator">Slide 21 of 39</span>
+        <pre class="javascript" style="font-size: 40px; line-height: 48px; width: 736px; height: 418px; left: 112px; top: 210px; position: absolute"><code>const foo = ['a', 'b', 'c'] 
+const bar = ['d', 'e', 'f']
+
+console.log(...foo) 
+console.log([...foo, ...bar])
+
+"a" "b" "c"
+["a", "b", "c", "d", "e", "f"]</code></pre>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 70px; position: absolute">Array Spread</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022">
+        <span class="slide-indicator">Slide 22 of 39</span>
+        <pre class="javascript" style="font-size: 25px; line-height: 30px; width: 836px; height: 554px; left: 62px; top: 133px; position: absolute"><code>const defaultStyle = { 
+  color: 'black', 
+  fontSize: 12, 
+  fontWeight: 'normal'
+}
+
+const style = {
+  ...defaultStyle, 
+  fontWeight: 'bold', 
+  backgroundColor: 'white'
+} 
+
+console.log(style)
+
+Object {
+  color: "black", fontSize: 12,
+  fontWeight: "bold", backgroundColor: "white"
+}</code></pre>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 21.5px; position: absolute">Object Spread</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023">
+        <span class="slide-indicator">Slide 23 of 39</span>
+        <pre class="javascript" style="font-size: 40px; line-height: 48px; width: 920px; height: 348px; left: 20px; top: 246px; position: absolute"><code>let [name, team] = ["Bob", "100Devs"]
+
+console.log(name)//"Bob"
+console.log(team)//"100Devs"</code></pre>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 16px; position: absolute">Array Destructuring</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 610.5px; position: absolute"><a href="https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/" target="_blank">https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024">
+        <span class="slide-indicator">Slide 24 of 39</span>
+        <pre class="javascript" style="font-size: 36px; line-height: 43px; width: 960px; height: 348px; left: 0px; top: 246px; position: absolute"><code>let mascot = {name: "Bob", team: "100Devs"}
+
+let {name, team} = mascot
+
+console.log(name)//"Bob"
+console.log(team)//"100Devs"</code></pre>
+        <h1 style="height: auto; width: 600px; left: 180px; top: 16px; position: absolute">Object Destructuring</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 610.5px; position: absolute"><a href="https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/" target="_blank">https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025">
+        <span class="slide-indicator">Slide 25 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">🚨 WARNING 🚨</h2>
+        <img src="https://media1.giphy.com/media/3o6ZtpWvwnhf34Oj0A/giphy.gif" width="300" height="350" style="position: absolute; max-width: 100%; width: 408px; height: 476px; left: 276px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026">
+        <span class="slide-indicator">Slide 26 of 39</span>
+        <h1 style="width: 806px; left: 74px; top: 42.5px; height: auto; position: absolute"><span style="font-size: 2em">React</span></h1>
+        <h2 style="width: 960px; left: 0px; top: 280px; height: auto; position: absolute; z-index: 11">
+          <p>
+            <span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt"
+              >React is a library for handling your UI.<br />
+              It allows you to write components which you can re-use and
+            </span>
+          </p>
+
+          <p><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">extend when needed. It does not handle anything else! </span></p>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027"><span class="slide-indicator">Slide 27 of 39</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8591048/fb.png" width="2397" height="1350" style="position: absolute; max-width: 100%; width: 960px; height: 540.676px; left: 0px; top: 79.662px; min-width: 1px; min-height: 1px" /></section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028">
+        <span class="slide-indicator">Slide 28 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">🚨 WARNING 🚨</h2>
+        <img src="https://media1.giphy.com/media/3o6ZtpWvwnhf34Oj0A/giphy.gif" width="300" height="350" style="position: absolute; max-width: 100%; width: 408px; height: 476px; left: 276px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029">
+        <span class="slide-indicator">Slide 29 of 39</span>
+        <h1 style="width: 806px; left: 74px; top: 42.5px; height: auto; position: absolute"><span style="font-size: 1.8em">React APIs</span></h1>
+        <h2 style="width: 960px; left: 0px; top: 280px; height: auto; position: absolute; z-index: 11">
+          <p>"react" contains the APIs for creating components</p>
+
+          <p>&nbsp;</p>
+
+          <p>"react-dom" contains the APIs for rendering to the browser DOM</p>
+        </h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030">
+        <span class="slide-indicator">Slide 30 of 39</span>
+        <h1 style="width: 806px; left: 74px; top: 42.5px; height: auto; position: absolute"><span style="font-size: 2em">JSX</span></h1>
+        <h2 style="width: 960px; left: 0px; top: 280px; height: auto; position: absolute; z-index: 11">
+          <p><span style="color: #ffff00">React components are functions which return JSX</span></p>
+
+          <p>&nbsp;</p>
+
+          <p>
+            A syntax extension to JS!<br />
+            JSX is a shortcut for using the React.createElement() API, that is<br />
+            much more concise, easy to read, and visually looks a little like the generated UI (as both are tree-like).<span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt"> </span>
+          </p>
+        </h2>
+        <h2 style="height: auto; width: 800px; left: 80px; top: 593px; position: absolute"><a href="https://www.react.express/" target="_blank">https://www.react.express</a></h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031">
+        <span class="slide-indicator">Slide 31 of 39</span>
+        <pre class="javascript" style="font-size: 40px; line-height: 48px; width: 265px; height: 59px; left: 347.5px; top: 250.5px; position: absolute"><code>this.props</code></pre>
+        <h1 style="height: auto; width: 800px; left: 80px; top: 91.5px; position: absolute">Component API</h1>
+        <div style="height: auto; width: 960px; left: 0px; top: 350px; position: absolute; z-index: 13">
+          <p><span style="color: #ffff00">Props are arguments passed into React Components</span></p>
+
+          <p>&nbsp;</p>
+
+          <p><span style="font-size: 25pt">Components can be </span><span style="font-size: 33.3333px">configured</span><span style="font-size: 25pt">&nbsp;upon instantiation by </span></p>
+
+          <p><span style="font-size: 25pt">passing properties to the constructor </span></p>
+
+          <p>
+            <a href="https://blog.devgenius.io/props-and-functions-in-react-made-easy-2ccbf69b135" target="_blank"><span style="font-size: 25pt">- these properties are called props. </span></a>
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032">
+        <span class="slide-indicator">Slide 32 of 39</span>
+        <pre class="javascript" style="font-size: 40px; line-height: 48px; width: 265px; height: 59px; left: 347.5px; top: 250.5px; position: absolute"><code>this.state</code></pre>
+        <h1 style="height: auto; width: 800px; left: 80px; top: 91.5px; position: absolute">Component API</h1>
+        <div style="height: auto; width: 876px; left: 46px; top: 350px; position: absolute; z-index: 12">
+          <p>React components have a built-in state object</p>
+
+          <p>&nbsp;</p>
+
+          <p>This is where you store stuff related to the component</p>
+
+          <p>&nbsp;</p>
+
+          <p><span style="color: #ffff00">When the state object changes, the component</span></p>
+
+          <p><span style="color: #ffff00">REACTS and re-renders!</span></p>
+
+          <p>&nbsp;</p>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033">
+        <span class="slide-indicator">Slide 33 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Virtual DOM</h1>
+        <img src="https://media1.giphy.com/media/26u42peXMFMFHoudi/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 125px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034">
+        <span class="slide-indicator">Slide 34 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">🚨 WARNING 🚨</h2>
+        <img src="https://media4.giphy.com/media/9rU2rP52gAJEY/giphy.gif" width="400" height="225" style="position: absolute; max-width: 100%; width: 653.333px; height: 367.5px; left: 153.334px; top: 210px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035">
+        <span class="slide-indicator">Slide 35 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute"><a href="https://codesandbox.io/s/3v32jkv336?file=/index.js" target="_blank">Example 1</a></h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 661px; position: absolute">Comes From The Reading</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036">
+        <span class="slide-indicator">Slide 36 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute"><a href="https://codesandbox.io/s/545v05rv2n?file=/index.js:397-439" target="_blank">Example 2</a></h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 661px; position: absolute"><span style="color: rgb(255, 255, 255)">Comes From The Reading</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037">
+        <span class="slide-indicator">Slide 37 of 39</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute"><a href="https://codesandbox.io/s/3rn5qvz0op?file=/index.js" target="_blank">Example 3</a></h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 661px; position: absolute"><span style="color: rgb(255, 255, 255)">Comes From The Reading</span></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038">
+        <span class="slide-indicator">Slide 38 of 39</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Mental Health Action Day</h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8590902/Screen_Shot_2021-05-20_at_12.55.52_PM.png" width="1868" height="1350" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 125px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039">
+        <span class="slide-indicator">Slide 39 of 39</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Homework</h1>
+        <h1 style="height: auto; width: 802px; left: 80.3795px; top: 490px; position: absolute">Do: FINISH</h1>
+
+        <img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%; width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px" />
+      </section>
+    </main>
+  </body>
+  <script>
+    const PROPS = ["width", "height", "top", "left", "right", "bottom", "font-size"];
+
+    function saveOriginalSizes(element) {
+      for (const prop of PROPS) {
+        const dataProp = "data-original-" + prop;
+        if (element.style[prop]) {
+          if (!element.hasAttribute(dataProp)) {
+            element.setAttribute(dataProp, element.style[prop]);
+          }
+        }
+      }
+    }
+
+    function scaleSizes(element, scale) {
+      const props = PROPS.filter((prop) => element.style[prop]);
+      for (const prop of props) {
+        const rawOrigValue = element.getAttribute("data-original-" + prop);
+        if (rawOrigValue.startsWith("auto")) continue;
+
+        const origValue = parseFloat(element.getAttribute("data-original-" + prop));
+
+        const unit = rawOrigValue.slice(-2);
+        element.style[prop] = origValue * scale + unit;
+      }
+    }
+
+    function fancyScaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      for (const slide of slides) {
+        saveOriginalSizes(slide);
+        scaleSizes(slide, scale);
+      }
+      /*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+      const sizedChildren = Array.from(document.querySelectorAll(".slide *")).filter((el) => el.hasAttribute("style") && PROPS.some((prop) => el.getAttribute("style")?.includes(prop + ":")));
+      for (const el of sizedChildren) {
+        saveOriginalSizes(el);
+        scaleSizes(el, scale);
+      }
+    }
+
+    function scaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      slides.forEach((slide) => {
+        slide.style.transform = "scale(" + scale + ")";
+      });
+    }
+
+    window.addEventListener("resize", scaleSlides);
+    window.addEventListener("load", scaleSlides);
+    document.addEventListener("DOMContentLoaded", scaleSlides);
+  </script>
+</html>

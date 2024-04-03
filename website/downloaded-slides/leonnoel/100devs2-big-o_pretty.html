@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Class 63 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord" />
+
+    <title>#100devs - Big O (cohort 02)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.3;
+        background-color: #444444;
+        color: #ffffff;
+      }
+      ul {
+        text-align: left;
+        list-style: bullet;
+      }
+
+      ol {
+        list-style: number;
+      }
+
+      .slide {
+        position: relative;
+        border: 1px solid white;
+        transform-origin: top left;
+      }
+      .slide-indicator {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>#100devs - Big O (cohort 02)</h1>
+      <p>Class 63 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here: leonnoel.com/discord</p>
+    </header>
+    <a href="#slide-001">Skip to first slide</a>
+    <nav>
+      <h2>Table of Contents</h2>
+      <ol>
+        <li>
+          <a href="#slide-001">Leon Noel</a>
+        </li>
+        <li>
+          <a href="#slide-002">Agenda</a>
+        </li>
+        <li>
+          <a href="#slide-003">Slide #003</a>
+        </li>
+        <li>
+          <a href="#slide-004">Checking In</a>
+        </li>
+        <li>
+          <a href="#slide-005">!newsletter</a>
+        </li>
+        <li>
+          <a href="#slide-006">Slide #006</a>
+        </li>
+        <li>
+          <a href="#slide-007">Slide #007</a>
+        </li>
+        <li>
+          <a href="#slide-008">Slide #008</a>
+        </li>
+        <li>
+          <a href="#slide-009">Slide #009</a>
+        </li>
+        <li>
+          <a href="#slide-010">Slide #010</a>
+        </li>
+        <li>
+          <a href="#slide-011">WE NEED TO TALK</a>
+        </li>
+        <li>
+          <a href="#slide-012">P.R.E.P</a>
+        </li>
+        <li>
+          <a href="#slide-013">Methods Questions</a>
+        </li>
+        <li>
+          <a href="#slide-014">Brute Force</a>
+        </li>
+        <li>
+          <a href="#slide-015">ITS ALL YOU NEED</a>
+        </li>
+        <li>
+          <a href="#slide-016">But... Let&apos;s Open More Doors</a>
+        </li>
+        <li>
+          <a href="#slide-017">A data structure is simply an organized way of storing data &nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-018">It is a pattern of collecting and organizing data for performing various operations correctly and efficiently.</a>
+        </li>
+        <li>
+          <a href="#slide-019">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-020">Slide #020</a>
+        </li>
+        <li>
+          <a href="#slide-021">Slide #021</a>
+        </li>
+        <li>
+          <a href="#slide-022">Slide #022</a>
+        </li>
+        <li>
+          <a href="#slide-023">Slide #023</a>
+        </li>
+        <li>
+          <a href="#slide-024">&nbsp;An algorithm is just&nbsp; &nbsp; the steps you take to solve a problem</a>
+        </li>
+        <li>
+          <a href="#slide-025">Slide #025</a>
+        </li>
+        <li>
+          <a href="#slide-026">Slide #026</a>
+        </li>
+        <li>
+          <a href="#slide-027">Slide #027</a>
+        </li>
+        <li>
+          <a href="#slide-028">Slide #028</a>
+        </li>
+        <li>
+          <a href="#slide-029">Slide #029</a>
+        </li>
+        <li>
+          <a href="#slide-030">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-031">Slide #031</a>
+        </li>
+        <li>
+          <a href="#slide-032">BUT WHY?</a>
+        </li>
+        <li>
+          <a href="#slide-033">Slide #033</a>
+        </li>
+        <li>
+          <a href="#slide-034">Common Complexities</a>
+        </li>
+        <li>
+          <a href="#slide-035">Slide #035</a>
+        </li>
+        <li>
+          <a href="#slide-036">Slide #036</a>
+        </li>
+        <li>
+          <a href="#slide-037">O(1) Example</a>
+        </li>
+        <li>
+          <a href="#slide-038">Slide #038</a>
+        </li>
+        <li>
+          <a href="#slide-039">O(N) Example</a>
+        </li>
+        <li>
+          <a href="#slide-040">O(1) VS O(N)</a>
+        </li>
+        <li>
+          <a href="#slide-041">Slide #041</a>
+        </li>
+        <li>
+          <a href="#slide-042">Slide #042</a>
+        </li>
+        <li>
+          <a href="#slide-043">Slide #043</a>
+        </li>
+        <li>
+          <a href="#slide-044">Slide #044</a>
+        </li>
+        <li>
+          <a href="#slide-045">Committing these to memory is important</a>
+        </li>
+        <li>
+          <a href="#slide-046">I have a problem</a>
+        </li>
+        <li>
+          <a href="#slide-047">The price of boxes is&nbsp;</a>
+        </li>
+        <li>
+          <a href="#slide-048">Let&apos;s take a look</a>
+        </li>
+        <li>
+          <a href="#slide-049">I want to create a bidding platform</a>
+        </li>
+        <li>
+          <a href="#slide-050">How can we find the min and max bid?</a>
+        </li>
+        <li>
+          <a href="#slide-051">Slide #051</a>
+        </li>
+        <li>
+          <a href="#slide-052">Slide #052</a>
+        </li>
+        <li>
+          <a href="#slide-053">Slide #053</a>
+        </li>
+        <li>
+          <a href="#slide-054">What if one loop found the min and the other found the max</a>
+        </li>
+        <li>
+          <a href="#slide-055">Finding the max bid</a>
+        </li>
+        <li>
+          <a href="#slide-056">Slide #056</a>
+        </li>
+        <li>
+          <a href="#slide-057">What if our data was already sorted?</a>
+        </li>
+        <li>
+          <a href="#slide-058">Slide #058</a>
+        </li>
+        <li>
+          <a href="#slide-059">What is an example of constant time?</a>
+        </li>
+        <li>
+          <a href="#slide-060">What is an example of linear time?</a>
+        </li>
+        <li>
+          <a href="#slide-061">What is an example of quadratic time?</a>
+        </li>
+        <li>
+          <a href="#slide-062">What is an example of logarithmic time?</a>
+        </li>
+        <li>
+          <a href="#slide-063">Let&apos;s explore some JS complexities</a>
+        </li>
+        <li>
+          <a href="#slide-064">.pop() ?</a>
+        </li>
+        <li>
+          <a href="#slide-065">.shift() ?</a>
+        </li>
+        <li>
+          <a href="#slide-066">.length ?</a>
+        </li>
+        <li>
+          <a href="#slide-067">forEach, map, reduce ?</a>
+        </li>
+        <li>
+          <a href="#slide-068">Homework</a>
+        </li>
+        <li>
+          <a href="#slide-069">Slide #069</a>
+        </li>
+      </ol>
+    </nav>
+    <main>
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-001">
+        <span class="slide-indicator">Slide 1 of 69</span>
+        <h2 style="height: auto; width: 600px; left: 180px; top: 471px; position: absolute">
+          <span style="color: #ffffff"><span style="font-size: 1em">Leon Noel</span></span>
+        </h2>
+
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png" width="1306" height="1350" style="position: absolute; max-width: 100%; width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px" />
+        <div style="height: auto; width: 800px; left: 80px; top: 266px; position: absolute; z-index: 13">
+          <h1>Big O</h1>
+
+          <h1>#100Devs</h1>
+        </div>
+        <p style="height: auto; width: 960px; left: 0px; top: 544px; position: absolute">
+          "But that was the shit that I prayed about I thank God I made it out<br />
+          Damn it feels good to go pick up my momma and take her out<br />
+          Lil Tony got paper now all in my bank account, and it ain't shit to debate about"
+        </p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-002">
+        <span class="slide-indicator">Slide 2 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 63.5px; height: auto; position: absolute">Agenda</h1>
+        <ul style="width: 806px; left: 80px; top: 210px; height: auto; position: absolute">
+          <li>Questions?</li>
+          <li>Discuss - #HUNTOBER2022</li>
+          <li>Discuss - You ARE ready!</li>
+          <li>Learn - Big O</li>
+          <li><span style="font-size: 50.7px">Homework</span></li>
+        </ul>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-003">
+        <span class="slide-indicator">Slide 3 of 69</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute; z-index: 10">
+          <h2>Questions</h2>
+
+          <h3>About class or life</h3>
+        </h2>
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7634660/how-dare.gif" width="250" height="140" style="position: absolute; max-width: 100%; width: 590.329px; height: 330.584px; left: 184.836px; top: 254.708px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-004">
+        <span class="slide-indicator">Slide 4 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">Checking In</h2>
+        <img src="https://media2.giphy.com/media/BmmfETghGOPrW/giphy.gif" width="560" height="240" style="position: absolute; max-width: 100%; width: 710px; height: 304.286px; left: 125px; top: 159.857px; min-width: 1px; min-height: 1px" />
+        <div style="height: auto; width: 806px; left: 77px; top: 521px; position: absolute; z-index: 12">
+          <h3>Like and Retweet the Tweet</h3>
+
+          <h3>!checkin</h3>
+        </div>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-005">
+        <span class="slide-indicator">Slide 5 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">!newsletter</h2>
+        <img src="https://media4.giphy.com/media/YypqAhlDKiFJknPbnt/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 124px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-006">
+        <span class="slide-indicator">Slide 6 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 272px; height: auto; position: absolute; z-index: 10">
+          <h1>#HUNTOBER2022</h1>
+
+          <p><span style="color: #ffff00">!templates</span></p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-007">
+        <span class="slide-indicator">Slide 7 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute; z-index: 10">
+          <h1>4 More <span style="color: #ffff00">Classes</span></h1>
+
+          <p>&nbsp;Building Hitlists &amp; How To Get A Job</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-008">
+        <span class="slide-indicator">Slide 8 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute; z-index: 10">
+          <h1>FRIDAY <span style="color: #ffff00">TEA</span></h1>
+
+          <p>6:00pm ET in Classroom</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-009">
+        <span class="slide-indicator">Slide 9 of 69</span>
+        <h1 style="width: 960px; left: 0px; top: 247.5px; height: auto; position: absolute; z-index: 10">
+          <h1>SUNDAY OFFICE <span style="color: #ffff00">HOURS</span></h1>
+
+          <h1>1pm ET&nbsp;</h1>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-010">
+        <span class="slide-indicator">Slide 10 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 222px; height: auto; position: absolute; z-index: 10">
+          <h1>Daily Question</h1>
+
+          <h1>Daily <span style="color: #ffff00">Standup</span></h1>
+
+          <p>(Mon-Fri 6pm EST)</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+
+          <p>&nbsp;</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-011">
+        <span class="slide-indicator">Slide 11 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">WE NEED TO TALK</h2>
+        <img src="https://media2.giphy.com/media/1qdjwESw2jTDKhVjSd/giphy.gif" width="400" height="400" style="position: absolute; max-width: 100%; width: 476px; height: 476px; left: 242px; top: 154px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 180px; top: 644.5px; position: absolute">Ready? Others?</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-012">
+        <span class="slide-indicator">Slide 12 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 189px; height: auto; position: absolute">P.R.E.P</h1>
+        <h2 style="width: 806px; left: 77px; top: 286px; height: auto; position: absolute">Parameters, Returns, Examples, Pseudo Code</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-013">
+        <span class="slide-indicator">Slide 13 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 280px; height: auto; position: absolute">Methods Questions</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-014">
+        <span class="slide-indicator">Slide 14 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Brute Force</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-015">
+        <span class="slide-indicator">Slide 15 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">ITS ALL YOU NEED</h2>
+        <img src="https://media1.giphy.com/media/3o6MbhLC8KyQ2yU6ME/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%; width: 634.667px; height: 476px; left: 162.666px; top: 154px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-016">
+        <span class="slide-indicator">Slide 16 of 69</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute">But... Let's Open More Doors</h2>
+        <img src="https://media4.giphy.com/media/yx400dIdkwWdsCgWYp/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 125px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-017">
+        <span class="slide-indicator">Slide 17 of 69</span>
+        <h1 style="width: 960px; left: 0px; top: 197px; height: auto; position: absolute">A <span style="color: #ffff00">data structure</span> is simply an organized way of storing data &nbsp;</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-018">
+        <span class="slide-indicator">Slide 18 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 57.5px; height: auto; position: absolute">It is a <span style="color: #ffff00">pattern</span> of collecting and organizing data for performing various operations <span style="color: #ffff00">correctly and efficiently</span>.</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-019">
+        <span class="slide-indicator">Slide 19 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 84.5px; height: auto; position: absolute">BUT WHY?</h2>
+        <img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%; width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-020">
+        <span class="slide-indicator">Slide 20 of 69</span>
+        <h1 style="width: 806px; left: 74px; top: 140px; height: auto; position: absolute; z-index: 10">
+          <h1>What if I wanted to store information about a stock trader?</h1>
+
+          <p>&nbsp;</p>
+
+          <h1><span style="color: #ffff00">Object</span> or <span style="color: #ffff00">Array</span>?</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-021">
+        <span class="slide-indicator">Slide 21 of 69</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute"><span style="color: #ffff00">Object</span> Makes The Most Sense</h2>
+        <pre style="font-size: 40px; line-height: 48px; width: 960px; height: 532px; left: 0px; top: 140px; position: absolute"><code>let stockTrader = {
+    firstName: 'Bob',
+    lastName: 'Wehadababyitsaboy',
+    location: 'New York, New York, USA',
+    jobTitle: 'Trading Associate',
+    yoe: 1,
+    recentTrades: ['tsla','gme','amc']
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-022">
+        <span class="slide-indicator">Slide 22 of 69</span>
+        <h1 style="width: 806px; left: 74px; top: 140px; height: auto; position: absolute; z-index: 10">
+          <h1>What if I wanted to store recent tsla purchase prices?</h1>
+
+          <p>&nbsp;</p>
+
+          <h1><span style="color: #ffff00">Object</span> or <span style="color: #ffff00">Array</span>?</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-023">
+        <span class="slide-indicator">Slide 23 of 69</span>
+        <h2 style="width: 960px; left: 0px; top: 42px; height: auto; position: absolute"><span style="color: #ffff00">Array</span> Makes The Most Sense</h2>
+        <pre style="font-size: 40px; line-height: 48px; width: 960px; height: 140px; left: -1px; top: 280px; position: absolute"><code>let tslaPurchasePrices = 
+	[208.17, 205.05, 217.57, 220.48]</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-024">
+        <span class="slide-indicator">Slide 24 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 226px; height: auto; position: absolute">
+          &nbsp;An algorithm is just&nbsp; &nbsp; <span style="color: #ffff00"><em>the steps you take to solve a problem</em></span>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-025">
+        <span class="slide-indicator">Slide 25 of 69</span>
+        <h1 style="width: 806px; left: 73px; top: 70px; height: auto; position: absolute; z-index: 10">
+          <h1>Thinking through appropriate</h1>
+
+          <h1>
+            <span style="color: #ffff00"><em>algorithms</em></span> is how we can <strong>efficiently</strong> solve problems
+          </h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-026">
+        <span class="slide-indicator">Slide 26 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 150.5px; height: auto; position: absolute; z-index: 10">
+          <h1>
+            We care about<br />
+            <span style="color: #ffff00">Space</span><br />
+            &amp;
+          </h1>
+
+          <h1><span style="color: #ffff00">Time</span></h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-027">
+        <span class="slide-indicator">Slide 27 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute">
+          <span style="color: #ffff00">Space</span><br />
+          How much memory is being used
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-028">
+        <span class="slide-indicator">Slide 28 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 172px; height: auto; position: absolute">
+          <font color="#ffff00">Time</font><br />
+          How many operations are executed per input
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-029">
+        <span class="slide-indicator">Slide 29 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 102px; height: auto; position: absolute; z-index: 10">
+          <h1>When taking about the efficiency of a solution we can use</h1>
+
+          <h1>
+            <span style="color: #ffff00"><em>Big-O Notation</em></span>
+          </h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-030">
+        <span class="slide-indicator">Slide 30 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 84.5px; height: auto; position: absolute">BUT WHY?</h2>
+        <img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%; width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-031">
+        <span class="slide-indicator">Slide 31 of 69</span>
+        <h1 style="width: 806px; left: 88px; top: 70px; height: auto; position: absolute">
+          <span style="color: #ffff00"><em>Big-O</em></span> notation mathematically describes the complexity of an algorithm in terms of <span style="color: #ffff00"><em>time</em></span> and <span style="color: #ffff00"><em>space</em></span>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-032">
+        <span class="slide-indicator">Slide 32 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 84.5px; height: auto; position: absolute">BUT WHY?</h2>
+        <img src="https://media3.giphy.com/media/fGOjgWRzQkC2sHHnq7/giphy.gif" width="360" height="450" style="position: absolute; max-width: 100%; width: 365.6px; height: 457px; left: 297.2px; top: 158.5px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 800px; left: 80px; top: 630px; position: absolute">All computers, environments, ect... are different</p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-033">
+        <span class="slide-indicator">Slide 33 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute; z-index: 10">
+          <h1>We care about</h1>
+
+          <h1><span style="color: #ffff00">rough</span> estimates</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-034">
+        <span class="slide-indicator">Slide 34 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 183px; height: auto; position: absolute">Common Complexities</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-035">
+        <span class="slide-indicator">Slide 35 of 69</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8701018/big-o.png" width="1272" height="1100" style="position: absolute; max-width: 100%; width: 598.996px; height: 518px; left: 180.502px; top: 70px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 179.498px; top: 630px; position: absolute"><a href="https://levelup.gitconnected.com/big-o-time-complexity-what-it-is-and-why-it-matters-for-your-code-6c08dd97ad59" target="_blank">Git Connected Big O Article</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-036">
+        <span class="slide-indicator">Slide 36 of 69</span>
+        <h1 style="width: 806px; left: 78px; top: 210px; height: auto; position: absolute; z-index: 10">
+          <h1>O(1)</h1>
+
+          <p><span style="color: rgb(93.3%, 93.3%, 93.3%); font-size: 25pt">For all inputs to our algorithm there is and will always be only one operation required </span></p>
+
+          <ul>
+            <li>Order 1</li>
+            <li>Constant Time</li>
+          </ul>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-037">
+        <span class="slide-indicator">Slide 37 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 43px; height: auto; position: absolute">O(1) Example</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 420px; position: absolute">No matter how many inputs are located in num there will only ever be one operation needed!</p>
+        <pre style="font-size: 36px; line-height: 43px; width: 640px; height: 138px; left: 160px; top: 210px; position: absolute"><code>const nums = [1,2,3,4,5] 
+const firstNumber = nums[0]</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-038">
+        <span class="slide-indicator">Slide 38 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute; z-index: 10">
+          <h1>O(N)</h1>
+
+          <p>For all inputs to our algorithm there will be one</p>
+
+          <p>operation per input</p>
+
+          <ul>
+            <li>Order n</li>
+            <li>Linear</li>
+            <li>Linear Scailing</li>
+          </ul>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-039">
+        <span class="slide-indicator">Slide 39 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 43px; height: auto; position: absolute">O(N) Example</h1>
+        <p style="height: auto; width: 803px; left: 80px; top: 490px; position: absolute">Here we sum the numbers in the array. We have to add each number to a running sum, so we have to operate on each one. This means one operation per input.</p>
+        <pre style="font-size: 36px; line-height: 43px; width: 640px; height: 231px; left: 160px; top: 210px; position: absolute"><code>const nums = [1,2,3,4,5]
+let sum = 0
+for(let num of nums){
+	sum += num
+}</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-040">
+        <span class="slide-indicator">Slide 40 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 32px; height: auto; position: absolute">O(1) VS O(N)</h1>
+        <h3 style="height: auto; width: 855px; left: 52.5px; top: 158px; position: absolute">Summing function for a sorted, contiguous array of integers that starts with the number 1? Could easily be O(n) but...</h3>
+        <pre style="font-size: 36px; line-height: 43px; width: 932px; height: 360px; left: 14px; top: 325px; position: absolute"><code>const sumContiguousArray = function(ary){ 
+  //get the last item
+  const lastItem = ary[ary.length - 1]
+  //Gauss's trick
+  return lastItem * (lastItem + 1) / 2
+}
+const nums = [1,2,3,4,5]
+const sumOfArray = sumContiguousArray(nums)</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-041">
+        <span class="slide-indicator">Slide 41 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 5px; height: auto; position: absolute; z-index: 10">
+          <h1>O(N^2)</h1>
+
+          <h1>Quadratic</h1>
+        </h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 420px; position: absolute">Text</p>
+        <pre style="font-size: 26px; line-height: 31px; width: 660px; height: 472px; left: 150px; top: 210px; position: absolute"><code>const hasDuplicates = function(num){ 
+  for(let i = 0; i &lt; nums.length; i++){
+    const thisNum = nums[i]
+    for(let j = 0; j &lt; nums.length; j++){
+      if(j !== i){ 
+        const otherNum = nums[j]
+       }
+    }  
+    if(otherNum === thisNum) return true
+  }
+  return false
+}
+
+const nums = [1,2,3,4,5,5]
+hasDuplicates(nums) //true</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-042">
+        <span class="slide-indicator">Slide 42 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute; z-index: 10">
+          <h1>O(N^2)</h1>
+
+          <p>Here we’re iterating over our array, which we already know is O(n), and another iteration inside it, which is another O(n). For every item in our list, we have to loop our list again to calculate what we need.</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-043">
+        <span class="slide-indicator">Slide 43 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute; z-index: 10">
+          <h1>O(LOG N)</h1>
+
+          <h2>
+            Logarithmic Time<br />
+            As you loop your operations are <span style="color: #ffff00">halved</span>
+          </h2>
+
+          <p>Divide and Conquer?</p>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-044">
+        <span class="slide-indicator">Slide 44 of 69</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8701018/big-o.png" width="1272" height="1100" style="position: absolute; max-width: 100%; width: 598.996px; height: 518px; left: 180.502px; top: 70px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 179.498px; top: 630px; position: absolute"><a href="https://levelup.gitconnected.com/big-o-time-complexity-what-it-is-and-why-it-matters-for-your-code-6c08dd97ad59" target="_blank">Git Connected Big O Article</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-045">
+        <span class="slide-indicator">Slide 45 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">
+          Committing these to memory is <em><span style="color: #ffff00">important</span></em>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-046">
+        <span class="slide-indicator">Slide 46 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">I have a problem</h2>
+        <img src="https://media2.giphy.com/media/RNWkmkrpvW6t7em1mD/giphy.gif" width="480" height="270" style="position: absolute; max-width: 100%; width: 710px; height: 399.375px; left: 126px; top: 192.312px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-047">
+        <span class="slide-indicator">Slide 47 of 69</span>
+        <h2 style="width: 806px; left: 77px; top: 42px; height: auto; position: absolute">The price of boxes is&nbsp;</h2>
+        <img src="https://media4.giphy.com/media/MwrQvTZA9Puuc/giphy.gif" width="480" height="360" style="position: absolute; max-width: 100%; width: 710px; height: 476px; left: 125px; top: 140px; min-width: 1px; min-height: 1px" />
+        <h2 style="height: auto; width: 600px; left: 180px; top: 630px; position: absolute"><span style="color: #ffff00">TOO DAMN HIGH</span></h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-048">
+        <span class="slide-indicator">Slide 48 of 69</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8821408/Screen_Shot_2021-08-05_at_1.47.04_PM.png" width="1826" height="492" style="position: absolute; max-width: 100%; width: 709.999px; height: 191.303px; left: 125px; top: 158.697px; min-width: 1px; min-height: 1px" />
+        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8821409/Screen_Shot_2021-08-05_at_1.47.24_PM.png" width="1870" height="488" style="position: absolute; max-width: 100%; width: 806.399px; height: 210.44px; left: 76.8005px; top: 384.78px; min-width: 1px; min-height: 1px" />
+        <h2 style="height: auto; width: 600px; left: 180px; top: 50.5px; position: absolute">Let's take a look</h2>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-049">
+        <span class="slide-indicator">Slide 49 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">I want to create a <span style="color: #ffff00">bidding</span> platform</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-050">
+        <span class="slide-indicator">Slide 50 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">How can we find the min and max bid?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-051">
+        <span class="slide-indicator">Slide 51 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 5px; height: auto; position: absolute; z-index: 10">
+          <h1>Let's loop through</h1>
+
+          <h1>all the bids</h1>
+        </h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 420px; position: absolute">Text</p>
+        <pre style="font-size: 24px; line-height: 29px; width: 865px; height: 502px; left: 47.5px; top: 198px; position: absolute"><code>const findMaxBid = function(bids){
+  let maxBid = bids[0],
+      minBid = bids[0]
+  for(let i = 0; i &lt; bids.length; i++){
+    for(let j = 0; j &lt; bids.length; j++){
+      if(bids[i] &gt; bids[j] &amp;&amp; bids[i] &gt; maxBid ){ 
+        maxBid = bids[i]
+       }else if(bids[i] &lt; bids[j] &amp;&amp; bids[i] &lt; minBid){
+         minBid = bids[i]
+       }
+    }  
+  }
+  return [minBid, maxBid]
+}
+
+const allBids = [2,7,3,1,4,5,5]
+console.log(findMaxBid(allBids))</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-052">
+        <span class="slide-indicator">Slide 52 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 210px; height: auto; position: absolute; z-index: 10">
+          <h1>Really bad code?,</h1>
+
+          <h1>but what is the complexity?</h1>
+        </h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-053">
+        <span class="slide-indicator">Slide 53 of 69</span><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/8701018/big-o.png" width="1272" height="1100" style="position: absolute; max-width: 100%; width: 598.996px; height: 518px; left: 180.502px; top: 70px; min-width: 1px; min-height: 1px" />
+        <p style="height: auto; width: 600px; left: 179.498px; top: 630px; position: absolute"><a href="https://levelup.gitconnected.com/big-o-time-complexity-what-it-is-and-why-it-matters-for-your-code-6c08dd97ad59" target="_blank">Git Connected Big O Article</a></p>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-054">
+        <span class="slide-indicator">Slide 54 of 69</span>
+        <h1 style="width: 806px; left: 80px; top: 156px; height: auto; position: absolute">What if one loop found the min and the other found the max</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-055">
+        <span class="slide-indicator">Slide 55 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 91.5px; height: auto; position: absolute">Finding the max bid</h1>
+        <p style="height: auto; width: 600px; left: 180px; top: 420px; position: absolute">Text</p>
+        <pre style="font-size: 26px; line-height: 31px; width: 630px; height: 412px; left: 165px; top: 233.5px; position: absolute"><code>const findMaxBid = function(bids){
+  let maxBid = bids[0]
+  for(let i = 0; i &lt; bids.length; i++){
+    if(bids[i] &gt; maxBid){
+      maxBid = bids[i]
+    }
+  }
+  return maxBid
+}
+
+const allBids = [1,2,7,3,4,5,5]
+console.log(findMaxBid(allBids))</code></pre>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-056">
+        <span class="slide-indicator">Slide 56 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute"><span style="color: #ffff00">2n</span>?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-057">
+        <span class="slide-indicator">Slide 57 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 253px; height: auto; position: absolute">What if our data was already sorted?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-058">
+        <span class="slide-indicator">Slide 58 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute"><span style="color: #ffff00">2</span>?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-059">
+        <span class="slide-indicator">Slide 59 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">What is an example of constant time?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-060">
+        <span class="slide-indicator">Slide 60 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">What is an example of linear time?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-061">
+        <span class="slide-indicator">Slide 61 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">What is an example of quadratic time?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-062">
+        <span class="slide-indicator">Slide 62 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">What is an example of logarithmic time?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-063">
+        <span class="slide-indicator">Slide 63 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">Let's explore some JS complexities</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-064">
+        <span class="slide-indicator">Slide 64 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">.pop() ?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-065">
+        <span class="slide-indicator">Slide 65 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">.shift() ?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-066">
+        <span class="slide-indicator">Slide 66 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">.length ?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-067">
+        <span class="slide-indicator">Slide 67 of 69</span>
+        <h1 style="width: 806px; left: 77px; top: 266px; height: auto; position: absolute">forEach, map, reduce ?</h1>
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-068">
+        <span class="slide-indicator">Slide 68 of 69</span>
+        <h1 style="width: 806px; left: 76px; top: 21.5px; height: auto; position: absolute">Homework</h1>
+        <div style="height: auto; width: 960px; left: -1px; top: 478px; position: absolute; z-index: 11">
+          <p>&nbsp;</p>
+
+          <p>
+            Do: Take your first application step!<br />
+            Do: &nbsp;<a href="https://frontendmasters.com/courses/practical-algorithms" target="_blank">https://frontendmasters.com/courses/practical-algorithms</a>
+          </p>
+        </div>
+
+        <img src="https://media.giphy.com/media/3oEjI5pYnV0zNvKzXa/source.gif" width="500" height="290" style="position: absolute; max-width: 100%; width: 482.759px; height: 280px; left: 240px; top: 140px; min-width: 1px; min-height: 1px" />
+      </section>
+      <hr />
+      <section class="slide" tabindex="0" style="height: 700px; width: 960px" id="slide-069"><span class="slide-indicator">Slide 69 of 69</span><img src="https://media3.giphy.com/media/mbhseRYedlG5W/giphy.gif" width="200" height="150" style="position: absolute; max-width: 100%; width: 634.667px; height: 476px; left: 162.666px; top: 91px; min-width: 1px; min-height: 1px" /></section>
+    </main>
+  </body>
+  <script>
+    const PROPS = ["width", "height", "top", "left", "right", "bottom", "font-size"];
+
+    function saveOriginalSizes(element) {
+      for (const prop of PROPS) {
+        const dataProp = "data-original-" + prop;
+        if (element.style[prop]) {
+          if (!element.hasAttribute(dataProp)) {
+            element.setAttribute(dataProp, element.style[prop]);
+          }
+        }
+      }
+    }
+
+    function scaleSizes(element, scale) {
+      const props = PROPS.filter((prop) => element.style[prop]);
+      for (const prop of props) {
+        const rawOrigValue = element.getAttribute("data-original-" + prop);
+        if (rawOrigValue.startsWith("auto")) continue;
+
+        const origValue = parseFloat(element.getAttribute("data-original-" + prop));
+
+        const unit = rawOrigValue.slice(-2);
+        element.style[prop] = origValue * scale + unit;
+      }
+    }
+
+    function fancyScaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      for (const slide of slides) {
+        saveOriginalSizes(slide);
+        scaleSizes(slide, scale);
+      }
+      /*slides.forEach(slide => {
+		slide.style.transform = 'scale(' + scale + ')';
+	});*/
+      const sizedChildren = Array.from(document.querySelectorAll(".slide *")).filter((el) => el.hasAttribute("style") && PROPS.some((prop) => el.getAttribute("style")?.includes(prop + ":")));
+      for (const el of sizedChildren) {
+        saveOriginalSizes(el);
+        scaleSizes(el, scale);
+      }
+    }
+
+    function scaleSlides() {
+      const slides = document.querySelectorAll(".slide");
+      const scale = Math.min(window.innerWidth / 960, window.innerHeight / 700) * 0.95;
+      slides.forEach((slide) => {
+        slide.style.transform = "scale(" + scale + ")";
+      });
+    }
+
+    window.addEventListener("resize", scaleSlides);
+    window.addEventListener("load", scaleSlides);
+    document.addEventListener("DOMContentLoaded", scaleSlides);
+  </script>
+</html>
