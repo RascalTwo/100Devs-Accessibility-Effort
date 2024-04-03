@@ -4,6 +4,10 @@ This document lists all changes made to the repository, grouped by date.
 
 ***
 
+## Tuesday, April 2, 2024
+
+- [Add first version of accessible slides](https://github.com/RascalTwo/100Devs-Accessibility-Effort/commit/04401a4)
+
 ## Sunday, March 31, 2024
 
 - [Exclude "Update CHANGELOG" commits from changelog](https://github.com/RascalTwo/100Devs-Accessibility-Effort/commit/cf1af15)
